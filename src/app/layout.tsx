@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import "../styles/global.scss";
 
+import Header from "@/components/header/Header";
+
 
 export const metadata: Metadata = {
   title: "WOMO首頁(demo)",
@@ -15,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header/>
         {children}
       </body>
     </html>

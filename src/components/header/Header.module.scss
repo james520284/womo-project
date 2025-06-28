@@ -1,0 +1,23 @@
+
+.header {
+    &Container{
+        display: flex;
+        align-items: center;
+    }
+
+    &Content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &NavMain,
+    &NavUtility{
+        li a {
+            padding: 20px;
+        }
+    }
+    
+}
+
+
+
