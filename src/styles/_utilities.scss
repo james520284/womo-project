@@ -32,6 +32,11 @@ $utilities: map-merge(
   )
 );
 
-.fz-sm {
+.fs-sm {
   font-size: 14px;
+}
+
+.noText {
+  cursor: default;
+  user-select: none;
 }

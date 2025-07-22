@@ -17,23 +17,6 @@
   border-radius: 20px;
 }
 
-:global(.swiper-pagination-bullet) {
-  background-color: #ff6600 !important;
-  opacity: 1;
-  outline: none;
-  user-select: none;
-}
-
-:global(.swiper-pagination-bullet-active) {
-  background-color: #ff6600 !important;
-}
-
-:global(.swiper-pagination) {
-  position: static !important; // 移除絕對定位
-  margin-top: 16px;
-  text-align: center;
-}
-
 .prevEl,
 .nextEl {
   position: absolute;
