@@ -1,10 +1,10 @@
 'use client';
 import { useState } from 'react';
 import style from './CreateArticleClient.module.scss';
-// import Image from 'next/image';
 import Link from 'next/link';
-// import { useSearchParams } from 'next/navigation';
-// import { Suspense } from 'react';
+
+import { useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 
 // libs
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -18,7 +18,7 @@ import CheckBtn from '@/components/ui/button/icon/CheckBtn';
 import CheckBtn2 from '@/components/ui/button/icon/CheckBtn2';
 import Button from '@/components/ui/button/submit/Button';
 // const
-// import { EMOJI } from '@/constants/emoji';
+import { EMOJI } from '@/constants/emoji';
 import { ACTIVITY } from '@/constants/activity';
 // icon
 import PhotoIcon from '@/components/icons/Photo';
@@ -30,9 +30,9 @@ import AddIcon from '@/components/icons/Add';
 // 元件
 
 const CreateArticleClient = () => {
-  // const searchParams = useSearchParams();
-  // const emojiParams = searchParams.get('emojiIndex');
-  // const [emojiIndex, setEmojiIndex] = useState(emojiParams ?? 0);
+  const searchParams = useSearchParams();
+  const emojiParams = searchParams.get('emojiIndex');
+  const [emojiIndex, setEmojiIndex] = useState(emojiParams ?? 0);
   const [selectedActivity, setSelectedActivity] = useState('');
   const [isShowAllActivity, setIsShowAllActivity] = useState(false);
   const [selectedSendMyCoin, setSelectedSendMyCoin] = useState(false);
@@ -59,48 +59,46 @@ const CreateArticleClient = () => {
         </div>
 
         <form action="" className="mb-20">
-          {/* <Suspense>
-            <SectionUI2 title="今日的心情標籤是什麼...">
-              <div className="d-flex justify-content-between">
-                {EMOJI.map((img, index) => (
-                  <button
-                    type="button"
-                    key={index}
-                    onClick={() => setEmojiIndex(index)}
-                    className={`${style.EmojiOuter} ${
-                      emojiIndex == index ? style.EmojiOuterActive : ''
-                    } `}
-                  >
-                    <div className="position-relative text-center">
-                      <Image
-                        src={img.image}
-                        alt={img.name}
-                        layout="responsive"
-                        width={48}
-                        height={48}
-                        style={{ maxWidth: '48px', height: 'auto' }}
-                        className={`${emojiIndex == index ? 'opacity-100' : 'opacity-50'}`}
-                      />
-                      <div
-                        className={`d-md-none position-absolute top-0 start-0 translate-middle ${
-                          emojiIndex == index ? 'd-block' : 'd-none'
-                        }`}
-                      >
-                        <CheckBtn />
-                      </div>
-                    </div>
+          <SectionUI2 title="今日的心情標籤是什麼...">
+            <div className="d-flex justify-content-between">
+              {EMOJI.map((img, index) => (
+                <button
+                  type="button"
+                  key={index}
+                  onClick={() => setEmojiIndex(index)}
+                  className={`${style.EmojiOuter} ${
+                    emojiIndex == index ? style.EmojiOuterActive : ''
+                  } `}
+                >
+                  <div className="position-relative text-center">
+                    <Image
+                      src={img.image}
+                      alt={img.name}
+                      layout="responsive"
+                      width={48}
+                      height={48}
+                      style={{ maxWidth: '48px', height: 'auto' }}
+                      className={`${emojiIndex == index ? 'opacity-100' : 'opacity-50'}`}
+                    />
                     <div
-                      className={`d-none position-absolute top-0 start-0 translate-middle ${
-                        emojiIndex == index ? 'd-md-block' : 'd-none'
+                      className={`d-md-none position-absolute top-0 start-0 translate-middle ${
+                        emojiIndex == index ? 'd-block' : 'd-none'
                       }`}
                     >
                       <CheckBtn />
                     </div>
-                  </button>
-                ))}
-              </div>
-            </SectionUI2>
-          </Suspense> */}
+                  </div>
+                  <div
+                    className={`d-none position-absolute top-0 start-0 translate-middle ${
+                      emojiIndex == index ? 'd-md-block' : 'd-none'
+                    }`}
+                  >
+                    <CheckBtn />
+                  </div>
+                </button>
+              ))}
+            </div>
+          </SectionUI2>
 
           <SectionUI2 title="想說些什麼呢？">
             <div className="form-floating mb-5">
@@ -132,35 +130,37 @@ const CreateArticleClient = () => {
           </SectionUI2>
 
           <SectionUI2 title="添加互動">
-            {ACTIVITY.map((act, index) => (
-              <div
-                key={act.title}
-                className={`form-check my-3 ${style.formCheck} ${
-                  !isShowAllActivity && index >= 3 ? 'd-none' : ''
-                }`}
-              >
-                <input
-                  className="form-check-input btn-check"
-                  type="radio"
-                  name="activityOption"
-                  id={`option${index + 1}`}
-                  value={act.title}
-                  onChange={handleActivityOption}
-                />
-                <div className="d-flex align-items-center">
-                  <label
-                    className="form-check-label d-flex align-items-center"
-                    htmlFor={`option${index + 1}`}
-                  >
-                    <CheckBtn isActive={selectedActivity === `${act.title}`} />
-                  </label>
-                  <span className={`${style.actTitle}  ${index === 0 ? style.firstTitle : ''}`}>
-                    {act.title}
-                  </span>
-                  <p>{act.desc}</p>
+            {ACTIVITY.map((act, index) => {
+              return (
+                <div
+                  key={act.title}
+                  className={`form-check my-3 ${style.formCheck} ${
+                    !isShowAllActivity && index >= 3 ? 'd-none' : ''
+                  }`}
+                >
+                  <input
+                    className="form-check-input btn-check"
+                    type="radio"
+                    name="activityOption"
+                    id={`option${index + 1}`}
+                    value={act.title}
+                    onChange={handleActivityOption}
+                  />
+                  <div className="d-flex align-items-center">
+                    <label
+                      className="form-check-label d-flex align-items-center"
+                      htmlFor={`option${index + 1}`}
+                    >
+                      <CheckBtn isActive={selectedActivity === `${act.title}`} />
+                    </label>
+                    <span className={`${style.actTitle}  ${index === 0 ? style.firstTitle : ''}`}>
+                      {act.title}
+                    </span>
+                    <p>{act.desc}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
 
             <div className="w-100 text-center fs-sm">
               <button type="button" onClick={() => setIsShowAllActivity(!isShowAllActivity)}>
