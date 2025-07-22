@@ -3,8 +3,8 @@ import { useState } from 'react';
 import style from './CreateArticleClient.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
-import { Suspense } from 'react';
+// import { useSearchParams } from 'next/navigation';
+// import { Suspense } from 'react';
 
 // libs
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -59,7 +59,7 @@ const CreateArticleClient = () => {
         </div>
 
         <form action="" className="mb-20">
-          <Suspense>
+          {/* <Suspense>
             <SectionUI2 title="今日的心情標籤是什麼...">
               <div className="d-flex justify-content-between">
                 {EMOJI.map((img, index) => (
@@ -100,7 +100,7 @@ const CreateArticleClient = () => {
                 ))}
               </div>
             </SectionUI2>
-          </Suspense>
+          </Suspense> */}
 
           <SectionUI2 title="想說些什麼呢？">
             <div className="form-floating mb-5">
