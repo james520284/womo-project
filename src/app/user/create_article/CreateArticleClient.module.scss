@@ -11,14 +11,14 @@
   border: 1px solid #adb5bd;
   margin-top: 16px;
 
-  @media (max-width: '768px') {
+  @media (max-width: 768px) {
     border: none;
     background-color: #fff;
   }
 
   &Active {
     border: 2px solid #da5271;
-    @media (max-width: '768px') {
+    @media (max-width: 768px) {
       border: none;
     }
   }
