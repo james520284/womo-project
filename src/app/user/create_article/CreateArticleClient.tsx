@@ -1,7 +1,7 @@
 'use client';
 import { useState } from 'react';
 import style from './CreateArticleClient.module.scss';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 // import { useSearchParams } from 'next/navigation';
 // import { Suspense } from 'react';
@@ -18,7 +18,7 @@ import CheckBtn from '@/components/ui/button/icon/CheckBtn';
 import CheckBtn2 from '@/components/ui/button/icon/CheckBtn2';
 import Button from '@/components/ui/button/submit/Button';
 // const
-import { EMOJI } from '@/constants/emoji';
+// import { EMOJI } from '@/constants/emoji';
 import { ACTIVITY } from '@/constants/activity';
 // icon
 import PhotoIcon from '@/components/icons/Photo';
@@ -30,9 +30,9 @@ import AddIcon from '@/components/icons/Add';
 // 元件
 
 const CreateArticleClient = () => {
-  const searchParams = useSearchParams();
-  const emojiParams = searchParams.get('emojiIndex');
-  const [emojiIndex, setEmojiIndex] = useState(emojiParams ?? 0);
+  // const searchParams = useSearchParams();
+  // const emojiParams = searchParams.get('emojiIndex');
+  // const [emojiIndex, setEmojiIndex] = useState(emojiParams ?? 0);
   const [selectedActivity, setSelectedActivity] = useState('');
   const [isShowAllActivity, setIsShowAllActivity] = useState(false);
   const [selectedSendMyCoin, setSelectedSendMyCoin] = useState(false);
