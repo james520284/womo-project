@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
-import "../styles/global.scss";
+// [本頁目的]：全域Root Layout
 
-import Header from "@/components/header/Header";
-
+import type { Metadata } from 'next';
+import '../styles/global.scss';
+import Footer from '@/components/footer/Footer';
+import React from 'react';
 
 export const metadata: Metadata = {
-  title: "WOMO首頁(demo)",
-  description: "練習WOMO",
+  title: 'WOMO首頁(demo)',
+  description: '練習WOMO',
 };
 
 export default function RootLayout({
@@ -17,8 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header/>
         {children}
+        <Footer />
       </body>
     </html>
   );
