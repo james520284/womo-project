@@ -6,6 +6,7 @@ import style from './page.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 
 // libs
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -60,46 +61,48 @@ const CreateArticle = () => {
         </div>
 
         <form action="" className="mb-20">
-          <SectionUI2 title="今日的心情標籤是什麼...">
-            <div className="d-flex justify-content-between">
-              {EMOJI.map((img, index) => (
-                <button
-                  type="button"
-                  key={index}
-                  onClick={() => setEmojiIndex(index)}
-                  className={`${style.EmojiOuter} ${
-                    emojiIndex == index ? style.EmojiOuterActive : ''
-                  } `}
-                >
-                  <div className="position-relative text-center">
-                    <Image
-                      src={img.image}
-                      alt={img.name}
-                      layout="responsive"
-                      width={48}
-                      height={48}
-                      style={{ maxWidth: '48px', height: 'auto' }}
-                      className={`${emojiIndex == index ? 'opacity-100' : 'opacity-50'}`}
-                    />
+          <Suspense>
+            <SectionUI2 title="今日的心情標籤是什麼...">
+              <div className="d-flex justify-content-between">
+                {EMOJI.map((img, index) => (
+                  <button
+                    type="button"
+                    key={index}
+                    onClick={() => setEmojiIndex(index)}
+                    className={`${style.EmojiOuter} ${
+                      emojiIndex == index ? style.EmojiOuterActive : ''
+                    } `}
+                  >
+                    <div className="position-relative text-center">
+                      <Image
+                        src={img.image}
+                        alt={img.name}
+                        layout="responsive"
+                        width={48}
+                        height={48}
+                        style={{ maxWidth: '48px', height: 'auto' }}
+                        className={`${emojiIndex == index ? 'opacity-100' : 'opacity-50'}`}
+                      />
+                      <div
+                        className={`d-md-none position-absolute top-0 start-0 translate-middle ${
+                          emojiIndex == index ? 'd-block' : 'd-none'
+                        }`}
+                      >
+                        <CheckBtn />
+                      </div>
+                    </div>
                     <div
-                      className={`d-md-none position-absolute top-0 start-0 translate-middle ${
-                        emojiIndex == index ? 'd-block' : 'd-none'
+                      className={`d-none position-absolute top-0 start-0 translate-middle ${
+                        emojiIndex == index ? 'd-md-block' : 'd-none'
                       }`}
                     >
                       <CheckBtn />
                     </div>
-                  </div>
-                  <div
-                    className={`d-none position-absolute top-0 start-0 translate-middle ${
-                      emojiIndex == index ? 'd-md-block' : 'd-none'
-                    }`}
-                  >
-                    <CheckBtn />
-                  </div>
-                </button>
-              ))}
-            </div>
-          </SectionUI2>
+                  </button>
+                ))}
+              </div>
+            </SectionUI2>
+          </Suspense>
 
           <SectionUI2 title="想說些什麼呢？">
             <div className="form-floating mb-5">
