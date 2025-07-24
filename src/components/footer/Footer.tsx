@@ -22,13 +22,13 @@ const Footer = () => {
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <CompassIcon width={24} />
-            <span>AR聚點</span>
+            <span className="mt-1">AR聚點</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <WalletIcon width={24} />
-            <span>籌碼包</span>
+            <span className="mt-1">籌碼包</span>
           </Link>
         </li>
         <li>
@@ -36,19 +36,19 @@ const Footer = () => {
             <span className={style.avatar}>
               <Avatar src={AVATAR_LINK.my} size={24} />
             </span>
-            <span>瘋碼秀</span>
+            <span className="mt-1">瘋碼秀</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <GiftIcon width={24} />
-            <span>找禮物</span>
+            <span className="mt-1">找禮物</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <IncomeIcon width={24} />
-            <span>籌碼收入</span>
+            <span className="mt-1">籌碼收入</span>
           </Link>
         </li>
       </ul>

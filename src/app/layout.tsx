@@ -6,8 +6,8 @@ import Footer from '@/components/footer/Footer';
 import React from 'react';
 
 export const metadata: Metadata = {
-  title: 'WOMO首頁(demo)',
-  description: '練習WOMO',
+  title: 'WOMO(demo)',
+  description: '皇冠版',
 };
 
 export default function RootLayout({
