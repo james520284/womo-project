@@ -15,7 +15,7 @@ const TopicCoinsPreview = () => {
     <section className="mt-10 mb-20">
       <div className={`container-fluid ${style.wrapper}`}>
         <div className="d-flex justify-content-between align-items-center">
-          <h2 className="h5 fw-bold">有了籌碼找對咖</h2>
+          <h2 className="h5 fw-bold">主題聚點</h2>
           <Link href="/">
             <span className={style.link}>探索更多 〉</span>
           </Link>
@@ -37,10 +37,10 @@ const TopicCoinsPreview = () => {
                   <div className="gap-2 d-flex flex-column flex-lg-row  justify-content-lg-center align-items-end align-items-lg-center">
                     <div className={style.btnWrapper}>
                       <Button as="a" href="/" size="small" color="secondary" width="expand">
-                        湊咖
+                        用AR開始聊
                       </Button>
                     </div>
-                    <div className={style.btnWrapper}>
+                    {/* <div className={style.btnWrapper}>
                       {topic.status === 1 ? (
                         <Button as="a" href="/" size="small" width="expand">
                           聊心情送籌碼
@@ -50,7 +50,7 @@ const TopicCoinsPreview = () => {
                           無活動
                         </Button>
                       )}
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>

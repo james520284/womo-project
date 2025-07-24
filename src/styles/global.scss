@@ -2,6 +2,8 @@
 @import './variables';
 @import 'node_modules/bootstrap/scss/bootstrap.scss';
 
+@import './custom-colors';
+@import './custom-utilities';
+
 @import './base';
-@import './utilities';
 @import './swiper';

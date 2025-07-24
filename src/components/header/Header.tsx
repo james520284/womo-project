@@ -8,7 +8,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 
 // icons
-import LocationIcon from '../icons/Location';
+import CompassIcon from '../icons/Compass';
 import WalletIcon from '../icons/Wallet';
 import GiftIcon from '../icons/Gift';
 import IncomeIcon from '../icons/Income';
@@ -51,8 +51,8 @@ const Header = () => {
           <ul className={`d-none d-lg-flex justify-content-between `}>
             <li className="px-2">
               <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
-                <LocationIcon width={28} />
-                <span className="ms-1">籌碼聚點</span>
+                <CompassIcon width={28} />
+                <span className="ms-1">ＡＲ聚點</span>
               </Link>
             </li>
             <li className="px-2">

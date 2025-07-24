@@ -1,4 +1,4 @@
-// [本頁目的]：個人貼文新增內頁
+// [本頁目的]：個人貼文新增內頁 SSR包CSR
 import CreateArticleClient from './CreateArticleClient';
 import { Suspense } from 'react';
 

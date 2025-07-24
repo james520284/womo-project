@@ -1,22 +1,27 @@
+// [本頁目的]：個人貼文新增內頁 CSR模式
+
 'use client';
 import { useState } from 'react';
 import style from './CreateArticleClient.module.scss';
 import Link from 'next/link';
-
 import { useSearchParams } from 'next/navigation';
 import Image from 'next/image';
-
 // libs
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 // 元件
 import Coin from '@/components/ui/coin/Coin';
 import Avatar from '@/components/ui/avatar/Avatar';
-import LocationIcon from '@/components/icons/Location';
 import PagesHeader from '@/components/header/PagesHeader';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import CheckBtn from '@/components/ui/button/icon/CheckBtn';
-import CheckBtn2 from '@/components/ui/button/icon/CheckBtn2';
 import Button from '@/components/ui/button/submit/Button';
+import AddSendCoins from '@/components/activity/sendCoins/AddSendCoins';
+import AddWishCoins from '@/components/activity/wishCoins/AddWishCoins';
+import AddExchangeCoins from '@/components/activity/exchangeCoins/AddExchangeCoins';
+import AddReunionPost from '@/components/activity/reunionPost/AddReunionPost';
+import AddSecretPost from '@/components/activity/secretPost/AddSecretPost';
+import AddLotteryGame from '@/components/activity/lotteryGame/AddLotteryGame';
+import AddCollectGame from '@/components/activity/collectGame/AddCollectGame';
 // const
 import { EMOJI } from '@/constants/emoji';
 import { ACTIVITY } from '@/constants/activity';
@@ -26,8 +31,8 @@ import MicrophoneIcon from '@/components/icons/Microphone';
 import VideoIcon from '@/components/icons/Video';
 import YoutubeIcon from '@/components/icons/Youtube';
 import ArrowIcon from '@/components/icons/Arrow';
-import AddIcon from '@/components/icons/Add';
-// 元件
+import LocationIcon from '@/components/icons/Location';
+import CancelIcon from '@/components/icons/Cancel';
 
 const CreateArticleClient = () => {
   const searchParams = useSearchParams();
@@ -35,10 +40,11 @@ const CreateArticleClient = () => {
   const [emojiIndex, setEmojiIndex] = useState(emojiParams ?? 0);
   const [selectedActivity, setSelectedActivity] = useState('');
   const [isShowAllActivity, setIsShowAllActivity] = useState(false);
-  const [selectedSendMyCoin, setSelectedSendMyCoin] = useState(false);
 
-  const handleActivityOption = (e: React.ChangeEvent<HTMLInputElement>) =>
+  const handleActivityOption = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedActivity(e.target.value);
+    setIsShowAllActivity(false);
+  };
 
   return (
     <>
@@ -129,84 +135,150 @@ const CreateArticleClient = () => {
             </div>
           </SectionUI2>
 
-          <SectionUI2 title="添加互動">
-            {ACTIVITY.map((act, index) => {
-              return (
-                <div
-                  key={act.title}
-                  className={`form-check my-3 ${style.formCheck} ${
-                    !isShowAllActivity && index >= 3 ? 'd-none' : ''
-                  }`}
-                >
-                  <input
-                    className="form-check-input btn-check"
-                    type="radio"
-                    name="activityOption"
-                    id={`option${index + 1}`}
-                    value={act.title}
-                    onChange={handleActivityOption}
-                  />
-                  <div className="d-flex align-items-center">
-                    <label
-                      className="form-check-label d-flex align-items-center"
-                      htmlFor={`option${index + 1}`}
-                    >
-                      <CheckBtn isActive={selectedActivity === `${act.title}`} />
-                    </label>
-                    <span className={`${style.actTitle}  ${index === 0 ? style.firstTitle : ''}`}>
-                      {act.title}
-                    </span>
-                    <p>{act.desc}</p>
+          {!selectedActivity && (
+            <SectionUI2 title={`添加互動 ${selectedActivity && ': ' + selectedActivity}`}>
+              {ACTIVITY.map((act, index) => {
+                return (
+                  <div
+                    key={act.title}
+                    className={`form-check my-3 ${style.formCheck} ${
+                      !isShowAllActivity && index >= 3 ? 'd-none' : ''
+                    }`}
+                  >
+                    <input
+                      className="form-check-input btn-check"
+                      type="radio"
+                      name="activityOption"
+                      id={`option${index + 1}`}
+                      value={act.title}
+                      onChange={handleActivityOption}
+                    />
+                    <div className="d-flex align-items-center">
+                      <label
+                        className="form-check-label d-flex align-items-center"
+                        htmlFor={`option${index + 1}`}
+                      >
+                        <CheckBtn isActive={selectedActivity === `${act.title}`} />
+                      </label>
+                      <span className={`${style.actTitle}  ${index === 0 ? style.firstTitle : ''}`}>
+                        {act.title}
+                      </span>
+                      <p>{act.desc}</p>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
 
-            <div className="w-100 text-center fs-sm">
-              <button type="button" onClick={() => setIsShowAllActivity(!isShowAllActivity)}>
-                {isShowAllActivity ? '隱藏更多' : '更多互動'} &nbsp;
-                <span
-                  style={{
-                    transform: `${isShowAllActivity ? 'rotate(0deg)' : 'rotate(180deg)'}`,
-                  }}
-                >
-                  <ArrowIcon width={16} />
-                </span>
-              </button>
-            </div>
-          </SectionUI2>
-          {selectedActivity === '贈幣' && (
-            <SectionUI2 title="贈幣">
-              <button
-                type="button"
-                className="d-flex align-items-center"
-                onClick={() => setSelectedSendMyCoin(!selectedSendMyCoin)}
-              >
-                <CheckBtn2 isActive={selectedSendMyCoin === true} />
-                <span className="ms-2">贈送自己的綠籌碼</span>
-              </button>
-              <div className={style.sendCoinWrapper}>
-                <div className="py-5 d-flex flex-column align-items-center justify-content-center">
-                  <button type="button" className="noText">
-                    <Coin scale={1} color="green">
-                      <div className={style.coinBg}>
-                        <AddIcon />
-                      </div>
-                    </Coin>
-                  </button>
-                  <span className="py-1 text-secondary fw-bold fs-5">籌碼</span>
-                  <span className="text-secondary fw-bold fs-3">0</span>
-                </div>
-                <div className="text-center fs-sm border-top py-5">
-                  <p>選擇籌碼包內的籌碼，送給留言者</p>
-                  <p className="text-muted">每位限領一顆，送完為止</p>
-                </div>
+              <div className="w-100 text-center fs-sm">
+                <button type="button" onClick={() => setIsShowAllActivity(!isShowAllActivity)}>
+                  {isShowAllActivity ? '隱藏更多' : '更多互動'} &nbsp;
+                  <span
+                    style={{
+                      transform: `${isShowAllActivity ? 'rotate(0deg)' : 'rotate(180deg)'}`,
+                    }}
+                  >
+                    <ArrowIcon width={16} />
+                  </span>
+                </button>
               </div>
             </SectionUI2>
           )}
 
+          {selectedActivity === '贈幣' && (
+            <div className="position-relative">
+              <AddSendCoins />
+              <button
+                type="button"
+                className={style.cancelBtn}
+                onClick={() => setSelectedActivity('')}
+              >
+                <CancelIcon />
+              </button>
+            </div>
+          )}
+
+          {selectedActivity === '許願' && (
+            <div className="position-relative">
+              <AddWishCoins />
+              <button
+                type="button"
+                className={style.cancelBtn}
+                onClick={() => setSelectedActivity('')}
+              >
+                <CancelIcon />
+              </button>
+            </div>
+          )}
+
+          {selectedActivity === '交換' && (
+            <div className="position-relative">
+              <AddExchangeCoins />
+              <button
+                type="button"
+                className={style.cancelBtn}
+                onClick={() => setSelectedActivity('')}
+              >
+                <CancelIcon />
+              </button>
+            </div>
+          )}
+
+          {selectedActivity === '湊咖' && (
+            <div className="position-relative">
+              <AddReunionPost />
+              <button
+                type="button"
+                className={style.cancelBtn}
+                onClick={() => setSelectedActivity('')}
+              >
+                <CancelIcon />
+              </button>
+            </div>
+          )}
+
+          {selectedActivity === '秘密' && (
+            <div className="position-relative">
+              <AddSecretPost />
+              <button
+                type="button"
+                className={style.cancelBtn}
+                onClick={() => setSelectedActivity('')}
+              >
+                <CancelIcon />
+              </button>
+            </div>
+          )}
+
+          {selectedActivity === '樂透' && (
+            <div className="position-relative">
+              <AddLotteryGame />
+              <button
+                type="button"
+                className={style.cancelBtn}
+                onClick={() => setSelectedActivity('')}
+              >
+                <CancelIcon />
+              </button>
+            </div>
+          )}
+
+          {selectedActivity === '集點' && (
+            <div className="position-relative">
+              <AddCollectGame />
+              <button
+                type="button"
+                className={style.cancelBtn}
+                onClick={() => setSelectedActivity('')}
+              >
+                <CancelIcon />
+              </button>
+            </div>
+          )}
+
           <div className="py-5 text-center">
-            <Button size="small">發布 〉</Button>
+            <Button size="small" width="expand">
+              發布 〉
+            </Button>
           </div>
         </form>
       </div>

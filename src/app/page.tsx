@@ -7,6 +7,7 @@ import TopicCoinsPreview from '@/components/home/TopicCoinsPreview';
 import KolPreview from '@/components/home/KolPreview';
 import StorePreview from '@/components/home/StorePreview';
 import HomeBanner from '@/components/swiper/HomeBannerSwiper';
+import HotEventsPreview from '@/components/home/HotEventsPreview';
 
 export default function Home() {
   return (
@@ -22,14 +23,17 @@ export default function Home() {
       {/* 首頁輪播banner CSR模式 */}
       <HomeBanner />
 
+      {/* 主題籌碼 CSR模式 */}
+      <HotEventsPreview />
+
       {/* 主題籌碼 SSR模式 */}
       <TopicCoinsPreview />
 
-      {/* 網紅籌碼推薦區 CSR模式 */}
-      <KolPreview />
-
       {/* 店家籌碼推薦區 CSR模式 */}
       <StorePreview />
+
+      {/* 網紅籌碼推薦區 CSR模式 */}
+      <KolPreview />
     </>
   );
 }

@@ -6,7 +6,7 @@ import style from './Footer.module.scss';
 import Link from 'next/link';
 
 // icons
-import LocationIcon from '../icons/Location';
+import CompassIcon from '../icons/Compass';
 import WalletIcon from '../icons/Wallet';
 import GiftIcon from '../icons/Gift';
 import IncomeIcon from '../icons/Income';
@@ -21,8 +21,8 @@ const Footer = () => {
       <ul className={`d-flex justify-content-between`}>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
-            <LocationIcon width={20} />
-            <span>籌碼聚點</span>
+            <CompassIcon width={20} />
+            <span>ＡＲ聚點</span>
           </Link>
         </li>
         <li>

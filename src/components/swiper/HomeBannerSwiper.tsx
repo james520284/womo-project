@@ -31,6 +31,14 @@ const HomeBanner = () => {
         modules={[Navigation, Pagination]}
         spaceBetween={20}
         slidesPerView={2}
+        breakpoints={{
+          0: {
+            slidesPerView: 1.1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+        }}
         loop={true}
         onInit={(swiper) => {
           // 手動綁定 navigation 按鈕

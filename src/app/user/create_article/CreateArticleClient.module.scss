@@ -46,10 +46,11 @@
   margin: 0px 4px;
 }
 
-.sendCoinWrapper {
+.activityWrapper {
   margin: 20px 0;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
+  background-color: #fff;
 }
 
 .coinBg {
@@ -62,4 +63,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.cancelBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-50%, 65%);
+  color: #adb5bd;
 }

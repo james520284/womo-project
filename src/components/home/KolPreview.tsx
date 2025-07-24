@@ -5,10 +5,8 @@
 import style from './KolPreview.module.scss';
 //元件
 import Link from 'next/link';
-import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import Button from '../ui/button/submit/Button';
-import ButtonOutline from '../ui/button/submit/ButtonOutline';
 import SectionUI from '../ui/section/SectionUI';
 //libs
 import { KOLs } from '@/libs/api/kols';
@@ -18,7 +16,7 @@ const KolPreview = () => {
     <section className="mt-10 mb-20">
       <div className={`container-fluid ${style.wrapper}`}>
         <div className="d-flex justify-content-between align-items-center">
-          <h2 className="h5 fw-bold">找創作者拿籌碼</h2>
+          <h2 className="h5 fw-bold">創作者聚點</h2>
           <Link href="/">
             <span className={style.link}>探索更多 〉</span>
           </Link>
@@ -35,7 +33,25 @@ const KolPreview = () => {
                       <p className="text-muted">{kol.content}</p>
                     </div>
                   </div>
-                  <div className="gap-2 gap-lg-7 d-flex flex-column flex-lg-row  justify-content-lg-center align-items-end align-items-lg-center">
+                  <div className="gap-2 d-flex flex-column flex-lg-row  justify-content-lg-center align-items-end align-items-lg-center">
+                    <div className={style.btnWrapper}>
+                      <Button as="a" href="/" size="small" color="secondary" width="expand">
+                        用AR開始聊
+                      </Button>
+                    </div>
+                    {/* <div className={style.btnWrapper}>
+                      {topic.status === 1 ? (
+                        <Button as="a" href="/" size="small" width="expand">
+                          聊心情送籌碼
+                        </Button>
+                      ) : (
+                        <Button as="a" size="small" color="noUse" width="expand">
+                          無活動
+                        </Button>
+                      )}
+                    </div> */}
+                  </div>
+                  {/* <div className="gap-2 gap-lg-7 d-flex flex-column flex-lg-row  justify-content-lg-center align-items-end align-items-lg-center">
                     <div className={`${style.btnWrapper} position-relative`}>
                       <Button as="a" href="/" size="small" color="secondary" width="expand">
                         &nbsp; 去哪領
@@ -48,8 +64,6 @@ const KolPreview = () => {
                     </div>
                     <div className={`${style.btnWrapper} position-relative`}>
                       <ButtonOutline
-                        // as="a"
-                        // href="/"
                         size="small"
                         width="expand"
                         color="secondary"
@@ -71,7 +85,7 @@ const KolPreview = () => {
                         </Coin>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
