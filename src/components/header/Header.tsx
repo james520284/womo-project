@@ -6,6 +6,7 @@ import style from './Header.module.scss';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 // icons
 import CompassIcon from '../icons/Compass';
@@ -25,6 +26,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const pathName = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,9 +52,14 @@ const Header = () => {
           </Link>
           <ul className={`d-none d-lg-flex justify-content-between `}>
             <li className="px-2">
-              <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
+              <Link
+                href="#"
+                className={`d-flex align-items-center ${style.headerNavLink} ${
+                  pathName === '/' ? 'text-brand' : 'text-dark'
+                }`}
+              >
                 <CompassIcon width={28} />
-                <span className="ms-1">ＡＲ聚點</span>
+                <span className="ms-1">AR聚點</span>
               </Link>
             </li>
             <li className="px-2">

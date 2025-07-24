@@ -4,7 +4,7 @@
 
 import style from './Footer.module.scss';
 import Link from 'next/link';
-
+import { usePathname } from 'next/navigation';
 // icons
 import CompassIcon from '../icons/Compass';
 import WalletIcon from '../icons/Wallet';
@@ -16,19 +16,25 @@ import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
 const Footer = () => {
+  const pathName = usePathname();
   return (
     <footer className={`d-lg-none  ${style.navMobile}`}>
       <ul className={`d-flex justify-content-between`}>
         <li>
-          <Link href="#" className="d-flex flex-column align-items-center">
+          <Link
+            href="/"
+            className={`d-flex flex-column align-items-center ${
+              pathName === '/' ? 'text-brand' : 'text-dark'
+            }`}
+          >
             <CompassIcon width={24} />
-            <span className="mt-1">AR聚點</span>
+            <span>AR聚點</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <WalletIcon width={24} />
-            <span className="mt-1">籌碼包</span>
+            <span>籌碼包</span>
           </Link>
         </li>
         <li>
@@ -36,19 +42,19 @@ const Footer = () => {
             <span className={style.avatar}>
               <Avatar src={AVATAR_LINK.my} size={24} />
             </span>
-            <span className="mt-1">瘋碼秀</span>
+            <span>瘋碼秀</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <GiftIcon width={24} />
-            <span className="mt-1">找禮物</span>
+            <span>找禮物</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <IncomeIcon width={24} />
-            <span className="mt-1">籌碼收入</span>
+            <span>籌碼收入</span>
           </Link>
         </li>
       </ul>
