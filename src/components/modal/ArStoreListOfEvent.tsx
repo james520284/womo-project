@@ -60,8 +60,10 @@ const ArStoreListOfEvent = ({ open, onOpenChange }: Props) => {
                     </div>
                     <div className="ms-5">
                       <h3 className="h6 fw-bold">{store.name}</h3>
-                      <p className="text-grey-200 fs-sm my-1 d-flex align-items-center">
-                        <LocationIcon width={16} />
+                      <p className="text-grey-200 fs-sm my-1 d-flex align-items-start">
+                        <span>
+                          <LocationIcon width={16} />
+                        </span>
                         <span className="ms-2">{store.address}</span>
                       </p>
                       <p className="text-grey-200 fs-sm my-1 d-flex align-items-center">
