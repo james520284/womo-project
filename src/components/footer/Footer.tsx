@@ -34,7 +34,7 @@ const Footer = () => {
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
             <span className={style.avatar}>
-              <Avatar src={AVATAR_LINK.my} size={20} />
+              <Avatar src={AVATAR_LINK.my} size={24} />
             </span>
             <span>瘋碼秀</span>
           </Link>

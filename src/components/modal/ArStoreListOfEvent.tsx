@@ -66,7 +66,7 @@ const ArStoreListOfEvent = ({ open, onOpenChange }: Props) => {
                       </p>
                       <p className="text-grey-200 fs-sm my-1 d-flex align-items-center">
                         <MemberIcon width={16} />
-                        <span className="ms-2">ＡＲ打卡人數：{store.tagAmount}</span>
+                        <span className="ms-2">AR打卡人數：{store.tagAmount}</span>
                       </p>
                     </div>
                   </div>
