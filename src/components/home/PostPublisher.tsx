@@ -10,7 +10,7 @@ import Button from '@/components/ui/button/submit/Button';
 import Coin from '@/components/ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import CheckBtn from '../ui/button/icon/CheckBtn';
-import RadixModal from '../modal/GiveMyCoin';
+import GiveMyCoin from '../modal/GiveMyCoin';
 import SectionUI from '../ui/section/SectionUI';
 //hooks
 import { useState } from 'react';
@@ -40,7 +40,7 @@ const PostPublisherClient = () => {
           <Button size="large" color="secondary" onClick={() => setGiveMyCoinModal(true)}>
             送籌碼
           </Button>
-          <RadixModal open={giveMyCoinModal} onOpenChange={setGiveMyCoinModal} />
+          <GiveMyCoin open={giveMyCoinModal} onOpenChange={setGiveMyCoinModal} />
         </div>
         <SectionUI>
           <div className={style.contentBar}>
@@ -68,8 +68,9 @@ const PostPublisherClient = () => {
                     layout="responsive"
                     width={48}
                     height={48}
-                    style={{ maxWidth: '48px', height: 'auto' }}
-                    className={`${emojiIndex == index ? 'opacity-100' : 'opacity-50'}`}
+                    className={`${style.emojiImg} ${
+                      emojiIndex == index ? 'opacity-100' : 'opacity-50'
+                    }`}
                   />
                   <div
                     className={`d-md-none position-absolute top-0 start-0 translate-middle ${

@@ -83,8 +83,9 @@ const CreateArticleClient = () => {
                       layout="responsive"
                       width={48}
                       height={48}
-                      style={{ maxWidth: '48px', height: 'auto' }}
-                      className={`${emojiIndex == index ? 'opacity-100' : 'opacity-50'}`}
+                      className={`${style.emojiImg}  ${
+                        emojiIndex == index ? 'opacity-100' : 'opacity-50'
+                      }`}
                     />
                     <div
                       className={`d-md-none position-absolute top-0 start-0 translate-middle ${

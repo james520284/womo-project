@@ -1,15 +1,19 @@
 // [本頁目的]：首頁 - 時事聚點
+'use client';
 
+import { useState } from 'react';
 import style from './HotEventsPreview.module.scss';
 import Image from 'next/image';
 //元件
 import Link from 'next/link';
 import Button from '../ui/button/submit/Button';
 import SectionUI from '../ui/section/SectionUI';
+import ArStoreListOfEvent from '../modal/ArStoreListOfEvent';
 //const
 import { events } from '@/libs/api/events';
 
 const HotEventsPreview = () => {
+  const [openArListModal, setOpenArListModal] = useState(false);
   return (
     <section className="mt-10 mb-20">
       <div className={`container-fluid ${style.wrapper}`}>
@@ -31,19 +35,28 @@ const HotEventsPreview = () => {
                         src={event.image}
                         alt={event.name}
                         fill
-                        style={{ objectFit: 'cover' }}
+                        style={{ objectFit: 'cover', borderRadius: '8px' }}
                       />
                     </div>
-                    <div className="ms-3 mt-lg-2 text-lg-center">
+                    <div className="ms-3 ms-lg-0 mt-lg-2 text-lg-center">
                       <h2 className="h6 fw-bold">{event.name}</h2>
                       <p className="text-muted">{event.content}</p>
                     </div>
                   </div>
                   <div className="gap-2 d-flex flex-column flex-lg-row  justify-content-lg-center align-items-end align-items-lg-center">
                     <div className={style.btnWrapper}>
-                      <Button as="a" href="/" size="small" color="secondary" width="expand">
-                        用AR開始聊
+                      <Button
+                        size="small"
+                        color="secondary"
+                        width="expand"
+                        onClick={() => setOpenArListModal(true)}
+                      >
+                        AR打卡
                       </Button>
+                      <ArStoreListOfEvent
+                        open={openArListModal}
+                        onOpenChange={setOpenArListModal}
+                      />
                     </div>
                   </div>
                 </div>

@@ -21,13 +21,13 @@ const Footer = () => {
       <ul className={`d-flex justify-content-between`}>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
-            <CompassIcon width={20} />
-            <span>ＡＲ聚點</span>
+            <CompassIcon width={24} />
+            <span>AR聚點</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
-            <WalletIcon width={20} />
+            <WalletIcon width={24} />
             <span>籌碼包</span>
           </Link>
         </li>
@@ -41,13 +41,13 @@ const Footer = () => {
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
-            <GiftIcon width={20} />
+            <GiftIcon width={24} />
             <span>找禮物</span>
           </Link>
         </li>
         <li>
           <Link href="#" className="d-flex flex-column align-items-center">
-            <IncomeIcon width={20} />
+            <IncomeIcon width={24} />
             <span>籌碼收入</span>
           </Link>
         </li>

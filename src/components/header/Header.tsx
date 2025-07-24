@@ -82,7 +82,7 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-          <ul className={`d-flex ${style.headerNavUtility}`}>
+          <ul className={`d-flex py-3 ${style.headerNavUtility}`}>
             <li className="px-1">
               <Link href="#">
                 <AddPostIcon width={20} />

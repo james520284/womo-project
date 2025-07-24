@@ -23,7 +23,7 @@ const StorePreview = () => {
         </div>
         <SectionUI>
           <div className="row row-cols-lg-3 flex-column flex-lg-row">
-            {Stores.map((store, index) => (
+            {Stores.slice(0, 3).map((store, index) => (
               <div key={index} className={`${style.coinRecommend}`}>
                 <div className="d-flex justify-content-between align-items-center flex-lg-column">
                   <div className="d-flex justify-content-lg-center align-items-center py-5 ">
@@ -36,7 +36,7 @@ const StorePreview = () => {
                   <div className="gap-2 d-flex flex-column flex-lg-row  justify-content-lg-center align-items-end align-items-lg-center">
                     <div className={style.btnWrapper}>
                       <Button as="a" href="/" size="small" color="secondary" width="expand">
-                        用AR開始聊
+                        AR打卡
                       </Button>
                     </div>
                     {/* <div className={style.btnWrapper}>
