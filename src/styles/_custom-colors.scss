@@ -11,44 +11,57 @@ $brand-800: darken(#da5271, 15%);
 $brand-900: darken(#da5271, 20%);
 $brand-950: darken(#da5271, 25%);
 
-$brandGreen: #00b0b4;
-$brandGreen-50: lighten(#00b0b4, 25%);
-$brandGreen-100: lighten(#00b0b4, 20%);
-$brandGreen-200: lighten(#00b0b4, 15%);
-$brandGreen-300: lighten(#00b0b4, 10%);
-$brandGreen-400: lighten(#00b0b4, 5%);
-$brandGreen-500: #00b0b4;
-$brandGreen-600: darken(#00b0b4, 5%);
-$brandGreen-700: darken(#00b0b4, 10%);
-$brandGreen-800: darken(#00b0b4, 15%);
-$brandGreen-900: darken(#00b0b4, 20%);
-$brandGreen-950: darken(#00b0b4, 25%);
+$coinGreen: #00b0b4;
+$coinGreen-50: lighten(#00b0b4, 25%);
+$coinGreen-100: lighten(#00b0b4, 20%);
+$coinGreen-200: lighten(#00b0b4, 15%);
+$coinGreen-300: lighten(#00b0b4, 10%);
+$coinGreen-400: lighten(#00b0b4, 5%);
+$coinGreen-500: #00b0b4;
+$coinGreen-600: darken(#00b0b4, 5%);
+$coinGreen-700: darken(#00b0b4, 10%);
+$coinGreen-800: darken(#00b0b4, 15%);
+$coinGreen-900: darken(#00b0b4, 20%);
+$coinGreen-950: darken(#00b0b4, 25%);
 
-$brandYellow: #e3bc41;
-$brandYellow-50: lighten(#e3bc41, 25%);
-$brandYellow-100: lighten(#e3bc41, 20%);
-$brandYellow-200: lighten(#e3bc41, 15%);
-$brandYellow-300: lighten(#e3bc41, 10%);
-$brandYellow-400: lighten(#e3bc41, 5%);
-$brandYellow-500: #e3bc41;
-$brandYellow-600: darken(#e3bc41, 5%);
-$brandYellow-700: darken(#e3bc41, 10%);
-$brandYellow-800: darken(#e3bc41, 15%);
-$brandYellow-900: darken(#e3bc41, 20%);
-$brandYellow-950: darken(#e3bc41, 25%);
+$coinRed: #d3745d;
+$coinRed-50: lighten(#d3745d, 25%);
+$coinRed-100: lighten(#d3745d, 20%);
+$coinRed-200: lighten(#d3745d, 15%);
+$coinRed-300: lighten(#d3745d, 10%);
+$coinRed-400: lighten(#d3745d, 5%);
+$coinRed-500: #d3745d;
+$coinRed-600: darken(#d3745d, 5%);
+$coinRed-700: darken(#d3745d, 10%);
+$coinRed-800: darken(#d3745d, 15%);
+$coinRed-900: darken(#d3745d, 20%);
+$coinRed-950: darken(#d3745d, 25%);
+
+$coinYellow: #e3bc41;
+$coinYellow-50: lighten(#e3bc41, 25%);
+$coinYellow-100: lighten(#e3bc41, 20%);
+$coinYellow-200: lighten(#e3bc41, 15%);
+$coinYellow-300: lighten(#e3bc41, 10%);
+$coinYellow-400: lighten(#e3bc41, 5%);
+$coinYellow-500: #e3bc41;
+$coinYellow-600: darken(#e3bc41, 5%);
+$coinYellow-700: darken(#e3bc41, 10%);
+$coinYellow-800: darken(#e3bc41, 15%);
+$coinYellow-900: darken(#e3bc41, 20%);
+$coinYellow-950: darken(#e3bc41, 25%);
 
 $grey: #6b6f82;
-$grey-50: lighten(#6b6f82, 25%);
-$grey-100: lighten(#6b6f82, 20%);
-$grey-200: lighten(#6b6f82, 15%);
-$grey-300: lighten(#6b6f82, 10%);
-$grey-400: lighten(#6b6f82, 5%);
+$grey-50: lighten(#6b6f82, 50%);
+$grey-100: lighten(#6b6f82, 40%);
+$grey-200: lighten(#6b6f82, 30%);
+$grey-300: lighten(#6b6f82, 20%);
+$grey-400: lighten(#6b6f82, 10%);
 $grey-500: #6b6f82;
-$grey-600: darken(#6b6f82, 5%);
-$grey-700: darken(#6b6f82, 10%);
-$grey-800: darken(#6b6f82, 15%);
-$grey-900: darken(#6b6f82, 20%);
-$grey-950: darken(#6b6f82, 25%);
+$grey-600: darken(#6b6f82, 10%);
+$grey-700: darken(#6b6f82, 20%);
+$grey-800: darken(#6b6f82, 30%);
+$grey-900: darken(#6b6f82, 40%);
+$grey-950: darken(#6b6f82, 50%);
 
 $black: #000000;
 $white: #ffffff;
@@ -73,31 +86,44 @@ $custom-colors: (
   'brand-900': $brand-900,
   'brand-950': $brand-950,
 
-  'brandGreen': $brandGreen,
-  'brandGreen-50': $brandGreen-50,
-  'brandGreen-100': $brandGreen-100,
-  'brandGreen-200': $brandGreen-200,
-  'brandGreen-300': $brandGreen-300,
-  'brandGreen-400': $brandGreen-400,
-  'brandGreen-500': $brandGreen-500,
-  'brandGreen-600': $brandGreen-600,
-  'brandGreen-700': $brandGreen-700,
-  'brandGreen-800': $brandGreen-800,
-  'brandGreen-900': $brandGreen-900,
-  'brandGreen-950': $brandGreen-950,
+  'coinGreen': $coinGreen,
+  'coinGreen-50': $coinGreen-50,
+  'coinGreen-100': $coinGreen-100,
+  'coinGreen-200': $coinGreen-200,
+  'coinGreen-300': $coinGreen-300,
+  'coinGreen-400': $coinGreen-400,
+  'coinGreen-500': $coinGreen-500,
+  'coinGreen-600': $coinGreen-600,
+  'coinGreen-700': $coinGreen-700,
+  'coinGreen-800': $coinGreen-800,
+  'coinGreen-900': $coinGreen-900,
+  'coinGreen-950': $coinGreen-950,
 
-  'brandYellow': $brandYellow,
-  'brandYellow-50': $brandYellow-50,
-  'brandYellow-100': $brandYellow-100,
-  'brandYellow-200': $brandYellow-200,
-  'brandYellow-300': $brandYellow-300,
-  'brandYellow-400': $brandYellow-400,
-  'brandYellow-500': $brandYellow-500,
-  'brandYellow-600': $brandYellow-600,
-  'brandYellow-700': $brandYellow-700,
-  'brandYellow-800': $brandYellow-800,
-  'brandYellow-900': $brandYellow-900,
-  'brandYellow-950': $brandYellow-950,
+  'coinRed': $coinRed,
+  'coinRed-50': $coinRed-50,
+  'coinRed-100': $coinRed-100,
+  'coinRed-200': $coinRed-200,
+  'coinRed-300': $coinRed-300,
+  'coinRed-400': $coinRed-400,
+  'coinRed-500': $coinRed-500,
+  'coinRed-600': $coinRed-600,
+  'coinRed-700': $coinRed-700,
+  'coinRed-800': $coinRed-800,
+  'coinRed-900': $coinRed-900,
+  'coinRed-950': $coinRed-950,
+
+  'coinYellow': $coinYellow,
+  'coinYellow-50': $coinYellow-50,
+  'coinYellow-100': $coinYellow-100,
+  'coinYellow-200': $coinYellow-200,
+  'coinYellow-300': $coinYellow-300,
+  'coinYellow-400': $coinYellow-400,
+  'coinYellow-500': $coinYellow-500,
+  'coinYellow-600': $coinYellow-600,
+  'coinYellow-700': $coinYellow-700,
+  'coinYellow-800': $coinYellow-800,
+  'coinYellow-900': $coinYellow-900,
+  'coinYellow-950': $coinYellow-950,
 
   'grey': $grey,
   'grey-50': $grey-50,

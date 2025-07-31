@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 // icons
 import CompassIcon from '../icons/Compass';
 import WalletIcon from '../icons/Wallet';
-import GiftIcon from '../icons/Gift';
+import ChatFriendIcon from '../icons/ChatFriend';
 import IncomeIcon from '../icons/Income';
 // 元件
 import Avatar from '../ui/avatar/Avatar';
@@ -32,7 +32,12 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className="d-flex flex-column align-items-center">
+          <Link
+            href="/user/coin_wallet"
+            className={`d-flex flex-column align-items-center ${
+              pathName === '/user/coin_wallet' ? 'text-brand' : 'text-dark'
+            }`}
+          >
             <WalletIcon width={24} />
             <span>籌碼包</span>
           </Link>
@@ -46,15 +51,15 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className="d-flex flex-column align-items-center">
-            <GiftIcon width={24} />
-            <span>找禮物</span>
+          <Link href="/user/coin_fans" className="d-flex flex-column align-items-center">
+            <ChatFriendIcon width={24} />
+            <span>籌碼粉</span>
           </Link>
         </li>
         <li>
-          <Link href="#" className="d-flex flex-column align-items-center">
+          <Link href="/user/ip_income" className="d-flex flex-column align-items-center">
             <IncomeIcon width={24} />
-            <span>籌碼收入</span>
+            <span>IP收入</span>
           </Link>
         </li>
       </ul>

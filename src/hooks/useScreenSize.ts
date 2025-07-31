@@ -19,7 +19,7 @@ const useScreenSize = () => {
 
       if (width <= 767) {
         setScreenSize({ isMobile: true, isTablet: false, isDesktop: false });
-      } else if (width <= 1024) {
+      } else if (width <= 991) {
         setScreenSize({ isMobile: false, isTablet: true, isDesktop: false });
       } else {
         setScreenSize({ isMobile: false, isTablet: false, isDesktop: true });

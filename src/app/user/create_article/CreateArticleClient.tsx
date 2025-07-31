@@ -66,43 +66,39 @@ const CreateArticleClient = () => {
 
         <form action="" className="mb-20">
           <SectionUI2 title="今日的心情標籤是什麼...">
-            <div className="d-flex justify-content-between">
+            <div className="row gy-3 justify-content-evenly">
               {EMOJI.map((img, index) => (
-                <button
-                  type="button"
-                  key={index}
-                  onClick={() => setEmojiIndex(index)}
-                  className={`${style.EmojiOuter} ${
-                    emojiIndex == index ? style.EmojiOuterActive : ''
-                  } `}
-                >
-                  <div className="position-relative text-center">
-                    <Image
-                      src={img.image}
-                      alt={img.name}
-                      layout="responsive"
-                      width={48}
-                      height={48}
-                      className={`${style.emojiImg}  ${
-                        emojiIndex == index ? 'opacity-100' : 'opacity-50'
-                      }`}
-                    />
-                    <div
-                      className={`d-md-none position-absolute top-0 start-0 translate-middle ${
-                        emojiIndex == index ? 'd-block' : 'd-none'
-                      }`}
+                <div key={index} className="col-3 col-md-1 d-flex justify-content-center">
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => setEmojiIndex(index)}
+                      className={`${style.EmojiOuter} ${
+                        emojiIndex == index ? style.EmojiOuterActive : ''
+                      } `}
                     >
-                      <CheckBtn />
-                    </div>
+                      <div className="position-relative text-center">
+                        <Image
+                          src={img.image}
+                          alt={img.name}
+                          layout="responsive"
+                          width={48}
+                          height={48}
+                          className={`${style.emojiImg}  ${
+                            emojiIndex == index ? 'opacity-100' : 'opacity-50'
+                          }`}
+                        />
+                      </div>
+                      <div
+                        className={` position-absolute top-0 start-0 translate-middle ${
+                          emojiIndex == index ? 'd-md-block' : 'd-none'
+                        }`}
+                      >
+                        <CheckBtn />
+                      </div>
+                    </button>
                   </div>
-                  <div
-                    className={`d-none position-absolute top-0 start-0 translate-middle ${
-                      emojiIndex == index ? 'd-md-block' : 'd-none'
-                    }`}
-                  >
-                    <CheckBtn />
-                  </div>
-                </button>
+                </div>
               ))}
             </div>
           </SectionUI2>

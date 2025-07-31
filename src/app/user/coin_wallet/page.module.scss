@@ -1,0 +1,24 @@
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.coinActionBtn {
+  padding: 12px 0px;
+  margin: 0px 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.walletHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

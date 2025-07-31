@@ -11,13 +11,12 @@ import { usePathname } from 'next/navigation';
 // icons
 import CompassIcon from '../icons/Compass';
 import WalletIcon from '../icons/Wallet';
-import GiftIcon from '../icons/Gift';
 import IncomeIcon from '../icons/Income';
-import AddPostIcon from '../icons/AddPost';
 import ChatFriendIcon from '../icons/ChatFriend';
 import SearchIcon from '../icons/Search';
 import BellIcon from '../icons/Bell';
 import MenuIcon from '../icons/Menu';
+import GiftIcon from '../icons/Gift';
 // 元件
 import Avatar from '../ui/avatar/Avatar';
 // const
@@ -63,7 +62,12 @@ const Header = () => {
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
+              <Link
+                href="/user/coin_wallet"
+                className={`d-flex align-items-center ${style.headerNavLink} ${
+                  pathName === '/user/coin_wallet' ? 'text-brand' : 'text-dark'
+                }`}
+              >
                 <WalletIcon width={28} />
                 <span className="ms-1">籌碼包</span>
               </Link>
@@ -77,27 +81,28 @@ const Header = () => {
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
-                <GiftIcon width={28} />
-                <span className="ms-1">找禮物</span>
+              <Link
+                href="/user/coin_fans"
+                className={`d-flex align-items-center ${style.headerNavLink}`}
+              >
+                <ChatFriendIcon width={28} />
+                <span className="ms-1">籌碼粉</span>
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
+              <Link
+                href="/user/ip_income"
+                className={`d-flex align-items-center ${style.headerNavLink}`}
+              >
                 <IncomeIcon width={28} />
-                <span className="ms-1">籌碼收入</span>
+                <span className="ms-1">IP收入</span>
               </Link>
             </li>
           </ul>
           <ul className={`d-flex py-3 ${style.headerNavUtility}`}>
             <li className="px-1">
               <Link href="#">
-                <AddPostIcon width={20} />
-              </Link>
-            </li>
-            <li className="px-1">
-              <Link href="#">
-                <ChatFriendIcon width={20} />
+                <GiftIcon width={20} />
               </Link>
             </li>
             <li className="px-1">
