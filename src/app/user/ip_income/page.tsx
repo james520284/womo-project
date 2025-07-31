@@ -1,4 +1,3 @@
-import style from './page.module.scss';
 import { Suspense } from 'react';
 import IpIncomeClient from './IpIncomeClient';
 
