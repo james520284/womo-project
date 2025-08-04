@@ -73,7 +73,7 @@ const ArStoreListOfEvent = ({ open, onOpenChange }: Props) => {
                     </div>
                   </div>
                   <div className="text-center mt-5">
-                    <Button color="secondary" size="small" width="expand">
+                    <Button color="green" size="small" width="expand">
                       <div className="d-flex align-items-center justify-content-center">
                         <ScanIcon width={16} />
                         <span className="ms-1">掃圖打卡</span>
