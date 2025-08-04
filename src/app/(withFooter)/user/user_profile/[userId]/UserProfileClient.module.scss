@@ -3,7 +3,7 @@
 }
 
 .section {
-  background-color: lighten(#6b6f82, 50%);
+  background-color: rgba($color: #6b6f82, $alpha: 0.08);
   border-radius: 16px;
   margin: 16px 0px;
   padding: 12px 20px;
@@ -17,19 +17,19 @@
 .tabBtn {
   align-self: self-end;
   font-size: 14px;
-  background-color: lighten(#6b6f82, 50%);
+  background-color: rgba($color: #6b6f82, $alpha: 0.1);
   border-radius: 20px;
   padding: 4px 12px;
   margin: 0 4px;
   &:hover {
-    background-color: darken(#6b6f82, 50%);
+    background-color: #000;
     color: #fff;
   }
 }
 .tabBtnActive {
   align-self: self-end;
   font-size: 14px;
-  background-color: darken(#6b6f82, 50%);
+  background-color: #000;
   color: #fff;
   border-radius: 20px;
   padding: 4px 12px;
