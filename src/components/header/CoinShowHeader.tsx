@@ -1,0 +1,56 @@
+'use client';
+
+import style from './CoinShowHeader.module.scss';
+import Avatar from '../ui/avatar/Avatar';
+import { useState, useEffect } from 'react';
+import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
+import Link from 'next/link';
+import ArrowIcon from '../icons/Arrow';
+import Button from '../ui/button/submit/Button';
+import AddPostIcon from '../icons/AddPost';
+
+const CoinShowHeader = () => {
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY > lastScrollY && currentY > 300) {
+        setShowHeader(false);
+      } else {
+        setShowHeader(true);
+      }
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+  return (
+    <header className={`${style.header} ${!showHeader ? style.hidden : ''}`}>
+      <div className="container-fluid">
+        <div className="d-flex  align-items-center justify-content-between py-5">
+          <div className="d-flex align-items-center">
+            <Link href="/user/my_profile">
+              <Avatar src={AVATAR_LINK.my} size={48} />
+            </Link>
+            <Link href="#" className="h6 fw-bold ms-2 d-flex align-items-center">
+              <span>蒼田楓</span>
+              <ArrowIcon />
+            </Link>
+          </div>
+
+          <Button as="a" href="/user/my_profile" color="brand" size="small">
+            <div className="d-flex align-items-center">
+              <AddPostIcon width={20} />
+              <span className="ms-1">瘋碼秀</span>
+            </div>
+          </Button>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default CoinShowHeader;

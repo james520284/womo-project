@@ -1,0 +1,25 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  box-shadow: 0 2px 10px rgba($color: #000, $alpha: 0.08);
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.coinActionBtn {
+  padding: 12px 0px;
+  margin: 0px 8px;
+  border-radius: 4px;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}

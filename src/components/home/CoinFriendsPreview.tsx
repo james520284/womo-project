@@ -26,7 +26,7 @@ const CoinFriendsPreview = () => {
               <h2 className="h5 fw-bold">
                 共 <span className="fs-2 text-primary">66</span> 人擁有我的籌碼
               </h2>
-              <Button size="small" color="secondary" onClick={() => router.push('/')}>
+              <Button size="small" color="green" onClick={() => router.push('/')}>
                 +發起籌碼應援
               </Button>
             </div>
@@ -54,7 +54,7 @@ const CoinFriendsPreview = () => {
                 ))}
               </div>
               <div className="mt-4 text-center">
-                <Button as="a" href="/" size="small" color="muted" width="expand">
+                <Button as="a" href="/" size="small" color="light" width="expand">
                   查看更多 〉
                 </Button>
               </div>
@@ -71,7 +71,7 @@ const CoinFriendsPreview = () => {
             ></Image>
             <p>
               目前沒有朋友擁有您的籌碼，立即送籌碼給朋友 &nbsp;{' '}
-              <Button size="small" color="secondary" onClick={() => {}}>
+              <Button size="small" color="green" onClick={() => {}}>
                 送籌碼
               </Button>
             </p>

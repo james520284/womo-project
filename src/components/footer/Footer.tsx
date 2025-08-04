@@ -28,7 +28,7 @@ const Footer = () => {
             }`}
           >
             <CompassIcon width={24} />
-            <span>AR聚點</span>
+            <span>闖關</span>
           </Link>
         </li>
         <li>
@@ -43,7 +43,7 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="#" className="d-flex flex-column align-items-center">
+          <Link href="/user/coin_show" className="d-flex flex-column align-items-center">
             <span className={style.avatar}>
               <Avatar src={AVATAR_LINK.my} size={24} />
             </span>
@@ -59,7 +59,7 @@ const Footer = () => {
         <li>
           <Link href="/user/ip_income" className="d-flex flex-column align-items-center">
             <IncomeIcon width={24} />
-            <span>IP收入</span>
+            <span>斜槓</span>
           </Link>
         </li>
       </ul>

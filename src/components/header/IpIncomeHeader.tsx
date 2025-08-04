@@ -6,7 +6,10 @@ import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
-import ShieldIcon from '../icons/Shield';
+import ArrowIcon from '../icons/Arrow';
+import SellIcon from '../icons/Sell';
+import { COINS } from '@/constants/coin';
+import Image from 'next/image';
 
 const IpIncomeHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -31,20 +34,28 @@ const IpIncomeHeader = () => {
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
           <button className="btn d-flex align-items-center">
-            <Coin color="red" scale={0.4}>
+            <Coin color="red" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <h1 className="h6 fw-bold ms-2">我的紅籌碼</h1>
+            <div className="text-start ms-2">
+              <h1 className="h6 fw-bold d-flex align-items-center">我的紅籌碼</h1>
+              <p className="fs-sm d-flex align-items-center">
+                <span>每顆價格</span>
+                <span className="text-warning fw-bold ms-2 me-1">100</span>
+                <Image src={COINS[2].image} alt="金籌碼" width={20} height={20} />
+                <span className="ms-1">
+                  <ArrowIcon width={20} />
+                </span>
+              </p>
+            </div>
           </button>
 
-          <div>
-            <Button color="primary" size="small">
-              購買頁
-            </Button>
-            <button type="button" className="ms-2">
-              <ShieldIcon width={24} />
-            </button>
-          </div>
+          <Button color="red" size="small">
+            <div className="d-flex align-items-center">
+              <SellIcon width={20} />
+              <span className="ms-1">賣籌碼</span>
+            </div>
+          </Button>
         </div>
       </div>
     </header>

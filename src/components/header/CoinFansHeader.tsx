@@ -6,7 +6,8 @@ import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
-import SettingIcon from '../icons/Setting';
+import SendIcon from '../icons/Send';
+import ArrowIcon from '../icons/Arrow';
 
 const CoinFansHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -30,21 +31,27 @@ const CoinFansHeader = () => {
     <header className={`${style.header} ${!showHeader ? style.hidden : ''}`}>
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
-          <button className="btn d-flex align-items-center">
-            <Coin color="green" scale={0.4}>
+          <button className="d-flex align-items-center">
+            <Coin color="green" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <h1 className="h6 fw-bold ms-2">我的綠籌碼</h1>
+            <div className="text-start ms-2">
+              <h1 className="h6 fw-bold d-flex align-items-center">我的綠籌碼</h1>
+              <p className="fs-sm d-flex align-items-center">
+                <span>本月剩餘顆數</span>
+                <span className="text-secondary fw-bold mx-2">85</span>
+                <span>
+                  <ArrowIcon width={20} />
+                </span>
+              </p>
+            </div>
           </button>
-
-          <div>
-            <Button color="secondary" size="small">
-              送籌碼
-            </Button>
-            <button type="button" className="ms-2">
-              <SettingIcon />
-            </button>
-          </div>
+          <Button color="green" size="small">
+            <div className="d-flex align-items-center">
+              <SendIcon width={20} />
+              <span className="ms-1">發籌碼</span>
+            </div>
+          </Button>
         </div>
       </div>
     </header>

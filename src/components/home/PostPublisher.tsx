@@ -37,7 +37,7 @@ const PostPublisherClient = () => {
           <Coin scale={isMobile ? 0.6 : isTablet ? 0.8 : 1} color="green">
             <Avatar href="/" src={AVATAR_LINK.my} />
           </Coin>
-          <Button size="large" color="secondary" onClick={() => setGiveMyCoinModal(true)}>
+          <Button size="large" color="green" onClick={() => setGiveMyCoinModal(true)}>
             送籌碼
           </Button>
           <GiveMyCoin open={giveMyCoinModal} onOpenChange={setGiveMyCoinModal} />
@@ -46,7 +46,7 @@ const PostPublisherClient = () => {
           <div className={style.contentBar}>
             <Link href="/user/create_article">發心情給擁有你籌碼的朋友</Link>
             <div className={style.contentBtn}>
-              <Button size="large" color="primary" onClick={handleEmojiBtn}>
+              <Button size="large" onClick={handleEmojiBtn}>
                 發佈心情
               </Button>
             </div>

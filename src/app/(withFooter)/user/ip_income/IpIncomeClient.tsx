@@ -13,16 +13,20 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Coin from '@/components/ui/coin/Coin';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import { Stores } from '@/libs/api/stores';
+import AddIcon from '@/components/icons/Add';
 
 const IpIncomeClient = () => {
   const { isMobile, isTablet } = useScreenSize();
-  const [tab, setTab] = useState<'support' | 'work'>('support');
+  const [tab, setTab] = useState<'support' | 'store' | 'work'>('support');
   const [isSort, setIsSort] = useState(false);
 
   return (
     <>
+      {/* Header */}
       {isMobile || isTablet ? <IpIncomeHeader /> : <Header />}
+
       <div className={`container-fluid ${style.wrapper}`}>
+        {/* 數據區 */}
         <section className="d-flex mt-3 mb-7">
           <div className={style.section}>
             <span className="fs-sm">本月收入 NT$</span>
@@ -40,14 +44,22 @@ const IpIncomeClient = () => {
           </div>
         </section>
 
-        <section className="mb-2">
-          <div className="mb-2">
+        {/* 頁籤區 */}
+        <section className="mb-2 d-flex align-items-center justify-content-between">
+          <div>
             <button
               type="button"
               className={tab === 'support' ? style.tabBtnActive : style.tabBtn}
               onClick={() => setTab('support')}
             >
               誰支持我
+            </button>
+            <button
+              type="button"
+              className={tab === 'store' ? style.tabBtnActive : style.tabBtn}
+              onClick={() => setTab('store')}
+            >
+              籌碼網店
             </button>
             <button
               type="button"
@@ -58,16 +70,23 @@ const IpIncomeClient = () => {
             </button>
           </div>
 
-          <div className="d-flex align-items-center  justify-content-end">
+          <div className="d-flex align-items-center">
             <Search width="96px" />
-            {tab === 'support' && (
-              <button type="button" className="ms-1" onClick={() => setIsSort(!isSort)}>
+            {tab === 'support' ? (
+              <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
                 {isSort ? <SortDownIcon /> : <SortUpIcon />}
               </button>
+            ) : (
+              tab === 'store' && (
+                <button type="button" className="ms-2">
+                  <AddIcon />
+                </button>
+              )
             )}
           </div>
         </section>
 
+        {/* 列表區 */}
         {tab === 'support' ? (
           <section>
             {AVATAR_LINK.others.map((user) => (
@@ -89,8 +108,30 @@ const IpIncomeClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="primary" size="small">
+                  <ButtonOutline color="red" size="small">
                     私聊
+                  </ButtonOutline>
+                </div>
+              </div>
+            ))}
+          </section>
+        ) : tab === 'store' ? (
+          <section>
+            {Stores.slice(0, 3).map((store) => (
+              <div
+                key={store.name}
+                className="d-flex justify-content-between align-items-center py-3 border-bottom"
+              >
+                <div className="d-flex  align-items-center">
+                  <Avatar src={store.image} size={52} />
+                  <div className="ms-2">
+                    <span className="fw-bold">{store.name}</span>
+                    <p className="me-1">平日優惠8折</p>
+                  </div>
+                </div>
+                <div>
+                  <ButtonOutline color="red" size="small">
+                    下架
                   </ButtonOutline>
                 </div>
               </div>
@@ -111,7 +152,7 @@ const IpIncomeClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="primary" size="small">
+                  <ButtonOutline color="red" size="small">
                     接案
                   </ButtonOutline>
                 </div>

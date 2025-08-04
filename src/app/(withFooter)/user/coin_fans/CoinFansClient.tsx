@@ -20,8 +20,11 @@ const CoinFansClient = () => {
 
   return (
     <>
+      {/* Header */}
       {isMobile || isTablet ? <CoinFansHeader /> : <Header />}
+
       <div className={`container-fluid ${style.wrapper}`}>
+        {/* 數據區 */}
         <section className="d-flex mt-3 mb-7">
           <div className={style.section}>
             <span className="fs-sm">持有人數</span>
@@ -39,8 +42,9 @@ const CoinFansClient = () => {
           </div>
         </section>
 
-        <section className="mb-2">
-          <div className="mb-2">
+        {/* 頁籤區 */}
+        <section className="mb-2 d-flex align-items-center justify-content-between">
+          <div>
             <button
               type="button"
               className={tab === 'now' ? style.tabBtnActive : style.tabBtn}
@@ -56,16 +60,17 @@ const CoinFansClient = () => {
               曾經的粉絲
             </button>
           </div>
-          <div className="d-flex align-items-center justify-content-end">
+          <div className=" d-flex align-items-center">
             <Search width="96px" />
             {tab === 'now' && (
-              <button type="button" className="ms-1" onClick={() => setIsSort(!isSort)}>
+              <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
                 {isSort ? <SortDownIcon /> : <SortUpIcon />}
               </button>
             )}
           </div>
         </section>
 
+        {/* 列表區 */}
         {tab === 'now' ? (
           <section>
             {AVATAR_LINK.others.map((user) => (
@@ -87,8 +92,8 @@ const CoinFansClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="secondary" size="small">
-                    送籌碼
+                  <ButtonOutline color="green" size="small">
+                    發籌碼
                   </ButtonOutline>
                 </div>
               </div>
@@ -107,8 +112,8 @@ const CoinFansClient = () => {
                   <span className="fw-bold ms-2">{user.name}</span>
                 </div>
                 <div>
-                  <ButtonOutline color="secondary" size="small">
-                    送籌碼
+                  <ButtonOutline color="green" size="small">
+                    發籌碼
                   </ButtonOutline>
                 </div>
               </div>

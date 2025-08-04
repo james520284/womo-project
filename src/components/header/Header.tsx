@@ -58,7 +58,7 @@ const Header = () => {
                 }`}
               >
                 <CompassIcon width={28} />
-                <span className="ms-1">AR聚點</span>
+                <span className="ms-1">闖關</span>
               </Link>
             </li>
             <li className="px-2">
@@ -73,7 +73,10 @@ const Header = () => {
               </Link>
             </li>
             <li className="px-2">
-              <Link href="#" className={`d-flex align-items-center ${style.headerNavLink}`}>
+              <Link
+                href="/user/coin_show"
+                className={`d-flex align-items-center ${style.headerNavLink}`}
+              >
                 <span className={style.avatar}>
                   <Avatar src={AVATAR_LINK.my} size={28} />
                 </span>
@@ -95,7 +98,7 @@ const Header = () => {
                 className={`d-flex align-items-center ${style.headerNavLink}`}
               >
                 <IncomeIcon width={28} />
-                <span className="ms-1">IP收入</span>
+                <span className="ms-1">斜槓</span>
               </Link>
             </li>
           </ul>

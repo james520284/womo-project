@@ -14,7 +14,7 @@
   font-size: 14px;
 }
 
-.button-primary {
+.button-red {
   color: #da5271;
   background-color: #fff;
   border: 1px solid #da5271;
@@ -29,13 +29,42 @@
   }
 }
 
-.button-secondary {
+.button-green {
   color: #00b1b5;
   background-color: #fff;
   border: 1px solid #00b1b5;
   &:hover {
     color: #fff;
     background-color: #00b1b5;
+  }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.button-yellow {
+  color: #e27928;
+  background-color: #fff;
+  border: 1px solid #e27928;
+  &:hover {
+    color: #fff;
+    background-color: #e27928;
+  }
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+.button-brand {
+  color: #f5f5f5;
+  background: linear-gradient(90deg, #cd506d, #e37929);
+  border: 1px solid #e27928;
+  &:hover {
+    filter: brightness(0.9);
   }
   &:disabled {
     opacity: 0.5;

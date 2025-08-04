@@ -15,7 +15,7 @@
   font-size: 14px;
 }
 
-.button-primary {
+.button-red {
   color: #fff;
   background-color: #da5271;
   &:hover {
@@ -23,7 +23,7 @@
   }
 }
 
-.button-secondary {
+.button-green {
   color: #fff;
   background-color: #00b1b5;
   &:hover {
@@ -31,11 +31,35 @@
   }
 }
 
-.button-muted {
+.button-yellow {
+  color: #fff;
+  background-color: #e27928;
+  &:hover {
+    background-color: darken(#e27928, 10%);
+  }
+}
+
+.button-dark {
+  color: #f5f5f5;
+  background-color: #495057;
+  &:hover {
+    background-color: darken(#495057, 10%);
+  }
+}
+
+.button-light {
   color: #495057;
   background-color: #f5f5f5;
   &:hover {
     background-color: darken(#f5f5f5, 10%);
+  }
+}
+
+.button-brand {
+  color: #f5f5f5;
+  background: linear-gradient(90deg, #cd506d, #e37929);
+  &:hover {
+    filter: brightness(0.9);
   }
 }
 

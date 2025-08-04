@@ -36,7 +36,7 @@ const TopicCoinsPreview = () => {
                   </div>
                   <div className="gap-2 d-flex flex-column flex-lg-row  justify-content-lg-center align-items-end align-items-lg-center">
                     <div className={style.btnWrapper}>
-                      <Button as="a" href="/" size="small" color="secondary" width="expand">
+                      <Button as="a" href="/" size="small" color="green" width="expand">
                         AR打卡
                       </Button>
                     </div>

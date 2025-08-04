@@ -35,3 +35,16 @@ $utilities: map-merge(
 .fs-sm {
   font-size: 14px;
 }
+
+.fs-xs {
+  font-size: 12px;
+}
+
+.table.no-caret * {
+  user-select: none;
+  caret-color: transparent;
+}
+
+.line-height-none {
+  line-height: 0;
+}

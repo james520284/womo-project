@@ -55,7 +55,7 @@ const HomeBanner = () => {
           <SwiperSlide key={index}>
             <div className={style.imgWrapper}>
               <Link href="#">
-                <Image src={pic} alt={`主圖${index + 1}`} fill className={style.img}></Image>
+                <Image src={pic.image} alt={`主圖${index + 1}`} fill className={style.img}></Image>
               </Link>
             </div>
           </SwiperSlide>

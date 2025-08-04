@@ -7,7 +7,7 @@ import clsx from 'clsx';
 type ButtonProps = {
   children: React.ReactNode;
   size?: 'large' | 'small';
-  color?: 'primary' | 'secondary';
+  color?: 'red' | 'green' | 'yellow' | 'brand';
   width?: 'fit' | 'expand';
   onClick?: () => void;
   as?: 'button' | 'a';
@@ -18,7 +18,7 @@ type ButtonProps = {
 const ButtonOutline = ({
   children,
   size = 'large',
-  color = 'primary',
+  color = 'red',
   width = 'fit',
   onClick,
   as = 'button',

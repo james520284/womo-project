@@ -47,7 +47,7 @@ const HotEventsPreview = () => {
                     <div className={style.btnWrapper}>
                       <Button
                         size="small"
-                        color="secondary"
+                        color="green"
                         width="expand"
                         onClick={() => setOpenArListModal(true)}
                       >
