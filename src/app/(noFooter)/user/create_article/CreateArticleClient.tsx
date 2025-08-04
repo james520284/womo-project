@@ -14,7 +14,6 @@ import Avatar from '@/components/ui/avatar/Avatar';
 import PagesHeader from '@/components/header/PagesHeader';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import CheckBtn from '@/components/ui/button/icon/CheckBtn';
-import Button from '@/components/ui/button/submit/Button';
 import AddSendCoins from '@/components/activity/sendCoins/AddSendCoins';
 import AddWishCoins from '@/components/activity/wishCoins/AddWishCoins';
 import AddExchangeCoins from '@/components/activity/exchangeCoins/AddExchangeCoins';
