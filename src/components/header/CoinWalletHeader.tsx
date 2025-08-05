@@ -27,30 +27,30 @@ const CoinWalletHeader = () => {
           <Image
             src="https://womophoto.s3.ap-northeast-1.amazonaws.com/public/assets/images/icon/quick_btn_give.svg?v=2"
             alt="送朋友"
-            width={32}
-            height={32}
+            width={24}
+            height={24}
           />
-          <span className="ms-1">送朋友</span>
+          <span className="ms-1 fs-sm">送朋友</span>
         </button>
 
         <button type="button" className={style.coinActionBtn}>
           <Image
             src="https://womophoto.s3.ap-northeast-1.amazonaws.com/public/assets/images/icon/quick_btn_receive.svg"
             alt="打賞我"
-            width={32}
-            height={32}
+            width={24}
+            height={24}
           />
-          <span className="ms-1">打賞我</span>
+          <span className="ms-1 fs-sm">打賞我</span>
         </button>
 
         <button type="button" className={style.coinActionBtn}>
           <Image
             src="https://womophoto.s3.ap-northeast-1.amazonaws.com/public/assets/images/icon/quick_btn_get.svg?v=2"
             alt="回謝你"
-            width={32}
-            height={32}
+            width={24}
+            height={24}
           />
-          <span className="ms-1">回謝你</span>
+          <span className="ms-1 fs-sm">回謝你</span>
         </button>
       </div>
     </header>

@@ -27,17 +27,17 @@ const CoinFansClient = () => {
         {/* 數據區 */}
         <section className="d-flex mt-3 mb-7">
           <div className={style.section}>
-            <span className="fs-sm">持有人數</span>
-            <span className="align-self-center fw-bold fs-5 py-2">11.5K</span>
+            <span className="fs-sm">持有我籌碼的人</span>
+            <span className="align-self-center fw-bold fs-5 py-2">115</span>
             <button type="button" className={style.dataBtn}>
-              呼叫粉絲
+              看看有誰
             </button>
           </div>
           <div className={style.section}>
-            <span className="fs-sm">流通顆數</span>
-            <span className="align-self-center fw-bold fs-5 py-2">24.7K</span>
+            <span className="fs-sm">我籌碼遇到的人</span>
+            <span className="align-self-center fw-bold fs-5 py-2">615</span>
             <button type="button" className={style.dataBtn}>
-              加強推廣
+              隨機漂流
             </button>
           </div>
         </section>
@@ -50,14 +50,14 @@ const CoinFansClient = () => {
               className={tab === 'now' ? style.tabBtnActive : style.tabBtn}
               onClick={() => setTab('now')}
             >
-              現有的粉絲
+              一天一信
             </button>
             <button
               type="button"
               className={tab === 'past' ? style.tabBtnActive : style.tabBtn}
               onClick={() => setTab('past')}
             >
-              曾經的粉絲
+              關係標記
             </button>
           </div>
           <div className=" d-flex align-items-center">
@@ -81,19 +81,22 @@ const CoinFansClient = () => {
                 <div className="d-flex  align-items-center">
                   <Avatar src={user.image} size={52} />
                   <div className="ms-2">
-                    <span className="fw-bold">{user.name}</span>
                     <div className="d-flex  align-items-center">
-                      <p className="me-1">持有籌碼</p>
+                      <span className="fw-bold">{user.name}</span>
+                      <span className="text-grey-400 fs-xs">．2天前</span>
+                    </div>
+                    <div className="d-flex  align-items-center fs-sm">
+                      <span className="me-1">使用１顆</span>
                       <Coin scale={0.25} color="green">
                         <Avatar src={AVATAR_LINK.my} />
                       </Coin>
-                      <span className="ms-1 fw-bold text-secondary">{user.num}</span>
+                      <span className="ms-1">寫信給你</span>
                     </div>
                   </div>
                 </div>
                 <div>
                   <ButtonOutline color="green" size="small">
-                    發籌碼
+                    開信
                   </ButtonOutline>
                 </div>
               </div>
@@ -108,12 +111,23 @@ const CoinFansClient = () => {
               >
                 <div className="d-flex  align-items-center">
                   <Avatar src={user.image} size={52} />
-
-                  <span className="fw-bold ms-2">{user.name}</span>
+                  <div className="ms-2">
+                    <span className="fw-bold">{user.name}</span>
+                    <div className="d-flex  align-items-center fs-sm">
+                      {user.tags?.map((tag, index) => (
+                        <span
+                          key={`${user.id}-${index}`}
+                          className="me-1 bg-grey-100 rounded p-1 fs-xs"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <ButtonOutline color="green" size="small">
-                    發籌碼
+                    回貼
                   </ButtonOutline>
                 </div>
               </div>

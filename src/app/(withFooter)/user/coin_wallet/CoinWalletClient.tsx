@@ -64,33 +64,31 @@ const CoinWalletClient = () => {
           <div></div>
         </section>
 
-        <section className="bg-grey-50 px-5 py-8 d-flex justify-content-between align-items-center">
+        <section className="bg-grey-50 px-5 py-8 d-flex justify-content-between align-items-center fs-sm">
           {tab === 'greenCoin' ? (
             <p className="fw-bold">
-              綠籌碼主：
-              <button className="px-1 text-coinGreen text-decoration-underline">74</button>人，共
+              綠籌碼：
               <span className="px-1 text-coinGreen">96</span>顆
             </p>
           ) : tab === 'redCoin' ? (
             <p className="fw-bold">
-              紅籌碼主：<button className="px-1 text-coinRed text-decoration-underline">9</button>
-              人，共
-              <span className="px-1 text-coinRed">12</span>顆
+              紅籌碼：<span className="px-1 text-coinRed">12</span>顆
             </p>
           ) : (
             <p className="fw-bold">
-              金籌碼：<button className="px-1 text-coinYellow">980</button>顆
+              金籌碼：<span className="px-1 text-coinYellow">980</span>顆
             </p>
           )}
 
           {tab !== 'yellowCoin' ? (
             <div className="d-flex">
               <Search width="100px" />
-              <button type="button" className="px-2">
-                <FilterIcon />
+              <button type="button" className="px-2 line-height-none">
+                <FilterIcon width={20} />
               </button>
               <button
                 type="button"
+                className="line-height-none"
                 onClick={() => {
                   if (tab === 'greenCoin') {
                     setIsDeletableGreenCoin(true);
@@ -99,7 +97,7 @@ const CoinWalletClient = () => {
                   }
                 }}
               >
-                <DeleteIcon />
+                <DeleteIcon width={20} />
               </button>
             </div>
           ) : (
@@ -133,7 +131,7 @@ const CoinWalletClient = () => {
               {KOLs.map((kol) => (
                 <div
                   key={kol.name}
-                  className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start"
+                  className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-"
                 >
                   {isDeletableGreenCoin && (
                     <input

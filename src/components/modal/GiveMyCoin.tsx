@@ -33,26 +33,27 @@ const GiveMyCoin = ({ open, onOpenChange }: Props) => {
             <Coin scale={0.5} color="green">
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <span className="h6 fw-bold ms-2">送我的籌碼給朋友</span>
+            <span className="h6 fw-bold ms-2">發我的籌碼給朋友</span>
           </Dialog.Title>
           <div className={style.bg}>
-            <div className="d-flex justify-content-between">
+            <div className="row flex-column align-items-center gy-5">
               <div className={style.section}>
                 <h3 className="fw-bold h6">朋友掃碼</h3>
                 <Image
                   src="https://upload.wikimedia.org/wikipedia/commons/d/d0/QR_code_for_mobile_English_Wikipedia.svg"
                   alt="QRcode"
-                  width={180}
-                  height={180}
+                  width={160}
+                  height={160}
                 />
                 <div>
-                  <Button size="small">下載 QR code</Button>
+                  <Button size="small">下載</Button>
                 </div>
               </div>
+
               <div className={style.section}>
                 <h3 className="fw-bold h6 mb-5">轉傳發送</h3>
-                <div className="d-flex justify-content-evenly align-items-center mb-5">
-                  <div>
+                <div className="d-flex  mb-5">
+                  <div className="mx-2">
                     <Image
                       src="https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/icon_share_social_fb.png"
                       alt="fb"
@@ -60,7 +61,7 @@ const GiveMyCoin = ({ open, onOpenChange }: Props) => {
                       height={60}
                     />
                   </div>
-                  <div>
+                  <div className="mx-2">
                     <Image
                       src="https://d1q14jmvwk39e0.cloudfront.net/public/assets/images/icon/icon_share_social_line.png"
                       alt="line"
@@ -71,25 +72,12 @@ const GiveMyCoin = ({ open, onOpenChange }: Props) => {
                 </div>
                 <input
                   type="text"
-                  className="form-control"
+                  className="form-control mb-5"
                   value="http://womo_front.dymain.com/user-profile-gallery.php?=get_coin_success"
                   onChange={() => {}}
                 />
                 <div className="mt-auto">
-                  <Button size="small">複製網址</Button>
-                </div>
-              </div>
-            </div>
-            <div className={`${style.section} ${style.section_lg} mt-5`}>
-              <h3 className="fw-bold h6 mb-5">WOMO站內送</h3>
-              <div>
-                <div className="d-flex justify-content-between align-items-center my-2">
-                  <p>發送給追蹤者</p>
-                  <Button size="small">前往</Button>
-                </div>
-                <div className="d-flex justify-content-between align-items-center my-2">
-                  <p>手動發送紀錄</p>
-                  <ButtonOutline size="small">查詢</ButtonOutline>
+                  <Button size="small">複製</Button>
                 </div>
               </div>
             </div>

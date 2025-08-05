@@ -1,0 +1,21 @@
+.wrapper {
+  max-width: 700px !important;
+}
+
+.addPostIcon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.newPostAlarm {
+  padding: 3px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, #cd506d, #e37929);
+}
+
+.myPost {
+  padding: 3px;
+  border-radius: 50%;
+  background: transparent;
+}

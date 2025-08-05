@@ -33,8 +33,7 @@
     &:hover {
       color: #da5271;
       .avatar {
-        border-radius: 50%;
-        outline: 3px solid #da5271;
+        outline: 2px solid #da5271;
       }
     }
   }
@@ -48,4 +47,9 @@
       }
     }
   }
+}
+
+.avatar {
+  transform: scale(1.5);
+  border-radius: 50%;
 }

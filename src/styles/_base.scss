@@ -39,3 +39,7 @@ button {
 input[type='checkbox'] {
   accent-color: #da5271;
 }
+
+input:focus {
+  border-color: #000; /* 改為你要的顏色 */
+}

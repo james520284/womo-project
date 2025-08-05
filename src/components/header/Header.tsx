@@ -9,7 +9,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 // icons
-import CompassIcon from '../icons/Compass';
+import ShowIcon from '../icons/Show';
 import WalletIcon from '../icons/Wallet';
 import IncomeIcon from '../icons/Income';
 import ChatFriendIcon from '../icons/ChatFriend';
@@ -52,20 +52,20 @@ const Header = () => {
           <ul className={`d-none d-lg-flex justify-content-between `}>
             <li className="px-2">
               <Link
-                href="#"
+                href="/"
                 className={`d-flex align-items-center ${style.headerNavLink} ${
-                  pathName === '/' ? 'text-brand' : 'text-dark'
+                  pathName === '/' ? 'text-brand' : ''
                 }`}
               >
-                <CompassIcon width={28} />
-                <span className="ms-1">闖關</span>
+                <ShowIcon width={28} />
+                <span className="ms-1">瘋碼秀</span>
               </Link>
             </li>
             <li className="px-2">
               <Link
                 href="/user/coin_wallet"
                 className={`d-flex align-items-center ${style.headerNavLink} ${
-                  pathName === '/user/coin_wallet' ? 'text-brand' : 'text-dark'
+                  pathName === '/user/coin_wallet' ? 'text-brand' : ''
                 }`}
               >
                 <WalletIcon width={28} />
@@ -74,31 +74,39 @@ const Header = () => {
             </li>
             <li className="px-2">
               <Link
-                href="/user/coin_show"
-                className={`d-flex align-items-center ${style.headerNavLink}`}
+                href="/user/my_profile"
+                className={`d-flex align-items-center ${style.headerNavLink} `}
               >
-                <span className={style.avatar}>
+                <span
+                  className={style.avatar}
+                  style={{
+                    outline: `${pathName === '/user/my_profile' ? '2px solid #da5271' : ''}`,
+                  }}
+                >
                   <Avatar src={AVATAR_LINK.my} size={28} />
                 </span>
-                <span className="ms-1">瘋碼秀</span>
               </Link>
             </li>
             <li className="px-2">
               <Link
                 href="/user/coin_fans"
-                className={`d-flex align-items-center ${style.headerNavLink}`}
+                className={`d-flex align-items-center ${style.headerNavLink}  ${
+                  pathName === '/user/coin_fans' ? 'text-brand' : ''
+                }`}
               >
                 <ChatFriendIcon width={28} />
-                <span className="ms-1">籌碼粉</span>
+                <span className="ms-1">粉絲包</span>
               </Link>
             </li>
             <li className="px-2">
               <Link
                 href="/user/ip_income"
-                className={`d-flex align-items-center ${style.headerNavLink}`}
+                className={`d-flex align-items-center ${style.headerNavLink} ${
+                  pathName === '/user/ip_income' ? 'text-brand' : ''
+                }`}
               >
                 <IncomeIcon width={28} />
-                <span className="ms-1">斜槓</span>
+                <span className="ms-1">玩斜槓</span>
               </Link>
             </li>
           </ul>

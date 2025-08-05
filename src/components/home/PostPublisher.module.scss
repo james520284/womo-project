@@ -1,11 +1,11 @@
 .bg {
-  background-color: #da5271;
-  padding-top: 36px;
-  padding-bottom: 36px;
+  background: linear-gradient(135deg, #cd506d, #e37929);
+  padding: 4px 0;
 }
 
 .wrapper {
   max-width: 700px !important;
+  position: relative;
 }
 
 .content {

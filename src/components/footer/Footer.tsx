@@ -6,10 +6,10 @@ import style from './Footer.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 // icons
-import CompassIcon from '../icons/Compass';
 import WalletIcon from '../icons/Wallet';
 import ChatFriendIcon from '../icons/ChatFriend';
 import IncomeIcon from '../icons/Income';
+import ShowIcon from '../icons/Show';
 // 元件
 import Avatar from '../ui/avatar/Avatar';
 // const
@@ -27,8 +27,8 @@ const Footer = () => {
               pathName === '/' ? 'text-brand' : 'text-dark'
             }`}
           >
-            <CompassIcon width={24} />
-            <span>闖關</span>
+            <ShowIcon width={24} />
+            <span>瘋碼秀</span>
           </Link>
         </li>
         <li>
@@ -43,23 +43,37 @@ const Footer = () => {
           </Link>
         </li>
         <li>
-          <Link href="/user/coin_show" className="d-flex flex-column align-items-center">
-            <span className={style.avatar}>
+          <Link href="/user/my_profile" className="d-flex flex-column align-items-center">
+            <span
+              className={style.avatar}
+              style={{
+                outline: `${pathName === '/user/my_profile' ? '2px solid #da5271' : ''}`,
+              }}
+            >
               <Avatar src={AVATAR_LINK.my} size={24} />
             </span>
-            <span>瘋碼秀</span>
           </Link>
         </li>
         <li>
-          <Link href="/user/coin_fans" className="d-flex flex-column align-items-center">
+          <Link
+            href="/user/coin_fans"
+            className={`d-flex flex-column align-items-center ${
+              pathName === '/user/coin_fans' ? 'text-brand' : 'text-dark'
+            }`}
+          >
             <ChatFriendIcon width={24} />
-            <span>籌碼粉</span>
+            <span>粉絲包</span>
           </Link>
         </li>
         <li>
-          <Link href="/user/ip_income" className="d-flex flex-column align-items-center">
+          <Link
+            href="/user/ip_income"
+            className={`d-flex flex-column align-items-center ${
+              pathName === '/user/ip_income' ? 'text-brand' : 'text-dark'
+            }`}
+          >
             <IncomeIcon width={24} />
-            <span>斜槓</span>
+            <span>玩斜槓</span>
           </Link>
         </li>
       </ul>

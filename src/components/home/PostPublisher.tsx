@@ -5,26 +5,19 @@
 import style from './PostPublisher.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
-//元件
 import Button from '@/components/ui/button/submit/Button';
 import Coin from '@/components/ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import CheckBtn from '../ui/button/icon/CheckBtn';
-import GiveMyCoin from '../modal/GiveMyCoin';
 import SectionUI from '../ui/section/SectionUI';
-//hooks
 import { useState } from 'react';
-import useScreenSize from '@/hooks/useScreenSize';
 import { useRouter } from 'next/navigation';
-//constants
 import { EMOJI } from '@/constants/emoji';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
 const PostPublisherClient = () => {
   const [emojiIndex, setEmojiIndex] = useState(0);
   const router = useRouter();
-  const { isMobile, isTablet } = useScreenSize();
-  const [giveMyCoinModal, setGiveMyCoinModal] = useState(false);
 
   const handleEmojiBtn = () => {
     router.push(`/user/create_article?emojiIndex=${emojiIndex}`);
@@ -33,21 +26,14 @@ const PostPublisherClient = () => {
   return (
     <section className={style.bg}>
       <div className={`container ${style.wrapper}`}>
-        <div className="d-flex justify-content-between align-items-center">
-          <Coin scale={isMobile ? 0.6 : isTablet ? 0.8 : 1} color="green">
-            <Avatar href="/" src={AVATAR_LINK.my} />
-          </Coin>
-          <Button size="large" color="green" onClick={() => setGiveMyCoinModal(true)}>
-            送籌碼
-          </Button>
-          <GiveMyCoin open={giveMyCoinModal} onOpenChange={setGiveMyCoinModal} />
-        </div>
         <SectionUI>
           <div className={style.contentBar}>
-            <Link href="/user/create_article">發心情給擁有你籌碼的朋友</Link>
+            <Link href="/user/create_article" className="fs-sm">
+              發心情給持有我籌碼的人
+            </Link>
             <div className={style.contentBtn}>
-              <Button size="large" onClick={handleEmojiBtn}>
-                發佈心情
+              <Button size="large" onClick={handleEmojiBtn} color="brand">
+                發心情
               </Button>
             </div>
           </div>
