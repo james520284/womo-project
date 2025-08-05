@@ -156,7 +156,7 @@ const CoinWalletClient = () => {
                     </div>
                   </Link>
 
-                  <span className="pb-1 text-truncate w-100 text-center fs-sm">{kol.name}</span>
+                  <span className="mb-1 text-truncate w-100 text-center fs-sm">{kol.name}</span>
                   <button
                     type="button"
                     className={`text-truncate ${style.badge}`}

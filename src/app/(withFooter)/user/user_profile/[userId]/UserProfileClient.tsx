@@ -94,7 +94,7 @@ const UserProfileClient = () => {
               {homeBanner.map((img) => (
                 <div key={img.id} className="col-4">
                   <div className="position-relative">
-                    <Link href="#">
+                    <Link href="/user/article_view/123">
                       <div
                         className={`${style.imgWrapper} ${
                           img.activity === '秘密' ? style.imgBlur : ''
@@ -102,17 +102,18 @@ const UserProfileClient = () => {
                       >
                         <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
                       </div>
-                    </Link>
-                    <div className={style.imgText}>
-                      <div className="d-flex align-items-center">
-                        <ViewIcon width={20} />
-                        <span className="ms-1">{img.view}</span>
+
+                      <div className={style.imgText}>
+                        <div className="d-flex align-items-center">
+                          <ViewIcon width={20} />
+                          <span className="ms-1">{img.view}</span>
+                        </div>
+                        <span>
+                          <span>#</span>
+                          {img.activity}
+                        </span>
                       </div>
-                      <span>
-                        <span>#</span>
-                        {img.activity}
-                      </span>
-                    </div>
+                    </Link>
                   </div>
                 </div>
               ))}

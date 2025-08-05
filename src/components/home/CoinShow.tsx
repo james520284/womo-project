@@ -52,23 +52,24 @@ const CoinShow = () => {
                     >
                       <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
                     </div>
+
+                    <div className={style.imgAuthor}>
+                      <div style={{ flexShrink: 0 }}>
+                        <Avatar src={img.avatar} size={24} />
+                      </div>
+                      <span className="ms-1">{img.author}</span>
+                    </div>
+                    <div className={style.imgText}>
+                      <div className="d-flex align-items-center">
+                        <ViewIcon width={20} />
+                        <span className="ms-1">{img.view}</span>
+                      </div>
+                      <span>
+                        <span>#</span>
+                        {img.activity}
+                      </span>
+                    </div>
                   </Link>
-                  <div className={style.imgAuthor}>
-                    <div style={{ flexShrink: 0 }}>
-                      <Avatar src={img.avatar} size={24} />
-                    </div>
-                    <span className="ms-1">{img.author}</span>
-                  </div>
-                  <div className={style.imgText}>
-                    <div className="d-flex align-items-center">
-                      <ViewIcon width={20} />
-                      <span className="ms-1">{img.view}</span>
-                    </div>
-                    <span>
-                      <span>#</span>
-                      {img.activity}
-                    </span>
-                  </div>
                 </div>
               </div>
             ))}
