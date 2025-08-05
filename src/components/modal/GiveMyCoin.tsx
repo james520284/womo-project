@@ -5,12 +5,9 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import style from './GiveMyCoin.module.scss';
 import Image from 'next/image';
-// 元件
 import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import Button from '../ui/button/submit/Button';
-import ButtonOutline from '../ui/button/submit/ButtonOutline';
-// const
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
 type Props = {

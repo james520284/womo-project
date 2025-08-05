@@ -6,14 +6,11 @@ import style from './PostPublisher.module.scss';
 import Link from 'next/link';
 import Image from 'next/image';
 import Button from '@/components/ui/button/submit/Button';
-import Coin from '@/components/ui/coin/Coin';
-import Avatar from '../ui/avatar/Avatar';
 import CheckBtn from '../ui/button/icon/CheckBtn';
 import SectionUI from '../ui/section/SectionUI';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { EMOJI } from '@/constants/emoji';
-import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
 const PostPublisherClient = () => {
   const [emojiIndex, setEmojiIndex] = useState(0);
