@@ -29,17 +29,17 @@ const IpIncomeClient = () => {
         {/* 數據區 */}
         <section className="d-flex mt-3 mb-7">
           <div className={style.section}>
-            <span className="fs-sm">本月收入 NT$</span>
-            <span className="align-self-center fw-bold fs-5 py-2">6,900</span>
+            <span className="fs-sm">我籌碼賺的零用錢</span>
+            <span className="align-self-center fw-bold fs-5 py-2">NT$ 690</span>
             <button type="button" className={style.dataBtn}>
               提領
             </button>
           </div>
           <div className={style.section}>
-            <span className="fs-sm">累積收入 NT$</span>
-            <span className="align-self-center fw-bold fs-5 py-2">124,500</span>
+            <span className="fs-sm">已經提領的零用錢</span>
+            <span className="align-self-center fw-bold fs-5 py-2">NT$ 1,245</span>
             <button type="button" className={style.dataBtn}>
-              分析
+              帳戶
             </button>
           </div>
         </section>
@@ -59,14 +59,14 @@ const IpIncomeClient = () => {
               className={tab === 'store' ? style.tabBtnActive : style.tabBtn}
               onClick={() => setTab('store')}
             >
-              籌碼網店
+              我的網店
             </button>
             <button
               type="button"
               className={tab === 'work' ? style.tabBtnActive : style.tabBtn}
               onClick={() => setTab('work')}
             >
-              品牌業配
+              我的業配
             </button>
           </div>
 

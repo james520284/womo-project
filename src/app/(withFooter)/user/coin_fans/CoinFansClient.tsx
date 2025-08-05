@@ -82,7 +82,7 @@ const CoinFansClient = () => {
                   <Avatar src={user.image} size={52} />
                   <div className="ms-2">
                     <div className="d-flex  align-items-center">
-                      <span className="fw-bold">{user.name}</span>
+                      <span className="fw-bold mb-1">{user.name}</span>
                       <span className="text-grey-400 fs-xs">．2天前</span>
                     </div>
                     <div className="d-flex  align-items-center fs-sm">
@@ -112,7 +112,8 @@ const CoinFansClient = () => {
                 <div className="d-flex  align-items-center">
                   <Avatar src={user.image} size={52} />
                   <div className="ms-2">
-                    <span className="fw-bold">{user.name}</span>
+                    <span className="fw-bold mb-1">{user.name}</span>
+                    <span className="text-grey-400 fs-xs">．標記我們</span>
                     <div className="d-flex  align-items-center fs-sm">
                       {user.tags?.map((tag, index) => (
                         <span
@@ -127,7 +128,7 @@ const CoinFansClient = () => {
                 </div>
                 <div>
                   <ButtonOutline color="green" size="small">
-                    回貼
+                    回標
                   </ButtonOutline>
                 </div>
               </div>

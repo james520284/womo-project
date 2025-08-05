@@ -95,7 +95,7 @@ const Header = () => {
                 }`}
               >
                 <ChatFriendIcon width={28} />
-                <span className="ms-1">粉絲包</span>
+                <span className="ms-1">我們倆</span>
               </Link>
             </li>
             <li className="px-2">

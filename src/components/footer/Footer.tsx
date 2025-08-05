@@ -62,7 +62,7 @@ const Footer = () => {
             }`}
           >
             <ChatFriendIcon width={24} />
-            <span>粉絲包</span>
+            <span>我們倆</span>
           </Link>
         </li>
         <li>

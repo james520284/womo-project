@@ -17,6 +17,9 @@ import { KOLs } from '@/libs/api/kols';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Link from 'next/link';
+import StickyIcon from '@/components/icons/Sticky';
+import AiFaceIcon from '@/components/icons/AiFace';
+import CloakIcon from '@/components/icons/Cloak';
 
 const CoinWalletClient = () => {
   const { isMobile, isTablet } = useScreenSize();
@@ -67,16 +70,16 @@ const CoinWalletClient = () => {
         <section className="bg-grey-50 px-5 py-8 d-flex justify-content-between align-items-center fs-sm">
           {tab === 'greenCoin' ? (
             <p className="fw-bold">
-              綠籌碼：
+              已蒐集綠籌碼：
               <span className="px-1 text-coinGreen">96</span>顆
             </p>
           ) : tab === 'redCoin' ? (
             <p className="fw-bold">
-              紅籌碼：<span className="px-1 text-coinRed">12</span>顆
+              已蒐集紅籌碼：<span className="px-1 text-coinRed">12</span>顆
             </p>
           ) : (
             <p className="fw-bold">
-              金籌碼：<span className="px-1 text-coinYellow">980</span>顆
+              剩餘金籌碼：<span className="px-1 text-coinYellow">980</span>顆
             </p>
           )}
 
@@ -107,7 +110,7 @@ const CoinWalletClient = () => {
               </Button>
               &nbsp;
               <ButtonOutline color="yellow" size="small">
-                購物
+                明細
               </ButtonOutline>
             </div>
           )}
@@ -146,11 +149,14 @@ const CoinWalletClient = () => {
                     <Coin color="green" scale={0.9}>
                       <Avatar src={kol.image} />
                     </Coin>
+                    <div className="text-center">
+                      <span className={style.numTag} style={{ color: '#00b0b4' }}>
+                        2
+                      </span>
+                    </div>
                   </Link>
 
-                  <span className="pt-2 pb-1 text-truncate w-100 text-center fs-sm">
-                    {kol.name}
-                  </span>
+                  <span className="pb-1 text-truncate w-100 text-center fs-sm">{kol.name}</span>
                   <button
                     type="button"
                     className={`text-truncate ${style.badge}`}
@@ -202,17 +208,20 @@ const CoinWalletClient = () => {
                     <Coin color="red" scale={0.9}>
                       <Avatar src={kol.image} />
                     </Coin>
+                    <div className="text-center">
+                      <span className={style.numTag} style={{ color: '#d3745d' }}>
+                        2
+                      </span>
+                    </div>
                   </button>
-                  <span className="pt-2 pb-1 text-truncate w-100 text-center fs-sm">
-                    {kol.name}
-                  </span>
+                  <span className="pb-1 text-truncate w-100 text-center fs-sm">{kol.name}</span>
                 </div>
               ))}
             </div>
           </SectionUI>
         ) : (
           <SectionUI>
-            <table className="table table-striped fs-xs no-caret">
+            {/* <table className="table table-striped fs-xs no-caret">
               <thead>
                 <tr>
                   <th scope="col">單號</th>
@@ -270,7 +279,69 @@ const CoinWalletClient = () => {
                   </td>
                 </tr>
               </tbody>
-            </table>
+            </table> */}
+            <div className="row gy-10">
+              <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
+                {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
+                <button type="button">
+                  <AiFaceIcon width={52} color="#e3bc41" />
+                </button>
+                <div className="text-center">
+                  <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
+                    25
+                  </span>
+                </div>
+                <span className="pt-2 pb-1 text-truncate w-100 text-center fs-sm">AI換臉</span>
+              </div>
+              <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
+                {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
+                <button type="button">
+                  <CloakIcon width={52} color="#e3bc41" />
+                </button>
+                <div className="text-center">
+                  <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
+                    60
+                  </span>
+                </div>
+                <span className="pt-2 pb-1 text-truncate w-100 text-center fs-sm">隱形斗篷</span>
+              </div>
+              <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
+                {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
+                <button type="button">
+                  <StickyIcon width={52} color="#e3bc41" />
+                </button>
+                <div className="text-center">
+                  <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
+                    100
+                  </span>
+                </div>
+                <span className="pt-2 pb-1 text-truncate w-100 text-center fs-sm">螃蟹哥貼圖</span>
+              </div>
+              <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
+                {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
+                <button type="button">
+                  <AiFaceIcon width={52} color="#e3bc41" />
+                </button>
+                <div className="text-center">
+                  <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
+                    150
+                  </span>
+                </div>
+                <span className="pt-2 pb-1 text-truncate w-100 text-center fs-sm">虛寶X</span>
+              </div>
+              <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
+                {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
+                <button type="button">
+                  <CloakIcon width={52} color="#e3bc41" />
+                </button>
+                <div className="text-center">
+                  <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
+                    200
+                  </span>
+                </div>
+                <span className="pt-2 pb-1 text-truncate w-100 text-center fs-sm">虛寶Y</span>
+              </div>
+            </div>
           </SectionUI>
         )}
       </div>
