@@ -52,7 +52,6 @@ import {
 } from '@/components/icons/AllIcon';
 import Link from 'next/link';
 import Button from '@/components/ui/button/submit/Button';
-import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 
 const iconMap = [
   AddIcon,
@@ -122,15 +121,15 @@ const Compo = () => {
       ))}
       <hr />
       <h2 className="mb-2">按鈕區</h2>
-      <Button size="large" color="red">
+      <Button size="lg" color="red">
         大紅
       </Button>{' '}
       &nbsp;
-      <Button size="middle" color="red">
+      <Button size="md" color="red">
         中紅
       </Button>
       &nbsp;
-      <Button size="small" color="red">
+      <Button size="sm" color="red">
         小紅
       </Button>
       &nbsp;
