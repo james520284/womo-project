@@ -97,8 +97,8 @@ const IpIncomeClient = () => {
                 <div className="d-flex  align-items-center">
                   <Avatar src={user.image} size={52} />
                   <div className="ms-2">
-                    <span className="fw-bold">{user.name}</span>
-                    <div className="d-flex  align-items-center">
+                    <span className="fw-bold mb-1">{user.name}</span>
+                    <div className="d-flex  align-items-center fs-sm">
                       <p className="me-1">持有籌碼</p>
                       <Coin scale={0.25} color="red">
                         <Avatar src={AVATAR_LINK.my} />
@@ -125,8 +125,8 @@ const IpIncomeClient = () => {
                 <div className="d-flex  align-items-center">
                   <Avatar src={store.image} size={52} />
                   <div className="ms-2">
-                    <span className="fw-bold">{store.name}</span>
-                    <p className="me-1">平日優惠8折</p>
+                    <span className="fw-bold mb-1">{store.name}</span>
+                    <p className="me-1 fs-sm">平日優惠8折</p>
                   </div>
                 </div>
                 <div>
@@ -147,8 +147,8 @@ const IpIncomeClient = () => {
                 <div className="d-flex  align-items-center">
                   <Avatar src={store.image} size={52} />
                   <div className="ms-2">
-                    <span className="fw-bold">{store.name}</span>
-                    <p className="me-1">案件：找網紅到店玩AR</p>
+                    <span className="fw-bold mb-1">{store.name}</span>
+                    <p className="me-1 fs-sm">案件：找網紅到店玩AR</p>
                   </div>
                 </div>
                 <div>

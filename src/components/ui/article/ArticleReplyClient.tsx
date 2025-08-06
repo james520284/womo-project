@@ -38,16 +38,13 @@ const ArticleReplyClient = () => {
       </div>
       {!isInputFocused ? (
         <div className="col-4">
-          <button
-            type="button"
-            className="d-flex align-items-center justify-content-center bg-secondary rounded w-100 py-1"
-          >
+          <button type="button" className={style.coinActionBtn}>
             <div className={style.coinWrapper}>
               <Coin color="green" scale={0.3}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
             </div>
-            <span className="ms-2 fw-bold fs-sm text-light">領取</span>
+            <span className="ms-3 fw-bold fs-sm text-light">領取</span>
           </button>
         </div>
       ) : (

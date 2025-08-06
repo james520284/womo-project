@@ -28,7 +28,7 @@ const MyProfileClient = () => {
         {/* 數據區 */}
         <section className="d-flex mt-3 mb-7">
           <div className={style.section}>
-            <span className="fs-sm">籌碼貼文</span>
+            <span className="fs-sm">我的籌碼貼文</span>
             <span className="align-self-center fw-bold fs-5 py-2">36</span>
             <div className="ms-auto">
               <Button color="green" size="small">
@@ -37,7 +37,7 @@ const MyProfileClient = () => {
             </div>
           </div>
           <div className={style.section}>
-            <span className="fs-sm">AR空間</span>
+            <span className="fs-sm">我的AR空間</span>
             <span className="align-self-center fw-bold fs-5 py-2">19</span>
             <div className="ms-auto">
               <Button color="red" size="small">

@@ -4,7 +4,7 @@ import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
 import ViewSolidIcon from '@/components/icons/ViewSolid';
 import MoodIcon from '@/components/icons/Mood';
-import ChatIcon from '@/components/icons/ChatFriend';
+import ChatIcon from '@/components/icons/Chat';
 import CoinEmojiIcon from '@/components/icons/CoinEmoji';
 import ArticleReplyClient from '@/components/ui/article/ArticleReplyClient';
 import Avatar from '@/components/ui/avatar/Avatar';
@@ -37,7 +37,7 @@ const articleView = () => {
       </section>
 
       <div className="container-fluid">
-        <section className=" mt-3 mb-5 text-muted d-flex align-items-center">
+        <section className=" mt-3 mb-5 d-flex align-items-center text-grey-400">
           <div>
             <ViewSolidIcon width={20} />
             <span className="fs-xs fw-bold">13.5K</span>

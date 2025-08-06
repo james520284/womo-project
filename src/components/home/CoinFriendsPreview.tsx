@@ -28,19 +28,22 @@ const CoinFriendsPreview = () => {
             </h2>
 
             <SectionUI>
-              <div className="row row-cols-lg-3 flex-column flex-lg-row">
-                <div className="d-flex justify-content-center align-items-center">
-                  <div>
-                    <Button size="small" color="green" onClick={() => setGiveMyCoinModal(true)}>
-                      發籌碼給更多人
-                    </Button>
-                  </div>
-                  <div className="ms-1">
-                    <ButtonOutline size="small" color="green" onClick={() => router.push('/')}>
-                      呼叫應援
-                    </ButtonOutline>
-                  </div>
+              {/* 行動呼籲按鈕 */}
+              <div className="d-flex justify-content-center align-items-center mb-lg-5">
+                <div>
+                  <Button size="small" color="green" onClick={() => setGiveMyCoinModal(true)}>
+                    發籌碼給更多人
+                  </Button>
                 </div>
+                <div className="ms-1">
+                  <ButtonOutline size="small" color="green" onClick={() => router.push('/')}>
+                    呼叫應援
+                  </ButtonOutline>
+                </div>
+              </div>
+
+              {/* 列表區 */}
+              <div className="row row-cols-lg-3 flex-column flex-lg-row">
                 {AVATAR_LINK.others.map((user, index) => (
                   <div key={index} className={`${style.coinFriend}`}>
                     <div className="d-flex justify-content-lg-center align-items-center py-5 ">

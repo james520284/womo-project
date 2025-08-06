@@ -17,7 +17,9 @@ const FriendsNewPost = () => {
               <Avatar src={AVATAR_LINK.my} />
             </Link>
             <span className="fs-xs mt-2">我</span>
-            <ArrowSolidIcon color="#da5271" width={16} />
+            <div className={style.arrowSolidIcon}>
+              <ArrowSolidIcon color="#da5271" width={16} />
+            </div>
           </div>
           {AVATAR_LINK.others.map((user) => (
             <div key={user.name} className="d-flex flex-column align-items-center ms-5">
