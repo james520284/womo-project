@@ -8,8 +8,7 @@ import CoinFansHeader from '@/components/header/CoinFansHeader';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Coin from '@/components/ui/coin/Coin';
-import SortUpIcon from '@/components/icons/SortUp';
-import SortDownIcon from '@/components/icons/SortDown';
+import { SortUpIcon, SortDownIcon } from '@/components/icons/AllIcon';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Search from '@/components/ui/search/Search';
 
@@ -95,7 +94,7 @@ const CoinFansClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="green" size="small">
+                  <ButtonOutline color="green" size="md">
                     開信
                   </ButtonOutline>
                 </div>
@@ -127,7 +126,7 @@ const CoinFansClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="green" size="small">
+                  <ButtonOutline color="green" size="md">
                     回標
                   </ButtonOutline>
                 </div>

@@ -1,7 +1,7 @@
 // [本頁目的]：通用型checkbox按鈕
 
 import style from './CheckBtn2.module.scss';
-import Check from '@/components/icons/Check';
+import { CheckIcon } from '@/components/icons/AllIcon';
 
 type Props = {
   color?: 'primary' | 'secondary';
@@ -31,7 +31,7 @@ const CheckBtn2 = ({ color = 'primary', isActive = true }: Props) => {
         if (!isActive) e.currentTarget.style.border = '2px solid #adb5bd';
       }}
     >
-      {isActive ? <Check /> : <Check style={{ opacity: '0' }} />}
+      {isActive ? <CheckIcon /> : <CheckIcon style={{ opacity: '0' }} />}
     </div>
   );
 };

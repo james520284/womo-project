@@ -5,9 +5,8 @@ import Avatar from '../ui/avatar/Avatar';
 import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import ArrowIcon from '../icons/Arrow';
 import Button from '../ui/button/submit/Button';
-import AddPostIcon from '../icons/AddPost';
+import { ArrowIcon, AddPostIcon } from '../icons/AllIcon';
 
 const CoinShowHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -41,7 +40,7 @@ const CoinShowHeader = () => {
             </Link>
           </div>
 
-          <Button as="a" href="/user/my_profile" color="brand" size="small">
+          <Button as="a" href="/user/my_profile" color="brand" size="md">
             <div className="d-flex align-items-center">
               <AddPostIcon width={20} />
               <span className="ms-1">瘋碼秀</span>

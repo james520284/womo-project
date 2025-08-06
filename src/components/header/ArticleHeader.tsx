@@ -3,7 +3,7 @@ import ArticleHeaderBtn from './ActionBtn/ArticleHeaderBtn';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import BackArrowIcon from '@/components/icons/BackArrow';
+import { BackArrowIcon } from '../icons/AllIcon';
 
 const ArticleHeader = () => {
   return (

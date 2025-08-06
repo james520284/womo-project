@@ -29,7 +29,7 @@ const PostPublisherClient = () => {
               發心情給持有我籌碼的人
             </Link>
             <div className={style.contentBtn}>
-              <Button size="large" onClick={handleEmojiBtn} color="brand">
+              <Button size="lg" onClick={handleEmojiBtn} color="brand">
                 發心情
               </Button>
             </div>

@@ -43,7 +43,7 @@ const GiveMyCoin = ({ open, onOpenChange }: Props) => {
                   height={160}
                 />
                 <div>
-                  <Button size="small">下載</Button>
+                  <Button size="md">下載</Button>
                 </div>
               </div>
 
@@ -74,7 +74,7 @@ const GiveMyCoin = ({ open, onOpenChange }: Props) => {
                   onChange={() => {}}
                 />
                 <div className="mt-auto">
-                  <Button size="small">複製</Button>
+                  <Button size="md">複製</Button>
                 </div>
               </div>
             </div>

@@ -31,12 +31,12 @@ const CoinFriendsPreview = () => {
               {/* 行動呼籲按鈕 */}
               <div className="d-flex justify-content-center align-items-center mb-lg-5">
                 <div>
-                  <Button size="small" color="green" onClick={() => setGiveMyCoinModal(true)}>
+                  <Button size="md" color="green" onClick={() => setGiveMyCoinModal(true)}>
                     發籌碼給更多人
                   </Button>
                 </div>
                 <div className="ms-1">
-                  <ButtonOutline size="small" color="green" onClick={() => router.push('/')}>
+                  <ButtonOutline size="md" color="green" onClick={() => router.push('/')}>
                     呼叫應援
                   </ButtonOutline>
                 </div>
@@ -66,7 +66,7 @@ const CoinFriendsPreview = () => {
                 ))}
               </div>
               <div className="mt-4 text-center">
-                <Button as="a" href="/" size="small" color="light" width="expand">
+                <Button as="a" href="/" size="md" color="light" width="expand">
                   查看更多 〉
                 </Button>
               </div>
@@ -83,7 +83,7 @@ const CoinFriendsPreview = () => {
             ></Image>
             <p>
               <span className="mb-2">目前沒有朋友持有您的籌碼，立即發籌碼給朋友</span>
-              <Button size="small" color="green" onClick={() => setGiveMyCoinModal(true)}>
+              <Button size="md" color="green" onClick={() => setGiveMyCoinModal(true)}>
                 發籌碼
               </Button>
             </p>

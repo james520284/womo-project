@@ -3,10 +3,18 @@ import style from './ArticleListLayout.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
-import ViewIcon from '@/components/icons/View';
-import ARIcon from '@/components/icons/AR';
 import Avatar from '@/components/ui/avatar/Avatar';
-import { ReunionBtn } from './ArticleListRowBtn';
+import { ViewIcon, ARIcon } from '@/components/icons/AllIcon';
+import {
+  ReceiveBtn,
+  GiveBtn,
+  WishBtn,
+  ExchangeBtn,
+  SecretBtn,
+  ReunionBtn,
+  LotteryBtn,
+  CollectBtn,
+} from './ArticleListCoinBtn';
 
 type Props = {
   tab: string;
@@ -64,7 +72,7 @@ export const GridLayout = ({ tab }: Props) => {
 export const RowLayout = ({ tab }: Props) => {
   return (
     <>
-      <section className="mb-20">
+      <section>
         <div className="row gx-3 align-items-stretch">
           {homeBanner.map((img) => (
             <React.Fragment key={img.id}>
@@ -114,8 +122,15 @@ export const RowLayout = ({ tab }: Props) => {
                       看更多
                     </Link>
                   </div>
-                  <div className="mt-auto">
-                    <ReunionBtn />
+                  <div>
+                    {(img.activity === '心情' && <ReceiveBtn />) ||
+                      (img.activity === '贈幣' && <GiveBtn />) ||
+                      (img.activity === '許願' && <WishBtn />) ||
+                      (img.activity === '交換' && <ExchangeBtn />) ||
+                      (img.activity === '湊咖' && <ReunionBtn />) ||
+                      (img.activity === '秘密' && <SecretBtn />) ||
+                      (img.activity === '樂透' && <LotteryBtn />) ||
+                      (img.activity === '集點' && <CollectBtn />)}
                   </div>
                 </div>
               </div>
@@ -130,7 +145,7 @@ export const RowLayout = ({ tab }: Props) => {
 export const FullLayout = ({ tab }: Props) => {
   return (
     <>
-      <section className="mb-20">
+      <section>
         <div className="row gy-3">
           {homeBanner.map((img) => (
             <React.Fragment key={img.id}>
@@ -178,9 +193,14 @@ export const FullLayout = ({ tab }: Props) => {
               </div>
               <div className="col-12 mb-5">
                 <div>
-                  <div>
-                    <ReunionBtn />
-                  </div>
+                  {(img.activity === '心情' && <ReceiveBtn />) ||
+                    (img.activity === '贈幣' && <GiveBtn />) ||
+                    (img.activity === '許願' && <WishBtn />) ||
+                    (img.activity === '交換' && <ExchangeBtn />) ||
+                    (img.activity === '湊咖' && <ReunionBtn />) ||
+                    (img.activity === '秘密' && <SecretBtn />) ||
+                    (img.activity === '樂透' && <LotteryBtn />) ||
+                    (img.activity === '集點' && <CollectBtn />)}
                 </div>
               </div>
             </React.Fragment>

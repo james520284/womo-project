@@ -5,14 +5,8 @@
 import style from './Footer.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-// icons
-import WalletIcon from '../icons/Wallet';
-import ChatFriendIcon from '../icons/ChatFriend';
-import IncomeIcon from '../icons/Income';
-import ShowIcon from '../icons/Show';
-// 元件
+import { WalletIcon, ChatFriendIcon, IncomeIcon, ShowIcon } from '../icons/AllIcon';
 import Avatar from '../ui/avatar/Avatar';
-// const
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
 const Footer = () => {

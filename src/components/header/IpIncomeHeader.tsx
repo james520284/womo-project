@@ -6,10 +6,9 @@ import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
-import ArrowIcon from '../icons/Arrow';
-import SellIcon from '../icons/Sell';
 import { COINS } from '@/constants/coin';
 import Image from 'next/image';
+import { ArrowIcon, SellIcon } from '../icons/AllIcon';
 
 const IpIncomeHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -50,7 +49,7 @@ const IpIncomeHeader = () => {
             </div>
           </button>
 
-          <Button color="red" size="small">
+          <Button color="red" size="md">
             <div className="d-flex align-items-center">
               <SellIcon width={20} />
               <span className="ms-1">賣籌碼</span>

@@ -1,7 +1,7 @@
 'use client';
 
 import style from './Search.module.scss';
-import SearchIcon from '@/components/icons/Search';
+import { SearchIcon } from '@/components/icons/AllIcon';
 import { useState } from 'react';
 
 type Props = {

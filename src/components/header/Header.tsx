@@ -7,19 +7,18 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import {
+  ShowIcon,
+  WalletIcon,
+  IncomeIcon,
+  ChatFriendIcon,
+  SearchIcon,
+  MenuIcon,
+  GiftIcon,
+  BellIcon,
+} from '../icons/AllIcon';
 
-// icons
-import ShowIcon from '../icons/Show';
-import WalletIcon from '../icons/Wallet';
-import IncomeIcon from '../icons/Income';
-import ChatFriendIcon from '../icons/ChatFriend';
-import SearchIcon from '../icons/Search';
-import BellIcon from '../icons/Bell';
-import MenuIcon from '../icons/Menu';
-import GiftIcon from '../icons/Gift';
-// 元件
 import Avatar from '../ui/avatar/Avatar';
-// const
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
 const Header = () => {

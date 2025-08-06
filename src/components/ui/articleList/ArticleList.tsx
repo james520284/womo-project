@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import { GridLayout, RowLayout, FullLayout } from './ArticleListLayout';
-import FilterIcon from '@/components/icons/Filter';
-import GridViewIcon from '@/components/icons/GridView';
-import ListViewIcon from '@/components/icons/ListView';
-import FullscreenIcon from '@/components/icons/Fullscreen';
+import { FilterIcon, GridViewIcon, ListViewIcon, FullscreenIcon } from '@/components/icons/AllIcon';
 
 type Props = {
   tab: string;
@@ -58,13 +55,15 @@ const ArticleList = ({ tab }: Props) => {
       </div>
 
       {/* 列表區 */}
-      {viewMode === 'grid' ? (
-        <GridLayout tab={tab} />
-      ) : viewMode === 'row' ? (
-        <RowLayout tab={tab} />
-      ) : (
-        <FullLayout tab={tab} />
-      )}
+      <div className="mb-20">
+        {viewMode === 'grid' ? (
+          <GridLayout tab={tab} />
+        ) : viewMode === 'row' ? (
+          <RowLayout tab={tab} />
+        ) : (
+          <FullLayout tab={tab} />
+        )}
+      </div>
     </>
   );
 };

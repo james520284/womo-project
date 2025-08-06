@@ -1,13 +1,13 @@
 'use client';
 
 import { useState } from 'react';
-import style from './AddSendCoins.module.scss';
+import style from './AddGiveCoins.module.scss';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import CheckBtn2 from '@/components/ui/button/icon/CheckBtn2';
 import Coin from '@/components/ui/coin/Coin';
-import AddIcon from '@/components/icons/Add';
+import { AddIcon } from '@/components/icons/AllIcon';
 
-const AddSendCoins = () => {
+const AddGiveCoins = () => {
   const [selectedSendMyCoin, setSelectedSendMyCoin] = useState(false);
 
   return (
@@ -41,4 +41,4 @@ const AddSendCoins = () => {
   );
 };
 
-export default AddSendCoins;
+export default AddGiveCoins;

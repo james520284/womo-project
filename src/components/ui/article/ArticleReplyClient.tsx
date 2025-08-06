@@ -5,9 +5,8 @@ import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import MoodIcon from '@/components/icons/Mood';
 import Coin from '../coin/Coin';
-import SendIcon from '@/components/icons/Send';
+import { MoodIcon, SendIcon } from '@/components/icons/AllIcon';
 
 const ArticleReplyClient = () => {
   const [isInputFocused, setIsInputFocused] = useState(false);

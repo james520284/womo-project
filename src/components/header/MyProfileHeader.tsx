@@ -5,9 +5,7 @@ import Avatar from '../ui/avatar/Avatar';
 import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import ArrowIcon from '../icons/Arrow';
-import GiveCoinIcon from '../icons/GiveCoin';
-import StoreIcon from '../icons/Store';
+import { ArrowIcon, GiveCoinIcon, StoreIcon } from '../icons/AllIcon';
 
 const MyProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);

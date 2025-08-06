@@ -6,14 +6,12 @@ import IpIncomeHeader from '@/components/header/IpIncomeHeader';
 import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Search from '@/components/ui/search/Search';
-import SortUpIcon from '@/components/icons/SortUp';
-import SortDownIcon from '@/components/icons/SortDown';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Coin from '@/components/ui/coin/Coin';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import { Stores } from '@/libs/api/stores';
-import AddIcon from '@/components/icons/Add';
+import { SortUpIcon, SortDownIcon, AddIcon } from '@/components/icons/AllIcon';
 
 const IpIncomeClient = () => {
   const { isMobile, isTablet } = useScreenSize();
@@ -108,7 +106,7 @@ const IpIncomeClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="red" size="small">
+                  <ButtonOutline color="red" size="md">
                     私聊
                   </ButtonOutline>
                 </div>
@@ -130,7 +128,7 @@ const IpIncomeClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="red" size="small">
+                  <ButtonOutline color="red" size="md">
                     下架
                   </ButtonOutline>
                 </div>
@@ -152,7 +150,7 @@ const IpIncomeClient = () => {
                   </div>
                 </div>
                 <div>
-                  <ButtonOutline color="red" size="small">
+                  <ButtonOutline color="red" size="md">
                     接案
                   </ButtonOutline>
                 </div>

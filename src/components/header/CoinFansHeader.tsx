@@ -6,8 +6,7 @@ import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
-import SendIcon from '../icons/Send';
-import ArrowIcon from '../icons/Arrow';
+import { ArrowIcon, SendIcon } from '../icons/AllIcon';
 
 const CoinFansHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -46,7 +45,7 @@ const CoinFansHeader = () => {
               </p>
             </div>
           </button>
-          <Button color="green" size="small">
+          <Button color="green" size="md">
             <div className="d-flex align-items-center">
               <SendIcon width={20} />
               <span className="ms-1">發籌碼</span>

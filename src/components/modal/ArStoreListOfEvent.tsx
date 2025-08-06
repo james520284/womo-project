@@ -5,14 +5,9 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import style from './ArStoreListOfEvent.module.scss';
 import Image from 'next/image';
-// 元件
 import Button from '../ui/button/submit/Button';
 import Avatar from '../ui/avatar/Avatar';
-// icon
-import LocationIcon from '../icons/Location';
-import ScanIcon from '../icons/Scan';
-import MemberIcon from '../icons/Member';
-// api
+import { LocationIcon, ScanIcon, MemberIcon } from '../icons/AllIcon';
 import { Stores } from '@/libs/api/stores';
 
 type Props = {
@@ -73,7 +68,7 @@ const ArStoreListOfEvent = ({ open, onOpenChange }: Props) => {
                     </div>
                   </div>
                   <div className="text-center mt-5">
-                    <Button color="green" size="small" width="expand">
+                    <Button color="green" size="md" width="expand">
                       <div className="d-flex align-items-center justify-content-center">
                         <ScanIcon width={16} />
                         <span className="ms-1">掃圖打卡</span>

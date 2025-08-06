@@ -1,5 +1,4 @@
-import ShareIcon from '@/components/icons/Share';
-import MoreIcon from '@/components/icons/More';
+import { ShareIcon, MoreIcon } from '@/components/icons/AllIcon';
 
 const ArticleHeaderBtn = () => {
   return (

@@ -7,10 +7,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-
-// icon
-import BackArrowIcon from '../icons/BackArrow';
-import CancelIcon from '../icons/Cancel';
+import { BackArrowIcon, CancelIcon } from '../icons/AllIcon';
 
 const PagesHeader = () => {
   const [showHeader, setShowHeader] = useState(true);

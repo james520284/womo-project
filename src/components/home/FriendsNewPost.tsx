@@ -4,7 +4,7 @@ import style from './FriendsNewPost.module.scss';
 import Link from 'next/link';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
-import ArrowSolidIcon from '../icons/ArrowSolid';
+import { ArrowSolidIcon } from '../icons/AllIcon';
 
 const FriendsNewPost = () => {
   return (

@@ -8,8 +8,6 @@ import CoinWalletHeader from '@/components/header/CoinWalletHeader';
 import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Search from '@/components/ui/search/Search';
-import FilterIcon from '@/components/icons/Filter';
-import DeleteIcon from '@/components/icons/Delete';
 import SectionUI from '@/components/ui/section/SectionUI';
 import Avatar from '@/components/ui/avatar/Avatar';
 import Coin from '@/components/ui/coin/Coin';
@@ -17,9 +15,14 @@ import { KOLs } from '@/libs/api/kols';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Link from 'next/link';
-import StickyIcon from '@/components/icons/Sticky';
-import AiFaceIcon from '@/components/icons/AiFace';
-import CloakIcon from '@/components/icons/Cloak';
+
+import {
+  FilterIcon,
+  DeleteIcon,
+  StickyIcon,
+  AiFaceIcon,
+  CloakIcon,
+} from '@/components/icons/AllIcon';
 
 const CoinWalletClient = () => {
   const { isMobile, isTablet } = useScreenSize();
@@ -105,11 +108,11 @@ const CoinWalletClient = () => {
             </div>
           ) : (
             <div>
-              <Button color="yellow" size="small">
+              <Button color="yellow" size="md">
                 儲值
               </Button>
               &nbsp;
-              <ButtonOutline color="yellow" size="small">
+              <ButtonOutline color="yellow" size="md">
                 明細
               </ButtonOutline>
             </div>
@@ -120,11 +123,11 @@ const CoinWalletClient = () => {
           <SectionUI>
             {isDeletableGreenCoin && (
               <div className="mb-5 text-center">
-                <Button size="small" color="dark">
+                <Button size="md" color="dark">
                   丟掉籌碼
                 </Button>
                 &nbsp;
-                <Button size="small" color="light" onClick={() => setIsDeletableGreenCoin(false)}>
+                <Button size="md" color="light" onClick={() => setIsDeletableGreenCoin(false)}>
                   取消
                 </Button>
               </div>
@@ -180,11 +183,11 @@ const CoinWalletClient = () => {
           <SectionUI>
             {isDeletableRedCoin && (
               <div className="mb-5 text-center">
-                <Button size="small" color="dark">
+                <Button size="md" color="dark">
                   丟掉籌碼
                 </Button>
                 &nbsp;
-                <Button size="small" color="light" onClick={() => setIsDeletableRedCoin(false)}>
+                <Button size="md" color="light" onClick={() => setIsDeletableRedCoin(false)}>
                   取消
                 </Button>
               </div>
