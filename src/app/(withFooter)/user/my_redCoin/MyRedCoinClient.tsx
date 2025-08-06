@@ -1,8 +1,8 @@
 'use client';
 
-import style from './IpIncomeClient.module.scss';
+import style from './MyRedCoinClient.module.scss';
 import Header from '@/components/header/Header';
-import IpIncomeHeader from '@/components/header/IpIncomeHeader';
+import MyRedCoinHeader from '@/components/header/MyRedCoinHeader';
 import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Search from '@/components/ui/search/Search';
@@ -13,7 +13,7 @@ import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import { Stores } from '@/libs/api/stores';
 import { SortUpIcon, SortDownIcon, AddIcon } from '@/components/icons/AllIcon';
 
-const IpIncomeClient = () => {
+const MyRedCoinClient = () => {
   const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'support' | 'store' | 'work'>('support');
   const [isSort, setIsSort] = useState(false);
@@ -21,7 +21,7 @@ const IpIncomeClient = () => {
   return (
     <>
       {/* Header */}
-      {isMobile || isTablet ? <IpIncomeHeader /> : <Header />}
+      {isMobile || isTablet ? <MyRedCoinHeader /> : <Header />}
 
       <div className={`container-fluid ${style.wrapper}`}>
         {/* 數據區 */}
@@ -163,4 +163,4 @@ const IpIncomeClient = () => {
   );
 };
 
-export default IpIncomeClient;
+export default MyRedCoinClient;

@@ -50,9 +50,9 @@ const Footer = () => {
         </li>
         <li>
           <Link
-            href="/user/coin_fans"
+            href="/user/my_greenCoin"
             className={`d-flex flex-column align-items-center ${
-              pathName === '/user/coin_fans' ? 'text-brand' : 'text-dark'
+              pathName === '/user/my_greenCoin' ? 'text-brand' : 'text-dark'
             }`}
           >
             <ChatFriendIcon width={24} />
@@ -61,9 +61,9 @@ const Footer = () => {
         </li>
         <li>
           <Link
-            href="/user/ip_income"
+            href="/user/my_redCoin"
             className={`d-flex flex-column align-items-center ${
-              pathName === '/user/ip_income' ? 'text-brand' : 'text-dark'
+              pathName === '/user/my_redCoin' ? 'text-brand' : 'text-dark'
             }`}
           >
             <IncomeIcon width={24} />

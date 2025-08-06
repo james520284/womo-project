@@ -108,11 +108,11 @@ const CoinWalletClient = () => {
             </div>
           ) : (
             <div>
-              <Button color="yellow" size="md">
+              <Button color="orange" size="md">
                 儲值
               </Button>
               &nbsp;
-              <ButtonOutline color="yellow" size="md">
+              <ButtonOutline color="orange" size="md">
                 明細
               </ButtonOutline>
             </div>

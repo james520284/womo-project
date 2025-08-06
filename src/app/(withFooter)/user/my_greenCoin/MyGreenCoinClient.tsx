@@ -1,10 +1,10 @@
 'use client';
 
-import style from './CoinFansClient.module.scss';
+import style from './MyGreenCoinClient.module.scss';
 import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Header from '@/components/header/Header';
-import CoinFansHeader from '@/components/header/CoinFansHeader';
+import MyGreenCoinHeader from '@/components/header/MyGreenCoinHeader';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Coin from '@/components/ui/coin/Coin';
@@ -12,7 +12,7 @@ import { SortUpIcon, SortDownIcon } from '@/components/icons/AllIcon';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Search from '@/components/ui/search/Search';
 
-const CoinFansClient = () => {
+const MyGreenCoinClient = () => {
   const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'now' | 'past'>('now');
   const [isSort, setIsSort] = useState(false);
@@ -20,7 +20,7 @@ const CoinFansClient = () => {
   return (
     <>
       {/* Header */}
-      {isMobile || isTablet ? <CoinFansHeader /> : <Header />}
+      {isMobile || isTablet ? <MyGreenCoinHeader /> : <Header />}
 
       <div className={`container-fluid ${style.wrapper}`}>
         {/* 數據區 */}
@@ -139,4 +139,4 @@ const CoinFansClient = () => {
   );
 };
 
-export default CoinFansClient;
+export default MyGreenCoinClient;

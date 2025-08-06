@@ -22,7 +22,7 @@ const MyProfileClient = () => {
             <span className="fs-sm">我的籌碼貼文</span>
             <span className="align-self-center fw-bold fs-5 py-2">36</span>
             <div className="ms-auto">
-              <Button color="green" size="md">
+              <Button as="a" href="/user/create_article" color="green" size="md">
                 ＋貼文
               </Button>
             </div>

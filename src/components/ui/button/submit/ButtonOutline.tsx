@@ -7,7 +7,7 @@ import clsx from 'clsx';
 type ButtonProps = {
   children: React.ReactNode;
   size?: 'lg' | 'md' | 'sm';
-  color?: 'red' | 'green' | 'yellow' | 'brand';
+  color?: 'red' | 'green' | 'orange';
   width?: 'fit' | 'expand';
   onClick?: () => void;
   as?: 'button' | 'a';

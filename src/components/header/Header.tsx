@@ -14,8 +14,8 @@ import {
   ChatFriendIcon,
   SearchIcon,
   MenuIcon,
-  GiftIcon,
   BellIcon,
+  AddFriendIcon,
 } from '../icons/AllIcon';
 
 import Avatar from '../ui/avatar/Avatar';
@@ -88,9 +88,9 @@ const Header = () => {
             </li>
             <li className="px-2">
               <Link
-                href="/user/coin_fans"
+                href="/user/my_greenCoin"
                 className={`d-flex align-items-center ${style.headerNavLink}  ${
-                  pathName === '/user/coin_fans' ? 'text-brand' : ''
+                  pathName === '/user/my_greenCoin' ? 'text-brand' : ''
                 }`}
               >
                 <ChatFriendIcon width={28} />
@@ -99,9 +99,9 @@ const Header = () => {
             </li>
             <li className="px-2">
               <Link
-                href="/user/ip_income"
+                href="/user/my_redCoin"
                 className={`d-flex align-items-center ${style.headerNavLink} ${
-                  pathName === '/user/ip_income' ? 'text-brand' : ''
+                  pathName === '/user/my_redCoin' ? 'text-brand' : ''
                 }`}
               >
                 <IncomeIcon width={28} />
@@ -111,8 +111,8 @@ const Header = () => {
           </ul>
           <ul className={`d-flex py-3 ${style.headerNavUtility}`}>
             <li className="px-1">
-              <Link href="#">
-                <GiftIcon width={20} />
+              <Link href="/user/coin_friends">
+                <AddFriendIcon width={20} />
               </Link>
             </li>
             <li className="px-1">

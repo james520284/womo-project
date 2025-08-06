@@ -1,14 +1,16 @@
 'use client';
 
-import style from './CoinFansHeader.module.scss';
+import style from './MyRedCoinHeader.module.scss';
 import { useState, useEffect } from 'react';
 import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
-import { ArrowIcon, SendIcon } from '../icons/AllIcon';
+import { COINS } from '@/constants/coin';
+import Image from 'next/image';
+import { ArrowIcon, SellIcon } from '../icons/AllIcon';
 
-const CoinFansHeader = () => {
+const MyRedCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -30,25 +32,27 @@ const CoinFansHeader = () => {
     <header className={`${style.header} ${!showHeader ? style.hidden : ''}`}>
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
-          <button className="d-flex align-items-center">
-            <Coin color="green" scale={0.5}>
+          <button className="btn d-flex align-items-center">
+            <Coin color="red" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
             <div className="text-start ms-2">
-              <h1 className="h6 fw-bold d-flex align-items-center">我的綠籌碼</h1>
+              <h1 className="h6 fw-bold d-flex align-items-center">我的紅籌碼</h1>
               <p className="fs-sm d-flex align-items-center">
-                <span>本月剩餘顆數</span>
-                <span className="text-secondary fw-bold mx-2">85</span>
-                <span>
+                <span>每顆價格</span>
+                <span className="text-warning fw-bold ms-2 me-1">100</span>
+                <Image src={COINS[2].image} alt="金籌碼" width={20} height={20} />
+                <span className="ms-1">
                   <ArrowIcon width={20} />
                 </span>
               </p>
             </div>
           </button>
-          <Button color="green" size="md">
+
+          <Button color="red" size="md">
             <div className="d-flex align-items-center">
-              <SendIcon width={20} />
-              <span className="ms-1">發籌碼</span>
+              <SellIcon width={20} />
+              <span className="ms-1">賣籌碼</span>
             </div>
           </Button>
         </div>
@@ -57,4 +61,4 @@ const CoinFansHeader = () => {
   );
 };
 
-export default CoinFansHeader;
+export default MyRedCoinHeader;
