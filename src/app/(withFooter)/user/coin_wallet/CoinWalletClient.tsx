@@ -15,7 +15,6 @@ import { KOLs } from '@/libs/api/kols';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Link from 'next/link';
-import { Tab } from '@/components/ui/tab/Tab';
 
 import {
   FilterIcon,
