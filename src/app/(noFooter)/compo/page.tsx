@@ -126,20 +126,27 @@ const Compo = () => {
       <h1 className="fw-bold">WOMO元件檢索</h1>
       <hr />
       <h2 className="mb-2 fw-bold">頭像區</h2>
-      <div className="d-flex align-items-center">
-        <Avatar src={AVATAR_LINK.my} />
-        &nbsp;
-        <Coin color="green" scale={0.6}>
+      <div>
+        <div className="d-flex align-items-center my-2">
           <Avatar src={AVATAR_LINK.my} />
-        </Coin>
-        &nbsp;
-        <Coin color="red" scale={0.6}>
-          <Avatar src={AVATAR_LINK.my} />
-        </Coin>
-        &nbsp; &nbsp;
-        <DoubleCoins scale={0.6}>
-          <Avatar src={AVATAR_LINK.my} />
-        </DoubleCoins>
+          <span className="ms-3">純頭像</span>
+        </div>
+        <div className="d-flex align-items-center my-2">
+          <Coin color="green" scale={0.6}>
+            <Avatar src={AVATAR_LINK.my} />
+          </Coin>
+          &nbsp;&nbsp;&nbsp;
+          <Coin color="red" scale={0.6}>
+            <Avatar src={AVATAR_LINK.my} />
+          </Coin>
+          <span className="ms-3">單顆型籌碼頭</span>
+        </div>
+        <div className="d-flex align-items-center my-2">
+          <DoubleCoins scale={0.6}>
+            <Avatar src={AVATAR_LINK.my} />
+          </DoubleCoins>
+          <span className="ms-3">雙顆型籌碼頭</span>
+        </div>
       </div>
       <br />
       <hr />
@@ -156,7 +163,7 @@ const Compo = () => {
 
       <h2 className="mb-2 fw-bold">按鈕區</h2>
       <div className="row g-5">
-        <div className="col-6">
+        <div className="col-12">
           <Button size="lg" color="red">
             大紅
           </Button>{' '}
@@ -169,7 +176,7 @@ const Compo = () => {
             小紅
           </Button>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <Button size="lg" color="green">
             大綠
           </Button>{' '}
@@ -182,7 +189,7 @@ const Compo = () => {
             小綠
           </Button>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <Button size="lg" color="orange">
             大橘
           </Button>{' '}
@@ -195,7 +202,7 @@ const Compo = () => {
             小橘
           </Button>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <Button size="lg" color="brand">
             大彩
           </Button>{' '}
@@ -208,7 +215,7 @@ const Compo = () => {
             小彩
           </Button>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <Button size="lg" color="dark">
             大黑
           </Button>{' '}
@@ -221,7 +228,7 @@ const Compo = () => {
             小黑
           </Button>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <Button size="lg" color="light">
             大白
           </Button>{' '}
@@ -234,20 +241,20 @@ const Compo = () => {
             小白
           </Button>
         </div>
-        <div className="col-6">
-          <Button size="lg" color="noUse">
+        <div className="col-12">
+          <Button size="lg" color="noUse" noUse={true}>
             停用
           </Button>
           &nbsp;
-          <Button size="md" color="noUse">
+          <Button size="md" color="noUse" noUse={true}>
             停用
           </Button>
           &nbsp;
-          <Button size="sm" color="noUse">
+          <Button size="sm" color="noUse" noUse={true}>
             停用
           </Button>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <ButtonOutline size="lg" color="red">
             大紅
           </ButtonOutline>
@@ -260,7 +267,7 @@ const Compo = () => {
             小紅
           </ButtonOutline>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <ButtonOutline size="lg" color="green">
             大綠
           </ButtonOutline>
@@ -273,7 +280,7 @@ const Compo = () => {
             小綠
           </ButtonOutline>
         </div>
-        <div className="col-6">
+        <div className="col-12">
           <ButtonOutline size="lg" color="orange">
             大橘
           </ButtonOutline>
@@ -355,8 +362,8 @@ const Compo = () => {
         </TabDataOnClick>
       </div>
       <br />
-      <SectionUI>無標題版外框區塊</SectionUI>
-      <SectionUI2 title="有標題版外框區塊">這是內文</SectionUI2>
+      <SectionUI>無標題之陰影外框區塊</SectionUI>
+      <SectionUI2 title="有標題之陰影外框區塊">這是內文</SectionUI2>
       <br />
       <hr />
 
