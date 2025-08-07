@@ -23,9 +23,9 @@ const FriendsNewPost = () => {
           </div>
           {AVATAR_LINK.others.map((user) => (
             <div key={user.name} className="d-flex flex-column align-items-center ms-5">
-              <div className={style.newPostAlarm}>
+              <Link href="/user/article_view/123" className={style.newPostAlarm}>
                 <Avatar src={user.image} />
-              </div>
+              </Link>
               <span className="fs-xs mt-2">{user.name}</span>
             </div>
           ))}

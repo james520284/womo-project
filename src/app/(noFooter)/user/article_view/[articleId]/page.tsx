@@ -3,7 +3,7 @@ import ArticleHeader from '@/components/header/ArticleHeader';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
 import { ViewSolidIcon, MoodIcon, ChatIcon, CoinEmojiIcon } from '@/components/icons/AllIcon';
-import ArticleReplyClient from '@/components/ui/article/ArticleReplyClient';
+import { ArticleReplyBar } from '@/components/functionClient/ArticleFuncClient';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
@@ -95,7 +95,7 @@ const articleView = () => {
       </div>
 
       <div className="container-fluid position-sticky bottom-0 bg-light py-2">
-        <ArticleReplyClient />
+        <ArticleReplyBar />
       </div>
     </div>
   );

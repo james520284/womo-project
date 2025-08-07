@@ -1,14 +1,38 @@
 'use client';
 
-import style from './ArticleReplyClient.module.scss';
+import style from './ArticleFuncClient.module.scss';
+import { ShareIcon, MoreIcon, MoodIcon, SendIcon, BackArrowIcon } from '@/components/icons/AllIcon';
 import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import Coin from '../coin/Coin';
-import { MoodIcon, SendIcon } from '@/components/icons/AllIcon';
+import Coin from '../ui/coin/Coin';
+import { useRouter } from 'next/navigation';
 
-const ArticleReplyClient = () => {
+export const ArticleHeaderBackBtn = () => {
+  const router = useRouter();
+
+  return (
+    <button onClick={() => router.back()}>
+      <BackArrowIcon width={20} />
+    </button>
+  );
+};
+
+export const ArticleHeaderFuncBtn = () => {
+  return (
+    <div className="d-flex align-items-center">
+      <button>
+        <ShareIcon width={20} />
+      </button>
+      <button className="ms-5">
+        <MoreIcon width={24} />
+      </button>
+    </div>
+  );
+};
+
+export const ArticleReplyBar = () => {
   const [isInputFocused, setIsInputFocused] = useState(false);
 
   return (
@@ -56,5 +80,3 @@ const ArticleReplyClient = () => {
     </div>
   );
 };
-
-export default ArticleReplyClient;

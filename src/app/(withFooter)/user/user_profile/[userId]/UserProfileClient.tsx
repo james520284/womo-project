@@ -9,7 +9,10 @@ import Coin from '@/components/ui/coin/Coin';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '@/components/ui/button/submit/Button';
-import ArticleList from '@/components/ui/articleList/ArticleList';
+import ArticleListUserSelf from '@/components/ui/articleList/ArticleListUserSelf';
+import { CartIcon, GiftIcon } from '@/components/icons/AllIcon';
+import Link from 'next/link';
+import { Tab } from '@/components/ui/tab/Tab';
 
 const UserProfileClient = () => {
   const { isMobile, isTablet } = useScreenSize();
@@ -22,7 +25,12 @@ const UserProfileClient = () => {
         {/* 籌碼使用區 */}
         <section className="d-flex mt-3 mb-7">
           <div className={style.section}>
-            <span className="fs-sm">我持有你的</span>
+            <div className="d-flex align-items-center justify-content-between">
+              <span className="fs-sm">我持有你的</span>
+              <button className={style.iconWrapper}>
+                <GiftIcon width={20} color="#00b0b4" />
+              </button>
+            </div>
             <div className="d-flex align-items-center justify-content-center py-2">
               <Coin scale={0.4} color="green">
                 <Avatar src={AVATAR_LINK.others[0].image} />
@@ -36,7 +44,12 @@ const UserProfileClient = () => {
             </div>
           </div>
           <div className={style.section}>
-            <span className="fs-sm">我持有你的</span>
+            <div className="d-flex align-items-center justify-content-between">
+              <span className="fs-sm">我持有你的</span>
+              <Link href="#" className={style.iconWrapper}>
+                <CartIcon width={20} color="#da5271" />
+              </Link>
+            </div>
             <div className="d-flex align-items-center justify-content-center py-2">
               <Coin scale={0.4} color="red">
                 <Avatar src={AVATAR_LINK.others[0].image} />
@@ -53,31 +66,29 @@ const UserProfileClient = () => {
 
         {/* 頁籤區 */}
         <section className="mb-5">
-          <button
-            type="button"
-            className={tab === 'post' ? style.tabBtnActive : style.tabBtn}
-            onClick={() => setTab('post')}
-          >
-            籌碼貼文 <span className="text-grey-300 ms-1 fs-xs">36</span>
-          </button>
-          <button
-            type="button"
-            className={tab === 'ARspace' ? style.tabBtnActive : style.tabBtn}
+          <Tab isActive={tab === 'post'} onClick={() => setTab('post')} isShowData={true} num={36}>
+            籌碼貼文
+          </Tab>
+          <Tab
+            isActive={tab === 'ARspace'}
             onClick={() => setTab('ARspace')}
+            isShowData={true}
+            num={19}
           >
-            AR空間 <span className="text-grey-300 ms-1 fs-xs">19</span>
-          </button>
-          <button
-            type="button"
-            className={tab === '24hrMsg' ? style.tabBtnActive : style.tabBtn}
+            AR空間
+          </Tab>
+          <Tab
+            isActive={tab === '24hrMsg'}
             onClick={() => setTab('24hrMsg')}
+            isShowData={true}
+            num={67}
           >
-            塗鴉牆 <span className="text-grey-300 ms-1 fs-xs">69</span>
-          </button>
+            塗鴉牆
+          </Tab>
         </section>
 
         {/* 貼文列表區 */}
-        <ArticleList tab={tab} />
+        {tab !== '24hrMsg' && <ArticleListUserSelf tab={tab} />}
       </div>
     </>
   );

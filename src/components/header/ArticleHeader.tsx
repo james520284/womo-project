@@ -1,9 +1,8 @@
 import style from './ArticleHeader.module.scss';
-import ArticleHeaderBtn from './ActionBtn/ArticleHeaderBtn';
+import { ArticleHeaderFuncBtn, ArticleHeaderBackBtn } from '../functionClient/ArticleFuncClient';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import { BackArrowIcon } from '../icons/AllIcon';
 
 const ArticleHeader = () => {
   return (
@@ -11,9 +10,7 @@ const ArticleHeader = () => {
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
           <div className="d-flex align-items-center">
-            <Link href="/user/my_profile">
-              <BackArrowIcon width={20} />
-            </Link>
+            <ArticleHeaderBackBtn />
             <div className="d-flex align-items-center ms-5">
               <Link href="/user/my_profile">
                 <Avatar src={AVATAR_LINK.my} size={40} />
@@ -26,7 +23,7 @@ const ArticleHeader = () => {
               </div>
             </div>
           </div>
-          <ArticleHeaderBtn />
+          <ArticleHeaderFuncBtn />
         </div>
       </div>
     </header>

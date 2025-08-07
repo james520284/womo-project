@@ -6,7 +6,8 @@ import Header from '@/components/header/Header';
 import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Button from '@/components/ui/button/submit/Button';
-import ArticleList from '@/components/ui/articleList/ArticleList';
+import ArticleListMySelf from '@/components/ui/articleList/ArticleListMySelf';
+import { Tab } from '@/components/ui/tab/Tab';
 
 const MyProfileClient = () => {
   const { isMobile, isTablet } = useScreenSize();
@@ -40,31 +41,29 @@ const MyProfileClient = () => {
 
         {/* 頁籤區 */}
         <section className="mb-5">
-          <button
-            type="button"
-            className={tab === 'post' ? style.tabBtnActive : style.tabBtn}
-            onClick={() => setTab('post')}
-          >
-            籌碼貼文 <span className="text-grey-300 ms-1 fs-xs">36</span>
-          </button>
-          <button
-            type="button"
-            className={tab === 'ARspace' ? style.tabBtnActive : style.tabBtn}
+          <Tab isActive={tab === 'post'} onClick={() => setTab('post')} isShowData={true} num={36}>
+            籌碼貼文
+          </Tab>
+          <Tab
+            isActive={tab === 'ARspace'}
             onClick={() => setTab('ARspace')}
+            isShowData={true}
+            num={19}
           >
-            AR空間 <span className="text-grey-300 ms-1 fs-xs">19</span>
-          </button>
-          <button
-            type="button"
-            className={tab === '24hrMsg' ? style.tabBtnActive : style.tabBtn}
+            AR空間
+          </Tab>
+          <Tab
+            isActive={tab === '24hrMsg'}
             onClick={() => setTab('24hrMsg')}
+            isShowData={true}
+            num={67}
           >
-            塗鴉牆 <span className="text-grey-300 ms-1 fs-xs">69</span>
-          </button>
+            塗鴉牆
+          </Tab>
         </section>
 
         {/* 貼文列表區 */}
-        <ArticleList tab={tab} />
+        {tab !== '24hrMsg' && <ArticleListMySelf tab={tab} />}
       </div>
     </>
   );

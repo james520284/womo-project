@@ -3,6 +3,7 @@
 import style from './CoinShow.module.scss';
 import { useState } from 'react';
 import ArticleList from '../ui/articleList/ArticleList';
+import { Tab } from '../ui/tab/Tab';
 
 const CoinShow = () => {
   const [tab, setTab] = useState<'post' | 'ARspace'>('post');
@@ -13,22 +14,12 @@ const CoinShow = () => {
 
       {/* 頁籤區 */}
       <section className="mb-5">
-        <div>
-          <button
-            type="button"
-            className={tab === 'post' ? style.tabBtnActive : style.tabBtn}
-            onClick={() => setTab('post')}
-          >
-            籌碼貼文
-          </button>
-          <button
-            type="button"
-            className={tab === 'ARspace' ? style.tabBtnActive : style.tabBtn}
-            onClick={() => setTab('ARspace')}
-          >
-            AR空間
-          </button>
-        </div>
+        <Tab isActive={tab === 'post'} onClick={() => setTab('post')}>
+          籌碼貼文
+        </Tab>
+        <Tab isActive={tab === 'ARspace'} onClick={() => setTab('ARspace')}>
+          AR空間
+        </Tab>
       </section>
 
       {/* 貼文列表區 */}

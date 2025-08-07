@@ -1,0 +1,19 @@
+.tab {
+  font-size: 14px;
+  background-color: rgba($color: #6b6f82, $alpha: 0.1);
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin: 0 4px;
+  &:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+.tabActive {
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  padding: 4px 12px;
+  margin: 0 4px;
+}

@@ -11,10 +11,11 @@ import Coin from '@/components/ui/coin/Coin';
 import { SortUpIcon, SortDownIcon } from '@/components/icons/AllIcon';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Search from '@/components/ui/search/Search';
+import { Tab } from '@/components/ui/tab/Tab';
 
 const MyGreenCoinClient = () => {
   const { isMobile, isTablet } = useScreenSize();
-  const [tab, setTab] = useState<'now' | 'past'>('now');
+  const [tab, setTab] = useState<'letter' | 'tag'>('letter');
   const [isSort, setIsSort] = useState(false);
 
   return (
@@ -44,24 +45,21 @@ const MyGreenCoinClient = () => {
         {/* 頁籤區 */}
         <section className="mb-2 d-flex align-items-center justify-content-between">
           <div>
-            <button
-              type="button"
-              className={tab === 'now' ? style.tabBtnActive : style.tabBtn}
-              onClick={() => setTab('now')}
+            <Tab
+              isActive={tab === 'letter'}
+              onClick={() => setTab('letter')}
+              isShowData={true}
+              num={36}
             >
               一天一信
-            </button>
-            <button
-              type="button"
-              className={tab === 'past' ? style.tabBtnActive : style.tabBtn}
-              onClick={() => setTab('past')}
-            >
+            </Tab>
+            <Tab isActive={tab === 'tag'} onClick={() => setTab('tag')} isShowData={true} num={19}>
               關係標記
-            </button>
+            </Tab>
           </div>
           <div className=" d-flex align-items-center">
             <Search width="96px" />
-            {tab === 'now' && (
+            {tab === 'letter' && (
               <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
                 {isSort ? <SortDownIcon /> : <SortUpIcon />}
               </button>
@@ -70,7 +68,7 @@ const MyGreenCoinClient = () => {
         </section>
 
         {/* 列表區 */}
-        {tab === 'now' ? (
+        {tab === 'letter' ? (
           <section>
             {AVATAR_LINK.others.map((user) => (
               <div

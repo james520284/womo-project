@@ -15,6 +15,7 @@ import { KOLs } from '@/libs/api/kols';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Link from 'next/link';
+import { Tab } from '@/components/ui/tab/Tab';
 
 import {
   FilterIcon,
@@ -31,8 +32,11 @@ const CoinWalletClient = () => {
   const [isDeletableRedCoin, setIsDeletableRedCoin] = useState(false);
   return (
     <>
+      {/* Header區 */}
       {isMobile || isTablet ? <CoinWalletHeader /> : <Header />}
+
       <div className={style.wrapper}>
+        {/* 頁籤區 */}
         <section className={style.walletHeader}>
           <div className={`${style.coinTab}`}>
             <button
@@ -67,18 +71,26 @@ const CoinWalletClient = () => {
               <span className="text-coinYellow fw-bold fs-5">{COINS[2].amount}</span>
             </button>
           </div>
-          <div></div>
         </section>
 
+        {/* 數據區 */}
         <section className="bg-grey-50 px-5 py-8 d-flex justify-content-between align-items-center fs-sm">
           {tab === 'greenCoin' ? (
             <p className="fw-bold">
               已蒐集綠籌碼：
-              <span className="px-1 text-coinGreen">96</span>顆
+              <span className="px-1 text-coinGreen">96</span>顆 ，共
+              <Link href="#" className="px-1 text-coinGreen text-decoration-underline">
+                84
+              </Link>
+              人
             </p>
           ) : tab === 'redCoin' ? (
             <p className="fw-bold">
-              已蒐集紅籌碼：<span className="px-1 text-coinRed">12</span>顆
+              已蒐集紅籌碼：<span className="px-1 text-coinRed">12</span>顆，共
+              <Link href="#" className="px-1 text-coinRed text-decoration-underline">
+                10
+              </Link>
+              人
             </p>
           ) : (
             <p className="fw-bold">
@@ -86,53 +98,58 @@ const CoinWalletClient = () => {
             </p>
           )}
 
-          {tab !== 'yellowCoin' ? (
-            <div className="d-flex">
-              <Search width="100px" />
-              <button type="button" className="px-2 line-height-none">
-                <FilterIcon width={20} />
-              </button>
-              <button
-                type="button"
-                className="line-height-none"
-                onClick={() => {
-                  if (tab === 'greenCoin') {
-                    setIsDeletableGreenCoin(true);
-                  } else {
-                    setIsDeletableRedCoin(true);
-                  }
-                }}
-              >
-                <DeleteIcon width={20} />
-              </button>
-            </div>
-          ) : (
+          {tab == 'yellowCoin' && (
             <div>
-              <Button color="orange" size="md">
+              <Button color="orange" size="sm">
                 儲值
               </Button>
               &nbsp;
-              <ButtonOutline color="orange" size="md">
+              <ButtonOutline color="orange" size="sm">
                 明細
               </ButtonOutline>
             </div>
           )}
         </section>
 
+        {/* 列表區 */}
         {tab === 'greenCoin' ? (
           <SectionUI>
-            {isDeletableGreenCoin && (
-              <div className="mb-5 text-center">
-                <Button size="md" color="dark">
-                  丟掉籌碼
-                </Button>
-                &nbsp;
-                <Button size="md" color="light" onClick={() => setIsDeletableGreenCoin(false)}>
-                  取消
-                </Button>
-              </div>
-            )}
+            {/* 功能按鈕區 */}
 
+            <div className="d-flex justify-content-end mb-5">
+              {isDeletableGreenCoin && (
+                <div className="d-flex align-items-center">
+                  <Button color="dark" size="sm">
+                    丟掉籌碼
+                  </Button>
+                  &nbsp;
+                  <Button color="light" size="sm" onClick={() => setIsDeletableGreenCoin(false)}>
+                    取消
+                  </Button>
+                </div>
+              )}
+              {!isDeletableGreenCoin && (
+                <div>
+                  <Search />
+                  <button type="button" className="px-2 line-height-none">
+                    <FilterIcon width={22} />
+                  </button>
+                  <button
+                    type="button"
+                    className="line-height-none"
+                    onClick={() => {
+                      if (tab === 'greenCoin') {
+                        setIsDeletableGreenCoin(true);
+                      }
+                    }}
+                  >
+                    <DeleteIcon width={22} />
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* 綠籌碼區 */}
             <div className="row gy-10">
               {KOLs.map((kol) => (
                 <div
@@ -181,18 +198,40 @@ const CoinWalletClient = () => {
           </SectionUI>
         ) : tab === 'redCoin' ? (
           <SectionUI>
-            {isDeletableRedCoin && (
-              <div className="mb-5 text-center">
-                <Button size="md" color="dark">
-                  丟掉籌碼
-                </Button>
-                &nbsp;
-                <Button size="md" color="light" onClick={() => setIsDeletableRedCoin(false)}>
-                  取消
-                </Button>
-              </div>
-            )}
-
+            {/* 功能按鈕區 */}
+            <div className="d-flex justify-content-end mb-5">
+              {isDeletableRedCoin && (
+                <div className="d-flex align-items-center">
+                  <Button color="dark" size="sm">
+                    丟掉籌碼
+                  </Button>
+                  &nbsp;
+                  <Button color="light" size="sm" onClick={() => setIsDeletableRedCoin(false)}>
+                    取消
+                  </Button>
+                </div>
+              )}
+              {!isDeletableRedCoin && (
+                <div>
+                  <Search />
+                  <button type="button" className="px-2 line-height-none">
+                    <FilterIcon width={22} />
+                  </button>
+                  <button
+                    type="button"
+                    className="line-height-none"
+                    onClick={() => {
+                      if (tab === 'redCoin') {
+                        setIsDeletableRedCoin(true);
+                      }
+                    }}
+                  >
+                    <DeleteIcon width={22} />
+                  </button>
+                </div>
+              )}
+            </div>
+            {/* 紅籌碼區 */}
             <div className="row gy-10">
               {KOLs.map((kol) => (
                 <div

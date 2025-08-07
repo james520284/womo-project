@@ -12,6 +12,7 @@ import Coin from '@/components/ui/coin/Coin';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import { Stores } from '@/libs/api/stores';
 import { SortUpIcon, SortDownIcon, AddIcon } from '@/components/icons/AllIcon';
+import { Tab } from '@/components/ui/tab/Tab';
 
 const MyRedCoinClient = () => {
   const { isMobile, isTablet } = useScreenSize();
@@ -45,29 +46,26 @@ const MyRedCoinClient = () => {
         {/* 頁籤區 */}
         <section className="mb-2 d-flex align-items-center justify-content-between">
           <div>
-            <button
-              type="button"
-              className={tab === 'support' ? style.tabBtnActive : style.tabBtn}
+            <Tab
+              isActive={tab === 'support'}
               onClick={() => setTab('support')}
+              isShowData={true}
+              num={24}
             >
               誰支持我
-            </button>
-            <button
-              type="button"
-              className={tab === 'store' ? style.tabBtnActive : style.tabBtn}
+            </Tab>
+            <Tab
+              isActive={tab === 'store'}
               onClick={() => setTab('store')}
+              isShowData={true}
+              num={14}
             >
               我的網店
-            </button>
-            <button
-              type="button"
-              className={tab === 'work' ? style.tabBtnActive : style.tabBtn}
-              onClick={() => setTab('work')}
-            >
+            </Tab>
+            <Tab isActive={tab === 'work'} onClick={() => setTab('work')} isShowData={true} num={1}>
               我的業配
-            </button>
+            </Tab>
           </div>
-
           <div className="d-flex align-items-center">
             <Search width="96px" />
             {tab === 'support' ? (
