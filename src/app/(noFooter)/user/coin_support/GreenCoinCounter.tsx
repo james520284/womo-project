@@ -30,7 +30,7 @@ const GreenCoinCounter = () => {
         <Search />
       </div>
 
-      <section className="d-flex flex-column  mt-5">
+      <section className="d-flex flex-column">
         <div className="d-flex align-items-center py-3 border-bottom">
           <Coin color="green" scale={0.6}>
             <Avatar src={AVATAR_LINK.my} />

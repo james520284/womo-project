@@ -28,7 +28,7 @@ const FriendsList = ({ tab }: Props) => {
                 <span className="me-1 bg-grey-100 rounded p-1 fs-xs">對方有我籌碼</span>
               )}
 
-              <Button color="brand" size="md">
+              <Button as="a" href="/user/coin_support" color="brand" size="md">
                 打賞
               </Button>
             </div>

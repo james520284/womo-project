@@ -30,7 +30,7 @@ const RedCoinCounter = () => {
         <Search />
       </div>
 
-      <section className="d-flex flex-column  mt-5">
+      <section className="d-flex flex-column">
         {AVATAR_LINK.others.map((user) => (
           <div key={user.id} className="d-flex align-items-center py-3 border-bottom">
             <Coin color="red" scale={0.6}>

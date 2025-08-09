@@ -1,0 +1,54 @@
+.section {
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 36px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-left: 12px;
+}
+
+.imgWrapper2 {
+  position: relative;
+  width: 28px;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-left: 4px;
+}
+
+.img {
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+// .textNoWrap {
+//   white-space: nowrap;
+// }
+
+.submitBtn {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  padding: 8px 0;
+  font-weight: 700;
+
+  @media (min-width: 768px) {
+    position: static;
+    width: 100%;
+    border-radius: 8px;
+  }
+  &Enough {
+    background: linear-gradient(135deg, #cd506d, #e37929);
+  }
+  &Lack {
+    background-color: #cd506d;
+  }
+}
