@@ -14,6 +14,7 @@ const MyProfileClient = () => {
   const [tab, setTab] = useState<'post' | 'ARspace' | '24hrMsg'>('post');
   return (
     <>
+      {/* 頭像區 */}
       {isMobile || isTablet ? <MyProfileHeader /> : <Header />}
 
       <div className={`container-fluid ${style.wrapper}`}>

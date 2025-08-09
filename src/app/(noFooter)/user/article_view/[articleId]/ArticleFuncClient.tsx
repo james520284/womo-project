@@ -1,14 +1,15 @@
 'use client';
 
 import style from './ArticleFuncClient.module.scss';
-import { IconShare, IconMore, IconMood, IconSend, IconBackArrow } from '../icons';
+import { IconShare, IconMore, IconMood, IconSend, IconBackArrow } from '@/components/icons';
 import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import Coin from '../ui/coin/Coin';
+import Coin from '@/components/ui/coin/Coin';
 import { useRouter } from 'next/navigation';
 
+// Header的返回鍵
 export const ArticleHeaderBackBtn = () => {
   const router = useRouter();
 
@@ -19,6 +20,7 @@ export const ArticleHeaderBackBtn = () => {
   );
 };
 
+// Header的功能鍵
 export const ArticleHeaderFuncBtn = () => {
   return (
     <div className="d-flex align-items-center">
@@ -32,6 +34,7 @@ export const ArticleHeaderFuncBtn = () => {
   );
 };
 
+// 貼文回覆鍵/籌碼互動鍵
 export const ArticleReplyBar = () => {
   const [isInputFocused, setIsInputFocused] = useState(false);
 

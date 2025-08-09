@@ -1,7 +1,7 @@
 'use client';
 
 import * as Dialog from '@radix-ui/react-dialog';
-import style from './YellowCoinPayDetail.module.scss';
+import style from './ModalYellowCoinPayDetail.module.scss';
 import Link from 'next/link';
 
 type Props = {
@@ -9,7 +9,7 @@ type Props = {
   onOpenChange: (open: boolean) => void;
 };
 
-const YellowCoinPayDetail = ({ open, onOpenChange }: Props) => {
+const ModalYellowCoinPayDetail = ({ open, onOpenChange }: Props) => {
   const dataArr = 1;
   return (
     <Dialog.Root open={open} onOpenChange={onOpenChange}>
@@ -93,4 +93,4 @@ const YellowCoinPayDetail = ({ open, onOpenChange }: Props) => {
   );
 };
 
-export default YellowCoinPayDetail;
+export default ModalYellowCoinPayDetail;

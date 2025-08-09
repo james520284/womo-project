@@ -1,5 +1,4 @@
 export const ACTIVITY = [
-  { title: '', desc: '不添加' },
   { title: '贈幣', desc: '送給留言者籌碼' },
   { title: '許願', desc: '跟所有人許願要籌碼' },
   { title: '交換', desc: '跟所有人交換籌碼' },

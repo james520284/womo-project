@@ -3,7 +3,7 @@ import ArticleHeader from '@/components/header/ArticleHeader';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
 import { IconViewSolid, IconMood, IconChat, IconCoinEmoji } from '@/components/icons';
-import { ArticleReplyBar } from '@/components/functionClient/ArticleFuncClient';
+import { ArticleReplyBar } from './ArticleFuncClient';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
@@ -11,7 +11,10 @@ import Link from 'next/link';
 const articleView = () => {
   return (
     <div className="position-relative">
+      {/* 頭像區 */}
       <ArticleHeader />
+
+      {/* 貼文文字區 */}
       <section className="container-fluid">
         <p className="fs-sm my-5">
           今天走進了一片幾乎以為不存在的地方。 從清晨開始翻山越嶺，只為了那個傳說中的「沉睡綠洲」。
@@ -24,6 +27,7 @@ const articleView = () => {
         </p>
       </section>
 
+      {/* 貼文圖片區 */}
       <section className={style.imgWrapper}>
         <Image
           src={homeBanner[0].image}
@@ -34,6 +38,7 @@ const articleView = () => {
       </section>
 
       <div className="container-fluid">
+        {/* 數據區 */}
         <section className=" mt-3 mb-5 d-flex align-items-center text-grey-400">
           <div>
             <IconViewSolid width={20} />
@@ -53,6 +58,7 @@ const articleView = () => {
           </div>
         </section>
 
+        {/* Emoji回覆區 */}
         <section className="border-bottom pb-3">
           {AVATAR_LINK.others.map((user) => (
             <Link
@@ -67,6 +73,7 @@ const articleView = () => {
           ))}
         </section>
 
+        {/* 貼文留言區 */}
         <section className="my-5">
           {AVATAR_LINK.others.map((user) => (
             <div key={user.name} className="d-flex align-items-start fs-sm mb-3">
@@ -94,6 +101,7 @@ const articleView = () => {
         </section>
       </div>
 
+      {/* 回覆鍵+籌碼互動鍵 */}
       <div className="container-fluid position-sticky bottom-0 bg-light py-2">
         <ArticleReplyBar />
       </div>

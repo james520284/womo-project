@@ -12,13 +12,13 @@ import Avatar from '@/components/ui/avatar/Avatar';
 import PagesHeader from '@/components/header/PagesHeader';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import CheckBtn from '@/components/ui/button/icon/CheckBtn';
-import AddGiveCoins from '@/components/activity/giveCoins/AddGiveCoins';
-import AddWishCoins from '@/components/activity/wishCoins/AddWishCoins';
-import AddExchangeCoins from '@/components/activity/exchangeCoins/AddExchangeCoins';
-import AddReunionPost from '@/components/activity/reunionPost/AddReunionPost';
-import AddSecretPost from '@/components/activity/secretPost/AddSecretPost';
-import AddLotteryGame from '@/components/activity/lotteryGame/AddLotteryGame';
-import AddCollectGame from '@/components/activity/collectGame/AddCollectGame';
+import AddGiveCoins from './(coinGame)/giveCoins/AddGiveCoins';
+import AddWishCoins from './(coinGame)/wishCoins/AddWishCoins';
+import AddExchangeCoins from './(coinGame)/exchangeCoins/AddExchangeCoins';
+import AddReunionPost from './(coinGame)/reunionPost/AddReunionPost';
+import AddSecretPost from './(coinGame)/secretPost/AddSecretPost';
+import AddLotteryGame from './(coinGame)/lotteryGame/AddLotteryGame';
+import AddCollectGame from './(coinGame)/collectGame/AddCollectGame';
 import { EMOJI } from '@/constants/emoji';
 import { ACTIVITY } from '@/constants/activity';
 import {
@@ -46,8 +46,11 @@ const CreateArticleClient = () => {
 
   return (
     <>
+      {/* Header區 */}
       <PagesHeader />
+
       <form action="" className={`container-fluid ${style.wrapper} mt-5 position-relative`}>
+        {/* 頭像區 */}
         <section className="d-flex align-items-center">
           <Coin color="green" scale={0.8}>
             <Avatar src={AVATAR_LINK.my} />
@@ -62,6 +65,7 @@ const CreateArticleClient = () => {
           </p>
         </section>
 
+        {/* Emoji選擇區 */}
         <SectionUI2 title="今日的心情標籤是什麼...">
           <div className="row gy-3 justify-content-evenly">
             {EMOJI.map((img, index) => (
@@ -100,6 +104,7 @@ const CreateArticleClient = () => {
           </div>
         </SectionUI2>
 
+        {/* 貼文內容編輯區 */}
         <SectionUI2 title="想說些什麼呢？">
           <div className="form-floating mb-5">
             <textarea
@@ -129,13 +134,16 @@ const CreateArticleClient = () => {
           </div>
         </SectionUI2>
 
+        {/* 添加互動區 */}
         {!selectedActivity && (
-          <SectionUI2 title={`添加互動 ${selectedActivity && ': ' + selectedActivity}`}>
+          <SectionUI2 title={'添加互動'}>
             {ACTIVITY.map((act, index) => {
               return (
-                <div
+                <button
+                  type="button"
+                  onClick={() => setSelectedActivity(act.title)}
                   key={act.title}
-                  className={`form-check my-3 ${style.formCheck} ${
+                  className={`form-check my-3 w-100 ${style.formCheck} ${
                     !isShowAllActivity && index >= 3 ? 'd-none' : ''
                   }`}
                 >
@@ -152,16 +160,12 @@ const CreateArticleClient = () => {
                       className="form-check-label d-flex align-items-center"
                       htmlFor={`option${index + 1}`}
                     >
-                      <button type="button" onClick={() => setSelectedActivity(act.title)}>
-                        <IconAdd width={16} />
-                      </button>
+                      <IconAdd width={16} />
                     </label>
-                    <span className={`${style.actTitle}  ${index === 0 ? style.firstTitle : ''}`}>
-                      {act.title}
-                    </span>
+                    <span className={style.actTitle}>{act.title}</span>
                     <p>{act.desc}</p>
                   </div>
-                </div>
+                </button>
               );
             })}
 
@@ -271,6 +275,7 @@ const CreateArticleClient = () => {
           </div>
         )}
 
+        {/* 送出鍵 */}
         <button type="submit" className={style.submitBtn}>
           發布
         </button>
