@@ -5,6 +5,7 @@ import FriendsNewPost from '@/components/home/FriendsNewPost';
 import PostPublisher from '@/components/home/PostPublisher';
 import CoinFriendsPreview from '@/components/home/CoinFriendsPreview';
 import CoinShow from '@/components/home/CoinShow';
+import { Suspense } from 'react';
 
 export default function Home() {
   return (
@@ -21,7 +22,9 @@ export default function Home() {
       <CoinFriendsPreview />
 
       {/* 熱門探索 CSR模式 */}
-      <CoinShow />
+      <Suspense>
+        <CoinShow />
+      </Suspense>
     </>
   );
 }
