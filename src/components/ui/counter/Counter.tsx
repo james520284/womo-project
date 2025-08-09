@@ -53,6 +53,8 @@ const Counter = ({ value, onChange, min = 1, max, className = '' }: Props) => {
       </button>
       <input
         type="text"
+        inputMode="numeric"
+        pattern="[0-9]*"
         className="form-control"
         value={value}
         onChange={handleInputChange}

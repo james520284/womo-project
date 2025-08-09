@@ -1,6 +1,6 @@
 'use client';
 
-import style from './CoinReceiveClient.module.scss';
+import style from './CoinGiveClient.module.scss';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import { COINS } from '@/constants/coin';
@@ -9,8 +9,10 @@ import { Tab } from '@/components/ui/tab/Tab';
 import { useState } from 'react';
 import PagesHeader from '@/components/header/PagesHeader';
 import GreenCoinCounter from './GreenCoinCounter';
+import RedCoinCounter from './RedCoinCounter';
+import YellowCoinCounter from './YellowCoinCounter';
 
-const CoinReceiveClient = () => {
+const CoinGiveClient = () => {
   const [donateWay, setDonateWay] = useState<'give' | 'buy'>('give');
   const [coinTab, setCoinTab] = useState<'green' | 'red' | 'yellow'>('green');
   const boxShadow = '0px 0px 5px 0px rgba(0, 0, 0, 0.25)';
@@ -38,7 +40,7 @@ const CoinReceiveClient = () => {
         </section>
 
         {/* 籌碼頁籤區 */}
-        <section className="d-flex justify-content-center mt-5">
+        <section className="d-flex justify-content-center my-5">
           <button
             type="button"
             className={style.coinTab}
@@ -86,10 +88,21 @@ const CoinReceiveClient = () => {
         </section>
 
         {/* 數量區 */}
-        <GreenCoinCounter />
+        {coinTab === 'green' ? (
+          <GreenCoinCounter />
+        ) : coinTab === 'red' ? (
+          <RedCoinCounter />
+        ) : (
+          <YellowCoinCounter />
+        )}
+
+        {/* 送出鍵 */}
+        <button type="submit" className={style.submitBtn}>
+          送出
+        </button>
       </div>
     </>
   );
 };
 
-export default CoinReceiveClient;
+export default CoinGiveClient;

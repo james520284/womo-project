@@ -15,7 +15,7 @@ const Search = ({ isActive = false, width }: Props) => {
   return (
     <>
       {isClick ? (
-        <span className="position-relative">
+        <div className="position-relative">
           <input
             type="text"
             name="search"
@@ -44,7 +44,7 @@ const Search = ({ isActive = false, width }: Props) => {
               <IconSearch width={14} />
             </span>
           )}
-        </span>
+        </div>
       ) : (
         <button type="button" className="line-height-none">
           <IconSearch width={28} onClick={() => setIsClick(!isClick)} />

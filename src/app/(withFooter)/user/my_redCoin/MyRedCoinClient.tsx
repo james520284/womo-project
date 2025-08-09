@@ -42,7 +42,7 @@ const MyRedCoinClient = () => {
         </section>
 
         {/* 頁籤區 */}
-        <section className="mb-2 d-flex align-items-center justify-content-between">
+        <section className="mb-2 d-flex align-items-center">
           <div>
             <Tab
               isActive={tab === 'support'}
@@ -64,21 +64,23 @@ const MyRedCoinClient = () => {
               我的業配
             </Tab>
           </div>
-          <div className="d-flex align-items-center">
-            <Search width="96px" />
-            {tab === 'support' ? (
-              <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
-                {isSort ? <IconSortDown /> : <IconSortUp />}
-              </button>
-            ) : (
-              tab === 'store' && (
-                <button type="button" className="ms-2">
-                  <IconAdd />
-                </button>
-              )
-            )}
-          </div>
         </section>
+
+        {/* 功能按鈕區 */}
+        <div className="d-flex align-items-center justify-content-end">
+          <Search />
+          {tab === 'support' ? (
+            <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
+              {isSort ? <IconSortDown /> : <IconSortUp />}
+            </button>
+          ) : (
+            tab === 'store' && (
+              <button type="button" className="ms-2">
+                <IconAdd />
+              </button>
+            )
+          )}
+        </div>
 
         {/* 列表區 */}
         {tab === 'support' ? (

@@ -29,8 +29,9 @@ const RedCoinCollectList = () => {
           </div>
         )}
         {!isDeletable && (
-          <div>
+          <div className="d-flex align-items-center">
             <Search />
+
             <button type="button" className="px-2 line-height-none">
               <IconFilter width={22} />
             </button>

@@ -27,7 +27,7 @@ const CoinWalletHeader = () => {
         <Link href="/user/coin_friends" className={style.coinActionBtn}>
           <Image
             src="https://womophoto.s3.ap-northeast-1.amazonaws.com/public/assets/images/icon/quick_btn_give.svg?v=2"
-            alt="送朋友"
+            alt="籌碼朋友"
             width={24}
             height={24}
           />
@@ -37,7 +37,7 @@ const CoinWalletHeader = () => {
         <Link href="#" className={style.coinActionBtn}>
           <Image
             src="https://womophoto.s3.ap-northeast-1.amazonaws.com/public/assets/images/icon/quick_btn_get.svg?v=2"
-            alt="回謝你"
+            alt="籌碼存摺"
             width={24}
             height={24}
           />
