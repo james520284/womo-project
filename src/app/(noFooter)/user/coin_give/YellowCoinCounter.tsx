@@ -2,10 +2,7 @@
 
 import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
-import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
-import Coin from '@/components/ui/coin/Coin';
 import Counter from '@/components/ui/counter/Counter';
-import Search from '@/components/ui/search/Search';
 import { COINS } from '@/constants/coin';
 
 const YellowCoinCounter = () => {
