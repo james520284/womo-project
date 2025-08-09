@@ -26,25 +26,11 @@ const RedCoinCounter = () => {
 
   return (
     <>
-      <Search width={'100%'} isActive={true} />
+      <div className="d-flex justify-content-end">
+        <Search />
+      </div>
 
       <section className="d-flex flex-column  mt-5">
-        <div className="d-flex align-items-center py-3 border-bottom">
-          <Coin color="red" scale={0.6}>
-            <Avatar src={AVATAR_LINK.my} />
-          </Coin>
-          <div className="ms-3 flex-grow-1">
-            <h2 className="fs-6 fw-bold mb-1 ">自己</h2>
-            <span className="text-coinRed fw-bold">100</span>
-          </div>
-          <Counter
-            value={num['james'] ?? '1'}
-            onChange={(val) => {
-              handleChange('james', val);
-            }}
-            min={1}
-          />
-        </div>
         {AVATAR_LINK.others.map((user) => (
           <div key={user.id} className="d-flex align-items-center py-3 border-bottom">
             <Coin color="red" scale={0.6}>

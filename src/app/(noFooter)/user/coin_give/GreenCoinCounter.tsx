@@ -26,7 +26,9 @@ const GreenCoinCounter = () => {
 
   return (
     <>
-      <Search width={'100%'} isActive={true} />
+      <div className="d-flex justify-content-end">
+        <Search />
+      </div>
 
       <section className="d-flex flex-column  mt-5">
         <div className="d-flex align-items-center py-3 border-bottom">
