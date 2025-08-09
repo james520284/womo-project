@@ -5,7 +5,8 @@ import CheckBtn from '@/components/ui/button/icon/CheckBtn';
 import Coin from '@/components/ui/coin/Coin';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
-import { LockIcon } from '@/components/icons/AllIcon';
+
+import { IconLock } from '@/components/icons';
 
 const AddSecretPost = () => {
   const [coinType, setCoinType] = useState('greenCoins');
@@ -17,7 +18,7 @@ const AddSecretPost = () => {
   return (
     <SectionUI2 title="秘密">
       <div className="d-flex align-items-center mb-8">
-        <LockIcon />
+        <IconLock />
         <span className="ms-1">本貼文已上鎖</span>
       </div>
       <span className="text-primary">*</span> 解鎖貼文需要幾顆籌碼

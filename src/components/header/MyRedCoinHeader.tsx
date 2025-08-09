@@ -8,7 +8,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
 import { COINS } from '@/constants/coin';
 import Image from 'next/image';
-import { ArrowIcon, SellIcon } from '../icons/AllIcon';
+import { IconArrow, IconSell } from '../icons';
 
 const MyRedCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -43,7 +43,7 @@ const MyRedCoinHeader = () => {
                 <span className="text-warning fw-bold ms-2 me-1">100</span>
                 <Image src={COINS[2].image} alt="金籌碼" width={20} height={20} />
                 <span className="ms-1">
-                  <ArrowIcon width={20} />
+                  <IconArrow width={20} />
                 </span>
               </p>
             </div>
@@ -51,7 +51,7 @@ const MyRedCoinHeader = () => {
 
           <Button color="red" size="md">
             <div className="d-flex align-items-center">
-              <SellIcon width={20} />
+              <IconSell width={20} />
               <span className="ms-1">賣籌碼</span>
             </div>
           </Button>

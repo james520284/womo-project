@@ -3,7 +3,7 @@
 import style from './AddWishCoins.module.scss';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import Coin from '@/components/ui/coin/Coin';
-import { AddIcon } from '@/components/icons/AllIcon';
+import { IconAdd } from '@/components/icons';
 
 const AddWishCoins = () => {
   return (
@@ -13,7 +13,7 @@ const AddWishCoins = () => {
           <button type="button" className="noText">
             <Coin scale={1} color="green">
               <div className={style.coinBg}>
-                <AddIcon />
+                <IconAdd />
               </div>
             </Coin>
           </button>

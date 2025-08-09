@@ -2,7 +2,7 @@ import style from './page.module.scss';
 import ArticleHeader from '@/components/header/ArticleHeader';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
-import { ViewSolidIcon, MoodIcon, ChatIcon, CoinEmojiIcon } from '@/components/icons/AllIcon';
+import { IconViewSolid, IconMood, IconChat, IconCoinEmoji } from '@/components/icons';
 import { ArticleReplyBar } from '@/components/functionClient/ArticleFuncClient';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -36,19 +36,19 @@ const articleView = () => {
       <div className="container-fluid">
         <section className=" mt-3 mb-5 d-flex align-items-center text-grey-400">
           <div>
-            <ViewSolidIcon width={20} />
+            <IconViewSolid width={20} />
             <span className="fs-xs fw-bold">13.5K</span>
           </div>
           <div className="ms-2">
-            <MoodIcon width={20} />
+            <IconMood width={20} />
             <span className="fs-xs fw-bold">598</span>
           </div>
           <div className="ms-2">
-            <ChatIcon width={20} />
+            <IconChat width={20} />
             <span className="fs-xs fw-bold">46</span>
           </div>
           <div className="ms-2">
-            <CoinEmojiIcon width={20} />
+            <IconCoinEmoji width={20} />
             <span className="fs-xs fw-bold">97</span>
           </div>
         </section>

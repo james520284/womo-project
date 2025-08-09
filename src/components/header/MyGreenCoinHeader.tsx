@@ -6,7 +6,7 @@ import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
-import { ArrowIcon, SendIcon } from '../icons/AllIcon';
+import { IconArrow, IconSend } from '../icons';
 
 const MyGreenCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -40,14 +40,14 @@ const MyGreenCoinHeader = () => {
                 <span>本月剩餘顆數</span>
                 <span className="text-secondary fw-bold mx-2">85</span>
                 <span>
-                  <ArrowIcon width={20} />
+                  <IconArrow width={20} />
                 </span>
               </p>
             </div>
           </button>
           <Button color="green" size="md">
             <div className="d-flex align-items-center">
-              <SendIcon width={20} />
+              <IconSend width={20} />
               <span className="ms-1">發籌碼</span>
             </div>
           </Button>

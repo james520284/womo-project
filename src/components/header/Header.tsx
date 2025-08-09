@@ -8,15 +8,15 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import {
-  ShowIcon,
-  WalletIcon,
-  IncomeIcon,
-  ChatFriendIcon,
-  SearchIcon,
-  MenuIcon,
-  BellIcon,
-  AddFriendIcon,
-} from '../icons/AllIcon';
+  IconShow,
+  IconWallet,
+  IconIncome,
+  IconChatFriend,
+  IconSearch,
+  IconMenu,
+  IconBell,
+  IconAddFriend,
+} from '../icons';
 
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -57,7 +57,7 @@ const Header = () => {
                   pathName === '/' ? 'text-brand' : ''
                 }`}
               >
-                <ShowIcon width={28} />
+                <IconShow width={28} />
                 <span className="ms-1">瘋碼秀</span>
               </Link>
             </li>
@@ -68,7 +68,7 @@ const Header = () => {
                   pathName === '/user/coin_wallet' ? 'text-brand' : ''
                 }`}
               >
-                <WalletIcon width={28} />
+                <IconWallet width={28} />
                 <span className="ms-1">籌碼包</span>
               </Link>
             </li>
@@ -94,7 +94,7 @@ const Header = () => {
                   pathName === '/user/my_greenCoin' ? 'text-brand' : ''
                 }`}
               >
-                <ChatFriendIcon width={28} />
+                <IconChatFriend width={28} />
                 <span className="ms-1">我們倆</span>
               </Link>
             </li>
@@ -105,7 +105,7 @@ const Header = () => {
                   pathName === '/user/my_redCoin' ? 'text-brand' : ''
                 }`}
               >
-                <IncomeIcon width={28} />
+                <IconIncome width={28} />
                 <span className="ms-1">玩斜槓</span>
               </Link>
             </li>
@@ -113,22 +113,22 @@ const Header = () => {
           <ul className={`d-flex py-3 ${style.headerNavUtility}`}>
             <li className="px-1">
               <Link href="/user/coin_friends">
-                <AddFriendIcon width={20} />
+                <IconAddFriend width={20} />
               </Link>
             </li>
             <li className="px-1">
               <Link href="#">
-                <SearchIcon width={20} />
+                <IconSearch width={20} />
               </Link>
             </li>
             <li className="px-1">
               <Link href="#">
-                <BellIcon width={20} />
+                <IconBell width={20} />
               </Link>
             </li>
             <li className="px-1">
               <Link href="#">
-                <MenuIcon width={20} />
+                <IconMenu width={20} />
               </Link>
             </li>
           </ul>

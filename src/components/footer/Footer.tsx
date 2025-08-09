@@ -5,7 +5,7 @@
 import style from './Footer.module.scss';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { WalletIcon, ChatFriendIcon, IncomeIcon, ShowIcon } from '../icons/AllIcon';
+import { IconWallet, IconChatFriend, IconIncome, IconShow } from '../icons';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
@@ -21,7 +21,7 @@ const Footer = () => {
               pathName === '/' ? 'text-brand' : 'text-dark'
             }`}
           >
-            <ShowIcon width={24} />
+            <IconShow width={24} />
             <span>瘋碼秀</span>
           </Link>
         </li>
@@ -32,7 +32,7 @@ const Footer = () => {
               pathName === '/user/coin_wallet' ? 'text-brand' : 'text-dark'
             }`}
           >
-            <WalletIcon width={24} />
+            <IconWallet width={24} />
             <span>籌碼包</span>
           </Link>
         </li>
@@ -55,7 +55,7 @@ const Footer = () => {
               pathName === '/user/my_greenCoin' ? 'text-brand' : 'text-dark'
             }`}
           >
-            <ChatFriendIcon width={24} />
+            <IconChatFriend width={24} />
             <span>我們倆</span>
           </Link>
         </li>
@@ -66,7 +66,7 @@ const Footer = () => {
               pathName === '/user/my_redCoin' ? 'text-brand' : 'text-dark'
             }`}
           >
-            <IncomeIcon width={24} />
+            <IconIncome width={24} />
             <span>玩斜槓</span>
           </Link>
         </li>

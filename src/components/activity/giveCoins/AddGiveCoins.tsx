@@ -5,7 +5,7 @@ import style from './AddGiveCoins.module.scss';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import CheckBtn2 from '@/components/ui/button/icon/CheckBtn2';
 import Coin from '@/components/ui/coin/Coin';
-import { AddIcon } from '@/components/icons/AllIcon';
+import { IconAdd } from '@/components/icons';
 
 const AddGiveCoins = () => {
   const [selectedSendMyCoin, setSelectedSendMyCoin] = useState(false);
@@ -25,7 +25,7 @@ const AddGiveCoins = () => {
           <button type="button" className="noText">
             <Coin scale={1} color="green">
               <div className={style.coinBg}>
-                <AddIcon />
+                <IconAdd />
               </div>
             </Coin>
           </button>

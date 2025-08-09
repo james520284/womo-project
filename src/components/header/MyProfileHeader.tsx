@@ -5,7 +5,7 @@ import Avatar from '../ui/avatar/Avatar';
 import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import { ArrowIcon, GiveCoinIcon, StoreIcon } from '../icons/AllIcon';
+import { IconArrow, IconGiveCoin, IconStore } from '../icons';
 
 const MyProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -35,17 +35,17 @@ const MyProfileHeader = () => {
             </Link>
             <Link href="#" className="h6 fw-bold ms-2 d-flex align-items-center">
               <span>蒼田楓</span>
-              <ArrowIcon />
+              <IconArrow />
             </Link>
           </div>
 
           <div className="d-flex align-items-center fs-sm">
             <Link href="/user/coin_receive" className="d-flex align-items-center">
-              <GiveCoinIcon width={20} />
+              <IconGiveCoin width={20} />
               <span>打賞我</span>
             </Link>
             <Link href="#" className="d-flex align-items-center ms-4">
-              <StoreIcon width={20} />
+              <IconStore width={20} />
               <span>我的網店</span>
             </Link>
           </div>

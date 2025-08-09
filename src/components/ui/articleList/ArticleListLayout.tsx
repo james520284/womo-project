@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Avatar from '@/components/ui/avatar/Avatar';
-import { ViewIcon, ARIcon } from '@/components/icons/AllIcon';
 import {
   ReceiveBtn,
   GiveBtn,
@@ -16,6 +15,8 @@ import {
   LotteryBtn,
   CollectBtn,
 } from './ArticleListCoinBtn';
+
+import { IconView, IconAR } from '@/components/icons';
 
 type Props = {
   tab: string;
@@ -43,7 +44,7 @@ export const GridLayout = ({ tab, onBeforeEnterPost }: Props) => {
                 </div>
                 <div className={style.imgText}>
                   <div className="d-flex align-items-center">
-                    <ViewIcon width={20} />
+                    <IconView width={20} />
                     <span className="ms-1">{img.view}</span>
                   </div>
                   <span>
@@ -53,7 +54,7 @@ export const GridLayout = ({ tab, onBeforeEnterPost }: Props) => {
                 </div>
                 {tab === 'ARspace' && (
                   <div className={style.imgARTag}>
-                    <ARIcon width={28} />
+                    <IconAR width={28} />
                   </div>
                 )}
               </Link>
@@ -85,7 +86,7 @@ export const RowLayout = ({ tab, onBeforeEnterPost }: Props) => {
 
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
-                      <ViewIcon width={20} />
+                      <IconView width={20} />
                       <span className="ms-1">{img.view}</span>
                     </div>
                     <span>
@@ -95,7 +96,7 @@ export const RowLayout = ({ tab, onBeforeEnterPost }: Props) => {
                   </div>
                   {tab === 'ARspace' && (
                     <div className={style.imgARTag}>
-                      <ARIcon width={28} />
+                      <IconAR width={28} />
                     </div>
                   )}
                 </Link>
@@ -168,7 +169,7 @@ export const FullLayout = ({ tab, onBeforeEnterPost }: Props) => {
 
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
-                      <ViewIcon width={20} />
+                      <IconView width={20} />
                       <span className="ms-1">{img.view}</span>
                     </div>
                     <span>
@@ -178,7 +179,7 @@ export const FullLayout = ({ tab, onBeforeEnterPost }: Props) => {
                   </div>
                   {tab === 'ARspace' && (
                     <div className={style.imgARTag}>
-                      <ARIcon width={48} />
+                      <IconAR width={48} />
                     </div>
                   )}
                 </Link>
@@ -221,7 +222,7 @@ export const GridLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
                 </div>
                 <div className={style.imgText}>
                   <div className="d-flex align-items-center">
-                    <ViewIcon width={20} />
+                    <IconView width={20} />
                     <span className="ms-1">{img.view}</span>
                   </div>
                   <span>
@@ -231,7 +232,7 @@ export const GridLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
                 </div>
                 {tab === 'ARspace' && (
                   <div className={style.imgARTag}>
-                    <ARIcon width={28} />
+                    <IconAR width={28} />
                   </div>
                 )}
               </Link>
@@ -263,7 +264,7 @@ export const RowLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
 
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
-                      <ViewIcon width={20} />
+                      <IconView width={20} />
                       <span className="ms-1">{img.view}</span>
                     </div>
                     <span>
@@ -273,7 +274,7 @@ export const RowLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
                   </div>
                   {tab === 'ARspace' && (
                     <div className={style.imgARTag}>
-                      <ARIcon width={28} />
+                      <IconAR width={28} />
                     </div>
                   )}
                 </Link>
@@ -346,7 +347,7 @@ export const FullLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
 
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
-                      <ViewIcon width={20} />
+                      <IconView width={20} />
                       <span className="ms-1">{img.view}</span>
                     </div>
                     <span>
@@ -356,7 +357,7 @@ export const FullLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
                   </div>
                   {tab === 'ARspace' && (
                     <div className={style.imgARTag}>
-                      <ARIcon width={48} />
+                      <IconAR width={48} />
                     </div>
                   )}
                 </Link>
@@ -399,7 +400,7 @@ export const GridLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
                 </div>
                 <div className={style.imgText}>
                   <div className="d-flex align-items-center">
-                    <ViewIcon width={20} />
+                    <IconView width={20} />
                     <span className="ms-1">{img.view}</span>
                   </div>
                   <span>
@@ -409,7 +410,7 @@ export const GridLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
                 </div>
                 {tab === 'ARspace' && (
                   <div className={style.imgARTag}>
-                    <ARIcon width={28} />
+                    <IconAR width={28} />
                   </div>
                 )}
               </Link>
@@ -441,7 +442,7 @@ export const RowLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
 
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
-                      <ViewIcon width={20} />
+                      <IconView width={20} />
                       <span className="ms-1">{img.view}</span>
                     </div>
                     <span>
@@ -451,7 +452,7 @@ export const RowLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
                   </div>
                   {tab === 'ARspace' && (
                     <div className={style.imgARTag}>
-                      <ARIcon width={28} />
+                      <IconAR width={28} />
                     </div>
                   )}
                 </Link>
@@ -524,7 +525,7 @@ export const FullLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
 
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
-                      <ViewIcon width={20} />
+                      <IconView width={20} />
                       <span className="ms-1">{img.view}</span>
                     </div>
                     <span>
@@ -534,7 +535,7 @@ export const FullLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
                   </div>
                   {tab === 'ARspace' && (
                     <div className={style.imgARTag}>
-                      <ARIcon width={48} />
+                      <IconAR width={48} />
                     </div>
                   )}
                 </Link>

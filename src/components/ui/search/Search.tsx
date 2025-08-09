@@ -1,7 +1,7 @@
 'use client';
 
 import style from './Search.module.scss';
-import { SearchIcon, CancelIcon } from '@/components/icons/AllIcon';
+import { IconSearch, IconCancel } from '@/components/icons';
 import { useState } from 'react';
 
 type Props = {
@@ -30,7 +30,7 @@ const Search = ({ isActive = false, width }: Props) => {
             type="button"
             className="line-height-none position-absolute top-50 end-0 translate-middle"
           >
-            <CancelIcon
+            <IconCancel
               width={16}
               color="#757575"
               onClick={() => {
@@ -41,13 +41,13 @@ const Search = ({ isActive = false, width }: Props) => {
           </button>
           {!value && (
             <span className="line-height-none position-absolute top-50 start-0 translate-middle ms-3 text-muted">
-              <SearchIcon width={14} />
+              <IconSearch width={14} />
             </span>
           )}
         </span>
       ) : (
         <button type="button" className="line-height-none">
-          <SearchIcon width={28} onClick={() => setIsClick(!isClick)} />
+          <IconSearch width={28} onClick={() => setIsClick(!isClick)} />
         </button>
       )}
     </>

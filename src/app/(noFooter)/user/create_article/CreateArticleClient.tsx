@@ -22,15 +22,15 @@ import AddCollectGame from '@/components/activity/collectGame/AddCollectGame';
 import { EMOJI } from '@/constants/emoji';
 import { ACTIVITY } from '@/constants/activity';
 import {
-  PhotoIcon,
-  MicrophoneIcon,
-  VideoIcon,
-  YoutubeIcon,
-  ArrowIcon,
-  LocationIcon,
-  CancelIcon,
-  AddIcon,
-} from '@/components/icons/AllIcon';
+  IconPhoto,
+  IconMicrophone,
+  IconVideo,
+  IconYoutube,
+  IconArrow,
+  IconLocation,
+  IconCancel,
+  IconAdd,
+} from '@/components/icons';
 
 const CreateArticleClient = () => {
   const searchParams = useSearchParams();
@@ -54,7 +54,7 @@ const CreateArticleClient = () => {
           </Coin>
           <p className="text-muted fw-bold ms-5">
             您正在
-            <LocationIcon width={16} className="text-secondary" />
+            <IconLocation width={16} className="text-secondary" />
             <Link href="#" className="text-secondary text-decoration-underline">
               森林小樹屋度假村
             </Link>
@@ -115,16 +115,16 @@ const CreateArticleClient = () => {
           </div>
           <div>
             <button className="mx-1">
-              <PhotoIcon width={32} />
+              <IconPhoto width={32} />
             </button>
             <button className="mx-1">
-              <MicrophoneIcon width={32} />
+              <IconMicrophone width={32} />
             </button>
             <button className="mx-1">
-              <VideoIcon width={32} />
+              <IconVideo width={32} />
             </button>
             <button className="mx-1">
-              <YoutubeIcon width={32} />
+              <IconYoutube width={32} />
             </button>
           </div>
         </SectionUI2>
@@ -153,7 +153,7 @@ const CreateArticleClient = () => {
                       htmlFor={`option${index + 1}`}
                     >
                       <button type="button" onClick={() => setSelectedActivity(act.title)}>
-                        <AddIcon width={16} />
+                        <IconAdd width={16} />
                       </button>
                     </label>
                     <span className={`${style.actTitle}  ${index === 0 ? style.firstTitle : ''}`}>
@@ -173,7 +173,7 @@ const CreateArticleClient = () => {
                     transform: `${isShowAllActivity ? 'rotate(180deg)' : 'rotate(0deg)'}`,
                   }}
                 >
-                  <ArrowIcon width={16} />
+                  <IconArrow width={16} />
                 </span>
               </button>
             </div>
@@ -188,7 +188,7 @@ const CreateArticleClient = () => {
               className={style.cancelBtn}
               onClick={() => setSelectedActivity('')}
             >
-              <CancelIcon />
+              <IconCancel />
             </button>
           </div>
         )}
@@ -201,7 +201,7 @@ const CreateArticleClient = () => {
               className={style.cancelBtn}
               onClick={() => setSelectedActivity('')}
             >
-              <CancelIcon />
+              <IconCancel />
             </button>
           </div>
         )}
@@ -214,7 +214,7 @@ const CreateArticleClient = () => {
               className={style.cancelBtn}
               onClick={() => setSelectedActivity('')}
             >
-              <CancelIcon />
+              <IconCancel />
             </button>
           </div>
         )}
@@ -227,7 +227,7 @@ const CreateArticleClient = () => {
               className={style.cancelBtn}
               onClick={() => setSelectedActivity('')}
             >
-              <CancelIcon />
+              <IconCancel />
             </button>
           </div>
         )}
@@ -240,7 +240,7 @@ const CreateArticleClient = () => {
               className={style.cancelBtn}
               onClick={() => setSelectedActivity('')}
             >
-              <CancelIcon />
+              <IconCancel />
             </button>
           </div>
         )}
@@ -253,7 +253,7 @@ const CreateArticleClient = () => {
               className={style.cancelBtn}
               onClick={() => setSelectedActivity('')}
             >
-              <CancelIcon />
+              <IconCancel />
             </button>
           </div>
         )}
@@ -266,7 +266,7 @@ const CreateArticleClient = () => {
               className={style.cancelBtn}
               onClick={() => setSelectedActivity('')}
             >
-              <CancelIcon />
+              <IconCancel />
             </button>
           </div>
         )}

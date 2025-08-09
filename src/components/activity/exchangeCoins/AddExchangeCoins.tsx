@@ -3,7 +3,7 @@
 import style from './AddExchangeCoins.module.scss';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import Coin from '@/components/ui/coin/Coin';
-import { AddIcon, ExchangeIcon } from '@/components/icons/AllIcon';
+import { IconAdd, IconExchange } from '@/components/icons';
 
 const AddExchangeCoins = () => {
   return (
@@ -14,7 +14,7 @@ const AddExchangeCoins = () => {
             <button type="button" className="noText">
               <Coin scale={1} color="green">
                 <div className={style.coinBg}>
-                  <AddIcon />
+                  <IconAdd />
                 </div>
               </Coin>
             </button>
@@ -26,14 +26,14 @@ const AddExchangeCoins = () => {
           </div>
         </div>
         <div className="mx-3">
-          <ExchangeIcon />
+          <IconExchange />
         </div>
         <div className={`${style.activityWrapper} flex-grow-1`}>
           <div className="py-5 d-flex flex-column align-items-center justify-content-center">
             <button type="button" className="noText">
               <Coin scale={1} color="green">
                 <div className={style.coinBg}>
-                  <AddIcon />
+                  <IconAdd />
                 </div>
               </Coin>
             </button>

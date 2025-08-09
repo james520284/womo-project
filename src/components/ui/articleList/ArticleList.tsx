@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { GridLayout, RowLayout, FullLayout } from './ArticleListLayout';
-import { FilterIcon, GridViewIcon, ListViewIcon, FullscreenIcon } from '@/components/icons/AllIcon';
+import { IconFilter, IconGridView, IconListView, IconFullscreen } from '@/components/icons';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 
 type Props = {
@@ -72,7 +72,7 @@ const ArticleList = ({ tab }: Props) => {
               handleClickViewMode('grid');
             }}
           >
-            <GridViewIcon width={20} />
+            <IconGridView width={20} />
           </button>
           <button
             type="button"
@@ -83,7 +83,7 @@ const ArticleList = ({ tab }: Props) => {
               handleClickViewMode('row');
             }}
           >
-            <ListViewIcon width={20} />
+            <IconListView width={20} />
           </button>
           <button
             type="button"
@@ -94,11 +94,11 @@ const ArticleList = ({ tab }: Props) => {
               handleClickViewMode('full');
             }}
           >
-            <FullscreenIcon width={20} />
+            <IconFullscreen width={20} />
           </button>
         </div>
         <button type="button" className="line-height-none">
-          <FilterIcon width={20} />
+          <IconFilter width={20} />
         </button>
       </div>
 

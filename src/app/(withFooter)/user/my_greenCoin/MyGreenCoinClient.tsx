@@ -8,7 +8,7 @@ import MyGreenCoinHeader from '@/components/header/MyGreenCoinHeader';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Coin from '@/components/ui/coin/Coin';
-import { SortUpIcon, SortDownIcon } from '@/components/icons/AllIcon';
+import { IconSortUp, IconSortDown } from '@/components/icons';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Search from '@/components/ui/search/Search';
 import { Tab } from '@/components/ui/tab/Tab';
@@ -61,7 +61,7 @@ const MyGreenCoinClient = () => {
             <Search width="96px" />
             {tab === 'letter' && (
               <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
-                {isSort ? <SortDownIcon /> : <SortUpIcon />}
+                {isSort ? <IconSortDown /> : <IconSortUp />}
               </button>
             )}
           </div>

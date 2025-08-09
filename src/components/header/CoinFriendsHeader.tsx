@@ -2,7 +2,7 @@
 
 import style from './CoinFriendsHeader.module.scss';
 import { useRouter } from 'next/navigation';
-import { BackArrowIcon, AddFriendIcon, FriendsListIcon } from '../icons/AllIcon';
+import { IconBackArrow, IconAddFriend, IconFriendsList } from '../icons';
 
 type Props = {
   isChange: boolean;
@@ -17,16 +17,16 @@ const CoinFriendsHeader = ({ isChange, setIsChange }: Props) => {
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
           <button className="btn" onClick={() => router.back()}>
-            <BackArrowIcon width={28} />
+            <IconBackArrow width={28} />
           </button>
           <h1 className="fs-5 fw-bold">{isChange ? '新增' : '籌碼'}朋友</h1>
           {isChange ? (
             <button type="button" onClick={() => setIsChange(!isChange)}>
-              <FriendsListIcon width={24} />
+              <IconFriendsList width={24} />
             </button>
           ) : (
             <button type="button" onClick={() => setIsChange(!isChange)}>
-              <AddFriendIcon width={24} />
+              <IconAddFriend width={24} />
             </button>
           )}
         </div>

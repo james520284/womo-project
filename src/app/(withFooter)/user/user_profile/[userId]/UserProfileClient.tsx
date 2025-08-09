@@ -10,7 +10,7 @@ import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '@/components/ui/button/submit/Button';
 import ArticleListUserSelf from '@/components/ui/articleList/ArticleListUserSelf';
-import { CartIcon, GiftIcon } from '@/components/icons/AllIcon';
+import { IconCart, IconGift } from '@/components/icons';
 import Link from 'next/link';
 import { Tab } from '@/components/ui/tab/Tab';
 
@@ -28,7 +28,7 @@ const UserProfileClient = () => {
             <div className="d-flex align-items-center justify-content-between">
               <span className="fs-sm">我持有你的</span>
               <button className={style.iconWrapper}>
-                <GiftIcon width={24} color="#00b0b4" />
+                <IconGift width={24} color="#00b0b4" />
               </button>
             </div>
             <div className="d-flex align-items-center justify-content-center py-2">
@@ -47,7 +47,7 @@ const UserProfileClient = () => {
             <div className="d-flex align-items-center justify-content-between">
               <span className="fs-sm">我持有你的</span>
               <Link href="#" className={style.iconWrapper}>
-                <CartIcon width={24} color="#da5271" />
+                <IconCart width={24} color="#da5271" />
               </Link>
             </div>
             <div className="d-flex align-items-center justify-content-center py-2">

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { GridLayoutUserSelf, RowLayoutUserSelf, FullLayoutUserSelf } from './ArticleListLayout';
-import { FilterIcon, GridViewIcon, ListViewIcon, FullscreenIcon } from '@/components/icons/AllIcon';
+import { IconFilter, IconGridView, IconListView, IconFullscreen } from '@/components/icons';
 
 type Props = {
   tab: string;
@@ -24,7 +24,7 @@ const ArticleListUserSelf = ({ tab }: Props) => {
               setViewMode('grid');
             }}
           >
-            <GridViewIcon width={20} />
+            <IconGridView width={20} />
           </button>
           <button
             type="button"
@@ -35,7 +35,7 @@ const ArticleListUserSelf = ({ tab }: Props) => {
               setViewMode('row');
             }}
           >
-            <ListViewIcon width={20} />
+            <IconListView width={20} />
           </button>
           <button
             type="button"
@@ -46,11 +46,11 @@ const ArticleListUserSelf = ({ tab }: Props) => {
               setViewMode('full');
             }}
           >
-            <FullscreenIcon width={20} />
+            <IconFullscreen width={20} />
           </button>
         </div>
         <button type="button" className="line-height-none">
-          <FilterIcon width={20} />
+          <IconFilter width={20} />
         </button>
       </div>
 

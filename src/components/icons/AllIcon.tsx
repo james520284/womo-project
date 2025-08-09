@@ -142,7 +142,7 @@ export const BackArrowIcon = (props: Props) => {
         d="M328 112L184 256l144 144"
       />
     </svg>
-  );
+  ); //ok
 };
 
 export const CancelIcon = (props: Props) => {
@@ -158,7 +158,7 @@ export const CancelIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const CartIcon = (props: Props) => {
   return (
@@ -201,7 +201,7 @@ export const CartIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ChatIcon = (props: Props) => {
   return (
@@ -212,7 +212,7 @@ export const ChatIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ChatFriendIcon = (props: Props) => {
   return (
@@ -223,7 +223,7 @@ export const ChatFriendIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const CheckIcon = (props: Props) => {
   return (
@@ -234,7 +234,7 @@ export const CheckIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const CloakIcon = (props: Props) => {
   return (
@@ -245,7 +245,7 @@ export const CloakIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const CoinEmojiIcon = (props: Props) => {
   return (
@@ -256,7 +256,7 @@ export const CoinEmojiIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const CompassIcon = (props: Props) => {
   return (
@@ -267,7 +267,7 @@ export const CompassIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const DeleteIcon = (props: Props) => {
   return (
@@ -278,7 +278,7 @@ export const DeleteIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ExchangeIcon = (props: Props) => {
   return (
@@ -289,7 +289,7 @@ export const ExchangeIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const FilterIcon = (props: Props) => {
   return (
@@ -304,7 +304,7 @@ export const FilterIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const FullscreenIcon = (props: Props) => {
   return (
@@ -321,7 +321,7 @@ export const FullscreenIcon = (props: Props) => {
       </g>
     </svg>
   );
-};
+}; //ok
 
 export const GiftIcon = (props: Props) => {
   return (
@@ -333,7 +333,7 @@ export const GiftIcon = (props: Props) => {
       </g>
     </svg>
   );
-};
+}; //ok
 
 export const GiveCoinIcon = (props: Props) => {
   return (
@@ -344,7 +344,7 @@ export const GiveCoinIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const GridViewIcon = (props: Props) => {
   return (
@@ -359,7 +359,7 @@ export const GridViewIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const IncomeIcon = (props: Props) => {
   return (
@@ -370,7 +370,7 @@ export const IncomeIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ListViewIcon = (props: Props) => {
   return (
@@ -383,7 +383,7 @@ export const ListViewIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const LocationIcon = (props: Props) => {
   return (
@@ -394,7 +394,7 @@ export const LocationIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const LockIcon = (props: Props) => {
   return (
@@ -405,7 +405,7 @@ export const LockIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const MemberIcon = (props: Props) => {
   return (
@@ -416,7 +416,7 @@ export const MemberIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const MenuIcon = (props: Props) => {
   return (
@@ -432,7 +432,7 @@ export const MenuIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const MicrophoneIcon = (props: Props) => {
   return (
@@ -449,7 +449,7 @@ export const MicrophoneIcon = (props: Props) => {
       </g>
     </svg>
   );
-};
+}; //ok
 
 export const MoodIcon = (props: Props) => {
   return (
@@ -460,7 +460,7 @@ export const MoodIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const MoreIcon = (props: Props) => {
   return (
@@ -471,7 +471,7 @@ export const MoreIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const PhotoIcon = (props: Props) => {
   return (
@@ -496,7 +496,7 @@ export const PhotoIcon = (props: Props) => {
       </g>
     </svg>
   );
-};
+}; //ok
 
 export const ScanIcon = (props: Props) => {
   return (
@@ -507,7 +507,7 @@ export const ScanIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const SearchIcon = (props: Props) => {
   return (
@@ -522,7 +522,7 @@ export const SearchIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const SellIcon = (props: Props) => {
   return (
@@ -533,7 +533,7 @@ export const SellIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const SendIcon = (props: Props) => {
   return (
@@ -546,7 +546,7 @@ export const SendIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const SettingIcon = (props: Props) => {
   return (
@@ -557,7 +557,7 @@ export const SettingIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ShareIcon = (props: Props) => {
   return (
@@ -568,7 +568,7 @@ export const ShareIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ShieldIcon = (props: Props) => {
   return (
@@ -579,7 +579,7 @@ export const ShieldIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ShowIcon = (props: Props) => {
   return (
@@ -598,7 +598,7 @@ export const ShowIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const SortDownIcon = (props: Props) => {
   return (
@@ -625,7 +625,7 @@ export const SortDownIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const SortUpIcon = (props: Props) => {
   return (
@@ -652,7 +652,7 @@ export const SortUpIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const StickyIcon = (props: Props) => {
   return (
@@ -670,7 +670,7 @@ export const StickyIcon = (props: Props) => {
       </g>
     </svg>
   );
-};
+}; //ok
 
 export const StoreIcon = (props: Props) => {
   return (
@@ -681,7 +681,7 @@ export const StoreIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const VideoIcon = (props: Props) => {
   return (
@@ -692,7 +692,7 @@ export const VideoIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const ViewIcon = (props: Props) => {
   return (
@@ -709,7 +709,7 @@ export const ViewIcon = (props: Props) => {
       </g>
     </svg>
   );
-};
+}; //ok
 
 export const ViewSolidIcon = (props: Props) => {
   return (
@@ -721,7 +721,7 @@ export const ViewSolidIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const WalletIcon = (props: Props) => {
   return (
@@ -734,7 +734,7 @@ export const WalletIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok
 
 export const YoutubeIcon = (props: Props) => {
   return (
@@ -745,7 +745,7 @@ export const YoutubeIcon = (props: Props) => {
       </g>
     </svg>
   );
-};
+}; //ok
 
 export const FriendsListIcon = (props: Props) => {
   return (
@@ -760,4 +760,4 @@ export const FriendsListIcon = (props: Props) => {
       />
     </svg>
   );
-};
+}; //ok

@@ -7,7 +7,7 @@ import style from './ArStoreListOfEvent.module.scss';
 import Image from 'next/image';
 import Button from '../ui/button/submit/Button';
 import Avatar from '../ui/avatar/Avatar';
-import { LocationIcon, ScanIcon, MemberIcon } from '../icons/AllIcon';
+import { IconLocation, IconScan, IconMember } from '../icons';
 import { Stores } from '@/libs/api/stores';
 
 type Props = {
@@ -57,12 +57,12 @@ const ArStoreListOfEvent = ({ open, onOpenChange }: Props) => {
                       <h3 className="h6 fw-bold">{store.name}</h3>
                       <p className="text-grey-200 fs-sm my-1 d-flex align-items-start">
                         <span>
-                          <LocationIcon width={16} />
+                          <IconLocation width={16} />
                         </span>
                         <span className="ms-2">{store.address}</span>
                       </p>
                       <p className="text-grey-200 fs-sm my-1 d-flex align-items-center">
-                        <MemberIcon width={16} />
+                        <IconMember width={16} />
                         <span className="ms-2">AR打卡人數：{store.tagAmount}</span>
                       </p>
                     </div>
@@ -70,7 +70,7 @@ const ArStoreListOfEvent = ({ open, onOpenChange }: Props) => {
                   <div className="text-center mt-5">
                     <Button color="green" size="md" width="expand">
                       <div className="d-flex align-items-center justify-content-center">
-                        <ScanIcon width={16} />
+                        <IconScan width={16} />
                         <span className="ms-1">掃圖打卡</span>
                       </div>
                     </Button>

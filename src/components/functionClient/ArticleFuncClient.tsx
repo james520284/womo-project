@@ -1,7 +1,7 @@
 'use client';
 
 import style from './ArticleFuncClient.module.scss';
-import { ShareIcon, MoreIcon, MoodIcon, SendIcon, BackArrowIcon } from '@/components/icons/AllIcon';
+import { IconShare, IconMore, IconMood, IconSend, IconBackArrow } from '../icons';
 import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -14,7 +14,7 @@ export const ArticleHeaderBackBtn = () => {
 
   return (
     <button onClick={() => router.back()}>
-      <BackArrowIcon width={20} />
+      <IconBackArrow width={20} />
     </button>
   );
 };
@@ -23,10 +23,10 @@ export const ArticleHeaderFuncBtn = () => {
   return (
     <div className="d-flex align-items-center">
       <button>
-        <ShareIcon width={20} />
+        <IconShare width={20} />
       </button>
       <button className="ms-5">
-        <MoreIcon width={24} />
+        <IconMore width={24} />
       </button>
     </div>
   );
@@ -55,7 +55,7 @@ export const ArticleReplyBar = () => {
         />
         {!isInputFocused && (
           <button type="button" className={style.moodIcon}>
-            <MoodIcon width={24} />
+            <IconMood width={24} />
           </button>
         )}
       </div>
@@ -73,7 +73,7 @@ export const ArticleReplyBar = () => {
       ) : (
         <div className="col-1">
           <button type="button" className="text-secondary">
-            <SendIcon width={24} />
+            <IconSend width={24} />
           </button>
         </div>
       )}

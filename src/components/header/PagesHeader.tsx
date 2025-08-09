@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { BackArrowIcon, CancelIcon } from '../icons/AllIcon';
+import { IconBackArrow, IconCancel } from '../icons';
 
 const PagesHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -34,13 +34,13 @@ const PagesHeader = () => {
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
           <button className="btn" onClick={() => router.back()}>
-            <BackArrowIcon width={28} />
+            <IconBackArrow width={28} />
           </button>
           <Link href="/" className={style.logoWrapper}>
             <Image src="/images/WOMO-LOGO1.png" alt="LOGO" fill className={style.logoImage} />
           </Link>
           <button className="btn" onClick={() => router.back()}>
-            <CancelIcon width={28} />
+            <IconCancel width={28} />
           </button>
         </div>
       </div>

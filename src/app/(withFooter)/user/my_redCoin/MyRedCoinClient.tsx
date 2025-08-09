@@ -11,7 +11,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Coin from '@/components/ui/coin/Coin';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import { Stores } from '@/libs/api/stores';
-import { SortUpIcon, SortDownIcon, AddIcon } from '@/components/icons/AllIcon';
+import { IconSortUp, IconSortDown, IconAdd } from '@/components/icons';
 import { Tab } from '@/components/ui/tab/Tab';
 
 const MyRedCoinClient = () => {
@@ -70,12 +70,12 @@ const MyRedCoinClient = () => {
             <Search width="96px" />
             {tab === 'support' ? (
               <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
-                {isSort ? <SortDownIcon /> : <SortUpIcon />}
+                {isSort ? <IconSortDown /> : <IconSortUp />}
               </button>
             ) : (
               tab === 'store' && (
                 <button type="button" className="ms-2">
-                  <AddIcon />
+                  <IconAdd />
                 </button>
               )
             )}

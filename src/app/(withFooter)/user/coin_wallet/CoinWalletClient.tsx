@@ -16,14 +16,7 @@ import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Link from 'next/link';
 import YellowCoinPayDetail from '@/components/modal/YellowCoinPayDetail';
-
-import {
-  FilterIcon,
-  DeleteIcon,
-  StickyIcon,
-  AiFaceIcon,
-  CloakIcon,
-} from '@/components/icons/AllIcon';
+import { IconFilter, IconDelete, IconSticky, IconAiFace, IconCloak } from '@/components/icons';
 
 const CoinWalletClient = () => {
   const { isMobile, isTablet } = useScreenSize();
@@ -125,7 +118,7 @@ const CoinWalletClient = () => {
                 <div>
                   <Search />
                   <button type="button" className="px-2 line-height-none">
-                    <FilterIcon width={22} />
+                    <IconFilter width={22} />
                   </button>
                   <button
                     type="button"
@@ -136,7 +129,7 @@ const CoinWalletClient = () => {
                       }
                     }}
                   >
-                    <DeleteIcon width={22} />
+                    <IconDelete width={22} />
                   </button>
                 </div>
               )}
@@ -208,7 +201,7 @@ const CoinWalletClient = () => {
                 <div>
                   <Search />
                   <button type="button" className="px-2 line-height-none">
-                    <FilterIcon width={22} />
+                    <IconFilter width={22} />
                   </button>
                   <button
                     type="button"
@@ -219,7 +212,7 @@ const CoinWalletClient = () => {
                       }
                     }}
                   >
-                    <DeleteIcon width={22} />
+                    <IconDelete width={22} />
                   </button>
                 </div>
               )}
@@ -260,7 +253,7 @@ const CoinWalletClient = () => {
               <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
                 {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
                 <button type="button">
-                  <AiFaceIcon width={52} color="#e3bc41" />
+                  <IconAiFace width={52} color="#e3bc41" />
                 </button>
                 <div className="text-center">
                   <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
@@ -272,7 +265,7 @@ const CoinWalletClient = () => {
               <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
                 {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
                 <button type="button">
-                  <CloakIcon width={52} color="#e3bc41" />
+                  <IconCloak width={52} color="#e3bc41" />
                 </button>
                 <div className="text-center">
                   <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
@@ -284,7 +277,7 @@ const CoinWalletClient = () => {
               <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
                 {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
                 <button type="button">
-                  <StickyIcon width={52} color="#e3bc41" />
+                  <IconSticky width={52} color="#e3bc41" />
                 </button>
                 <div className="text-center">
                   <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
@@ -296,7 +289,7 @@ const CoinWalletClient = () => {
               <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
                 {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
                 <button type="button">
-                  <AiFaceIcon width={52} color="#e3bc41" />
+                  <IconAiFace width={52} color="#e3bc41" />
                 </button>
                 <div className="text-center">
                   <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
@@ -308,7 +301,7 @@ const CoinWalletClient = () => {
               <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
                 {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
                 <button type="button">
-                  <CloakIcon width={52} color="#e3bc41" />
+                  <IconCloak width={52} color="#e3bc41" />
                 </button>
                 <div className="text-center">
                   <span className={style.numTagGold} style={{ color: '#e3bc41' }}>
