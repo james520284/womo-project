@@ -7,7 +7,7 @@ import { IconSticky, IconAiFace, IconCloak } from '@/components/icons';
 
 type Props = {
   isOpenPayDetail: boolean;
-  setIsOpenPayDetail: () => void;
+  setIsOpenPayDetail: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const YellowCoinCollectList = ({ isOpenPayDetail, setIsOpenPayDetail }: Props) => {
