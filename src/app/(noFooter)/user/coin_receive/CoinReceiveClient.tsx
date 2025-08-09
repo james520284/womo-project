@@ -6,7 +6,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import { COINS } from '@/constants/coin';
 import Image from 'next/image';
 import { Tab } from '@/components/ui/tab/Tab';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import PagesHeader from '@/components/header/PagesHeader';
 import GreenCoinCounter from './GreenCoinCounter';
 
