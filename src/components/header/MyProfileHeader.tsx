@@ -40,7 +40,7 @@ const MyProfileHeader = () => {
           </div>
 
           <div className="d-flex align-items-center fs-sm">
-            <Link href="#" className="d-flex align-items-center">
+            <Link href="/user/coin_receive" className="d-flex align-items-center">
               <GiveCoinIcon width={20} />
               <span>打賞我</span>
             </Link>

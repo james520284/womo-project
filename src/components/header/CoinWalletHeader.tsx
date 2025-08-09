@@ -31,7 +31,7 @@ const CoinWalletHeader = () => {
             width={24}
             height={24}
           />
-          <span className="ms-1 fs-sm">打賞朋友</span>
+          <span className="ms-1 fs-sm">籌碼朋友</span>
         </Link>
 
         <Link href="#" className={style.coinActionBtn}>

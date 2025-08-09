@@ -11,24 +11,40 @@ type Props = {
 
 const Search = ({ isActive = false, width }: Props) => {
   const [isClick, setIsClick] = useState(isActive);
+  const [value, setValue] = useState('');
   return (
     <>
       {isClick ? (
-        <>
-          <span className="position-relative">
-            <input
-              type="text"
-              name="search"
-              id="search"
-              placeholder="關鍵字"
-              className={style.search}
-              style={{ width }}
+        <span className="position-relative">
+          <input
+            type="text"
+            name="search"
+            id="search"
+            placeholder="我要找..."
+            className={style.search}
+            style={{ width }}
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
+          />
+          <button
+            type="button"
+            className="line-height-none position-absolute top-50 end-0 translate-middle"
+          >
+            <CancelIcon
+              width={16}
+              color="#757575"
+              onClick={() => {
+                setIsClick(!isClick);
+                setValue('');
+              }}
             />
-            <button type="button" className="position-absolute top-0 end-0 me-1">
-              <CancelIcon width={20} onClick={() => setIsClick(!isClick)} />
-            </button>
-          </span>
-        </>
+          </button>
+          {!value && (
+            <span className="line-height-none position-absolute top-50 start-0 translate-middle ms-3 text-muted">
+              <SearchIcon width={14} />
+            </span>
+          )}
+        </span>
       ) : (
         <button type="button" className="line-height-none">
           <SearchIcon width={28} onClick={() => setIsClick(!isClick)} />

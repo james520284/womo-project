@@ -1,0 +1,26 @@
+.wrapper {
+  max-width: 700px !important;
+}
+
+.coinTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 8px;
+  margin: 0 12px;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: 0 24px;
+}
+
+.img {
+  object-fit: contain;
+  border-radius: 20px;
+}

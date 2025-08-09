@@ -28,7 +28,7 @@ const UserProfileClient = () => {
             <div className="d-flex align-items-center justify-content-between">
               <span className="fs-sm">我持有你的</span>
               <button className={style.iconWrapper}>
-                <GiftIcon width={20} color="#00b0b4" />
+                <GiftIcon width={24} color="#00b0b4" />
               </button>
             </div>
             <div className="d-flex align-items-center justify-content-center py-2">
@@ -47,7 +47,7 @@ const UserProfileClient = () => {
             <div className="d-flex align-items-center justify-content-between">
               <span className="fs-sm">我持有你的</span>
               <Link href="#" className={style.iconWrapper}>
-                <CartIcon width={20} color="#da5271" />
+                <CartIcon width={24} color="#da5271" />
               </Link>
             </div>
             <div className="d-flex align-items-center justify-content-center py-2">

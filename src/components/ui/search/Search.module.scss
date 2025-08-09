@@ -1,6 +1,8 @@
 .search {
   font-size: 12px;
-  border-radius: 4px;
+  border: none;
+  border-bottom: 1px solid #c7c7cd;
+
   height: 28px;
 
   &:focus {
@@ -9,5 +11,6 @@
 }
 
 .search::placeholder {
+  padding-left: 16px;
   font-size: 12px;
 }

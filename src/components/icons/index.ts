@@ -1,0 +1,10 @@
+export { default as IconAddDuotone } from './AddDuotoneIcon';
+export { default as IconAddFriend } from './AddFriendIcon';
+export { default as IconAddPost } from './AddPostIcon';
+export { default as IconAiFace } from './AiFaceIcon';
+export { default as IconAnalyze } from './AnalyzeIcon';
+export { default as IconAR } from './ARIcon';
+export { default as IconArrow } from './ArrowIcon';
+export { default as IconArrowSolid } from './ArrowSolidIcon';
+export { default as IconBell } from './BellIcon';
+export { default as IconBackArrow } from './BackArrowIcon';

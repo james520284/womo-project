@@ -19,17 +19,61 @@ import {
 
 type Props = {
   tab: string;
+  onBeforeEnterPost?: () => void;
 };
 
-export const GridLayout = ({ tab }: Props) => {
+export const GridLayout = ({ tab, onBeforeEnterPost }: Props) => {
   return (
-    <>
-      <section>
-        <div className="row g-1">
-          {homeBanner.map((img) => (
-            <div key={img.id} className="col-4">
-              <div className="position-relative">
-                <Link href="/user/article_view/123">
+    <section>
+      <div className="row g-1">
+        {homeBanner.map((img) => (
+          <div key={img.id} className="col-4">
+            <div className="position-relative">
+              <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
+                <div
+                  className={`${style.imgWrapper} ${
+                    (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
+                    style.imgBlur
+                  }`}
+                >
+                  <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
+                </div>
+                <div className={style.imgAuthor}>
+                  <Avatar src={img.avatar} size={24} />
+                </div>
+                <div className={style.imgText}>
+                  <div className="d-flex align-items-center">
+                    <ViewIcon width={20} />
+                    <span className="ms-1">{img.view}</span>
+                  </div>
+                  <span>
+                    <span>#</span>
+                    {img.activity}
+                  </span>
+                </div>
+                {tab === 'ARspace' && (
+                  <div className={style.imgARTag}>
+                    <ARIcon width={28} />
+                  </div>
+                )}
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export const RowLayout = ({ tab, onBeforeEnterPost }: Props) => {
+  return (
+    <section>
+      <div className="row gx-3 align-items-stretch">
+        {homeBanner.map((img) => (
+          <React.Fragment key={img.id}>
+            <div className="col-4 mb-10">
+              <div className="position-relative h-100">
+                <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
                   <div
                     className={`${style.imgWrapper} ${
                       (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
@@ -39,12 +83,6 @@ export const GridLayout = ({ tab }: Props) => {
                     <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
                   </div>
 
-                  <div className={style.imgAuthor}>
-                    <div style={{ flexShrink: 0 }}>
-                      <Avatar src={img.avatar} size={24} />
-                    </div>
-                    <span className="ms-1">{img.author}</span>
-                  </div>
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
                       <ViewIcon width={20} />
@@ -63,136 +101,22 @@ export const GridLayout = ({ tab }: Props) => {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-};
-
-export const RowLayout = ({ tab }: Props) => {
-  return (
-    <>
-      <section>
-        <div className="row gx-3 align-items-stretch">
-          {homeBanner.map((img) => (
-            <React.Fragment key={img.id}>
-              <div className="col-4 mb-10">
-                <div className="position-relative h-100">
-                  <Link href="/user/article_view/123">
-                    <div
-                      className={`${style.imgWrapper} ${
-                        (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
-                        style.imgBlur
-                      }`}
-                    >
-                      <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
-                    </div>
-
-                    <div className={style.imgText}>
-                      <div className="d-flex align-items-center">
-                        <ViewIcon width={20} />
-                        <span className="ms-1">{img.view}</span>
-                      </div>
-                      <span>
-                        <span>#</span>
-                        {img.activity}
-                      </span>
-                    </div>
-                    {tab === 'ARspace' && (
-                      <div className={style.imgARTag}>
-                        <ARIcon width={28} />
-                      </div>
-                    )}
+            <div className="col-8 mb-10">
+              <div className="px-3 d-flex flex-column">
+                <div className="mb-2">
+                  <div className="d-flex align-items-center mb-2">
+                    <Avatar src={img.avatar} size={36} />
+                    <span className="ms-1 fw-bold">{img.author}</span>
+                  </div>
+                  <p className={style.content}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores.
+                    Rerum facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam
+                    eligendi nesciunt ipsum placeat. Omnis nisi quia eius in.
+                  </p>
+                  <Link href="/user/article_view/123" className="fs-xs text-grey-500">
+                    看更多
                   </Link>
                 </div>
-              </div>
-              <div className="col-8 mb-10">
-                <div className="px-3 d-flex flex-column">
-                  <div className="mb-2">
-                    <div className="d-flex align-items-center mb-2">
-                      <Avatar src={img.avatar} size={36} />
-                      <span className="ms-1 fw-bold">{img.author}</span>
-                    </div>
-                    <p className={style.content}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores.
-                      Rerum facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam
-                      eligendi nesciunt ipsum placeat. Omnis nisi quia eius in.
-                    </p>
-                    <Link href="/user/article_view/123" className="fs-xs text-grey-500">
-                      看更多
-                    </Link>
-                  </div>
-                  <div>
-                    {(img.activity === '心情' && <ReceiveBtn />) ||
-                      (img.activity === '贈幣' && <GiveBtn />) ||
-                      (img.activity === '許願' && <WishBtn />) ||
-                      (img.activity === '交換' && <ExchangeBtn />) ||
-                      (img.activity === '湊咖' && <ReunionBtn />) ||
-                      (img.activity === '秘密' && <SecretBtn />) ||
-                      (img.activity === '樂透' && <LotteryBtn />) ||
-                      (img.activity === '集點' && <CollectBtn />)}
-                  </div>
-                </div>
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-};
-
-export const FullLayout = ({ tab }: Props) => {
-  return (
-    <>
-      <section>
-        <div className="row gy-3">
-          {homeBanner.map((img) => (
-            <React.Fragment key={img.id}>
-              <div className="col-12">
-                <div className="d-flex align-items-center mb-2">
-                  <Avatar src={img.avatar} size={36} />
-                  <span className="ms-1 fw-bold">{img.author}</span>
-                </div>
-                <p className={style.content}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores. Rerum
-                  facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam eligendi
-                  nesciunt ipsum placeat. Omnis nisi quia eius in.
-                </p>
-                <Link href="/user/article_view/123" className="fs-xs text-grey-500 mt-1 ">
-                  看更多
-                </Link>
-                <div className="position-relative">
-                  <Link href="/user/article_view/123">
-                    <div
-                      className={`${style.imgWrapper} ${
-                        (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
-                        style.imgBlur
-                      }`}
-                    >
-                      <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
-                    </div>
-
-                    <div className={style.imgText}>
-                      <div className="d-flex align-items-center">
-                        <ViewIcon width={20} />
-                        <span className="ms-1">{img.view}</span>
-                      </div>
-                      <span>
-                        <span>#</span>
-                        {img.activity}
-                      </span>
-                    </div>
-                    {tab === 'ARspace' && (
-                      <div className={style.imgARTag}>
-                        <ARIcon width={48} />
-                      </div>
-                    )}
-                  </Link>
-                </div>
-              </div>
-              <div className="col-12 mb-5">
                 <div>
                   {(img.activity === '心情' && <ReceiveBtn />) ||
                     (img.activity === '贈幣' && <GiveBtn />) ||
@@ -204,23 +128,35 @@ export const FullLayout = ({ tab }: Props) => {
                     (img.activity === '集點' && <CollectBtn />)}
                 </div>
               </div>
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
-    </>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export const GridLayoutMyself = ({ tab }: Props) => {
+export const FullLayout = ({ tab, onBeforeEnterPost }: Props) => {
   return (
-    <>
-      <section>
-        <div className="row g-1">
-          {homeBanner.map((img) => (
-            <div key={img.id} className="col-4">
+    <section>
+      <div className="row gy-3">
+        {homeBanner.map((img) => (
+          <React.Fragment key={img.id}>
+            <div className="col-12">
+              <div className="d-flex align-items-center mb-2">
+                <Avatar src={img.avatar} size={36} />
+                <span className="ms-1 fw-bold">{img.author}</span>
+              </div>
+              <p className={style.content}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores. Rerum
+                facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam eligendi
+                nesciunt ipsum placeat. Omnis nisi quia eius in.
+              </p>
+              <Link href="/user/article_view/123" className="fs-xs text-grey-500 mt-1 ">
+                看更多
+              </Link>
               <div className="position-relative">
-                <Link href="/user/article_view/123">
+                <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
                   <div
                     className={`${style.imgWrapper} ${
                       (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
@@ -229,6 +165,102 @@ export const GridLayoutMyself = ({ tab }: Props) => {
                   >
                     <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
                   </div>
+
+                  <div className={style.imgText}>
+                    <div className="d-flex align-items-center">
+                      <ViewIcon width={20} />
+                      <span className="ms-1">{img.view}</span>
+                    </div>
+                    <span>
+                      <span>#</span>
+                      {img.activity}
+                    </span>
+                  </div>
+                  {tab === 'ARspace' && (
+                    <div className={style.imgARTag}>
+                      <ARIcon width={48} />
+                    </div>
+                  )}
+                </Link>
+              </div>
+            </div>
+            <div className="col-12 mb-5">
+              <div>
+                {(img.activity === '心情' && <ReceiveBtn />) ||
+                  (img.activity === '贈幣' && <GiveBtn />) ||
+                  (img.activity === '許願' && <WishBtn />) ||
+                  (img.activity === '交換' && <ExchangeBtn />) ||
+                  (img.activity === '湊咖' && <ReunionBtn />) ||
+                  (img.activity === '秘密' && <SecretBtn />) ||
+                  (img.activity === '樂透' && <LotteryBtn />) ||
+                  (img.activity === '集點' && <CollectBtn />)}
+              </div>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export const GridLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
+  return (
+    <section>
+      <div className="row g-1">
+        {homeBanner.map((img) => (
+          <div key={img.id} className="col-4">
+            <div className="position-relative">
+              <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
+                <div
+                  className={`${style.imgWrapper} ${
+                    (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
+                    style.imgBlur
+                  }`}
+                >
+                  <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
+                </div>
+                <div className={style.imgText}>
+                  <div className="d-flex align-items-center">
+                    <ViewIcon width={20} />
+                    <span className="ms-1">{img.view}</span>
+                  </div>
+                  <span>
+                    <span>#</span>
+                    {img.activity}
+                  </span>
+                </div>
+                {tab === 'ARspace' && (
+                  <div className={style.imgARTag}>
+                    <ARIcon width={28} />
+                  </div>
+                )}
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export const RowLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
+  return (
+    <section>
+      <div className="row gx-3 align-items-stretch">
+        {homeBanner.map((img) => (
+          <React.Fragment key={img.id}>
+            <div className="col-4 mb-10">
+              <div className="position-relative h-100">
+                <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
+                  <div
+                    className={`${style.imgWrapper} ${
+                      (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
+                      style.imgBlur
+                    }`}
+                  >
+                    <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
+                  </div>
+
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
                       <ViewIcon width={20} />
@@ -247,136 +279,22 @@ export const GridLayoutMyself = ({ tab }: Props) => {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-};
-
-export const RowLayoutMyself = ({ tab }: Props) => {
-  return (
-    <>
-      <section>
-        <div className="row gx-3 align-items-stretch">
-          {homeBanner.map((img) => (
-            <React.Fragment key={img.id}>
-              <div className="col-4 mb-10">
-                <div className="position-relative h-100">
-                  <Link href="/user/article_view/123">
-                    <div
-                      className={`${style.imgWrapper} ${
-                        (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
-                        style.imgBlur
-                      }`}
-                    >
-                      <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
-                    </div>
-
-                    <div className={style.imgText}>
-                      <div className="d-flex align-items-center">
-                        <ViewIcon width={20} />
-                        <span className="ms-1">{img.view}</span>
-                      </div>
-                      <span>
-                        <span>#</span>
-                        {img.activity}
-                      </span>
-                    </div>
-                    {tab === 'ARspace' && (
-                      <div className={style.imgARTag}>
-                        <ARIcon width={28} />
-                      </div>
-                    )}
+            <div className="col-8 mb-10">
+              <div className="px-3 d-flex flex-column">
+                <div className="mb-2">
+                  <div className="d-flex align-items-center mb-2">
+                    <Avatar src={AVATAR_LINK.my} size={36} />
+                    <span className="ms-1 fw-bold">蒼田楓</span>
+                  </div>
+                  <p className={style.content}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores.
+                    Rerum facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam
+                    eligendi nesciunt ipsum placeat. Omnis nisi quia eius in.
+                  </p>
+                  <Link href="/user/article_view/123" className="fs-xs text-grey-500">
+                    看更多
                   </Link>
                 </div>
-              </div>
-              <div className="col-8 mb-10">
-                <div className="px-3 d-flex flex-column">
-                  <div className="mb-2">
-                    <div className="d-flex align-items-center mb-2">
-                      <Avatar src={AVATAR_LINK.my} size={36} />
-                      <span className="ms-1 fw-bold">蒼田楓</span>
-                    </div>
-                    <p className={style.content}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores.
-                      Rerum facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam
-                      eligendi nesciunt ipsum placeat. Omnis nisi quia eius in.
-                    </p>
-                    <Link href="/user/article_view/123" className="fs-xs text-grey-500">
-                      看更多
-                    </Link>
-                  </div>
-                  <div>
-                    {(img.activity === '心情' && <ReceiveBtn />) ||
-                      (img.activity === '贈幣' && <GiveBtn />) ||
-                      (img.activity === '許願' && <WishBtn />) ||
-                      (img.activity === '交換' && <ExchangeBtn />) ||
-                      (img.activity === '湊咖' && <ReunionBtn />) ||
-                      (img.activity === '秘密' && <SecretBtn />) ||
-                      (img.activity === '樂透' && <LotteryBtn />) ||
-                      (img.activity === '集點' && <CollectBtn />)}
-                  </div>
-                </div>
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-};
-
-export const FullLayoutMyself = ({ tab }: Props) => {
-  return (
-    <>
-      <section>
-        <div className="row gy-3">
-          {homeBanner.map((img) => (
-            <React.Fragment key={img.id}>
-              <div className="col-12">
-                <div className="d-flex align-items-center mb-2">
-                  <Avatar src={AVATAR_LINK.my} size={36} />
-                  <span className="ms-1 fw-bold">蒼田楓</span>
-                </div>
-                <p className={style.content}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores. Rerum
-                  facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam eligendi
-                  nesciunt ipsum placeat. Omnis nisi quia eius in.
-                </p>
-                <Link href="/user/article_view/123" className="fs-xs text-grey-500 mt-1 ">
-                  看更多
-                </Link>
-                <div className="position-relative">
-                  <Link href="/user/article_view/123">
-                    <div
-                      className={`${style.imgWrapper} ${
-                        (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
-                        style.imgBlur
-                      }`}
-                    >
-                      <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
-                    </div>
-
-                    <div className={style.imgText}>
-                      <div className="d-flex align-items-center">
-                        <ViewIcon width={20} />
-                        <span className="ms-1">{img.view}</span>
-                      </div>
-                      <span>
-                        <span>#</span>
-                        {img.activity}
-                      </span>
-                    </div>
-                    {tab === 'ARspace' && (
-                      <div className={style.imgARTag}>
-                        <ARIcon width={48} />
-                      </div>
-                    )}
-                  </Link>
-                </div>
-              </div>
-              <div className="col-12 mb-5">
                 <div>
                   {(img.activity === '心情' && <ReceiveBtn />) ||
                     (img.activity === '贈幣' && <GiveBtn />) ||
@@ -388,23 +306,35 @@ export const FullLayoutMyself = ({ tab }: Props) => {
                     (img.activity === '集點' && <CollectBtn />)}
                 </div>
               </div>
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
-    </>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
   );
 };
 
-export const GridLayoutUserSelf = ({ tab }: Props) => {
+export const FullLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
   return (
-    <>
-      <section>
-        <div className="row g-1">
-          {homeBanner.map((img) => (
-            <div key={img.id} className="col-4">
+    <section>
+      <div className="row gy-3">
+        {homeBanner.map((img) => (
+          <React.Fragment key={img.id}>
+            <div className="col-12">
+              <div className="d-flex align-items-center mb-2">
+                <Avatar src={AVATAR_LINK.my} size={36} />
+                <span className="ms-1 fw-bold">蒼田楓</span>
+              </div>
+              <p className={style.content}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores. Rerum
+                facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam eligendi
+                nesciunt ipsum placeat. Omnis nisi quia eius in.
+              </p>
+              <Link href="/user/article_view/123" className="fs-xs text-grey-500 mt-1 ">
+                看更多
+              </Link>
               <div className="position-relative">
-                <Link href="/user/article_view/123">
+                <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
                   <div
                     className={`${style.imgWrapper} ${
                       (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
@@ -413,6 +343,102 @@ export const GridLayoutUserSelf = ({ tab }: Props) => {
                   >
                     <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
                   </div>
+
+                  <div className={style.imgText}>
+                    <div className="d-flex align-items-center">
+                      <ViewIcon width={20} />
+                      <span className="ms-1">{img.view}</span>
+                    </div>
+                    <span>
+                      <span>#</span>
+                      {img.activity}
+                    </span>
+                  </div>
+                  {tab === 'ARspace' && (
+                    <div className={style.imgARTag}>
+                      <ARIcon width={48} />
+                    </div>
+                  )}
+                </Link>
+              </div>
+            </div>
+            <div className="col-12 mb-5">
+              <div>
+                {(img.activity === '心情' && <ReceiveBtn />) ||
+                  (img.activity === '贈幣' && <GiveBtn />) ||
+                  (img.activity === '許願' && <WishBtn />) ||
+                  (img.activity === '交換' && <ExchangeBtn />) ||
+                  (img.activity === '湊咖' && <ReunionBtn />) ||
+                  (img.activity === '秘密' && <SecretBtn />) ||
+                  (img.activity === '樂透' && <LotteryBtn />) ||
+                  (img.activity === '集點' && <CollectBtn />)}
+              </div>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export const GridLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
+  return (
+    <section>
+      <div className="row g-1">
+        {homeBanner.map((img) => (
+          <div key={img.id} className="col-4">
+            <div className="position-relative">
+              <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
+                <div
+                  className={`${style.imgWrapper} ${
+                    (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
+                    style.imgBlur
+                  }`}
+                >
+                  <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
+                </div>
+                <div className={style.imgText}>
+                  <div className="d-flex align-items-center">
+                    <ViewIcon width={20} />
+                    <span className="ms-1">{img.view}</span>
+                  </div>
+                  <span>
+                    <span>#</span>
+                    {img.activity}
+                  </span>
+                </div>
+                {tab === 'ARspace' && (
+                  <div className={style.imgARTag}>
+                    <ARIcon width={28} />
+                  </div>
+                )}
+              </Link>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export const RowLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
+  return (
+    <section>
+      <div className="row gx-3 align-items-stretch">
+        {homeBanner.map((img) => (
+          <React.Fragment key={img.id}>
+            <div className="col-4 mb-10">
+              <div className="position-relative h-100">
+                <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
+                  <div
+                    className={`${style.imgWrapper} ${
+                      (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
+                      style.imgBlur
+                    }`}
+                  >
+                    <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
+                  </div>
+
                   <div className={style.imgText}>
                     <div className="d-flex align-items-center">
                       <ViewIcon width={20} />
@@ -431,136 +457,22 @@ export const GridLayoutUserSelf = ({ tab }: Props) => {
                 </Link>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-};
-
-export const RowLayoutUserSelf = ({ tab }: Props) => {
-  return (
-    <>
-      <section>
-        <div className="row gx-3 align-items-stretch">
-          {homeBanner.map((img) => (
-            <React.Fragment key={img.id}>
-              <div className="col-4 mb-10">
-                <div className="position-relative h-100">
-                  <Link href="/user/article_view/123">
-                    <div
-                      className={`${style.imgWrapper} ${
-                        (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
-                        style.imgBlur
-                      }`}
-                    >
-                      <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
-                    </div>
-
-                    <div className={style.imgText}>
-                      <div className="d-flex align-items-center">
-                        <ViewIcon width={20} />
-                        <span className="ms-1">{img.view}</span>
-                      </div>
-                      <span>
-                        <span>#</span>
-                        {img.activity}
-                      </span>
-                    </div>
-                    {tab === 'ARspace' && (
-                      <div className={style.imgARTag}>
-                        <ARIcon width={28} />
-                      </div>
-                    )}
+            <div className="col-8 mb-10">
+              <div className="px-3 d-flex flex-column">
+                <div className="mb-2">
+                  <div className="d-flex align-items-center mb-2">
+                    <Avatar src={AVATAR_LINK.others[0].image} size={36} />
+                    <span className="ms-1 fw-bold">{AVATAR_LINK.others[0].name}</span>
+                  </div>
+                  <p className={style.content}>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores.
+                    Rerum facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam
+                    eligendi nesciunt ipsum placeat. Omnis nisi quia eius in.
+                  </p>
+                  <Link href="/user/article_view/123" className="fs-xs text-grey-500">
+                    看更多
                   </Link>
                 </div>
-              </div>
-              <div className="col-8 mb-10">
-                <div className="px-3 d-flex flex-column">
-                  <div className="mb-2">
-                    <div className="d-flex align-items-center mb-2">
-                      <Avatar src={AVATAR_LINK.others[0].image} size={36} />
-                      <span className="ms-1 fw-bold">{AVATAR_LINK.others[0].name}</span>
-                    </div>
-                    <p className={style.content}>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores.
-                      Rerum facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam
-                      eligendi nesciunt ipsum placeat. Omnis nisi quia eius in.
-                    </p>
-                    <Link href="/user/article_view/123" className="fs-xs text-grey-500">
-                      看更多
-                    </Link>
-                  </div>
-                  <div>
-                    {(img.activity === '心情' && <ReceiveBtn />) ||
-                      (img.activity === '贈幣' && <GiveBtn />) ||
-                      (img.activity === '許願' && <WishBtn />) ||
-                      (img.activity === '交換' && <ExchangeBtn />) ||
-                      (img.activity === '湊咖' && <ReunionBtn />) ||
-                      (img.activity === '秘密' && <SecretBtn />) ||
-                      (img.activity === '樂透' && <LotteryBtn />) ||
-                      (img.activity === '集點' && <CollectBtn />)}
-                  </div>
-                </div>
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
-    </>
-  );
-};
-
-export const FullLayoutUserSelf = ({ tab }: Props) => {
-  return (
-    <>
-      <section>
-        <div className="row gy-3">
-          {homeBanner.map((img) => (
-            <React.Fragment key={img.id}>
-              <div className="col-12">
-                <div className="d-flex align-items-center mb-2">
-                  <Avatar src={AVATAR_LINK.others[0].image} size={36} />
-                  <span className="ms-1 fw-bold">{AVATAR_LINK.others[0].name}</span>
-                </div>
-                <p className={style.content}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores. Rerum
-                  facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam eligendi
-                  nesciunt ipsum placeat. Omnis nisi quia eius in.
-                </p>
-                <Link href="/user/article_view/123" className="fs-xs text-grey-500 mt-1 ">
-                  看更多
-                </Link>
-                <div className="position-relative">
-                  <Link href="/user/article_view/123">
-                    <div
-                      className={`${style.imgWrapper} ${
-                        (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
-                        style.imgBlur
-                      }`}
-                    >
-                      <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
-                    </div>
-
-                    <div className={style.imgText}>
-                      <div className="d-flex align-items-center">
-                        <ViewIcon width={20} />
-                        <span className="ms-1">{img.view}</span>
-                      </div>
-                      <span>
-                        <span>#</span>
-                        {img.activity}
-                      </span>
-                    </div>
-                    {tab === 'ARspace' && (
-                      <div className={style.imgARTag}>
-                        <ARIcon width={48} />
-                      </div>
-                    )}
-                  </Link>
-                </div>
-              </div>
-              <div className="col-12 mb-5">
                 <div>
                   {(img.activity === '心情' && <ReceiveBtn />) ||
                     (img.activity === '贈幣' && <GiveBtn />) ||
@@ -572,10 +484,77 @@ export const FullLayoutUserSelf = ({ tab }: Props) => {
                     (img.activity === '集點' && <CollectBtn />)}
                 </div>
               </div>
-            </React.Fragment>
-          ))}
-        </div>
-      </section>
-    </>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export const FullLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
+  return (
+    <section>
+      <div className="row gy-3">
+        {homeBanner.map((img) => (
+          <React.Fragment key={img.id}>
+            <div className="col-12">
+              <div className="d-flex align-items-center mb-2">
+                <Avatar src={AVATAR_LINK.others[0].image} size={36} />
+                <span className="ms-1 fw-bold">{AVATAR_LINK.others[0].name}</span>
+              </div>
+              <p className={style.content}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, dolores. Rerum
+                facere aut dicta eos doloribus minima! Est reiciendis incidunt, aperiam eligendi
+                nesciunt ipsum placeat. Omnis nisi quia eius in.
+              </p>
+              <Link href="/user/article_view/123" className="fs-xs text-grey-500 mt-1 ">
+                看更多
+              </Link>
+              <div className="position-relative">
+                <Link href="/user/article_view/123" onClick={onBeforeEnterPost}>
+                  <div
+                    className={`${style.imgWrapper} ${
+                      (tab === 'ARspace' || (tab === 'post' && img.activity === '秘密')) &&
+                      style.imgBlur
+                    }`}
+                  >
+                    <Image src={img.image} alt="圖1" fill style={{ objectFit: 'cover' }} />
+                  </div>
+
+                  <div className={style.imgText}>
+                    <div className="d-flex align-items-center">
+                      <ViewIcon width={20} />
+                      <span className="ms-1">{img.view}</span>
+                    </div>
+                    <span>
+                      <span>#</span>
+                      {img.activity}
+                    </span>
+                  </div>
+                  {tab === 'ARspace' && (
+                    <div className={style.imgARTag}>
+                      <ARIcon width={48} />
+                    </div>
+                  )}
+                </Link>
+              </div>
+            </div>
+            <div className="col-12 mb-5">
+              <div>
+                {(img.activity === '心情' && <ReceiveBtn />) ||
+                  (img.activity === '贈幣' && <GiveBtn />) ||
+                  (img.activity === '許願' && <WishBtn />) ||
+                  (img.activity === '交換' && <ExchangeBtn />) ||
+                  (img.activity === '湊咖' && <ReunionBtn />) ||
+                  (img.activity === '秘密' && <SecretBtn />) ||
+                  (img.activity === '樂透' && <LotteryBtn />) ||
+                  (img.activity === '集點' && <CollectBtn />)}
+              </div>
+            </div>
+          </React.Fragment>
+        ))}
+      </div>
+    </section>
   );
 };

@@ -52,6 +52,7 @@ import {
   WalletIcon,
   YoutubeIcon,
   AddFriendIcon,
+  FriendsListIcon,
 } from '@/components/icons/AllIcon';
 import Link from 'next/link';
 import Button from '@/components/ui/button/submit/Button';
@@ -64,6 +65,8 @@ import SectionUI from '@/components/ui/section/SectionUI';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import { useState } from 'react';
 import { Tab, TabDataOnClick } from '@/components/ui/tab/Tab';
+import Search from '@/components/ui/search/Search';
+import GiveMyCoin from '@/components/modal/GiveMyCoin';
 
 const iconMap = [
   AddIcon,
@@ -117,10 +120,13 @@ const iconMap = [
   WalletIcon,
   YoutubeIcon,
   AddFriendIcon,
+  FriendsListIcon,
 ];
 
 const Compo = () => {
   const [tab, setTab] = useState('標籤1');
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="container my-5 mb-20">
       <h1 className="fw-bold">WOMO元件檢索</h1>
@@ -361,6 +367,26 @@ const Compo = () => {
           Tab頁籤3
         </TabDataOnClick>
       </div>
+      <br />
+      <p>搜尋器</p>
+      <Search isActive={true} />
+      <br />
+      <br />
+
+      <Button color="brand" onClick={() => setIsOpen(true)}>
+        點我打開彈跳視窗
+      </Button>
+      <br />
+      <GiveMyCoin open={isOpen} onOpenChange={setIsOpen} />
+
+      <br />
+      <Link
+        href="https://www.radix-ui.com/"
+        className="text-decoration-underline text-danger fs-sm"
+      >
+        需安裝彈跳視窗套件：Radix UI 官網(與Next相容)
+      </Link>
+      <br />
       <br />
       <SectionUI>無標題之陰影外框區塊</SectionUI>
       <SectionUI2 title="有標題之陰影外框區塊">這是內文</SectionUI2>

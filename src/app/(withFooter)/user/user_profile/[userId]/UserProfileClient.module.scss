@@ -12,6 +12,7 @@
   flex-direction: column;
   flex-grow: 1;
   margin: 12px;
+  position: relative;
 }
 
 .tabBtn {
@@ -38,10 +39,13 @@
 
 .iconWrapper {
   background-color: #fff;
-  border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  top: 5%;
+  right: 5%;
 }

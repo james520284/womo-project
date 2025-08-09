@@ -1,11 +1,15 @@
 'use client';
 
 import style from './CoinFriendsHeader.module.scss';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { BackArrowIcon, AddFriendIcon } from '../icons/AllIcon';
+import { BackArrowIcon, AddFriendIcon, FriendsListIcon } from '../icons/AllIcon';
 
-const CoinFriendsHeader = () => {
+type Props = {
+  isChange: boolean;
+  setIsChange: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const CoinFriendsHeader = ({ isChange, setIsChange }: Props) => {
   const router = useRouter();
 
   return (
@@ -15,10 +19,16 @@ const CoinFriendsHeader = () => {
           <button className="btn" onClick={() => router.back()}>
             <BackArrowIcon width={28} />
           </button>
-          <h1 className="fs-5 fw-bold">籌碼朋友</h1>
-          <Link href="#">
-            <AddFriendIcon width={24} />
-          </Link>
+          <h1 className="fs-5 fw-bold">{isChange ? '新增' : '籌碼'}朋友</h1>
+          {isChange ? (
+            <button type="button" onClick={() => setIsChange(!isChange)}>
+              <FriendsListIcon width={24} />
+            </button>
+          ) : (
+            <button type="button" onClick={() => setIsChange(!isChange)}>
+              <AddFriendIcon width={24} />
+            </button>
+          )}
         </div>
       </div>
     </header>

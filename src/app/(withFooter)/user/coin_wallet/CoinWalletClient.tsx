@@ -15,6 +15,7 @@ import { KOLs } from '@/libs/api/kols';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import Link from 'next/link';
+import YellowCoinPayDetail from '@/components/modal/YellowCoinPayDetail';
 
 import {
   FilterIcon,
@@ -29,6 +30,7 @@ const CoinWalletClient = () => {
   const [tab, setTab] = useState<'greenCoin' | 'redCoin' | 'yellowCoin'>('greenCoin');
   const [isDeletableGreenCoin, setIsDeletableGreenCoin] = useState(false);
   const [isDeletableRedCoin, setIsDeletableRedCoin] = useState(false);
+  const [isOpenPayDetail, setIsOpenPayDetail] = useState(false);
   return (
     <>
       {/* Header區 */}
@@ -77,19 +79,11 @@ const CoinWalletClient = () => {
           {tab === 'greenCoin' ? (
             <p className="fw-bold">
               已蒐集綠籌碼：
-              <span className="px-1 text-coinGreen">96</span>顆 ，共
-              <Link href="#" className="px-1 text-coinGreen text-decoration-underline">
-                84
-              </Link>
-              人
+              <span className="px-1 text-coinGreen">96</span>顆
             </p>
           ) : tab === 'redCoin' ? (
             <p className="fw-bold">
-              已蒐集紅籌碼：<span className="px-1 text-coinRed">12</span>顆，共
-              <Link href="#" className="px-1 text-coinRed text-decoration-underline">
-                10
-              </Link>
-              人
+              已蒐集紅籌碼：<span className="px-1 text-coinRed">12</span>顆
             </p>
           ) : (
             <p className="fw-bold">
@@ -103,8 +97,8 @@ const CoinWalletClient = () => {
                 儲值
               </Button>
               &nbsp;
-              <ButtonOutline color="orange" size="sm">
-                明細
+              <ButtonOutline color="orange" size="sm" onClick={() => setIsOpenPayDetail(true)}>
+                紀錄
               </ButtonOutline>
             </div>
           )}
@@ -262,65 +256,6 @@ const CoinWalletClient = () => {
           </SectionUI>
         ) : (
           <SectionUI>
-            {/* <table className="table table-striped fs-xs no-caret">
-              <thead>
-                <tr>
-                  <th scope="col">單號</th>
-                  <th scope="col">顆數</th>
-                  <th scope="col">支付(NT$)</th>
-                  <th scope="col">時間</th>
-                  <th scope="col"></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">WM0001</th>
-                  <td>3000</td>
-                  <td>300</td>
-                  <td>2025-10-07</td>
-                  <td>
-                    <Link href="#" className="text-decoration-underline">
-                      查看
-                    </Link>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row" className="text-primary">
-                    NG0001
-                  </th>
-                  <td className="text-primary">10000</td>
-                  <td className="text-primary">-1000</td>
-                  <td className="text-primary">2025-10-12</td>
-                  <td className="text-primary">
-                    <Link href="#" className="text-decoration-underline">
-                      查看
-                    </Link>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">WM0002</th>
-                  <td>5000</td>
-                  <td>500</td>
-                  <td>2025-11-15</td>
-                  <td>
-                    <Link href="#" className="text-decoration-underline">
-                      查看
-                    </Link>
-                  </td>
-                </tr>
-                <tr>
-                  <th scope="row">WM0003</th>
-                  <td>600</td>
-                  <td>60</td>
-                  <td>2025-12-01</td>
-                  <td>
-                    <Link href="#" className="text-decoration-underline">
-                      查看
-                    </Link>
-                  </td>
-                </tr>
-              </tbody>
-            </table> */}
             <div className="row gy-10">
               <div className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start">
                 {isDeletableRedCoin && <input type="checkbox" className="align-self-start" />}
@@ -386,6 +321,9 @@ const CoinWalletClient = () => {
           </SectionUI>
         )}
       </div>
+      {/* 彈跳視窗區 */}
+      {/* 儲值明細 */}
+      <YellowCoinPayDetail open={isOpenPayDetail} onOpenChange={setIsOpenPayDetail} />
     </>
   );
 };

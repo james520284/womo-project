@@ -29,6 +29,7 @@ import {
   ArrowIcon,
   LocationIcon,
   CancelIcon,
+  AddIcon,
 } from '@/components/icons/AllIcon';
 
 const CreateArticleClient = () => {
@@ -151,7 +152,9 @@ const CreateArticleClient = () => {
                       className="form-check-label d-flex align-items-center"
                       htmlFor={`option${index + 1}`}
                     >
-                      <CheckBtn isActive={selectedActivity === `${act.title}`} />
+                      <button type="button" onClick={() => setSelectedActivity(act.title)}>
+                        <AddIcon width={16} />
+                      </button>
                     </label>
                     <span className={`${style.actTitle}  ${index === 0 ? style.firstTitle : ''}`}>
                       {act.title}

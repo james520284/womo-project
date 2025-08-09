@@ -48,6 +48,7 @@ const Header = () => {
           <Link href="/" className={style.logoWrapper}>
             <Image src="/images/WOMO-LOGO1.png" alt="LOGO" fill className={style.logoImage} />
           </Link>
+
           <ul className={`d-none d-lg-flex justify-content-between `}>
             <li className="px-2">
               <Link
