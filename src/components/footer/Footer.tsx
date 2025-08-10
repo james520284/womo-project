@@ -1,5 +1,3 @@
-// [本頁目的]：全域置底功能Bar
-
 'use client';
 
 import style from './Footer.module.scss';

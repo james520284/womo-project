@@ -1,5 +1,3 @@
-// [本頁目的]：個人頭像
-
 import style from './Avatar.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';

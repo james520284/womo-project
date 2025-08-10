@@ -1,6 +1,3 @@
-// [本頁目的]：通用型外框按鈕
-
-'use client';
 import style from './ButtonOutline.module.scss';
 import clsx from 'clsx';
 

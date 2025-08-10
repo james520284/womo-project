@@ -1,5 +1,3 @@
-'use client';
-
 import style from './AddWishCoins.module.scss';
 import SectionUI2 from '@/components/ui/section/SectionUI2';
 import Coin from '@/components/ui/coin/Coin';

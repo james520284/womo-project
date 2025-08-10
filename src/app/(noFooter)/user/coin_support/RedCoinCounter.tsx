@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import Coin from '@/components/ui/coin/Coin';
 import Counter from '@/components/ui/counter/Counter';
 import Search from '@/components/ui/search/Search';
+import SectionUI from '@/components/ui/section/SectionUI';
 
 const RedCoinCounter = () => {
   const [num, setNum] = useState<Record<string, string>>({});
@@ -25,7 +26,7 @@ const RedCoinCounter = () => {
   };
 
   return (
-    <>
+    <SectionUI>
       <div className="d-flex justify-content-end">
         <Search />
       </div>
@@ -48,7 +49,7 @@ const RedCoinCounter = () => {
           </div>
         ))}
       </section>
-    </>
+    </SectionUI>
   );
 };
 

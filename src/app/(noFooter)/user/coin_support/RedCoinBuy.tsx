@@ -1,5 +1,3 @@
-'use client';
-
 import style from './RedCoinBuy.module.scss';
 import Counter from '@/components/ui/counter/Counter';
 import { COINS } from '@/constants/coin';
@@ -8,6 +6,7 @@ import Avatar from '@/components/ui/avatar/Avatar';
 import Coin from '@/components/ui/coin/Coin';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
+import SectionUI from '@/components/ui/section/SectionUI';
 
 const RedCoinBuy = () => {
   const total = 100;
@@ -15,7 +14,7 @@ const RedCoinBuy = () => {
   return (
     <section className={style.section}>
       {/* 紅籌碼數量區 */}
-      <section className="mb-8">
+      <SectionUI>
         <div className="d-flex align-items-center mb-2 bg-grey-50 p-2 rounded-2">
           <h3 className="fs-6 fw-bold me-1">購買我的紅籌碼</h3>
           <Coin color="red" scale={0.25}>
@@ -34,10 +33,10 @@ const RedCoinBuy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionUI>
 
       {/* 金籌碼數量區 */}
-      <section className="mb-8">
+      <SectionUI>
         <div className="d-flex align-items-center mb-2 bg-grey-50 p-2 rounded-2">
           <h3 className="fs-6 fw-bold">額外送我金籌碼</h3>
           <div className={style.imgWrapper2}>
@@ -56,7 +55,7 @@ const RedCoinBuy = () => {
             </div>
           </div>
         </div>
-      </section>
+      </SectionUI>
       <hr />
 
       {/* 總計區 */}

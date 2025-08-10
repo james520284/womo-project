@@ -1,5 +1,3 @@
-// [本頁目的]：全域置頂功能Bar - UI版型1
-
 'use client';
 
 import style from './Header.module.scss';

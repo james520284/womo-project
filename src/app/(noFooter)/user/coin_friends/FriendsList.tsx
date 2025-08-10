@@ -1,5 +1,3 @@
-'use client';
-
 import Button from '@/components/ui/button/submit/Button';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';

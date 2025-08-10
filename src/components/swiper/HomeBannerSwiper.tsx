@@ -1,5 +1,3 @@
-// [本頁目的]：首頁 - Banner輪播
-
 'use client';
 import style from './HomeBanner.module.scss';
 import Image from 'next/image';

@@ -1,7 +1,3 @@
-// [本頁目的]：彈跳視窗 - 送自己籌碼
-
-'use client';
-
 import * as Dialog from '@radix-ui/react-dialog';
 import style from './GiveMyCoin.module.scss';
 import Image from 'next/image';

@@ -1,5 +1,3 @@
-// [本頁目的]：首頁 - 個人發佈貼文
-
 'use client';
 
 import style from './PostPublisher.module.scss';

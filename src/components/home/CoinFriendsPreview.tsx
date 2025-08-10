@@ -1,5 +1,3 @@
-// [本頁目的]：首頁 - 誰擁有我的籌碼
-
 'use client';
 
 import style from './CoinFriendsPreview.module.scss';

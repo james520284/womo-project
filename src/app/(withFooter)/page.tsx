@@ -1,5 +1,3 @@
-// [本頁目的]：前台首頁
-
 import Header from '@/components/header/Header';
 import FriendsNewPost from '@/components/home/FriendsNewPost';
 import PostPublisher from '@/components/home/PostPublisher';

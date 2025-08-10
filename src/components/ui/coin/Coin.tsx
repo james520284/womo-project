@@ -1,5 +1,3 @@
-// [本頁目的]：單顆籌碼外框UI
-
 import style from './Coin.module.scss';
 import { ReactNode } from 'react';
 

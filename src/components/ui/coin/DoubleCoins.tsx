@@ -1,5 +1,3 @@
-// [本頁目的]：雙顆籌碼外框UI
-
 import style from './DoubleCoins.module.scss';
 import { ReactNode } from 'react';
 

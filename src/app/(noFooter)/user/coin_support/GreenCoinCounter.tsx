@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 import Coin from '@/components/ui/coin/Coin';
 import Counter from '@/components/ui/counter/Counter';
 import Search from '@/components/ui/search/Search';
+import SectionUI from '@/components/ui/section/SectionUI';
 
 const GreenCoinCounter = () => {
   const [num, setNum] = useState<Record<string, string>>({});
@@ -25,7 +26,7 @@ const GreenCoinCounter = () => {
   };
 
   return (
-    <>
+    <SectionUI>
       <div className="d-flex justify-content-end">
         <Search />
       </div>
@@ -47,6 +48,7 @@ const GreenCoinCounter = () => {
             min={1}
           />
         </div>
+
         {AVATAR_LINK.others.map((user) => (
           <div key={user.id} className="d-flex align-items-center py-3 border-bottom">
             <Coin color="green" scale={0.6}>
@@ -64,7 +66,7 @@ const GreenCoinCounter = () => {
           </div>
         ))}
       </section>
-    </>
+    </SectionUI>
   );
 };
 

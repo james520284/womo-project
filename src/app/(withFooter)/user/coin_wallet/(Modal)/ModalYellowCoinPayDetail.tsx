@@ -1,5 +1,3 @@
-'use client';
-
 import * as Dialog from '@radix-ui/react-dialog';
 import style from './ModalYellowCoinPayDetail.module.scss';
 import Link from 'next/link';

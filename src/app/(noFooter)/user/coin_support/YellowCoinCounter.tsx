@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import Counter from '@/components/ui/counter/Counter';
 import { COINS } from '@/constants/coin';
+import SectionUI from '@/components/ui/section/SectionUI';
 
 const YellowCoinCounter = () => {
   const [num, setNum] = useState(1);
@@ -11,7 +12,7 @@ const YellowCoinCounter = () => {
     setNum(Number(newVal));
   };
   return (
-    <>
+    <SectionUI>
       <div className="d-flex align-items-center py-3">
         <Avatar src={COINS[2].image} />
 
@@ -26,7 +27,7 @@ const YellowCoinCounter = () => {
           min={1}
         />
       </div>
-    </>
+    </SectionUI>
   );
 };
 

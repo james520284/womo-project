@@ -1,6 +1,5 @@
-// [本頁目的]：個人貼文新增內頁 CSR模式
-
 'use client';
+
 import { useState } from 'react';
 import style from './CreateArticleClient.module.scss';
 import Link from 'next/link';

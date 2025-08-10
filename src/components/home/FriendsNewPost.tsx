@@ -1,5 +1,3 @@
-'use client';
-
 import style from './FriendsNewPost.module.scss';
 import Link from 'next/link';
 import Avatar from '@/components/ui/avatar/Avatar';

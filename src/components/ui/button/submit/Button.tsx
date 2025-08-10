@@ -1,6 +1,3 @@
-// [本頁目的]：通用型實心按鈕
-
-'use client';
 import style from './Button.module.scss';
 import clsx from 'clsx';
 

@@ -1,5 +1,3 @@
-'use client';
-
 import style from './CoinWalletClient.module.scss';
 import SectionUI from '@/components/ui/section/SectionUI';
 import ModalYellowCoinPayDetail from './(Modal)/ModalYellowCoinPayDetail';

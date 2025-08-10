@@ -1,5 +1,3 @@
-// [本頁目的]：通用型checkbox按鈕
-
 import style from './CheckBtn2.module.scss';
 import { IconCheck } from '@/components/icons';
 
