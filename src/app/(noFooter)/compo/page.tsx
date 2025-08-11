@@ -53,6 +53,7 @@ import {
   IconYoutube,
   IconAddFriend,
   IconFriendsList,
+  IconFriends,
 } from '@/components/icons';
 
 import Link from 'next/link';
@@ -122,6 +123,7 @@ const iconMap = [
   IconYoutube,
   IconAddFriend,
   IconFriendsList,
+  IconFriends,
 ];
 
 const Compo = () => {

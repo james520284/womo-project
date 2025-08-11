@@ -4,7 +4,7 @@ import style from './Header.module.scss';
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import {
   IconShow,
   IconWallet,
@@ -23,6 +23,7 @@ const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const pathName = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,9 +111,14 @@ const Header = () => {
           </ul>
           <ul className={`d-flex py-3 ${style.headerNavUtility}`}>
             <li className="px-1">
-              <Link href="/user/coin_friends">
+              <button
+                type="button"
+                onClick={() => {
+                  router.push(`/user/coin_friends?isChangeToAddFriend=${true}`);
+                }}
+              >
                 <IconAddFriend width={20} />
-              </Link>
+              </button>
             </li>
             <li className="px-1">
               <Link href="#">

@@ -51,3 +51,4 @@ export { default as IconViewSolid } from './ViewSolidIcon';
 export { default as IconWallet } from './WalletIcon';
 export { default as IconYoutube } from './YoutubeIcon';
 export { default as IconFriendsList } from './FriendsListIcon';
+export { default as IconFriends } from './FriendIcon';

@@ -65,7 +65,7 @@ const CoinFriendsPreview = () => {
               </div>
               <div className="mt-4 text-center">
                 <Button as="a" href="/" size="md" color="light" width="expand">
-                  查看更多 〉
+                  看看還有誰 〉
                 </Button>
               </div>
             </SectionUI>

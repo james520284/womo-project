@@ -28,7 +28,7 @@ const MyGreenCoinClient = () => {
             <span className="fs-sm">持有我籌碼的人</span>
             <span className="align-self-center fw-bold fs-5 py-2">115</span>
             <button type="button" className={style.dataBtn}>
-              看看有誰
+              呼叫應援
             </button>
           </div>
           <div className={style.section}>
