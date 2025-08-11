@@ -11,7 +11,7 @@ import Link from 'next/link';
 const articleView = () => {
   return (
     <div className="position-relative">
-      {/* 頭像區 */}
+      {/* Header區 */}
       <ArticleHeader />
 
       {/* 貼文文字區 */}

@@ -8,9 +8,9 @@ const RedCoinGameOfStore = () => {
       {Stores.slice(0, 3).map((store) => (
         <div
           key={store.name}
-          className="d-flex justify-content-between align-items-center py-3 border-bottom"
+          className="d-flex justify-content-between align-items-center py-5 border-bottom"
         >
-          <div className="d-flex  align-items-center">
+          <div className="d-flex  align-items-start">
             <Avatar src={store.image} size={52} />
             <div className="ms-2">
               <span className="fw-bold mb-1">{store.name}</span>

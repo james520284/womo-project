@@ -39,8 +39,8 @@ const UserProfileClient = () => {
               <span className="fw-bold fs-5 text-secondary ms-2">48</span>
             </div>
             <div className="ms-auto">
-              <Button color="green" size="md">
-                使用
+              <Button as="a" href="/user/greenCoin_game" color="green" size="md">
+                碼上玩
               </Button>
             </div>
           </div>
@@ -59,7 +59,7 @@ const UserProfileClient = () => {
             </div>
             <div className="ms-auto">
               <Button color="red" size="md">
-                使用
+                碼上玩
               </Button>
             </div>
           </div>
@@ -84,7 +84,7 @@ const UserProfileClient = () => {
             isShowData={true}
             num={67}
           >
-            塗鴉牆
+            限時塗鴉
           </Tab>
         </section>
 

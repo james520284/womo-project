@@ -9,9 +9,9 @@ const RedCoinGameOfSupport = () => {
       {AVATAR_LINK.others.map((user) => (
         <div
           key={user.name}
-          className="d-flex justify-content-between align-items-center py-3 border-bottom"
+          className="d-flex justify-content-between align-items-center py-5 border-bottom"
         >
-          <div className="d-flex  align-items-center">
+          <div className="d-flex  align-items-start">
             <Avatar src={user.image} size={52} />
             <div className="ms-2">
               <span className="fw-bold mb-1">{user.name}</span>

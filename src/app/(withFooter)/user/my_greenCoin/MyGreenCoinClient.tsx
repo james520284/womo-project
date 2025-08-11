@@ -49,7 +49,7 @@ const MyGreenCoinClient = () => {
               isShowData={true}
               num={36}
             >
-              一天一信
+              悄悄話
             </Tab>
             <Tab isActive={tab === 'tag'} onClick={() => setTab('tag')} isShowData={true} num={19}>
               關係標記

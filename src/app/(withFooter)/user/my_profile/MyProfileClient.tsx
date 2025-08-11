@@ -59,7 +59,7 @@ const MyProfileClient = () => {
             isShowData={true}
             num={67}
           >
-            塗鴉牆
+            限時塗鴉
           </Tab>
         </section>
 
