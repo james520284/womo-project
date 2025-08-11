@@ -40,6 +40,19 @@ input[type='checkbox'] {
   accent-color: #da5271;
 }
 
-input:focus {
-  border-color: #000; /* 改為你要的顏色 */
+input {
+  font-size: 12px;
+  border: none;
+  border-bottom: 1px solid #c7c7cd;
+
+  height: 28px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input::placeholder {
+  padding-left: 20px;
+  font-size: 12px;
 }

@@ -1,6 +1,5 @@
 'use client';
 
-import style from './Search.module.scss';
 import { IconSearch, IconCancel } from '@/components/icons';
 import { useState } from 'react';
 
@@ -21,7 +20,6 @@ const Search = ({ isActive = false, width }: Props) => {
             name="search"
             id="search"
             placeholder="我要找..."
-            className={style.search}
             style={{ width }}
             value={value}
             onChange={(e) => setValue(e.target.value)}
