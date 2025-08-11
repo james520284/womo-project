@@ -30,12 +30,12 @@ const AddFriends = () => {
       {/* 數據區 */}
 
       <div className="d-flex align-items-center">
-        <span className="ms-auto">目前剩餘顆數：</span>
+        <span className="ms-auto fs-sm">目前剩餘顆數：</span>
         <span className="d-flex align-items-center">
-          <Coin color="green" scale={0.3}>
+          <Coin color="green" scale={0.25}>
             <Avatar src={AVATAR_LINK.my} />
           </Coin>
-          <span className="text-coinGreen ms-2">85</span>
+          <span className="text-coinGreen ms-2 fs-sm">85</span>
         </span>
       </div>
 
