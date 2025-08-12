@@ -22,7 +22,7 @@ import {
   IconFilter,
   IconFullscreen,
   IconGift,
-  IconGiveCoin,
+  IconLoveBox,
   IconGridView,
   IconIncome,
   IconListView,
@@ -54,6 +54,14 @@ import {
   IconAddFriend,
   IconFriendsList,
   IconFriends,
+  IconGiveCoin,
+  IconWishCandle,
+  IconExchangeCoin,
+  IconGroupTogether,
+  IconLockOutline,
+  IconLottery,
+  IconCollectCoin,
+  IconNull,
 } from '@/components/icons';
 
 import Link from 'next/link';
@@ -92,7 +100,7 @@ const iconMap = [
   IconFilter,
   IconFullscreen,
   IconGift,
-  IconGiveCoin,
+  IconLoveBox,
   IconGridView,
   IconIncome,
   IconListView,
@@ -124,6 +132,14 @@ const iconMap = [
   IconAddFriend,
   IconFriendsList,
   IconFriends,
+  IconGiveCoin,
+  IconWishCandle,
+  IconExchangeCoin,
+  IconGroupTogether,
+  IconLockOutline,
+  IconLottery,
+  IconCollectCoin,
+  IconNull,
 ];
 
 const Compo = () => {

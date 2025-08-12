@@ -2,7 +2,7 @@ import style from './FriendsNewPost.module.scss';
 import Link from 'next/link';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
-import { ArrowSolidIcon } from '../icons/AllIcon';
+import { IconArrowSolid } from '../icons';
 
 const FriendsNewPost = () => {
   return (
@@ -16,7 +16,7 @@ const FriendsNewPost = () => {
             </Link>
             <span className="fs-xs mt-2">我</span>
             <div className={style.arrowSolidIcon}>
-              <ArrowSolidIcon color="#da5271" width={16} />
+              <IconArrowSolid color="#da5271" width={16} />
             </div>
           </div>
           {AVATAR_LINK.others.map((user) => (

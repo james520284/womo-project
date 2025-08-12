@@ -5,7 +5,7 @@ import Avatar from '../ui/avatar/Avatar';
 import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import { IconArrow, IconGiveCoin, IconStore } from '../icons';
+import { IconArrow, IconLoveBox, IconStore } from '../icons';
 
 const UserProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -41,7 +41,7 @@ const UserProfileHeader = () => {
 
           <div className="d-flex align-items-center fs-sm">
             <Link href="#" className="d-flex align-items-center">
-              <IconGiveCoin width={20} />
+              <IconLoveBox width={20} />
               <span>打賞我</span>
             </Link>
             <Link href="#" className="d-flex align-items-center ms-4">
