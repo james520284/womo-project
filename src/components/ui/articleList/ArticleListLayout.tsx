@@ -105,8 +105,10 @@ export const RowLayout = ({ tab, onBeforeEnterPost }: Props) => {
             <div className="col-8 mb-10">
               <div className="px-3 d-flex flex-column">
                 <div className="mb-2">
-                  <div className="d-flex align-items-center mb-2">
-                    <Avatar src={img.avatar} size={36} />
+                  <div className="d-flex align-items-start mb-2">
+                    <div className="flex-shrink-0">
+                      <Avatar src={img.avatar} size={36} />
+                    </div>
                     <span className="ms-1 fw-bold">{img.author}</span>
                   </div>
                   <p className={style.content}>
@@ -283,8 +285,10 @@ export const RowLayoutMyself = ({ tab, onBeforeEnterPost }: Props) => {
             <div className="col-8 mb-10">
               <div className="px-3 d-flex flex-column">
                 <div className="mb-2">
-                  <div className="d-flex align-items-center mb-2">
-                    <Avatar src={AVATAR_LINK.my} size={36} />
+                  <div className="d-flex align-items-start mb-2">
+                    <div className="flex-shrink-0">
+                      <Avatar src={AVATAR_LINK.my} size={36} />
+                    </div>
                     <span className="ms-1 fw-bold">蒼田楓</span>
                   </div>
                   <p className={style.content}>
@@ -461,8 +465,10 @@ export const RowLayoutUserSelf = ({ tab, onBeforeEnterPost }: Props) => {
             <div className="col-8 mb-10">
               <div className="px-3 d-flex flex-column">
                 <div className="mb-2">
-                  <div className="d-flex align-items-center mb-2">
-                    <Avatar src={AVATAR_LINK.others[0].image} size={36} />
+                  <div className="d-flex align-items-start mb-2">
+                    <div className="flex-shrink-0">
+                      <Avatar src={AVATAR_LINK.others[0].image} size={36} />
+                    </div>
                     <span className="ms-1 fw-bold">{AVATAR_LINK.others[0].name}</span>
                   </div>
                   <p className={style.content}>
