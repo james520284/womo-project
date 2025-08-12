@@ -2,7 +2,7 @@
 
 import style from './CreateArticleHeader.module.scss';
 import { useRouter } from 'next/navigation';
-import { IconBackArrow, IconCancel, IconFriendsList } from '../icons';
+import { IconBackArrow, IconCancel } from '../icons';
 
 const CreateArticleHeader = () => {
   const router = useRouter();
