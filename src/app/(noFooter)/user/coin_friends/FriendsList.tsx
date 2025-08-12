@@ -87,10 +87,11 @@ const FriendsList = () => {
                     <span>顆</span>
                   </div>
                 )}
-
-                <Button as="a" href="/user/coin_support" color="brand" size="md">
-                  打賞
-                </Button>
+                {tab === 'all' && (
+                  <Button as="a" href="/user/coin_support" color="brand" size="md">
+                    打賞
+                  </Button>
+                )}
               </div>
             </div>
           </div>
