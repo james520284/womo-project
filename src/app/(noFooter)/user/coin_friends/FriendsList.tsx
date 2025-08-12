@@ -4,9 +4,16 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Search from '@/components/ui/search/Search';
 import { TabDataOnClick } from '@/components/ui/tab/Tab';
 import { useState } from 'react';
+import { useSearchParams } from 'next/navigation';
+import DoubleCoins from '@/components/ui/coin/DoubleCoins';
 
 const FriendsList = () => {
-  const [tab, setTab] = useState<'all' | 'iHave' | 'youHave'>('all');
+  const searchParams = useSearchParams().get('youHaveMyCoin') as
+    | 'all'
+    | 'youHaveMyCoin'
+    | 'iHaveYourCoin'
+    | null;
+  const [tab, setTab] = useState<'all' | 'youHaveMyCoin' | 'iHaveYourCoin'>(searchParams ?? 'all');
   const dataArr = ['互有彼此籌碼', '對方有我籌碼', '我有對方籌碼'];
   return (
     <>
@@ -22,16 +29,16 @@ const FriendsList = () => {
             全部
           </TabDataOnClick>
           <TabDataOnClick
-            isActive={tab === 'youHave'}
-            onClick={() => setTab('youHave')}
+            isActive={tab === 'youHaveMyCoin'}
+            onClick={() => setTab('youHaveMyCoin')}
             num={520}
             unit="人"
           >
             對方有我籌碼
           </TabDataOnClick>
           <TabDataOnClick
-            isActive={tab === 'iHave'}
-            onClick={() => setTab('iHave')}
+            isActive={tab === 'iHaveYourCoin'}
+            onClick={() => setTab('iHaveYourCoin')}
             num={257}
             unit="人"
           >
@@ -56,11 +63,29 @@ const FriendsList = () => {
                 {tab === 'all' && (
                   <span className="me-1 bg-grey-100 rounded p-1 fs-xs">{dataArr[index]}</span>
                 )}
-                {tab === 'iHave' && (
-                  <span className="me-1 bg-grey-100 rounded p-1 fs-xs">我有對方籌碼</span>
+                {tab === 'youHaveMyCoin' && (
+                  <div className="d-flex align-items-center mt-1">
+                    <span>他持有我</span>
+                    <div className="px-2">
+                      <DoubleCoins scale={0.3}>
+                        <Avatar src={AVATAR_LINK.my} />
+                      </DoubleCoins>
+                    </div>
+                    <span className="text-primary fw-bold">{user.num}</span>
+                    <span>顆</span>
+                  </div>
                 )}
-                {tab === 'youHave' && (
-                  <span className="me-1 bg-grey-100 rounded p-1 fs-xs">對方有我籌碼</span>
+                {tab === 'iHaveYourCoin' && (
+                  <div className="d-flex align-items-center mt-1">
+                    <span>我持有他</span>
+                    <div className="px-2">
+                      <DoubleCoins scale={0.3}>
+                        <Avatar src={AVATAR_LINK.others[index].image} />
+                      </DoubleCoins>
+                    </div>
+                    <span className="text-primary fw-bold">{user.num}</span>
+                    <span>顆</span>
+                  </div>
                 )}
 
                 <Button as="a" href="/user/coin_support" color="brand" size="md">

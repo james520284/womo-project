@@ -29,8 +29,12 @@ const CoinFriendsPreview = () => {
               {/* 行動呼籲按鈕 */}
               <div className="d-flex justify-content-center align-items-center mb-lg-5">
                 <div>
-                  <Button size="md" color="green" onClick={() => setGiveMyCoinModal(true)}>
-                    發籌碼給更多人
+                  <Button
+                    size="md"
+                    color="green"
+                    onClick={() => router.push(`/user/coin_friends?isChangeToAddFriend=${true}`)}
+                  >
+                    讓更多人領我籌碼
                   </Button>
                 </div>
                 <div className="ms-1">
@@ -64,7 +68,12 @@ const CoinFriendsPreview = () => {
                 ))}
               </div>
               <div className="mt-4 text-center">
-                <Button as="a" href="/" size="md" color="light" width="expand">
+                <Button
+                  size="md"
+                  color="light"
+                  width="expand"
+                  onClick={() => router.push(`/user/coin_friends?youHaveMyCoin=${'youHaveMyCoin'}`)}
+                >
                   看看還有誰 〉
                 </Button>
               </div>
@@ -79,12 +88,16 @@ const CoinFriendsPreview = () => {
               height={0}
               style={{ height: 'auto' }}
             ></Image>
-            <p>
-              <span className="mb-2">目前沒有朋友持有您的籌碼，立即發籌碼給朋友</span>
-              <Button size="md" color="green" onClick={() => setGiveMyCoinModal(true)}>
-                發籌碼
+            <div>
+              <p className="mb-2">目前沒有朋友持有您的籌碼</p>
+              <Button
+                size="md"
+                color="green"
+                onClick={() => router.push(`/user/coin_friends?isChangeToAddFriend=${true}`)}
+              >
+                讓更多人領我籌碼
               </Button>
-            </p>
+            </div>
           </SectionUI>
         )}
       </div>
