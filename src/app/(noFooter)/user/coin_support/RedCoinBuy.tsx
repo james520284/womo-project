@@ -18,7 +18,7 @@ const RedCoinBuy = () => {
         <div className="d-flex align-items-center mb-2 bg-grey-50 p-2 rounded-2">
           <h3 className="fs-6 fw-bold me-1">購買我的紅籌碼</h3>
           <Coin color="red" scale={0.25}>
-            <Avatar src={AVATAR_LINK.my}></Avatar>
+            <Avatar src={AVATAR_LINK.others[0].image}></Avatar>
           </Coin>
         </div>
 

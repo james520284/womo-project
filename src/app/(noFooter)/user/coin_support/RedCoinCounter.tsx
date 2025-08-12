@@ -32,7 +32,7 @@ const RedCoinCounter = () => {
       </div>
 
       <section className="d-flex flex-column">
-        {AVATAR_LINK.others.map((user) => (
+        {AVATAR_LINK.others.slice(1, 3).map((user) => (
           <div key={user.id} className="d-flex align-items-center py-3 border-bottom">
             <Coin color="red" scale={0.6}>
               <Avatar src={user.image} />

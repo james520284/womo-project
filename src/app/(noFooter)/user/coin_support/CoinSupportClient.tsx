@@ -22,14 +22,14 @@ const CoinSupportClient = () => {
         {/* 頭像區 */}
         <section className="d-flex flex-column align-items-center">
           {supportWay === 'give' ? (
-            <Avatar src={AVATAR_LINK.my} size={120}></Avatar>
+            <Avatar src={AVATAR_LINK.others[0].image} size={120}></Avatar>
           ) : (
             <Coin color="red" scale={1.2}>
-              <Avatar src={AVATAR_LINK.my}></Avatar>
+              <Avatar src={AVATAR_LINK.others[0].image}></Avatar>
             </Coin>
           )}
 
-          <h1 className="fw-bold fs-5 mt-2">蒼田楓</h1>
+          <h1 className="fw-bold fs-5 mt-2">{AVATAR_LINK.others[0].name}</h1>
         </section>
 
         {/* 頁籤區 */}
