@@ -56,3 +56,10 @@ input::placeholder {
   padding-left: 20px;
   font-size: 12px;
 }
+
+textarea {
+  border: none !important;
+  outline: none !important;
+  resize: none !important;
+  overflow-y: hidden;
+}

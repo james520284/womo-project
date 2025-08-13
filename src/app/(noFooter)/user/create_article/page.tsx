@@ -1,11 +1,11 @@
-import StepForGame from '../create_article/StepForGame';
+import CreateArticleClient from './CreateArticleClient';
 import { Suspense } from 'react';
 
 const CreateArticle = () => {
   return (
     <>
       <Suspense>
-        <StepForGame />
+        <CreateArticleClient />
       </Suspense>
     </>
   );

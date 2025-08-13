@@ -15,7 +15,7 @@ const AddGiveCoins = () => {
     <div className="mb-20">
       <div className={style.activityWrapper}>
         <div className="text-center fs-sm border-bottom py-5">
-          <p className="fw-bold">挑選籌碼，送給在這則貼文留言的人</p>
+          <p className="fw-bold mb-1">挑選籌碼，送給來留言的人</p>
           <p className="text-muted">每位限領一顆，送完為止</p>
         </div>
         <div className="py-5 d-flex flex-column align-items-center justify-content-center">
