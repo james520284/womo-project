@@ -23,8 +23,8 @@ const StepForGame = () => {
                   onClick={() => setTab(game.brief)}
                   className={`${style.gameTab} ${tab === game.brief ? style.gameTabActive : ''}`}
                 >
-                  <game.icon width={24} />
-                  <span className="fs-xs fw-bold mt-1">{game.title}</span>
+                  <game.icon width={28} />
+                  <span className="fs-sm fw-bold mt-1">{game.title}</span>
                 </button>
               </div>
             ))}

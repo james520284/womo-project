@@ -1,0 +1,25 @@
+.wrapper {
+  max-width: 700px;
+}
+
+.pageControl {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 8px 0;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid rgba($color: #6b6f82, $alpha: 0.2);
+
+  @media (min-width: 768px) {
+    position: static;
+    width: 100%;
+    border-radius: 8px;
+  }
+}

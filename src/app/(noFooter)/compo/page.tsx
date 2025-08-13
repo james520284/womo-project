@@ -62,6 +62,7 @@ import {
   IconLottery,
   IconCollectCoin,
   IconNull,
+  IconExclamationMarkCircle,
 } from '@/components/icons';
 
 import Link from 'next/link';
@@ -140,6 +141,7 @@ const iconMap = [
   IconLottery,
   IconCollectCoin,
   IconNull,
+  IconExclamationMarkCircle,
 ];
 
 const Compo = () => {

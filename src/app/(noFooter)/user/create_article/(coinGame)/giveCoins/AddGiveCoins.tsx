@@ -34,7 +34,9 @@ const AddGiveCoins = () => {
               )}
             </Coin>
           </div>
-          <span className="mt-1 text-secondary fw-bold fs-5">0</span>
+          <span className="mt-1 text-secondary fw-bold fs-5">
+            {!coinUrl ? '0' : AVATAR_LINK.others[0].num}
+          </span>
           {coinUrl && (
             <Button color="light" size="sm" onClick={() => setCoinUrl('')}>
               更換

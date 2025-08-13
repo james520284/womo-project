@@ -60,3 +60,4 @@ export { default as IconLockOutline } from './LockOutlineIcon';
 export { default as IconLottery } from './LotteryIcon';
 export { default as IconCollectCoin } from './CollectCoinIcon';
 export { default as IconNull } from './NullIcon';
+export { default as IconExclamationMarkCircle } from './ExclamationMarkCircleIcon';

@@ -33,7 +33,7 @@ const MyProfileClient = () => {
             <span className="fs-sm">我的AR空間</span>
             <span className="align-self-center fw-bold fs-5 py-2">19</span>
             <div className="ms-auto">
-              <Button as="a" href="#" color="red" size="md">
+              <Button as="a" href="/user/create_arSpace" color="red" size="md">
                 ＋空間
               </Button>
             </div>
