@@ -5,6 +5,8 @@ import CreateArticleHeader from '@/components/header/CreateArticleHeader';
 import { ACTIVITY } from '@/constants/activity';
 import { useState } from 'react';
 import { coinGameType } from '@/types/coinGameType';
+import AddGiveCoins from './(coinGame)/giveCoins/AddGiveCoins';
+import Button from '@/components/ui/button/submit/Button';
 
 const StepForGame = () => {
   const [tab, setTab] = useState<coinGameType>('give');
@@ -16,7 +18,7 @@ const StepForGame = () => {
         <div className="w-75 mx-auto">
           <h2 className="fs-6 fw-bold mb-4">添加互動</h2>
 
-          <div className="row  gy-3">
+          <div className="row  gy-3 mb-8">
             {ACTIVITY.map((game) => (
               <div key={game.title} className="col-3">
                 <button
@@ -31,6 +33,18 @@ const StepForGame = () => {
             ))}
           </div>
         </div>
+        <hr className="mb-8" />
+        <div className="w-75 mx-auto">
+          {(tab === 'give' && <AddGiveCoins />) || (tab === 'skip' && '')}
+        </div>
+      </div>
+      <div className={style.footer}>
+        <button type="button" className="text-muted fs-sm">
+          上一步
+        </button>
+        <Button color="brand" size="md">
+          發佈
+        </Button>
       </div>
     </>
   );
