@@ -45,7 +45,7 @@ const Search = ({ isActive = false, width }: Props) => {
         </div>
       ) : (
         <button type="button" className="line-height-none">
-          <IconSearch width={28} onClick={() => setIsClick(!isClick)} />
+          <IconSearch width={23} onClick={() => setIsClick(!isClick)} />
         </button>
       )}
     </>

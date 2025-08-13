@@ -1,8 +1,13 @@
 import style from './StepForContent.module.scss';
-import { IconPhoto, IconMicrophone, IconVideo, IconYoutube } from '@/components/icons';
+import { IconPhoto, IconMicrophone, IconVideo, IconYoutube, IconCancel } from '@/components/icons';
 import AutoResizeTextarea from '@/components/ui/Textarea/Textarea';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
+// 套件
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper-bundle.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 const StepForContent = () => {
   return (
@@ -24,15 +29,34 @@ const StepForContent = () => {
         </div>
       </div>
       <section className={style.imgWrapper}>
-        <Image
-          src={homeBanner[0].image}
-          alt={homeBanner[0].author}
-          fill
-          style={{ objectFit: 'cover' }}
-        />
+        {/* swiper主體 */}
+        <Swiper
+          spaceBetween={4}
+          slidesPerView={1.1}
+          breakpoints={{
+            0: {
+              slidesPerView: 1.1,
+            },
+            768: {
+              slidesPerView: 2,
+            },
+          }}
+          loop={true}
+        >
+          {homeBanner.map((pic, index) => (
+            <SwiperSlide key={index}>
+              <div className={style.imgWrapper}>
+                <Image src={pic.image} alt={`主圖${index + 1}`} fill className={style.img} />
+                <button className={style.cancelBtn}>
+                  <IconCancel />
+                </button>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </section>
 
-      <div className="w-75 mx-auto mt-5 mb-20">
+      <div className="w-75 mx-auto mb-20">
         <AutoResizeTextarea />
       </div>
     </section>

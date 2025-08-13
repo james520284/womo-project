@@ -11,11 +11,11 @@ const CreateArticleHeader = () => {
     <header className={style.header}>
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
-          <button className="btn" onClick={() => router.back()}>
+          <button type="button" onClick={() => router.back()}>
             <IconBackArrow width={28} />
           </button>
           <h1 className="fs-5 fw-bold">新增籌碼貼文</h1>
-          <button type="button">
+          <button type="button" onClick={() => router.back()}>
             <IconCancel width={28} />
           </button>
         </div>

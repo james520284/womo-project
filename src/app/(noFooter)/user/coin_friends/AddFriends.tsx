@@ -13,10 +13,10 @@ const AddFriends = () => {
         <h2 className="fs-6 mb-5 fw-bold text-secondary">如何增加籌碼朋友？</h2>
         <div className="mb-5 d-flex align-items-center">
           <TabDataOnClick isActive={tab === 'giveMyCoin'} onClick={() => setTab('giveMyCoin')}>
-            讓別人領我籌碼
+            別人領我的籌碼
           </TabDataOnClick>
           <TabDataOnClick isActive={tab === 'receiveCoin'} onClick={() => setTab('receiveCoin')}>
-            我領取別人籌碼
+            我領別人的籌碼
           </TabDataOnClick>
         </div>
       </section>

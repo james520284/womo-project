@@ -33,7 +33,7 @@ const StepForEmoji = () => {
           </div>
         </div>
 
-        <h3 className="fw-bold fs-6 my-5">我今天的心情是</h3>
+        <h3 className="fw-bold fs-6 my-5">我現在的心情是</h3>
       </section>
       <div className="w-75 mx-auto ">
         <div className="row gy-3 justify-content-evenly">

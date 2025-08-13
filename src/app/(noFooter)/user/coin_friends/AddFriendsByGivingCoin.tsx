@@ -75,14 +75,17 @@ const AddFriendsByGivingCoin = () => {
           </Button>
         </div>
         <div className="d-flex align-items-center justify-content-between py-3 border-bottom">
-          <div className="d-flex align-items-center">
+          <div className="d-flex align-items-center  ">
             <div
               className="text-white bg-primary rounded-3 d-flex justify-content-center align-items-center"
               style={{ width: '48px', height: '48px' }}
             >
               <IconFriends width={28} />
             </div>
-            <span className="ms-2 ">送籌碼給其他朋友</span>
+            <div className="d-flex flex-column ms-2">
+              <span>複製連結給更多朋友領取籌碼</span>
+              <input type="text" defaultValue={'www.womo.com.tw/user/123'} className="w-100" />
+            </div>
           </div>
           <Button size="md" color="green">
             複製
