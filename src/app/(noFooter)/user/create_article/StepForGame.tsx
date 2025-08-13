@@ -15,7 +15,7 @@ const StepForGame = () => {
     <>
       <CreateArticleHeader />
       <div className={`container-fluid mt-5 ${style.wrapper}`}>
-        <div className="w-75 mx-auto  border-bottom">
+        <div className="w-75 mx-auto ">
           <h2 className="fs-6 fw-bold mb-4">添加互動</h2>
 
           <div className="row  gy-3 mb-8">

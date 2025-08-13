@@ -13,9 +13,11 @@ const AddGiveCoins = () => {
 
   return (
     <div className="mb-20">
-      <h2 className="fs-6 fw-bold mb-4">贈幣：送給留言者籌碼</h2>
-
       <div className={style.activityWrapper}>
+        <div className="text-center fs-sm border-bottom py-5">
+          <p className="fw-bold">挑選籌碼，送給在這則貼文留言的人</p>
+          <p className="text-muted">每位限領一顆，送完為止</p>
+        </div>
         <div className="py-5 d-flex flex-column align-items-center justify-content-center">
           <div className="noText position-relative">
             <Coin scale={0.8} color="green">
@@ -38,10 +40,6 @@ const AddGiveCoins = () => {
               更換
             </Button>
           )}
-        </div>
-        <div className="text-center fs-sm border-top py-5">
-          <p>選擇籌碼包內的籌碼，送給留言者</p>
-          <p className="text-muted">每位限領一顆，送完為止</p>
         </div>
       </div>
     </div>
