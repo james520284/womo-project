@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import style from './AddGiveCoins.module.scss';
-import CheckBtn2 from '@/components/ui/button/icon/CheckBtn2';
 import Coin from '@/components/ui/coin/Coin';
 import { IconAdd } from '@/components/icons';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
