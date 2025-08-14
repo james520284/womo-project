@@ -8,11 +8,13 @@
   margin: 0 auto;
   padding: 8px;
   background-color: rgba($color: #6b6f82, $alpha: 0.1);
+  border: 1px solid rgba($color: #6b6f82, $alpha: 0.1);
   transition: 0.2s;
 
   &:hover {
-    color: #fff;
-    background-color: #da5271;
+    color: #da5271;
+    background-color: #fff;
+    border: 1px solid #da5271;
   }
 }
 
@@ -25,6 +27,7 @@
   width: 72px;
   margin: 0 auto;
   padding: 8px 0;
-  color: #fff;
-  background-color: #da5271;
+  color: #da5271;
+  background-color: #fff;
+  border: 1px solid #da5271;
 }

@@ -28,7 +28,6 @@ const CoinGive = () => {
           <div key={COINS[0].name} className={style.imgWrapper}>
             <Image src={COINS[0].image} alt={COINS[0].name} fill className={style.img} />
           </div>
-          <span className="mt-3 text-coinGreen fw-bold">綠籌碼</span>
         </button>
 
         <button
@@ -43,7 +42,6 @@ const CoinGive = () => {
           <div key={COINS[1].name} className={style.imgWrapper}>
             <Image src={COINS[1].image} alt={COINS[1].name} fill className={style.img} />
           </div>
-          <span className="mt-3 text-coinRed fw-bold">紅籌碼</span>
         </button>
 
         <button
@@ -58,7 +56,6 @@ const CoinGive = () => {
           <div key={COINS[2].name} className={style.imgWrapper}>
             <Image src={COINS[2].image} alt={COINS[2].name} fill className={style.img} />
           </div>
-          <span className="mt-3 text-coinYellow fw-bold">金籌碼</span>
         </button>
       </section>
 
