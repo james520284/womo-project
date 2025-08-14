@@ -14,7 +14,7 @@ const StepForArBuild = () => {
         <div className="mb-10">
           <h2 className="fs-6 fw-bold mb-4">AR空間在哪裡</h2>
           {!isLocation ? (
-            <Button size="sm" color="dark" onClick={() => setIsLocation(true)}>
+            <Button size="sm" onClick={() => setIsLocation(true)}>
               用Map搜地點
             </Button>
           ) : (
