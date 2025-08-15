@@ -34,7 +34,7 @@ const CoinWalletHeader = () => {
           <span className="ms-1 fs-sm">籌碼朋友</span>
         </Link>
 
-        <Link href="#" className={style.coinActionBtn}>
+        <Link href="/user/coin_passbook" className={style.coinActionBtn}>
           <Image
             src="https://womophoto.s3.ap-northeast-1.amazonaws.com/public/assets/images/icon/quick_btn_get.svg?v=2"
             alt="籌碼存摺"

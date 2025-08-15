@@ -18,33 +18,26 @@ const FriendsList = () => {
   return (
     <>
       {/* 頁籤區 */}
-      <section className="mt-8">
-        <div className="mb-5 d-flex align-items-center">
-          <TabDataOnClick
-            isActive={tab === 'all'}
-            onClick={() => setTab('all')}
-            num={777}
-            unit="人"
-          >
-            全部
-          </TabDataOnClick>
-          <TabDataOnClick
-            isActive={tab === 'youHaveMyCoin'}
-            onClick={() => setTab('youHaveMyCoin')}
-            num={520}
-            unit="人"
-          >
-            對方有我籌碼
-          </TabDataOnClick>
-          <TabDataOnClick
-            isActive={tab === 'iHaveYourCoin'}
-            onClick={() => setTab('iHaveYourCoin')}
-            num={257}
-            unit="人"
-          >
-            我有對方籌碼
-          </TabDataOnClick>
-        </div>
+      <section className="mt-8 mb-5 d-flex align-items-center">
+        <TabDataOnClick isActive={tab === 'all'} onClick={() => setTab('all')} num={777} unit="人">
+          全部
+        </TabDataOnClick>
+        <TabDataOnClick
+          isActive={tab === 'youHaveMyCoin'}
+          onClick={() => setTab('youHaveMyCoin')}
+          num={520}
+          unit="人"
+        >
+          對方有我籌碼
+        </TabDataOnClick>
+        <TabDataOnClick
+          isActive={tab === 'iHaveYourCoin'}
+          onClick={() => setTab('iHaveYourCoin')}
+          num={257}
+          unit="人"
+        >
+          我有對方籌碼
+        </TabDataOnClick>
       </section>
 
       {/* 功能按鈕區 */}

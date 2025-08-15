@@ -10,7 +10,7 @@ import SectionUI from '@/components/ui/section/SectionUI';
 import CheckBtn from '@/components/ui/button/icon/CheckBtn';
 
 const GreenCoinCounter = () => {
-  const [isChosenId, setIsChosenId] = useState('');
+  const [isChosenId, setIsChosenId] = useState('自己');
   const [num, setNum] = useState<Record<string, string>>({});
 
   useEffect(() => {
@@ -37,9 +37,9 @@ const GreenCoinCounter = () => {
       <section className="d-flex flex-column">
         <div className="d-flex align-items-center justify-content-between py-3 border-bottom">
           <div className="d-flex align-items-center ">
-            <div className="me-2">
-              <CheckBtn isActive />
-            </div>
+            <button type="button" className="me-2" onClick={() => setIsChosenId('自己')}>
+              <CheckBtn isActive={isChosenId === '自己'} />
+            </button>
             <Coin color="green" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
@@ -54,6 +54,7 @@ const GreenCoinCounter = () => {
               handleChange('james', val);
             }}
             min={1}
+            disabled={isChosenId !== '自己'}
           />
         </div>
 
@@ -78,6 +79,7 @@ const GreenCoinCounter = () => {
               value={num[user.id] ?? '1'}
               onChange={(val) => handleChange(String(user.id), val)}
               min={1}
+              disabled={isChosenId !== String(user.id)}
             />
           </div>
         ))}

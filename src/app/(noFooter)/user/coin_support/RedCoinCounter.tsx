@@ -7,8 +7,10 @@ import Coin from '@/components/ui/coin/Coin';
 import Counter from '@/components/ui/counter/Counter';
 import Search from '@/components/ui/search/Search';
 import SectionUI from '@/components/ui/section/SectionUI';
+import CheckBtn from '@/components/ui/button/icon/CheckBtn';
 
 const RedCoinCounter = () => {
+  const [isChosenId, setIsChosenId] = useState('');
   const [num, setNum] = useState<Record<string, string>>({});
   useEffect(() => {
     setNum((prev) => {
@@ -34,6 +36,9 @@ const RedCoinCounter = () => {
       <section className="d-flex flex-column">
         {AVATAR_LINK.others.slice(1, 3).map((user) => (
           <div key={user.id} className="d-flex align-items-center py-3 border-bottom">
+            <button type="button" className="me-2" onClick={() => setIsChosenId(String(user.id))}>
+              <CheckBtn isActive={isChosenId === String(user.id)} />
+            </button>
             <Coin color="red" scale={0.6}>
               <Avatar src={user.image} />
             </Coin>
@@ -45,6 +50,7 @@ const RedCoinCounter = () => {
               value={num[user.id] ?? '1'}
               onChange={(val) => handleChange(String(user.id), val)}
               min={1}
+              disabled={isChosenId !== String(user.id)}
             />
           </div>
         ))}

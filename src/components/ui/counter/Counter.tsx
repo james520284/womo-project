@@ -4,9 +4,10 @@ type Props = {
   min?: number;
   max?: number;
   className?: string;
+  disabled?: boolean;
 };
 
-const Counter = ({ value, onChange, min = 1, max, className = '' }: Props) => {
+const Counter = ({ value, onChange, min = 1, max, className = '', disabled }: Props) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const val = e.target.value;
     if (/^\d*$/.test(val)) {
@@ -44,10 +45,10 @@ const Counter = ({ value, onChange, min = 1, max, className = '' }: Props) => {
       <button
         type="button"
         className={`input-group-text text-white ${
-          value === String(min) ? 'bg-grey-300' : 'bg-dark'
+          disabled || value === String(min) ? 'bg-grey-300' : 'bg-dark'
         }`}
         onClick={decrement}
-        disabled={value === String(min)}
+        disabled={disabled || value === String(min)}
       >
         －
       </button>
@@ -59,12 +60,15 @@ const Counter = ({ value, onChange, min = 1, max, className = '' }: Props) => {
         value={value}
         onChange={handleInputChange}
         onBlur={handleBlur}
+        disabled={disabled}
       />
       <button
         type="button"
-        className="input-group-text text-white bg-dark"
+        className={`input-group-text text-white ${
+          disabled || (!!max && Number(value) >= max) ? 'bg-grey-300' : 'bg-dark'
+        }`}
         onClick={increment}
-        disabled={!!max && Number(value) >= max}
+        disabled={disabled || (!!max && Number(value) >= max)}
       >
         ＋
       </button>

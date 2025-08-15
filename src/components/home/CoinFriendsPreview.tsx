@@ -39,7 +39,7 @@ const CoinFriendsPreview = () => {
                 </div>
                 <div className="ms-1">
                   <ButtonOutline size="md" color="green" onClick={() => router.push('/')}>
-                    呼叫應援
+                    開話題速聊
                   </ButtonOutline>
                 </div>
               </div>
