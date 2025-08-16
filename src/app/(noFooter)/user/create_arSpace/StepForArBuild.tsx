@@ -1,5 +1,5 @@
 import style from './StepForArBuild.module.scss';
-import { IconPhoto, IconCancel, IconExclamationMarkCircle, IconSearch } from '@/components/icons';
+import { IconPhoto, IconCancel, IconExclamationMarkCircle } from '@/components/icons';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
 import { useState } from 'react';
