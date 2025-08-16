@@ -13,7 +13,7 @@ const FriendsList = () => {
     | 'youHaveMyCoin'
     | 'iHaveYourCoin'
     | null;
-  const [tab, setTab] = useState<'all' | 'youHaveMyCoin' | 'iHaveYourCoin'>(searchParams ?? 'all');
+  const [tab, setTab] = useState<'all' | 'iHaveYourCoin' | 'youHaveMyCoin'>(searchParams ?? 'all');
   const dataArr = ['互有彼此籌碼', '對方有我籌碼', '我有對方籌碼'];
   return (
     <>
@@ -23,20 +23,20 @@ const FriendsList = () => {
           全部
         </TabDataOnClick>
         <TabDataOnClick
-          isActive={tab === 'youHaveMyCoin'}
-          onClick={() => setTab('youHaveMyCoin')}
-          num={520}
-          unit="人"
-        >
-          對方有我籌碼
-        </TabDataOnClick>
-        <TabDataOnClick
           isActive={tab === 'iHaveYourCoin'}
           onClick={() => setTab('iHaveYourCoin')}
           num={257}
           unit="人"
         >
           我有對方籌碼
+        </TabDataOnClick>
+        <TabDataOnClick
+          isActive={tab === 'youHaveMyCoin'}
+          onClick={() => setTab('youHaveMyCoin')}
+          num={520}
+          unit="人"
+        >
+          對方有我籌碼
         </TabDataOnClick>
       </section>
 
@@ -52,9 +52,31 @@ const FriendsList = () => {
             <Avatar src={user.image} size={52} />
             <div className="ms-2 flex-grow-1">
               <span className="fw-bold mb-1 ">{user.name}</span>
-              <div className="d-flex  align-items-center justify-content-between fs-sm">
+              <div className="fs-sm">
                 {tab === 'all' && (
-                  <span className="me-1 bg-grey-100 rounded p-1 fs-xs">{dataArr[index]}</span>
+                  <div className="d-flex  align-items-center justify-content-between">
+                    <span className="me-1 bg-grey-100 rounded p-1 fs-xs">{dataArr[index]}</span>
+                    <Button as="a" href="/user/coin_support" color="brand" size="md">
+                      打賞
+                    </Button>
+                  </div>
+                )}
+                {tab === 'iHaveYourCoin' && (
+                  <div className="d-flex  align-items-center justify-content-between">
+                    <div className="d-flex align-items-center mt-1">
+                      <span>我持有他</span>
+                      <div className="px-2">
+                        <DoubleCoins scale={0.3}>
+                          <Avatar src={AVATAR_LINK.others[index].image} />
+                        </DoubleCoins>
+                      </div>
+                      <span className="text-primary fw-bold">{user.num}</span>
+                      <span>顆</span>
+                    </div>
+                    <Button as="a" href="/user/coin_support" color="brand" size="md">
+                      碼上玩
+                    </Button>
+                  </div>
                 )}
                 {tab === 'youHaveMyCoin' && (
                   <div className="d-flex align-items-center mt-1">
@@ -67,23 +89,6 @@ const FriendsList = () => {
                     <span className="text-primary fw-bold">{user.num}</span>
                     <span>顆</span>
                   </div>
-                )}
-                {tab === 'iHaveYourCoin' && (
-                  <div className="d-flex align-items-center mt-1">
-                    <span>我持有他</span>
-                    <div className="px-2">
-                      <DoubleCoins scale={0.3}>
-                        <Avatar src={AVATAR_LINK.others[index].image} />
-                      </DoubleCoins>
-                    </div>
-                    <span className="text-primary fw-bold">{user.num}</span>
-                    <span>顆</span>
-                  </div>
-                )}
-                {tab === 'all' && (
-                  <Button as="a" href="/user/coin_support" color="brand" size="md">
-                    打賞
-                  </Button>
                 )}
               </div>
             </div>

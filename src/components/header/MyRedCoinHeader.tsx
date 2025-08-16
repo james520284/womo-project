@@ -9,10 +9,12 @@ import Button from '../ui/button/submit/Button';
 import { COINS } from '@/constants/coin';
 import Image from 'next/image';
 import { IconArrow, IconSell } from '../icons';
+import { useRouter } from 'next/navigation';
 
 const MyRedCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +51,11 @@ const MyRedCoinHeader = () => {
             </div>
           </button>
 
-          <Button color="red" size="md">
+          <Button
+            color="red"
+            size="md"
+            onClick={() => router.push(`/user/coin_support?buy=${'buy'}`)}
+          >
             <div className="d-flex align-items-center">
               <IconSell width={20} />
               <span className="ms-1">賣籌碼</span>

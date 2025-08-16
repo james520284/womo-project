@@ -20,6 +20,7 @@ const Search = ({ isActive = false, width }: Props) => {
             name="search"
             id="search"
             placeholder="我要找..."
+            className="ps-5"
             style={{ width }}
             value={value}
             onChange={(e) => setValue(e.target.value)}

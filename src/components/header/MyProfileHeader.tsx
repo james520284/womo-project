@@ -33,7 +33,7 @@ const MyProfileHeader = () => {
             <Link href="/user/my_profile">
               <Avatar src={AVATAR_LINK.my} size={48} />
             </Link>
-            <Link href="#" className="h6 fw-bold ms-2 d-flex align-items-center">
+            <Link href="/user/profile_detail" className="h6 fw-bold ms-2 d-flex align-items-center">
               <span>蒼田楓</span>
               <IconArrow />
             </Link>

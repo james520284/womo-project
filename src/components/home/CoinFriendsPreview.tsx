@@ -34,7 +34,7 @@ const CoinFriendsPreview = () => {
                     color="green"
                     onClick={() => router.push(`/user/coin_friends?isChangeToAddFriend=${true}`)}
                   >
-                    讓更多人領我籌碼
+                    發我的籌碼給更多人
                   </Button>
                 </div>
                 <div className="ms-1">

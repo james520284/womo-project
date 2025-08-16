@@ -7,10 +7,12 @@ import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
 import { IconArrow, IconSend } from '../icons';
+import { useRouter } from 'next/navigation';
 
 const MyGreenCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +47,11 @@ const MyGreenCoinHeader = () => {
               </p>
             </div>
           </button>
-          <Button color="green" size="md">
+          <Button
+            color="green"
+            size="md"
+            onClick={() => router.push(`/user/coin_friends?isChangeToAddFriend=${true}`)}
+          >
             <div className="d-flex align-items-center">
               <IconSend width={20} />
               <span className="ms-1">發籌碼</span>

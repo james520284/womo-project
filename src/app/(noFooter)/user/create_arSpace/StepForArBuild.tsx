@@ -1,5 +1,5 @@
 import style from './StepForArBuild.module.scss';
-import { IconPhoto, IconCancel, IconExclamationMarkCircle } from '@/components/icons';
+import { IconPhoto, IconCancel, IconExclamationMarkCircle, IconSearch } from '@/components/icons';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -9,14 +9,18 @@ const StepForArBuild = () => {
   const [isLocation, setIsLocation] = useState(false);
   const [isImgUpload, setIsImgUpload] = useState(false);
   return (
-    <section className={`container-fluid mt-5 ${style.wrapper}`}>
+    <section className={`container-fluid mt-10 ${style.wrapper}`}>
       <div className="w-75 mx-auto ">
         <div className="mb-10">
-          <h2 className="fs-6 fw-bold mb-4">AR空間在哪裡</h2>
-          {!isLocation ? (
+          <div className="d-flex align-items-center justify-content-between mb-3">
+            <h2 className="fs-6 fw-bold">AR空間在哪裡</h2>
             <Button size="sm" onClick={() => setIsLocation(true)}>
-              用Map搜地點
+              搜地圖
             </Button>
+          </div>
+
+          {!isLocation ? (
+            <input type="text" placeholder="寫上地點或店名" />
           ) : (
             <div className="d-flex align-items-center fs-sm">
               <button type="button" onClick={() => setIsLocation(false)}>

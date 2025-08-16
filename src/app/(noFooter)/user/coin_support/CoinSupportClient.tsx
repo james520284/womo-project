@@ -9,9 +9,11 @@ import { useState } from 'react';
 import PagesHeader from '@/components/header/PagesHeader';
 import CoinGive from './CoinGive';
 import RedCoinBuy from './RedCoinBuy';
+import { useSearchParams } from 'next/navigation';
 
 const CoinSupportClient = () => {
-  const [supportWay, setSupportWay] = useState<'give' | 'buy'>('give');
+  const searchParams = useSearchParams().get('buy') as 'give' | 'buy' | null;
+  const [supportWay, setSupportWay] = useState<'give' | 'buy'>(searchParams ?? 'give');
 
   return (
     <>

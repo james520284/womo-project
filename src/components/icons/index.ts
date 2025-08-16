@@ -61,3 +61,7 @@ export { default as IconLottery } from './LotteryIcon';
 export { default as IconCollectCoin } from './CollectCoinIcon';
 export { default as IconNull } from './NullIcon';
 export { default as IconExclamationMarkCircle } from './ExclamationMarkCircleIcon';
+export { default as IconGenderMale } from './GenderMaleIcon';
+export { default as IconGenderFemale } from './GenderFemaleIcon';
+export { default as IconEditOutline } from './EditOutlineIcon';
+export { IconFB, IconIG, IconYT } from './SocialMediaIcon';
