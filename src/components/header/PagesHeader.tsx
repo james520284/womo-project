@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { IconBackArrow, IconCancel } from '../icons';
+import { IconBackArrow, IconShare } from '../icons';
 
 const PagesHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -37,8 +37,8 @@ const PagesHeader = () => {
           <Link href="/" className={style.logoWrapper}>
             <Image src="/images/WOMO-LOGO1.png" alt="LOGO" fill className={style.logoImage} />
           </Link>
-          <button className="btn" onClick={() => router.back()}>
-            <IconCancel width={28} />
+          <button className="btn">
+            <IconShare width={20} />
           </button>
         </div>
       </div>

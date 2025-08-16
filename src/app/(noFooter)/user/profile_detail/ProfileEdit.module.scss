@@ -1,0 +1,30 @@
+.submitBtn {
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #fff;
+  background: linear-gradient(135deg, #cd506d, #e37929);
+  padding: 8px 0;
+  font-weight: 700;
+
+  @media (min-width: 768px) {
+    position: static;
+    width: 100%;
+    border-radius: 8px;
+  }
+}
+
+.profileName {
+  font-size: 20px;
+  font-weight: 700;
+  width: 80%;
+  margin-bottom: 8px;
+}
+
+.profileId {
+  font-size: 14px;
+
+  width: 80%;
+}

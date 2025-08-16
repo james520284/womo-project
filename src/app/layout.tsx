@@ -1,6 +1,5 @@
-// [本頁目的]：全域Root Layout
-
 import type { Metadata } from 'next';
+import 'antd/dist/reset.css';
 import '../styles/global.scss';
 import React from 'react';
 

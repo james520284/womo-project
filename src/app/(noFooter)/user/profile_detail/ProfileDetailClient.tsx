@@ -7,6 +7,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import { IconGenderFemale, IconFB, IconIG, IconYT } from '@/components/icons';
 import Link from 'next/link';
 import { useState } from 'react';
+import ProfileEdit from './ProfileEdit';
 
 const ProfileDetailClient = () => {
   const [isEditable, setIsEditable] = useState(false);
@@ -71,7 +72,7 @@ const ProfileDetailClient = () => {
           </section>
         </div>
       ) : (
-        ''
+        <ProfileEdit setIsEditable={setIsEditable} />
       )}
     </>
   );
