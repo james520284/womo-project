@@ -77,12 +77,12 @@ const AddFriendsByGivingCoin = () => {
         <div className="d-flex align-items-center justify-content-between py-3 border-bottom">
           <div className="d-flex align-items-center ">
             <div
-              className="text-white bg-primary rounded-3 d-flex justify-content-center align-items-center"
+              className="text-white bg-primary rounded-3 d-flex justify-content-center align-items-center flex-shrink-0"
               style={{ width: '48px', height: '48px' }}
             >
               <IconFriends width={28} />
             </div>
-            <div className="ms-2">
+            <div className="ms-2 pe-2">
               <span>貼連結發籌碼</span>
               <input type="text" defaultValue={'www.womo.com.tw/user/123'} />
             </div>
