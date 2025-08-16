@@ -1,7 +1,6 @@
 'use client';
 
 import style from './ProfileDetailClient.module.scss';
-import ProfileDetailHeader from '@/components/header/ProfileDetailHeader';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import { IconGenderFemale, IconFB, IconIG, IconYT } from '@/components/icons';
@@ -19,9 +18,6 @@ const ProfileDetailClient = () => {
   ];
   return (
     <>
-      {/* Header區 */}
-      <ProfileDetailHeader setIsEditable={setIsEditable} />
-
       {!isEditable ? (
         <div className={`container-fluid mt-10 ${style.wrapper}`}>
           {/* 頭像區 */}
