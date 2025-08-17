@@ -3,7 +3,7 @@
 import style from './CoinFriendsPreview.module.scss';
 import Image from 'next/image';
 import { useState } from 'react';
-import GiveMyCoin from '../modal/GiveMyCoin';
+import GiveMyCoin from '../modal/DialogModal';
 import Avatar from '../ui/avatar/Avatar';
 import Button from '../ui/button/submit/Button';
 import ButtonOutline from '../ui/button/submit/ButtonOutline';

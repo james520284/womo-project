@@ -37,12 +37,16 @@ const MyProfileHeader = () => {
             </Link>
             <ProfileDetailSideSheet
               side="bottom"
-              title="我的個人資訊"
+              title="我的小檔案"
               titleHidden
               trigger={
-                <div className="h6 fw-bold ms-2 d-flex align-items-center">
-                  <span>蒼田楓</span>
-                  <IconArrow />
+                <div className="ms-2">
+                  <h2 className="fs-6 fw-bold">蒼田楓</h2>
+                  <span className="fs-sm d-flex align-items-center">
+                    <span className="me-1">我的小檔案</span>
+
+                    <IconArrow width={20} />
+                  </span>
                 </div>
               }
             >

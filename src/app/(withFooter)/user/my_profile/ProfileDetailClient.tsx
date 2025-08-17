@@ -9,9 +9,9 @@ import Link from 'next/link';
 const ProfileDetailClient = () => {
   const interest = ['撞球', '韓式料理', '懸疑片', '抒情歌', '狗狗'];
   const socialMedia = [
-    <IconFB key="FB" width={34} />,
-    <IconIG key="IG" width={42} />,
-    <IconYT key="YT" width={36} />,
+    <IconFB key="FB" width={32} />,
+    <IconIG key="IG" width={32} />,
+    <IconYT key="YT" width={32} />,
   ];
   return (
     <>
@@ -39,7 +39,7 @@ const ProfileDetailClient = () => {
           <h3 className="fs-6 fw-bold mb-3">我感興趣的</h3>
           <div className="d-flex align-items-center fs-sm text-dark fw-bold">
             {interest.map((item, index) => (
-              <span key={index} className="bg-grey-100 rounded-pill px-2 py-1 me-2">
+              <span key={index} className={style.tag}>
                 {item}
               </span>
             ))}

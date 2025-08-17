@@ -7,11 +7,21 @@ import PagesHeader from '@/components/header/PagesHeader';
 import style from './MyProfileEditClient.module.scss';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
-import { IconGenderMale, IconGenderFemale, IconFB, IconIG, IconYT } from '@/components/icons';
-import Link from 'next/link';
+import {
+  IconGenderMale,
+  IconGenderFemale,
+  IconFB,
+  IconIG,
+  IconYT,
+  IconAddSolid,
+  IconCancel,
+} from '@/components/icons';
 import Button from '@/components/ui/button/submit/Button';
 import { useState } from 'react';
 import { CITIES } from '@/constants/city';
+import MyProfileHobbyTagModal from './MyProfileHobbyTagModal';
+import { IconTikTok } from '@/components/icons/SocialMediaIcon';
+import AutoResizeTextarea from '@/components/ui/Textarea/Textarea';
 
 const MyProfileEditClient = () => {
   const [gender, setGender] = useState<'boy' | 'girl'>('girl');
@@ -22,20 +32,27 @@ const MyProfileEditClient = () => {
   const handleChangeCity = (value: string) => {
     alert(`選到的縣市：${value}`);
   };
-  const handleChangeHobby = (value: string | string[]) => {
-    console.log(`selected ${value}`);
-  };
+
+  const [isOpenHobbyTagModal, setIsOpenHobbyTagModal] = useState(false);
+  const [showTags, setShowTags] = useState<string[]>([]);
 
   const socialMedia = [
-    <IconFB key="FB" width={34} />,
-    <IconIG key="IG" width={42} />,
-    <IconYT key="YT" width={36} />,
+    <IconFB key="FB" width={28} />,
+    <IconIG key="IG" width={28} />,
+    <IconYT key="YT" width={28} />,
+    <IconTikTok key="TikTok" width={28} />,
   ];
+
+  const handleShowTagsDelete = (tag: string) => {
+    setShowTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev]));
+  };
+
   return (
     <>
       {/* Header區 */}
       <PagesHeader />
-      <div className={`container-fluid mt-10   ${style.wrapper}`}>
+
+      <div className={`container-fluid mt-10 ${style.wrapper}`}>
         {/* 頭像區 */}
         <section className="d-flex align-items-center">
           <div className="position-relative">
@@ -144,61 +161,54 @@ const MyProfileEditClient = () => {
         </ConfigProvider>
 
         {/* 興趣區 */}
-        <ConfigProvider
-          theme={{
-            // 全域主題色
-            token: {
-              colorPrimary: '#da5271', // 主色：選中、高亮
-              colorBgContainer: '#da5271', // 選擇器輸入框底色
-              colorBorder: '#da5271', // 邊框顏色（含 hover/focus）
-              controlOutline: 'rgba(218, 82, 113,0.25)', // focus 外圈
-            },
-            // 只針對 Select 客製
-            components: {
-              Select: {
-                selectorBg: '#fff', // 輸入框背景
-                optionSelectedBg: '#d9dbe1', // 下拉選單被選中背景
-                optionSelectedColor: '#000', // 下拉選單被選中文字
-                optionActiveBg: '#d9dbe1', // hover 選項背景
-                multipleItemBg: '#d9dbe1', // 多選 tag 背景
-                multipleItemBorderColor: '#d9dbe1',
-              },
-            },
-          }}
-        >
-          <section className="mt-10">
-            <h3 className="fs-6 fw-bold mb-3">我感興趣的</h3>
-            <Select
-              prefix="美食"
-              mode="multiple"
-              style={{ width: '100%' }}
-              onChange={handleChangeHobby}
-              options={[
-                { value: 'jack', label: '日韓' },
-                { value: 'lucy', label: 'Lucy' },
-                { value: 'tom', label: 'Tom' },
-              ]}
-            />
-          </section>
-        </ConfigProvider>
-        {/* 關於我 */}
         <section className="mt-10">
+          <div className="d-flex align-items-center mb-3">
+            <h3 className="fs-6 fw-bold me-1">我感興趣的</h3>
+            <button type="button" onClick={() => setIsOpenHobbyTagModal(true)}>
+              <IconAddSolid />
+            </button>
+          </div>
+          {showTags.map((tag) => (
+            <button
+              type="button"
+              key={tag}
+              className={style.tag}
+              onClick={() => handleShowTagsDelete(tag)}
+            >
+              <span>{tag}</span>
+              <span className="ms-1 line-height-none">
+                <IconCancel width={16} />
+              </span>
+            </button>
+          ))}
+        </section>
+        <MyProfileHobbyTagModal
+          open={isOpenHobbyTagModal}
+          onOpenChange={setIsOpenHobbyTagModal}
+          defaultSelectedTags={showTags}
+          onSave={setShowTags}
+        />
+
+        {/* 關於我 */}
+        <section className="mt-10 pb-20">
           <h3 className="fs-6 fw-bold mb-3">關於我</h3>
-          <div className="d-flex align-items-center fs-sm text-dark fw-bold mb-2">
+          <div className=" fs-sm text-dark fw-bold mb-5">
             {socialMedia.map((item, index) => (
-              <Link href="#" key={index} className={style.mediaIcon}>
+              <div key={index} className={style.mediaIcon}>
                 {item}
-              </Link>
+                <input type="text" className="w-75 ms-2" placeholder={`貼上${item.key}連結`} />
+              </div>
             ))}
           </div>
-          <p className="fs-sm">m</p>
+          <p className="fs-sm">
+            <AutoResizeTextarea />
+          </p>
         </section>
-
-        {/* 送出鍵 */}
-        <button type="button" className={style.submitBtn}>
-          修改
-        </button>
       </div>
+      {/* 送出鍵 */}
+      <button type="button" className={style.submitBtn}>
+        修改
+      </button>
     </>
   );
 };

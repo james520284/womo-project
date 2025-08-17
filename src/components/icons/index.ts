@@ -65,3 +65,4 @@ export { default as IconGenderMale } from './GenderMaleIcon';
 export { default as IconGenderFemale } from './GenderFemaleIcon';
 export { default as IconEditOutline } from './EditOutlineIcon';
 export { IconFB, IconIG, IconYT } from './SocialMediaIcon';
+export { default as IconAddSolid } from './AddSolidIcon';
