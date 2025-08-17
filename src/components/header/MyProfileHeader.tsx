@@ -6,8 +6,8 @@ import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { IconArrow, IconLoveBox, IconStore } from '../icons';
-import { SideSheet } from '@/components/sideSheet/SideSheet';
-import ProfileDetailClient from '@/app/(noFooter)/user/profile_detail/ProfileDetailClient';
+import ProfileDetailSideSheet from '@/app/(withFooter)/user/my_profile/ProfileDetailSideSheet';
+import ProfileDetailClient from '@/app/(withFooter)/user/my_profile/ProfileDetailClient';
 
 const MyProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -35,10 +35,10 @@ const MyProfileHeader = () => {
             <Link href="/user/my_profile">
               <Avatar src={AVATAR_LINK.my} size={48} />
             </Link>
-            <SideSheet
+            <ProfileDetailSideSheet
               side="bottom"
-              title="設定面板"
-              titleHidden // ✅ 標題不顯示，但仍具 a11y
+              title="我的個人資訊"
+              titleHidden
               trigger={
                 <div className="h6 fw-bold ms-2 d-flex align-items-center">
                   <span>蒼田楓</span>
@@ -47,7 +47,7 @@ const MyProfileHeader = () => {
               }
             >
               <ProfileDetailClient />
-            </SideSheet>
+            </ProfileDetailSideSheet>
           </div>
 
           <div className="d-flex align-items-center fs-sm">

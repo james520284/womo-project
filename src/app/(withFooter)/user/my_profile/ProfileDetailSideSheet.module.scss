@@ -102,9 +102,10 @@
 
 .actions {
   position: absolute;
-  top: 8px;
-  right: 8px;
+  top: 16px;
+  right: 16px;
   display: flex;
+  align-items: center;
   gap: 16px; /* 按鈕之間的間距 */
 }
 
@@ -112,7 +113,7 @@
   border: 0;
   background: transparent;
   font-size: 18px;
-  line-height: 1;
+  line-height: 0;
   cursor: pointer;
 }
 

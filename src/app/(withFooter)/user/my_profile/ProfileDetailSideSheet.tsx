@@ -1,9 +1,8 @@
-'use client';
-
 import * as Dialog from '@radix-ui/react-dialog';
 import { ReactNode } from 'react';
-import styles from './SideSheet.module.scss';
-import { IconShare, IconMore, IconCancel, IconEditOutline } from '../icons';
+import styles from './ProfileDetailSideSheet.module.scss';
+import { IconShare, IconCancel, IconEditOutline, IconMore } from '@/components/icons';
+import Link from 'next/link';
 
 type Side = 'left' | 'right' | 'top' | 'bottom';
 
@@ -17,13 +16,13 @@ type SideSheetProps = {
   children: ReactNode;
 };
 
-export function SideSheet({
+const ProfileDetailSideSheet = ({
   side = 'right',
   trigger,
   title,
   titleHidden = false,
   children,
-}: SideSheetProps) {
+}: SideSheetProps) => {
   const a11yTitle = title ?? 'Sheet';
   const contentAriaLabel = titleHidden ? a11yTitle : undefined;
 
@@ -46,9 +45,9 @@ export function SideSheet({
 
           {/* 把 close/share/more 放在同一個容器 */}
           <div className={styles.actions}>
-            <button className={styles.iconBtn} aria-label="Edit">
+            <Link href="/user/myProfile_edit" className={styles.iconBtn} aria-label="Edit">
               <IconEditOutline width={20} />
-            </button>
+            </Link>
             <button className={styles.iconBtn} aria-label="Share">
               <IconShare width={20} />
             </button>
@@ -67,4 +66,6 @@ export function SideSheet({
       </Dialog.Portal>
     </Dialog.Root>
   );
-}
+};
+
+export default ProfileDetailSideSheet;
