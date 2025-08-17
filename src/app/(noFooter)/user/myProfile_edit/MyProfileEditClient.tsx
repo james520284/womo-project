@@ -27,11 +27,11 @@ const MyProfileEditClient = () => {
   const [openDropdown, setOpenDropdown] = useState(false);
   const [gender, setGender] = useState<'boy' | 'girl'>('girl');
   const onChangeBirthday: DatePickerProps['onChange'] = (_, dateString) => {
-    alert(`選到日期：${dateString}`);
+    console.log(`選到日期：${dateString}`);
   };
   const { Option } = Select;
   const handleChangeCity = (value: string) => {
-    alert(`選到的縣市：${value}`);
+    console.log(`選到的縣市：${value}`);
   };
 
   const [isOpenHobbyTagModal, setIsOpenHobbyTagModal] = useState(false);
