@@ -132,6 +132,7 @@ const MyProfileEditClient = () => {
               placeholder="選擇日期"
               format="YYYY-MM-DD"
               disabledDate={(current) => current && current > dayjs().endOf('day')}
+              inputReadOnly
             />
           </section>
         </ConfigProvider>
