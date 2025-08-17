@@ -138,7 +138,6 @@ const MyProfileEditClient = () => {
               Select: {
                 optionSelectedBg: '#da5271', // 選中選項的背景色
                 optionSelectedColor: '#fff', // 選中選項的字色
-                colorBorder: '#da5271', // 邊框顏色
               },
             },
           }}
@@ -150,6 +149,17 @@ const MyProfileEditClient = () => {
               style={{ width: 200 }}
               onChange={handleChangeCity}
               allowClear
+              listHeight={320}
+              styles={{
+                popup: {
+                  root: {
+                    maxHeight: 320,
+                    overflowY: 'auto',
+                    WebkitOverflowScrolling: 'touch',
+                    overscrollBehavior: 'contain',
+                  },
+                },
+              }}
             >
               {CITIES.map((city) => (
                 <Option key={city} value={city}>
