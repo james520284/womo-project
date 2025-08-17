@@ -191,8 +191,8 @@ const MyProfileEditClient = () => {
 
         {/* 關於我 */}
         <section className="mt-10 pb-20">
-          <h3 className="fs-6 fw-bold mb-3">關於我</h3>
-          <div className=" fs-sm text-dark fw-bold mb-5">
+          <h3 className="fs-6 fw-bold mb-5">關於我</h3>
+          <div className=" fs-sm text-dark fw-bold mb-8">
             {socialMedia.map((item, index) => (
               <div key={index} className={style.mediaIcon}>
                 {item}

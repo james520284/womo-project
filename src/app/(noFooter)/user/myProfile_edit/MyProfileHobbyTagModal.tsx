@@ -61,7 +61,12 @@ const MyProfileHobbyTagModal = ({
             <span className="fs-6 fw-bold">我感興趣的</span>
           </Dialog.Title>
           {/* 摺疊區 */}
-          <Accordion.Root type="single" collapsible className={style.root}>
+          <Accordion.Root
+            type="single"
+            collapsible
+            className={style.root}
+            defaultValue={categories[0]?.id}
+          >
             {categories.map((category) => (
               <Accordion.Item key={category.id} value={category.id} className={style.item}>
                 <Accordion.Header className={style.header}>
