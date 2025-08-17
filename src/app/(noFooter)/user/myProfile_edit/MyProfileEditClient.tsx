@@ -17,13 +17,14 @@ import {
   IconCancel,
 } from '@/components/icons';
 import Button from '@/components/ui/button/submit/Button';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CITIES } from '@/constants/city';
 import MyProfileHobbyTagModal from './MyProfileHobbyTagModal';
 import { IconTikTok } from '@/components/icons/SocialMediaIcon';
 import AutoResizeTextarea from '@/components/ui/Textarea/Textarea';
 
 const MyProfileEditClient = () => {
+  const [openDropdown, setOpenDropdown] = useState(false);
   const [gender, setGender] = useState<'boy' | 'girl'>('girl');
   const onChangeBirthday: DatePickerProps['onChange'] = (_, dateString) => {
     alert(`選到日期：${dateString}`);
@@ -46,6 +47,14 @@ const MyProfileEditClient = () => {
   const handleShowTagsDelete = (tag: string) => {
     setShowTags((prev) => (prev.includes(tag) ? prev.filter((t) => t !== tag) : [...prev]));
   };
+
+  useEffect(() => {
+    const original = document.body.style.overflow;
+    document.body.style.overflow = openDropdown ? 'hidden' : original;
+    return () => {
+      document.body.style.overflow = original;
+    };
+  }, [openDropdown]);
 
   return (
     <>
@@ -149,17 +158,8 @@ const MyProfileEditClient = () => {
               style={{ width: 200 }}
               onChange={handleChangeCity}
               allowClear
-              listHeight={320}
-              styles={{
-                popup: {
-                  root: {
-                    maxHeight: 320,
-                    overflowY: 'auto',
-                    WebkitOverflowScrolling: 'touch',
-                    overscrollBehavior: 'contain',
-                  },
-                },
-              }}
+              open={openDropdown}
+              onOpenChange={setOpenDropdown}
             >
               {CITIES.map((city) => (
                 <Option key={city} value={city}>
