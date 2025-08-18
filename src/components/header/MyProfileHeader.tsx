@@ -7,7 +7,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { IconArrow, IconLoveBox, IconStore } from '../icons';
 import ProfileDetailSideSheet from '@/app/(withFooter)/user/my_profile/ProfileDetailSideSheet';
-import ProfileDetailClient from '@/app/(withFooter)/user/my_profile/ProfileDetailClient';
+import ProfileDetail from '@/app/(withFooter)/user/my_profile/ProfileDetail';
 
 const MyProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -32,9 +32,7 @@ const MyProfileHeader = () => {
       <div className="container-fluid">
         <div className="d-flex  align-items-center justify-content-between py-5">
           <div className="d-flex align-items-center">
-            <Link href="/user/my_profile">
-              <Avatar src={AVATAR_LINK.my} size={48} />
-            </Link>
+            <Avatar src={AVATAR_LINK.my} size={48} />
             <ProfileDetailSideSheet
               side="bottom"
               title="我的小檔案"
@@ -50,7 +48,7 @@ const MyProfileHeader = () => {
                 </div>
               }
             >
-              <ProfileDetailClient />
+              <ProfileDetail />
             </ProfileDetailSideSheet>
           </div>
 

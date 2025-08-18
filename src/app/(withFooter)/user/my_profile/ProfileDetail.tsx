@@ -1,6 +1,6 @@
 'use client';
 
-import style from './ProfileDetailClient.module.scss';
+import style from './ProfileDetail.module.scss';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import { IconGenderFemale, IconFB, IconIG, IconYT } from '@/components/icons';

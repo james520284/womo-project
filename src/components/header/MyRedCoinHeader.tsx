@@ -10,6 +10,8 @@ import { COINS } from '@/constants/coin';
 import Image from 'next/image';
 import { IconArrow, IconSell } from '../icons';
 import { useRouter } from 'next/navigation';
+import MyRedCoinDetailSideSheet from '@/app/(withFooter)/user/my_redCoin/MyRedCoinDetailSideSheet';
+import MyRedCoinPlan from '@/app/(withFooter)/user/my_redCoin/MyRedCoinPlan';
 
 const MyRedCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -34,22 +36,31 @@ const MyRedCoinHeader = () => {
     <header className={`${style.header} ${!showHeader ? style.hidden : ''}`}>
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
-          <button className="btn d-flex align-items-center">
+          <div className="d-flex align-items-center">
             <Coin color="red" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <div className="text-start ms-2">
-              <h1 className="h6 fw-bold d-flex align-items-center">我的紅籌碼</h1>
-              <p className="fs-sm d-flex align-items-center">
-                <span>每顆價格</span>
-                <span className="text-warning fw-bold ms-2 me-1">100</span>
-                <Image src={COINS[2].image} alt="金籌碼" width={20} height={20} />
-                <span className="ms-1">
-                  <IconArrow width={20} />
-                </span>
-              </p>
-            </div>
-          </button>
+            <MyRedCoinDetailSideSheet
+              side="bottom"
+              title="我的紅籌碼方案"
+              titleHidden
+              trigger={
+                <div className="text-start ms-2">
+                  <h1 className="h6 fw-bold d-flex align-items-center">我的紅籌碼</h1>
+                  <p className="fs-sm d-flex align-items-center">
+                    <span>每顆價格</span>
+                    <span className="text-warning fw-bold ms-2 me-1">100</span>
+                    <Image src={COINS[2].image} alt="金籌碼" width={20} height={20} />
+                    <span className="ms-1">
+                      <IconArrow width={20} />
+                    </span>
+                  </p>
+                </div>
+              }
+            >
+              <MyRedCoinPlan />
+            </MyRedCoinDetailSideSheet>
+          </div>
 
           <Button
             color="red"

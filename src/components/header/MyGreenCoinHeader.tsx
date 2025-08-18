@@ -8,6 +8,8 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
 import { IconArrow, IconSend } from '../icons';
 import { useRouter } from 'next/navigation';
+import MyGreenCoinDetailSideSheet from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinDetailSideSheet';
+import MyGreenCoinPlan from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinPlan';
 
 const MyGreenCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -32,21 +34,30 @@ const MyGreenCoinHeader = () => {
     <header className={`${style.header} ${!showHeader ? style.hidden : ''}`}>
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
-          <button className="d-flex align-items-center">
+          <div className="d-flex align-items-center">
             <Coin color="green" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <div className="text-start ms-2">
-              <h1 className="h6 fw-bold d-flex align-items-center">我的綠籌碼</h1>
-              <p className="fs-sm d-flex align-items-center">
-                <span>本月剩餘顆數</span>
-                <span className="text-secondary fw-bold mx-2">85</span>
-                <span>
-                  <IconArrow width={20} />
-                </span>
-              </p>
-            </div>
-          </button>
+            <MyGreenCoinDetailSideSheet
+              side="bottom"
+              title="我的綠籌碼方案"
+              titleHidden
+              trigger={
+                <div className="text-start ms-2">
+                  <h1 className="h6 fw-bold d-flex align-items-center">我的綠籌碼</h1>
+                  <p className="fs-sm d-flex align-items-center">
+                    <span>本月剩餘顆數</span>
+                    <span className="text-secondary fw-bold mx-2">85</span>
+                    <span>
+                      <IconArrow width={20} />
+                    </span>
+                  </p>
+                </div>
+              }
+            >
+              <MyGreenCoinPlan />
+            </MyGreenCoinDetailSideSheet>
+          </div>
           <Button
             color="green"
             size="md"
