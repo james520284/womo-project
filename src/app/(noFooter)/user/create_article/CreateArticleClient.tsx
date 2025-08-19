@@ -1,6 +1,6 @@
 'use client';
 
-import CreateArticleHeader from '@/components/header/CreateArticleHeader';
+import PagesHeader from '@/components/header/PagesHeader';
 import style from './CreateArticleClient.module.scss';
 import StepForEmoji from './StepForEmoji';
 import StepForContent from './StepForContent';
@@ -28,7 +28,7 @@ const CreateArticleClient = () => {
   return (
     <>
       {/* Header區 */}
-      <CreateArticleHeader />
+      <PagesHeader titleType="txt" titleTxt="新增籌碼貼文" cancelBtn={true} />
 
       {/* 內容區 */}
       {steps[currentPageIndex]}

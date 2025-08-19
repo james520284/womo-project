@@ -61,7 +61,7 @@ const CoinWalletClient = () => {
         </section>
 
         {/* 數據區 */}
-        <section className="bg-grey-50 px-5 py-8 d-flex justify-content-between align-items-center">
+        <section className="bg-grey-50 px-5 py-5 d-flex justify-content-between align-items-center">
           {tab === 'greenCoin' ? (
             <p className="fw-bold">
               已蒐集綠籌碼：

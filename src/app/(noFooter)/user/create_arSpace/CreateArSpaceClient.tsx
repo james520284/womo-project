@@ -1,6 +1,6 @@
 'use client';
 
-import CreateArSpaceHeader from '@/components/header/CreateArSpaceHeader';
+import PagesHeader from '@/components/header/PagesHeader';
 import style from './CreateArSpaceClient.module.scss';
 import StepForArBuild from './StepForArBuild';
 import StepForEmoji from '../create_article/StepForEmoji';
@@ -30,7 +30,7 @@ const CreateArSpaceClient = () => {
   return (
     <>
       {/* Header區 */}
-      <CreateArSpaceHeader />
+      <PagesHeader titleType="txt" titleTxt="新增AR空間" cancelBtn={true} />
 
       {/* 內容區 */}
       {steps[currentPageIndex]}

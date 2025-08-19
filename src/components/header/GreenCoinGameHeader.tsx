@@ -4,10 +4,10 @@ import style from './ArticleHeader.module.scss';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import { IconBackArrow, IconShare, IconGift } from '../icons';
+import { IconBackArrow, IconGift } from '../icons';
 import { useRouter } from 'next/navigation';
 import Coin from '../ui/coin/Coin';
-import Button from '../ui/button/submit/Button';
+import ButtonOutline from '../ui/button/submit/ButtonOutline';
 
 const GreenCoinGameHeader = () => {
   const router = useRouter();
@@ -31,17 +31,12 @@ const GreenCoinGameHeader = () => {
               </div>
             </div>
           </div>
-          <div className="d-flex align-items-center">
-            <Button color="green" size="md">
-              <div className="d-flex align-items-center">
-                <IconGift width={20} />
-                <span className="ms-1">領籌碼</span>
-              </div>
-            </Button>
-            <button className="ms-2">
-              <IconShare width={20} />
-            </button>
-          </div>
+          <ButtonOutline color="green" size="md">
+            <div className="d-flex align-items-center">
+              <IconGift width={20} />
+              <span className="ms-1">領籌碼</span>
+            </div>
+          </ButtonOutline>
         </div>
       </div>
     </header>

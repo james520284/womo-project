@@ -1,9 +1,7 @@
 'use client';
 
 import style from './CoinPassbookClient.module.scss';
-import CoinPassbookHeader from '@/components/header/CoinPassbookHeader';
-import Header from '@/components/header/Header';
-import useScreenSize from '@/hooks/useScreenSize';
+import PagesHeader from '@/components/header/PagesHeader';
 import Image from 'next/image';
 import { COINS } from '@/constants/coin';
 import { Tab } from '@/components/ui/tab/Tab';
@@ -12,14 +10,12 @@ import GetRecord from './GetRecord';
 import UseRecord from './UseRecord';
 
 const CoinPassbookClient = () => {
-  const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'getRecord' | 'useRecord'>('getRecord');
 
   return (
     <>
       {/* Header區 */}
-      {isMobile || isTablet ? <CoinPassbookHeader /> : <Header />}
-
+      <PagesHeader titleType="txt" titleTxt="籌碼存摺" />
       <div className={style.wrapper}>
         {/* 數據區 */}
         <section className={style.walletHeader}>

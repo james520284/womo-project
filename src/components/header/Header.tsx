@@ -121,7 +121,7 @@ const Header = () => {
               </button>
             </li>
             <li className="px-1">
-              <Link href="#">
+              <Link href="/search">
                 <IconSearch width={20} />
               </Link>
             </li>

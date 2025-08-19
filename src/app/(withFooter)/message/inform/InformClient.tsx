@@ -2,7 +2,7 @@
 
 import { Tab } from '@/components/ui/tab/Tab';
 import { useState } from 'react';
-import InformHeader from '@/components/header/InformHeader';
+import PagesHeader from '@/components/header/PagesHeader';
 import style from './InformClient.module.scss';
 import ArticleInform from './ArticleInform';
 import GameInform from './GameInform';
@@ -13,7 +13,7 @@ const InformClient = () => {
   return (
     <>
       {/* Header區 */}
-      <InformHeader />
+      <PagesHeader titleType="txt" titleTxt="通知" />
 
       {/* 頁籤區 */}
       <div className={`container-fluid ${style.wrapper}`}>

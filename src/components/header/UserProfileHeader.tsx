@@ -32,7 +32,7 @@ const UserProfileHeader = () => {
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
           <div className="d-flex align-items-center">
-            <Avatar src={AVATAR_LINK.others[0].image} size={40} />
+            <Avatar src={AVATAR_LINK.others[0].image} size={48} />
 
             <ProfileDetailSideSheet
               side="bottom"
@@ -40,7 +40,7 @@ const UserProfileHeader = () => {
               titleHidden
               trigger={
                 <div className="ms-2">
-                  <h2 className="fs-6 fw-bold mb-1">蒼田楓</h2>
+                  <h2 className="fs-6 fw-bold mb-1">{AVATAR_LINK.others[0].name}</h2>
                   <span className="fs-sm d-flex align-items-center">
                     <span className="me-1">我的小檔案</span>
 
