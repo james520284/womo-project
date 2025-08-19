@@ -1,14 +1,8 @@
 import style from './CoinWalletClient.module.scss';
 import SectionUI from '@/components/ui/section/SectionUI';
-import ModalYellowCoinPayDetail from './(Modal)/ModalYellowCoinPayDetail';
 import { IconSticky, IconAiFace, IconCloak } from '@/components/icons';
 
-type Props = {
-  isOpenPayDetail: boolean;
-  setIsOpenPayDetail: React.Dispatch<React.SetStateAction<boolean>>;
-};
-
-const YellowCoinCollectList = ({ isOpenPayDetail, setIsOpenPayDetail }: Props) => {
+const YellowCoinCollectList = () => {
   return (
     <>
       <SectionUI>
@@ -70,9 +64,6 @@ const YellowCoinCollectList = ({ isOpenPayDetail, setIsOpenPayDetail }: Props) =
           </div>
         </div>
       </SectionUI>
-      {/* 彈跳視窗區 */}
-      {/* 儲值明細 */}
-      <ModalYellowCoinPayDetail open={isOpenPayDetail} onOpenChange={setIsOpenPayDetail} />
     </>
   );
 };

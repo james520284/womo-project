@@ -2,20 +2,17 @@
 
 import style from './MyProfileClient.module.scss';
 import MyProfileHeader from '@/components/header/MyProfileHeader';
-import Header from '@/components/header/Header';
-import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Button from '@/components/ui/button/submit/Button';
 import ArticleListMySelf from '@/components/ui/articleList/ArticleListMySelf';
 import { Tab } from '@/components/ui/tab/Tab';
 
 const MyProfileClient = () => {
-  const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'post' | 'ARspace' | '24hrMsg'>('post');
   return (
     <>
-      {/* 頭像區 */}
-      {isMobile || isTablet ? <MyProfileHeader /> : <Header />}
+      {/* Header區 */}
+      <MyProfileHeader />
 
       <div className={`container-fluid ${style.wrapper}`}>
         {/* 數據區 */}

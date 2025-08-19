@@ -9,11 +9,12 @@ const ArticleInform = () => {
     '在這則貼文留言給我',
     '在這則貼文@提及我',
     '在這則貼文領取我的籌碼',
+    '在這則貼文解鎖我的秘密',
     '發佈一則你可能感興趣的貼文',
   ];
   return (
     <section>
-      {KOLs.slice(0, 5).map((user, index) => (
+      {KOLs.map((user, index) => (
         <div
           key={user.name}
           className="d-flex justify-content-between align-items-center py-5 border-bottom"

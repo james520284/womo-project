@@ -2,8 +2,6 @@
 
 import style from './UserProfileClient.module.scss';
 import UserProfileHeader from '@/components/header/UserProfileHeader';
-import Header from '@/components/header/Header';
-import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Coin from '@/components/ui/coin/Coin';
 import Avatar from '@/components/ui/avatar/Avatar';
@@ -15,13 +13,12 @@ import { Tab } from '@/components/ui/tab/Tab';
 import { useRouter } from 'next/navigation';
 
 const UserProfileClient = () => {
-  const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'post' | 'ARspace' | '24hrMsg'>('post');
   const router = useRouter();
   return (
     <>
-      {/* 頭像區 */}
-      {isMobile || isTablet ? <UserProfileHeader /> : <Header />}
+      {/* Header區 */}
+      <UserProfileHeader />
 
       <div className={`container-fluid ${style.wrapper}`}>
         {/* 籌碼使用區 */}

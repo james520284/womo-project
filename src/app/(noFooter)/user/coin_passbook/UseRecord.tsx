@@ -5,7 +5,7 @@ import { TOPIC_COINS } from '@/libs/api/topicCoins/topicCoins';
 import { COINS } from '@/constants/coin';
 
 const UseRecord = () => {
-  const actionType = ['對方領取', '打賞對方', '消耗使用'];
+  const actionType = ['對方領取我', '我打賞對方', '我消耗使用'];
   return (
     <section>
       <div className="py-4">

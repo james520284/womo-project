@@ -65,3 +65,9 @@
   border-radius: 20px;
   text-align: center;
 }
+
+.linkDisabled {
+  pointer-events: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+}

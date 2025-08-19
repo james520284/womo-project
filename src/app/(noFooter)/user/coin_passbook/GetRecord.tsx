@@ -4,7 +4,7 @@ import Coin from '@/components/ui/coin/Coin';
 import { TOPIC_COINS } from '@/libs/api/topicCoins/topicCoins';
 
 const GetRecord = () => {
-  const actionType = ['領取對方', '購買對方', '對方打賞'];
+  const actionType = ['我領取對方', '我購買對方', '對方打賞我'];
   return (
     <section>
       <div className="py-4">

@@ -3,9 +3,7 @@
 import style from './CoinWalletClient.module.scss';
 import { COINS } from '@/constants/coin';
 import Image from 'next/image';
-import Header from '@/components/header/Header';
 import CoinWalletHeader from '@/components/header/CoinWalletHeader';
-import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
@@ -14,13 +12,12 @@ import RedCoinCollectList from './RedCoinCollectList';
 import YellowCoinCollectList from './YellowCoinCollectList';
 
 const CoinWalletClient = () => {
-  const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'greenCoin' | 'redCoin' | 'yellowCoin'>('greenCoin');
-  const [isOpenPayDetail, setIsOpenPayDetail] = useState(false);
+
   return (
     <>
       {/* Header區 */}
-      {isMobile || isTablet ? <CoinWalletHeader /> : <Header />}
+      <CoinWalletHeader />
 
       <div className={style.wrapper}>
         {/* 頁籤區 */}
@@ -83,8 +80,8 @@ const CoinWalletClient = () => {
                 儲值
               </Button>
               &nbsp;
-              <ButtonOutline color="orange" size="sm" onClick={() => setIsOpenPayDetail(true)}>
-                紀錄
+              <ButtonOutline color="orange" size="sm">
+                商城
               </ButtonOutline>
             </div>
           )}
@@ -96,10 +93,7 @@ const CoinWalletClient = () => {
         ) : tab === 'redCoin' ? (
           <RedCoinCollectList />
         ) : (
-          <YellowCoinCollectList
-            isOpenPayDetail={isOpenPayDetail}
-            setIsOpenPayDetail={setIsOpenPayDetail}
-          />
+          <YellowCoinCollectList />
         )}
       </div>
     </>

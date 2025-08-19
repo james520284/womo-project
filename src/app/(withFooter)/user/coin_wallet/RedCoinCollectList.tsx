@@ -9,6 +9,7 @@ import Avatar from '@/components/ui/avatar/Avatar';
 import Coin from '@/components/ui/coin/Coin';
 import Button from '@/components/ui/button/submit/Button';
 import { IconFilter, IconDelete } from '@/components/icons';
+import Link from 'next/link';
 
 const RedCoinCollectList = () => {
   const [isDeletable, setIsDeletable] = useState(false);
@@ -47,17 +48,20 @@ const RedCoinCollectList = () => {
           </div>
         )}
       </div>
-      {/* 紅籌碼區 */}
+      {/* 列表區 */}
       <div className="row gy-10">
         {KOLs.map((kol) => (
-          <div
-            key={kol.name}
-            className="col-4 col-lg-3 d-flex flex-column align-items-center justify-content-start"
-          >
+          <div key={kol.name} className="col-4 col-lg-3 d-flex flex-column align-items-center">
             {isDeletable && (
-              <input type="checkbox" name={kol.name} id={kol.name} className="align-self-start" />
+              <div>
+                <input type="checkbox" name={kol.name} id={kol.name} />
+              </div>
             )}
-            <button type="button">
+
+            <Link
+              href={!isDeletable ? '/user/user_profile/123' : '#'}
+              className={isDeletable ? style.linkDisabled : ''}
+            >
               <Coin color="red" scale={0.9}>
                 <Avatar src={kol.image} />
               </Coin>
@@ -66,7 +70,7 @@ const RedCoinCollectList = () => {
                   2
                 </span>
               </div>
-            </button>
+            </Link>
             <span className="pb-1 text-truncate w-100 text-center fs-sm">{kol.name}</span>
           </div>
         ))}

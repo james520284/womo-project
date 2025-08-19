@@ -1,9 +1,7 @@
 'use client';
 
 import style from './MyGreenCoinClient.module.scss';
-import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
-import Header from '@/components/header/Header';
 import MyGreenCoinHeader from '@/components/header/MyGreenCoinHeader';
 import { IconSortUp, IconSortDown } from '@/components/icons';
 import Search from '@/components/ui/search/Search';
@@ -12,14 +10,13 @@ import GreenCoinGameOfLetter from './GreenCoinGameOfLetter';
 import GreenCoinGameOfTag from './GreenCoinGameOfTag';
 
 const MyGreenCoinClient = () => {
-  const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'letter' | 'tag'>('letter');
   const [isSort, setIsSort] = useState(false);
 
   return (
     <>
       {/* Header */}
-      {isMobile || isTablet ? <MyGreenCoinHeader /> : <Header />}
+      <MyGreenCoinHeader />
 
       <div className={`container-fluid ${style.wrapper}`}>
         {/* 數據區 */}

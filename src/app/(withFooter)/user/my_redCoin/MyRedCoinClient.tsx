@@ -1,9 +1,7 @@
 'use client';
 
 import style from './MyRedCoinClient.module.scss';
-import Header from '@/components/header/Header';
 import MyRedCoinHeader from '@/components/header/MyRedCoinHeader';
-import useScreenSize from '@/hooks/useScreenSize';
 import { useState } from 'react';
 import Search from '@/components/ui/search/Search';
 import { IconSortUp, IconSortDown, IconAdd } from '@/components/icons';
@@ -13,14 +11,13 @@ import RedCoinGameOfStore from './RedCoinGameOfStore';
 import RedCoinGameOfWork from './RedCoinGameOfWork';
 
 const MyRedCoinClient = () => {
-  const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'support' | 'store' | 'work'>('support');
   const [isSort, setIsSort] = useState(false);
 
   return (
     <>
-      {/* Header */}
-      {isMobile || isTablet ? <MyRedCoinHeader /> : <Header />}
+      {/* Header區 */}
+      <MyRedCoinHeader />
 
       <div className={`container-fluid ${style.wrapper}`}>
         {/* 數據區 */}
