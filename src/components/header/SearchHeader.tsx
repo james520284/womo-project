@@ -29,12 +29,12 @@ const SearchHeader = () => {
   return (
     <header className={`${style.header} ${!showHeader ? style.hidden : ''}`}>
       <div className="container-fluid">
-        <div className="d-flex align-items-center gap-2 py-3">
+        <div className="d-flex align-items-center gap-2 py-5">
           <button type="button" className="line-height-none" onClick={() => router.back()}>
             <IconBackArrow width={20} />
           </button>
           <div className="flex-grow-1">
-            <Search isActive={true} width="100%" />
+            <Search isActive={true} className="fs-5 border-bottom-0 bg-grey-50 rounded" />
           </div>
         </div>
       </div>

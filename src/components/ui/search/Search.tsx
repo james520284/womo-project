@@ -5,10 +5,10 @@ import { useState } from 'react';
 
 type Props = {
   isActive?: boolean;
-  width?: string;
+  className?: string;
 };
 
-const Search = ({ isActive = false, width }: Props) => {
+const Search = ({ isActive, className }: Props) => {
   const [isClick, setIsClick] = useState(isActive);
   const [value, setValue] = useState('');
   return (
@@ -20,8 +20,7 @@ const Search = ({ isActive = false, width }: Props) => {
             name="search"
             id="search"
             placeholder="我要找..."
-            className="ps-5"
-            style={{ width }}
+            className={`ps-6 fw-bold  ${className}`}
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
