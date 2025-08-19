@@ -66,3 +66,4 @@ export { default as IconGenderFemale } from './GenderFemaleIcon';
 export { default as IconEditOutline } from './EditOutlineIcon';
 export { IconFB, IconIG, IconYT } from './SocialMediaIcon';
 export { default as IconAddSolid } from './AddSolidIcon';
+export { default as IconCheckBadge } from './CheckBadgeIcon';

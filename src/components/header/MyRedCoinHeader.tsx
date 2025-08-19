@@ -8,7 +8,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
 import { COINS } from '@/constants/coin';
 import Image from 'next/image';
-import { IconArrow, IconSell } from '../icons';
+import { IconArrow, IconSell, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
 import MyRedCoinDetailSideSheet from '@/app/(withFooter)/user/my_redCoin/MyRedCoinDetailSideSheet';
 import MyRedCoinPlan from '@/app/(withFooter)/user/my_redCoin/MyRedCoinPlan';
@@ -46,7 +46,10 @@ const MyRedCoinHeader = () => {
               titleHidden
               trigger={
                 <div className="text-start ms-2">
-                  <h1 className="h6 fw-bold d-flex align-items-center">我的紅籌碼</h1>
+                  <div className="d-flex align-items-center mb-1">
+                    <h1 className="h6 fw-bold me-1">我的紅籌碼</h1>
+                    <IconCheckBadge width={16} color="#c3c3c3" />
+                  </div>
                   <p className="fs-sm d-flex align-items-center">
                     <span>每顆價格</span>
                     <span className="text-warning fw-bold ms-2 me-1">100</span>

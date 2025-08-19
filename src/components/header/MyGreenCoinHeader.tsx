@@ -6,7 +6,7 @@ import Coin from '../ui/coin/Coin';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
-import { IconArrow, IconSend } from '../icons';
+import { IconArrow, IconSend, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
 import MyGreenCoinDetailSideSheet from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinDetailSideSheet';
 import MyGreenCoinPlan from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinPlan';
@@ -44,7 +44,10 @@ const MyGreenCoinHeader = () => {
               titleHidden
               trigger={
                 <div className="text-start ms-2">
-                  <h1 className="h6 fw-bold d-flex align-items-center">我的綠籌碼</h1>
+                  <div className="d-flex align-items-center mb-1">
+                    <h1 className="h6 fw-bold me-1">我的綠籌碼</h1>
+                    <IconCheckBadge width={16} color="#c3c3c3" />
+                  </div>
                   <p className="fs-sm d-flex align-items-center">
                     <span>本月剩餘顆數</span>
                     <span className="text-secondary fw-bold mx-2">85</span>

@@ -39,7 +39,7 @@ const MyProfileHeader = () => {
               titleHidden
               trigger={
                 <div className="ms-2">
-                  <h2 className="fs-6 fw-bold">蒼田楓</h2>
+                  <h2 className="fs-6 fw-bold mb-1">蒼田楓</h2>
                   <span className="fs-sm d-flex align-items-center">
                     <span className="me-1">我的小檔案</span>
 
