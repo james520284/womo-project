@@ -66,6 +66,10 @@ const MyGreenCoinPlan = () => {
           <div>
             <ul className="fs-sm">
               <li className="mb-3">
+                <span className="fw-bold">多元發幣</span>
+                <p>支援智能 Code、手機號碼等多元發送方式</p>
+              </li>
+              <li className="mb-3">
                 <span className="fw-bold">專屬後台</span>
                 <p>更多進階模組，讓籌碼帳號推廣更強大</p>
               </li>
