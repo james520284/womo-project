@@ -65,29 +65,33 @@ const MyGreenCoinPlan = () => {
           </div>
           <div>
             <ul className="fs-sm">
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">多元發幣</span>
                 <p>支援智能 Code、手機號碼等多元發送方式</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">專屬後台</span>
-                <p>更多進階模組，讓籌碼帳號推廣更強大</p>
+                <p>更多進階模組，全面提升籌碼帳號推廣力</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">分店聯盟</span>
-                <p>籌碼可在多間分店通用，很適合連鎖品牌或有多據點的創作者</p>
+                <p>籌碼跨店通用，最適合連鎖品牌與多據點創作者</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">團隊管理</span>
-                <p>可設定不同層級的權限，方便多人經營</p>
+                <p>可分配不同層級權限，讓多人協作更輕鬆</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">廣告投放</span>
                 <p>可在WOMO投放廣告，或將優惠禮物上架到指定帳號的網店通路</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">業配媒合</span>
                 <p>品牌可公開提案找創作者，創作者也能接案賺收入</p>
+              </li>
+              <li className="mb-4">
+                <span className="fw-bold">數據分析</span>
+                <p>掌握籌碼流通數據，並提供 AI 智能建議，優化經營策略</p>
               </li>
             </ul>
           </div>

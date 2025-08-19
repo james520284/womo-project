@@ -61,23 +61,23 @@ const MyRedCoinPlan = () => {
           </div>
           <div>
             <ul className="fs-sm">
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">擁有特權</span>
                 <p>紅籌碼臉可以更換為本人真實頭像</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">真實可靠</span>
                 <p>官方認證，杜絕假帳號</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">社群信任</span>
                 <p>留言、互動更有說服力，第一眼就贏得信任</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">加倍曝光</span>
                 <p>演算法加持，讓你的籌碼和貼文被更多人看見</p>
               </li>
-              <li className="mb-3">
+              <li className="mb-4">
                 <span className="fw-bold">合作加分</span>
                 <p>更容易吸引品牌與夥伴找上門</p>
               </li>
