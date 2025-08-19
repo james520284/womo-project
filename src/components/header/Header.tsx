@@ -126,7 +126,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="px-1">
-              <Link href="#">
+              <Link href="/message/inform">
                 <IconBell width={20} />
               </Link>
             </li>

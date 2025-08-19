@@ -1,0 +1,12 @@
+.wrapper {
+  max-width: 700px !important;
+}
+.userName {
+  font-weight: 700;
+  display: inline-block; /* 或者 block，依需求 */
+  max-width: 180px; /* 限制名字最寬，依你的版面調整 */
+  overflow: hidden; /* 超出範圍隱藏 */
+  white-space: nowrap; /* 不要換行 */
+  text-overflow: ellipsis; /* 顯示 "..." */
+  vertical-align: bottom; /* 跟時間文字對齊 */
+}
