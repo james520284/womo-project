@@ -59,7 +59,7 @@ const MyProfileEditClient = () => {
   return (
     <>
       {/* Header區 */}
-      <PagesHeader />
+      <PagesHeader titleType="txt" titleTxt="修改我的小檔案" />
 
       <div className={`container-fluid mt-10 ${style.wrapper}`}>
         {/* 頭像區 */}
