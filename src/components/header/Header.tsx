@@ -121,15 +121,16 @@ const Header = () => {
               </button>
             </li>
             <li className="px-1">
+              <Link href="/user/message/inform">
+                <IconBell width={20} />
+              </Link>
+            </li>
+            <li className="px-1">
               <Link href="/search">
                 <IconSearch width={20} />
               </Link>
             </li>
-            <li className="px-1">
-              <Link href="/message/inform">
-                <IconBell width={20} />
-              </Link>
-            </li>
+
             <li className="px-1">
               <Link href="#">
                 <IconMenu width={20} />

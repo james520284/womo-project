@@ -59,7 +59,7 @@ const UserProfileClient = () => {
               <span className="fw-bold fs-5 text-primary ms-2">9</span>
             </div>
             <div className="ms-auto">
-              <Button as="a" href="#" color="red" size="md">
+              <Button as="a" href="/user/redCoin_game" color="red" size="md">
                 碼上玩
               </Button>
             </div>

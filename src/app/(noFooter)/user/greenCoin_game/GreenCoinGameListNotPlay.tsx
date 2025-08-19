@@ -3,7 +3,7 @@ import Coin from '@/components/ui/coin/Coin';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 
-const GameListNotPlay = () => {
+const GreenCoinGameListNotPlay = () => {
   return (
     <div>
       {/* 參加湊咖 */}
@@ -80,4 +80,4 @@ const GameListNotPlay = () => {
   );
 };
 
-export default GameListNotPlay;
+export default GreenCoinGameListNotPlay;

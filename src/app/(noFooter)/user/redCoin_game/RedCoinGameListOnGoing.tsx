@@ -5,7 +5,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 
-const GameListOnGoing = () => {
+const RedCoinGameListOnGoing = () => {
   return (
     <div>
       {/* 一天一信 */}
@@ -13,11 +13,11 @@ const GameListOnGoing = () => {
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
             <div className="d-flex align-items-center">
-              <Coin color="green" scale={0.5}>
+              <Coin color="red" scale={0.5}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
               <span
-                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
                 1
@@ -30,7 +30,7 @@ const GameListOnGoing = () => {
             </div>
           </div>
           <div className="text-start ms-5">
-            <Button color="green" size="sm">
+            <Button color="red" size="sm">
               碼上寄
             </Button>
           </div>
@@ -42,11 +42,11 @@ const GameListOnGoing = () => {
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
             <div className="d-flex align-items-center">
-              <Coin color="green" scale={0.5}>
+              <Coin color="red" scale={0.5}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
               <span
-                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
                 1
@@ -59,7 +59,7 @@ const GameListOnGoing = () => {
             </div>
           </div>
           <div className="text-start ms-5">
-            <Button color="green" size="sm">
+            <Button color="red" size="sm">
               碼上塗
             </Button>
           </div>
@@ -71,11 +71,11 @@ const GameListOnGoing = () => {
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
             <div className="d-flex align-items-center">
-              <Coin color="green" scale={0.5}>
+              <Coin color="red" scale={0.5}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
               <span
-                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
                 10
@@ -88,7 +88,7 @@ const GameListOnGoing = () => {
             </div>
           </div>
           <div className="text-start ms-5">
-            <Button color="green" size="sm">
+            <Button color="red" size="sm">
               碼上標
             </Button>
           </div>
@@ -100,11 +100,11 @@ const GameListOnGoing = () => {
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
             <div className="d-flex align-items-center">
-              <Coin color="green" scale={0.5}>
+              <Coin color="red" scale={0.5}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
               <span
-                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
                 1
@@ -117,12 +117,12 @@ const GameListOnGoing = () => {
           </div>
           <div className="text-start ms-5 d-flex flex-column">
             <div className="mb-1">
-              <Button color="green" size="sm">
+              <Button color="red" size="sm">
                 搜貼文
               </Button>
             </div>
 
-            <ButtonOutline color="green" size="sm">
+            <ButtonOutline color="red" size="sm">
               搜空間
             </ButtonOutline>
           </div>
@@ -132,4 +132,4 @@ const GameListOnGoing = () => {
   );
 };
 
-export default GameListOnGoing;
+export default RedCoinGameListOnGoing;

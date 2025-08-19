@@ -1,17 +1,17 @@
 'use client';
 
-import GreenCoinGameHeader from '@/components/header/GreenCoinGameHeader';
-import GreenCoinGameListOnGoing from './GreenCoinGameListOnGoing';
-import GreenCoinGameListNotPlay from './GreenCoinGameListNotPlay';
+import RedCoinGameHeader from '@/components/header/RedCoinGameHeader';
+import RedCoinGameListNotPlay from './RedCoinGameListNotPlay';
+import RedCoinGameListOnGoing from './RedCoinGameListOnGoing';
 import { Tab } from '@/components/ui/tab/Tab';
 import { useState } from 'react';
 
-const GreenCoinGameListClient = () => {
+const RedCoinGameListClient = () => {
   const [gameStatus, setGameStatus] = useState<'playing' | 'notPlay'>('playing');
   return (
     <>
       {/* Header區 */}
-      <GreenCoinGameHeader />
+      <RedCoinGameHeader />
 
       <div className="container-fluid mt-10">
         {/* 互動狀態 */}
@@ -23,10 +23,10 @@ const GreenCoinGameListClient = () => {
         </Tab>
 
         {/* 互動列表區 */}
-        {gameStatus === 'playing' ? <GreenCoinGameListOnGoing /> : <GreenCoinGameListNotPlay />}
+        {gameStatus === 'playing' ? <RedCoinGameListOnGoing /> : <RedCoinGameListNotPlay />}
       </div>
     </>
   );
 };
 
-export default GreenCoinGameListClient;
+export default RedCoinGameListClient;

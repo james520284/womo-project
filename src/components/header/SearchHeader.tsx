@@ -6,7 +6,11 @@ import { useRouter } from 'next/navigation';
 import { IconBackArrow } from '../icons';
 import Search from '../ui/search/Search';
 
-const SearchHeader = () => {
+type Props = {
+  setIsSearching: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const SearchHeader = ({ setIsSearching }: Props) => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const router = useRouter();
@@ -34,7 +38,11 @@ const SearchHeader = () => {
             <IconBackArrow width={20} />
           </button>
           <div className="flex-grow-1">
-            <Search isActive={true} className="fs-5 border-bottom-0 bg-grey-50 rounded" />
+            <Search
+              isActive={true}
+              className="fs-5 border-bottom-0 bg-grey-50 rounded"
+              setIsSearching={setIsSearching}
+            />
           </div>
         </div>
       </div>

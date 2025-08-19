@@ -1,16 +1,21 @@
 'use client';
 
 import { IconSearch, IconCancel } from '@/components/icons';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type Props = {
   isActive?: boolean;
   className?: string;
+  setIsSearching?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Search = ({ isActive, className }: Props) => {
+const Search = ({ isActive, className, setIsSearching }: Props) => {
   const [isClick, setIsClick] = useState(isActive);
   const [value, setValue] = useState('');
+
+  useEffect(() => {
+    setIsSearching?.(value !== '');
+  }, [value, setIsSearching]);
   return (
     <>
       {isClick ? (

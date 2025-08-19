@@ -1,15 +1,15 @@
 'use client';
 
-import style from './GreenCoinGameHeader.module.scss';
+import style from './RedCoinGameHeader.module.scss';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import { IconBackArrow, IconGift } from '../icons';
+import { IconBackArrow, IconCart } from '../icons';
 import { useRouter } from 'next/navigation';
 import Coin from '../ui/coin/Coin';
 import ButtonOutline from '../ui/button/submit/ButtonOutline';
 
-const GreenCoinGameHeader = () => {
+const RedCoinGameHeader = () => {
   const router = useRouter();
   return (
     <header className={style.header}>
@@ -21,20 +21,20 @@ const GreenCoinGameHeader = () => {
             </button>
             <div className="d-flex align-items-center ms-5">
               <Link href="/user/my_profile">
-                <Coin color="green" scale={0.5}>
+                <Coin color="red" scale={0.5}>
                   <Avatar src={AVATAR_LINK.my} />
                 </Coin>
               </Link>
               <div className="text-start ms-2">
-                <h1 className="fs-5 fw-bold d-flex align-items-center fs-sm text-coinGreen">48</h1>
+                <h1 className="fs-5 fw-bold d-flex align-items-center fs-sm text-coinRed">9</h1>
                 <p className="fs-xs text-muted">我目前持有</p>
               </div>
             </div>
           </div>
-          <ButtonOutline color="green" size="md">
+          <ButtonOutline color="red" size="md">
             <div className="d-flex align-items-center">
-              <IconGift width={20} />
-              <span className="ms-1">領籌碼</span>
+              <IconCart width={20} />
+              <span className="ms-1">買籌碼</span>
             </div>
           </ButtonOutline>
         </div>
@@ -43,4 +43,4 @@ const GreenCoinGameHeader = () => {
   );
 };
 
-export default GreenCoinGameHeader;
+export default RedCoinGameHeader;
