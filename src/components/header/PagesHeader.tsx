@@ -16,6 +16,7 @@ type Props = {
   shareBtn?: boolean;
   cancelBtn?: boolean;
   friendBtn?: boolean;
+  searchBtn?: boolean;
   isChangeToAddFriend?: boolean;
   setIsChangeToAddFriend?: React.Dispatch<React.SetStateAction<boolean>>;
 };
