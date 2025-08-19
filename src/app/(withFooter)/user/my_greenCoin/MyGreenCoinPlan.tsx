@@ -83,7 +83,7 @@ const MyGreenCoinPlan = () => {
               </li>
               <li className="mb-4">
                 <span className="fw-bold">廣告投放</span>
-                <p>可在WOMO投放廣告，或將優惠禮物上架到指定帳號的網店通路</p>
+                <p>可在WOMO投放廣告、將優惠曝光到指定帳號的網店</p>
               </li>
               <li className="mb-4">
                 <span className="fw-bold">業配媒合</span>
