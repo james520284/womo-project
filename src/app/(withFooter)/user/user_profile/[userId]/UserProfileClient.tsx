@@ -11,7 +11,6 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '@/components/ui/button/submit/Button';
 import ArticleListUserSelf from '@/components/ui/articleList/ArticleListUserSelf';
 import { IconCart, IconGift } from '@/components/icons';
-import Link from 'next/link';
 import { Tab } from '@/components/ui/tab/Tab';
 import { useRouter } from 'next/navigation';
 
