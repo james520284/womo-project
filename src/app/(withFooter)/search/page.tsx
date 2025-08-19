@@ -11,7 +11,7 @@ const Search = () => {
       {/* Header區 */}
       <SearchHeader />
 
-      {/* 列表區 */}
+      {/* 列表 */}
       <div className={`container-fluid mt-10 ${style.wrapper}`}>
         <div className="d-flex align-items-center justify-content-between mb-3">
           <h1 className="fs-5 fw-bold">近期搜尋</h1>
