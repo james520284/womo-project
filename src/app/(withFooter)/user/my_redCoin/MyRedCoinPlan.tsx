@@ -38,7 +38,7 @@ const MyRedCoinPlan = () => {
               <span className=" fw-bold me-2">NT$10</span>
               <span className="text-grey-600 fs-sm">/&nbsp;每顆</span>
             </span>
-            <span className="fs-xs ms-auto">價格固定無法變動</span>
+            <span className="fs-xs ms-auto">賣價固定無法變動</span>
           </div>
           <div className={style.section}>
             <span className="fs-sm">紅籌碼分潤</span>
@@ -46,7 +46,7 @@ const MyRedCoinPlan = () => {
               <span className="text-primary fw-bold me-2">NT$4</span>
               <span className="text-grey-600 fs-sm">/&nbsp;每顆</span>
             </span>
-            <span className="fs-xs ms-auto">獲得分潤無上限</span>
+            <span className="fs-xs ms-auto">販售分潤無上限</span>
           </div>
         </section>
 
