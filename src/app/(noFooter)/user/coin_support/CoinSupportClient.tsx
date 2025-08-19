@@ -18,7 +18,14 @@ const CoinSupportClient = () => {
   return (
     <>
       {/* Header區 */}
-      <PagesHeader />
+      <PagesHeader
+        titleType="img"
+        imageSrc="/images/WOMO-LOGO1.png"
+        imageLink="/"
+        backArrowBtn={false}
+        shareBtn={true}
+        cancelBtn={true}
+      />
 
       <div className={`container-fluid mt-5 mb-20 ${style.wrapper}`}>
         {/* 頭像區 */}

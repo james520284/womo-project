@@ -12,6 +12,7 @@ type Props = {
   titleTxt?: string;
   imageSrc?: string;
   imageLink?: string;
+  backArrowBtn?: boolean;
   shareBtn?: boolean;
   cancelBtn?: boolean;
   friendBtn?: boolean;
@@ -24,6 +25,7 @@ const PagesHeader = ({
   titleTxt,
   imageSrc,
   imageLink,
+  backArrowBtn = true,
   shareBtn,
   cancelBtn,
   friendBtn,
@@ -54,9 +56,12 @@ const PagesHeader = ({
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-3">
           <div className="d-flex align-items-center gap-2">
-            <button type="button" className="line-height-none" onClick={() => router.back()}>
-              <IconBackArrow width={20} />
-            </button>
+            {backArrowBtn && (
+              <button type="button" className="line-height-none" onClick={() => router.back()}>
+                <IconBackArrow width={20} />
+              </button>
+            )}
+
             {titleType === 'txt' ? (
               <h1 className="fs-6 fw-bold">{titleTxt}</h1>
             ) : (
