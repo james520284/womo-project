@@ -6,7 +6,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import { IconGenderFemale, IconFB, IconIG, IconYT } from '@/components/icons';
 import Link from 'next/link';
 
-const ProfileDetailClient = () => {
+const ProfileDetail = () => {
   const interest = ['撞球', '韓式料理', '懸疑片', '抒情歌', '狗狗'];
   const socialMedia = [
     <IconFB key="FB" width={32} />,
@@ -67,4 +67,4 @@ const ProfileDetailClient = () => {
   );
 };
 
-export default ProfileDetailClient;
+export default ProfileDetail;

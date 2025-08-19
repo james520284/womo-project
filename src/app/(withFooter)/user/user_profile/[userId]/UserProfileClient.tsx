@@ -13,10 +13,12 @@ import ArticleListUserSelf from '@/components/ui/articleList/ArticleListUserSelf
 import { IconCart, IconGift } from '@/components/icons';
 import Link from 'next/link';
 import { Tab } from '@/components/ui/tab/Tab';
+import { useRouter } from 'next/navigation';
 
 const UserProfileClient = () => {
   const { isMobile, isTablet } = useScreenSize();
   const [tab, setTab] = useState<'post' | 'ARspace' | '24hrMsg'>('post');
+  const router = useRouter();
   return (
     <>
       {/* 頭像區 */}
@@ -47,9 +49,12 @@ const UserProfileClient = () => {
           <div className={style.section}>
             <div className="d-flex align-items-center justify-content-between">
               <span className="fs-sm">我持有你的</span>
-              <Link href="#" className={style.iconWrapper}>
+              <button
+                className={style.iconWrapper}
+                onClick={() => router.push(`/user/coin_support?buy=${'buy'}`)}
+              >
                 <IconCart width={24} color="#da5271" />
-              </Link>
+              </button>
             </div>
             <div className="d-flex align-items-center justify-content-center py-2">
               <Coin scale={0.4} color="red">
@@ -58,7 +63,7 @@ const UserProfileClient = () => {
               <span className="fw-bold fs-5 text-primary ms-2">9</span>
             </div>
             <div className="ms-auto">
-              <Button color="red" size="md">
+              <Button as="a" href="#" color="red" size="md">
                 碼上玩
               </Button>
             </div>

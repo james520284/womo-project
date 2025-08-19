@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { IconArrow, IconLoveBox, IconStore } from '../icons';
+import ProfileDetailSideSheet from '@/app/(withFooter)/user/my_profile/ProfileDetailSideSheet';
+import ProfileDetail from '@/app/(withFooter)/user/my_profile/ProfileDetail';
 
 const UserProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -30,13 +32,25 @@ const UserProfileHeader = () => {
       <div className="container-fluid">
         <div className="d-flex justify-content-between align-items-center py-5">
           <div className="d-flex align-items-center">
-            <button className="btn d-flex align-items-center">
-              <Avatar src={AVATAR_LINK.others[0].image} size={40} />
-            </button>
-            <Link href="#" className="h6 fw-bold ms-2 d-flex align-items-center">
-              <span>朵拉公主</span>
-              <IconArrow />
-            </Link>
+            <Avatar src={AVATAR_LINK.others[0].image} size={40} />
+
+            <ProfileDetailSideSheet
+              side="bottom"
+              title="我的小檔案"
+              titleHidden
+              trigger={
+                <div className="ms-2">
+                  <h2 className="fs-6 fw-bold mb-1">蒼田楓</h2>
+                  <span className="fs-sm d-flex align-items-center">
+                    <span className="me-1">我的小檔案</span>
+
+                    <IconArrow width={20} />
+                  </span>
+                </div>
+              }
+            >
+              <ProfileDetail />
+            </ProfileDetailSideSheet>
           </div>
 
           <div className="d-flex align-items-center fs-sm">
