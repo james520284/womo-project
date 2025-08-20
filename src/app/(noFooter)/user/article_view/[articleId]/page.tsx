@@ -2,7 +2,7 @@ import style from './page.module.scss';
 import ArticleHeader from '@/components/header/ArticleHeader';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
-import { IconViewSolid, IconMood, IconChat, IconCoinEmoji, IconHot } from '@/components/icons';
+import { IconViewSolid, IconChat, IconCoinEmoji, IconHot } from '@/components/icons';
 import { ArticleReplyBar } from './ArticleFuncClient';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
