@@ -1,3 +1,7 @@
+.wrapper {
+  max-width: 700px !important;
+}
+
 .imgWrapper {
   position: relative;
   width: 100%;
@@ -9,5 +13,20 @@
   top: 0;
   right: 0;
   transform: translate(25%, -25%);
-  font-size: 24px;
+  color: #cd506d;
+  z-index: 0;
+  filter: drop-shadow(0 0 2px #cd506d);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: translate(-10px, 18px);
+    z-index: -1;
+  }
 }

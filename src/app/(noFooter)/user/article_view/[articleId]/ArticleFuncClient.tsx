@@ -1,13 +1,15 @@
 'use client';
 
 import style from './ArticleFuncClient.module.scss';
-import { IconShare, IconMore, IconMood, IconSend, IconBackArrow } from '@/components/icons';
+import { IconShare, IconMore, IconHot, IconSend, IconBackArrow } from '@/components/icons';
 import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import Coin from '@/components/ui/coin/Coin';
 import { useRouter } from 'next/navigation';
+import HotEmojiSideSheet from './HotEmojiSideSheet';
+import HotEmojiSupport from './HotEmojiSupportStep1';
 
 // Header的返回鍵
 export const ArticleHeaderBackBtn = () => {
@@ -57,9 +59,18 @@ export const ArticleReplyBar = () => {
           rows={1}
         />
         {!isInputFocused && (
-          <button type="button" className={style.moodIcon}>
-            <IconMood width={24} />
-          </button>
+          <HotEmojiSideSheet
+            side="bottom"
+            title="我的綠籌碼方案"
+            titleHidden
+            trigger={
+              <button type="button" className={style.hotIcon}>
+                <IconHot width={32} />
+              </button>
+            }
+          >
+            <HotEmojiSupport />
+          </HotEmojiSideSheet>
         )}
       </div>
       {!isInputFocused ? (

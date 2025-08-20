@@ -2,7 +2,7 @@ import style from './page.module.scss';
 import ArticleHeader from '@/components/header/ArticleHeader';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
-import { IconViewSolid, IconMood, IconChat, IconCoinEmoji } from '@/components/icons';
+import { IconViewSolid, IconMood, IconChat, IconCoinEmoji, IconHot } from '@/components/icons';
 import { ArticleReplyBar } from './ArticleFuncClient';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -44,10 +44,7 @@ const articleView = () => {
             <IconViewSolid width={20} />
             <span className="fs-xs fw-bold">13.5K</span>
           </div>
-          <div className="ms-2">
-            <IconMood width={20} />
-            <span className="fs-xs fw-bold">598</span>
-          </div>
+
           <div className="ms-2">
             <IconChat width={20} />
             <span className="fs-xs fw-bold">46</span>
@@ -59,18 +56,26 @@ const articleView = () => {
         </section>
 
         {/* Emoji回覆區 */}
-        <section className="border-bottom pb-3">
-          {AVATAR_LINK.others.map((user) => (
-            <Link
-              key={user.name}
-              href="#"
-              className="position-relative me-3"
-              style={{ display: 'inline-block' }}
-            >
-              <Avatar src={user.image} size={60} />
-              <span className={style.avatarEmoji}>{user.emoji}</span>
-            </Link>
-          ))}
+        <section className=" border-bottom pb-3 d-flex flex-column align-items-start">
+          <span className="fs-sm fw-bold mb-3 py-1 px-2 bg-primary text-light rounded-pill d-flex align-items-center">
+            <IconHot width={20} />
+            <span>推爆</span>
+          </span>
+          <div>
+            {AVATAR_LINK.others.map((user) => (
+              <Link
+                key={user.name}
+                href="#"
+                className="position-relative me-3"
+                style={{ display: 'inline-block' }}
+              >
+                <Avatar src={user.image} size={60} />
+                <span className={style.avatarEmoji}>
+                  <IconHot width={36} />
+                </span>
+              </Link>
+            ))}
+          </div>
         </section>
 
         {/* 貼文留言區 */}
