@@ -6,7 +6,7 @@ import { useState } from 'react';
 import Button from '@/components/ui/button/submit/Button';
 import ArticleListMySelf from '@/components/ui/articleList/ArticleListMySelf';
 import { Tab } from '@/components/ui/tab/Tab';
-import DrawWall from './DrawWall';
+import DrawWall from './DrawWall/DrawWall';
 
 const MyProfileClient = () => {
   const [tab, setTab] = useState<'post' | 'ARspace' | '24hrMsg'>('post');
@@ -57,7 +57,7 @@ const MyProfileClient = () => {
             isShowData={true}
             num={9}
           >
-            限時塗鴉
+            限時塗鴉聊
           </Tab>
         </section>
 

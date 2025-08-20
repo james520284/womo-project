@@ -8,8 +8,8 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import Coin from '@/components/ui/coin/Coin';
 import { useRouter } from 'next/navigation';
-import HotEmojiSideSheet from './HotEmojiSideSheet';
-import HotEmojiSupport from './HotEmojiSupportStep1';
+import HotEmojiSideSheet from './HotEmoji/HotEmojiSideSheet';
+import HotEmojiSupport from './HotEmoji/HotEmojiSupportStep1';
 
 // Header的返回鍵
 export const ArticleHeaderBackBtn = () => {
@@ -61,7 +61,7 @@ export const ArticleReplyBar = () => {
         {!isInputFocused && (
           <HotEmojiSideSheet
             side="bottom"
-            title="我的綠籌碼方案"
+            title="推爆貼文"
             titleHidden
             trigger={
               <button type="button" className={style.hotIcon}>

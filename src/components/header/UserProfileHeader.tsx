@@ -6,8 +6,8 @@ import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { IconArrow, IconLoveBox, IconStore } from '../icons';
-import ProfileDetailSideSheet from '@/app/(withFooter)/user/my_profile/ProfileDetailSideSheet';
-import ProfileDetail from '@/app/(withFooter)/user/my_profile/ProfileDetail';
+import ProfileDetailSideSheet from '@/app/(withFooter)/user/my_profile/ProfileDetail/ProfileDetailSideSheet';
+import ProfileDetail from '@/app/(withFooter)/user/my_profile/ProfileDetail/ProfileDetail';
 
 const UserProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
