@@ -81,7 +81,7 @@ const CoinWalletClient = () => {
               </Button>
               &nbsp;
               <ButtonOutline color="orange" size="sm">
-                商城
+                網店
               </ButtonOutline>
             </div>
           )}

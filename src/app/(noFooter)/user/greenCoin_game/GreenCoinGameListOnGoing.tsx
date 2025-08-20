@@ -37,7 +37,7 @@ const GreenCoinGameListOnGoing = () => {
         </div>
       </SectionUI>
 
-      {/* 限時塗鴉 */}
+      {/* 搶奪塗鴉 */}
       <SectionUI>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
@@ -53,14 +53,43 @@ const GreenCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">限時塗鴉</h3>
-              <p>用我的籌碼，在我的塗鴉牆，想到什麼就寫，想聊什麼就聊😁 </p>
-              <span className="text-muted mt-1 fs-xs">#每則訊息只停留24小時</span>
+              <h3 className="fw-bold fs-6 mb-2">搶奪塗鴉</h3>
+              <p>用我的籌碼，在我有限的牆布上隨手塗鴉，想畫就畫、想聊就聊😁 </p>
+              <span className="text-muted mt-1 fs-xs">#每則塗鴉僅限 24 小時</span>
             </div>
           </div>
           <div className="text-start ms-5">
             <Button color="green" size="sm">
               碼上塗
+            </Button>
+          </div>
+        </div>
+      </SectionUI>
+
+      {/* 話題速聊 */}
+      <SectionUI>
+        <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-start">
+            <div className="d-flex align-items-center">
+              <Coin color="green" scale={0.5}>
+                <Avatar src={AVATAR_LINK.my} />
+              </Coin>
+              <span
+                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                style={{ width: '24px' }}
+              >
+                1
+              </span>
+            </div>
+            <div className="ms-5">
+              <h3 className="fw-bold fs-6 mb-2">彈幕速聊</h3>
+              <p>用我的籌碼，在我的彈幕空間留言，也能撿籌碼，偷看別人聊了什麼😏 </p>
+              <span className="text-muted mt-1 fs-xs">#回覆時，你的籌碼也會被丟出來，讓別人撿</span>
+            </div>
+          </div>
+          <div className="text-start ms-5">
+            <Button color="green" size="sm">
+              碼上留
             </Button>
           </div>
         </div>

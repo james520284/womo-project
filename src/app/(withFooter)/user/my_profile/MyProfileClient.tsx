@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Button from '@/components/ui/button/submit/Button';
 import ArticleListMySelf from '@/components/ui/articleList/ArticleListMySelf';
 import { Tab } from '@/components/ui/tab/Tab';
+import DrawWall from './DrawWall';
 
 const MyProfileClient = () => {
   const [tab, setTab] = useState<'post' | 'ARspace' | '24hrMsg'>('post');
@@ -54,14 +55,14 @@ const MyProfileClient = () => {
             isActive={tab === '24hrMsg'}
             onClick={() => setTab('24hrMsg')}
             isShowData={true}
-            num={67}
+            num={9}
           >
-            限時塗鴉
+            搶奪塗鴉
           </Tab>
         </section>
 
         {/* 貼文列表區 */}
-        {tab !== '24hrMsg' && <ArticleListMySelf tab={tab} />}
+        {tab !== '24hrMsg' ? <ArticleListMySelf tab={tab} /> : <DrawWall />}
       </div>
     </>
   );

@@ -11,11 +11,11 @@ const RedCoinGameListNotPlay = () => {
         <div className="d-flex align-items-center justify-content-between opacity-50">
           <div className="d-flex align-items-start">
             <div className="d-flex align-items-center">
-              <Coin color="green" scale={0.5}>
+              <Coin color="red" scale={0.5}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
               <span
-                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
                 1
@@ -35,11 +35,11 @@ const RedCoinGameListNotPlay = () => {
         <div className="d-flex align-items-center justify-content-between opacity-50">
           <div className="d-flex align-items-start">
             <div className="d-flex align-items-center">
-              <Coin color="green" scale={0.5}>
+              <Coin color="red" scale={0.5}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
               <span
-                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
                 1
@@ -59,11 +59,11 @@ const RedCoinGameListNotPlay = () => {
         <div className="d-flex align-items-center justify-content-between  opacity-50">
           <div className="d-flex align-items-start">
             <div className="d-flex align-items-center">
-              <Coin color="green" scale={0.5}>
+              <Coin color="red" scale={0.5}>
                 <Avatar src={AVATAR_LINK.my} />
               </Coin>
               <span
-                className="fs-5 fw-bold fs-sm text-coinGreen ms-2 d-inline-block text-center"
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
                 N

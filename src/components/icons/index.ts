@@ -69,3 +69,4 @@ export { default as IconAddSolid } from './AddSolidIcon';
 export { default as IconCheckBadge } from './CheckBadgeIcon';
 export { default as IconHot } from './HotIcon';
 export { default as IconLove } from './LoveIcon';
+export { default as IconDraw } from './DrawIcon';

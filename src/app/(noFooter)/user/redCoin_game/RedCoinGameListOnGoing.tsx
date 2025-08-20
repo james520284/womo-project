@@ -24,20 +24,20 @@ const RedCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">悄悄話</h3>
-              <p>用我的籌碼，寄一封悄悄話給我，讓我們再靠近一點🥰 </p>
-              <span className="text-muted mt-1 fs-xs">#一天限寄一封</span>
+              <h3 className="fw-bold fs-6 mb-2">私聊房</h3>
+              <p>用我的籌碼，開啟我們的專屬聊天室🥰</p>
+              <span className="text-muted mt-1 fs-xs">#解鎖50則回覆訊息</span>
             </div>
           </div>
           <div className="text-start ms-5">
             <Button color="red" size="sm">
-              碼上寄
+              碼上開
             </Button>
           </div>
         </div>
       </SectionUI>
 
-      {/* 限時塗鴉 */}
+      {/* 推爆貼文 */}
       <SectionUI>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
@@ -53,20 +53,20 @@ const RedCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">限時塗鴉</h3>
-              <p>用我的籌碼，在我的塗鴉牆，想到什麼就寫，想聊什麼就聊😁 </p>
-              <span className="text-muted mt-1 fs-xs">#每則訊息只停留24小時</span>
+              <h3 className="fw-bold fs-6 mb-2">推爆貼文</h3>
+              <p>用我的籌碼，推爆我這則你愛的貼文😁</p>
+              <span className="text-muted mt-1 fs-xs">#想推爆幾次都行</span>
             </div>
           </div>
           <div className="text-start ms-5">
             <Button color="red" size="sm">
-              碼上塗
+              碼上推
             </Button>
           </div>
         </div>
       </SectionUI>
 
-      {/* 關係標記 */}
+      {/* 認領牆布 */}
       <SectionUI>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
@@ -82,14 +82,43 @@ const RedCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">關係標記</h3>
-              <p>用我的籌碼，標記我們的關係，讓我們的故事貼上專屬的名字😊</p>
-              <span className="text-muted mt-1 fs-xs">#想標幾組都行</span>
+              <h3 className="fw-bold fs-6 mb-2">認領牆布</h3>
+              <p>用我的籌碼，認領我塗鴉牆上的空白牆布😊</p>
+              <span className="text-muted mt-1 fs-xs">#你的頭像將永久印在我的牆布上</span>
             </div>
           </div>
           <div className="text-start ms-5">
             <Button color="red" size="sm">
-              碼上標
+              碼上認
+            </Button>
+          </div>
+        </div>
+      </SectionUI>
+
+      {/* 購買道具 */}
+      <SectionUI>
+        <div className="d-flex align-items-center justify-content-between">
+          <div className="d-flex align-items-start">
+            <div className="d-flex align-items-center">
+              <Coin color="red" scale={0.5}>
+                <Avatar src={AVATAR_LINK.my} />
+              </Coin>
+              <span
+                className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
+                style={{ width: '24px' }}
+              >
+                N
+              </span>
+            </div>
+            <div className="ms-5">
+              <h3 className="fw-bold fs-6 mb-2">購買道具</h3>
+              <p>用我的籌碼，在我的網店購買你喜歡的WOMO道具😊</p>
+              <span className="text-muted mt-1 fs-xs">#道具一旦購買將無法取消唷</span>
+            </div>
+          </div>
+          <div className="text-start ms-5">
+            <Button color="red" size="sm">
+              碼上買
             </Button>
           </div>
         </div>

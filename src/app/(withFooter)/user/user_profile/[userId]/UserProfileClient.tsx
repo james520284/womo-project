@@ -83,9 +83,9 @@ const UserProfileClient = () => {
             isActive={tab === '24hrMsg'}
             onClick={() => setTab('24hrMsg')}
             isShowData={true}
-            num={67}
+            num={9}
           >
-            限時塗鴉
+            搶奪塗鴉
           </Tab>
         </section>
 
