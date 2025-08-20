@@ -51,9 +51,9 @@ export default function DrawPage() {
             height={360}
             style={{ width: '100%', maxWidth: 360, height: 'auto' }}
           />
-          {/* 也可用 a 下載：
-          <a href={img} download="drawing.png">下載圖片</a>
-          */}
+          <a href={img} download="drawing.png">
+            下載圖片
+          </a>
         </>
       )}
     </div>
