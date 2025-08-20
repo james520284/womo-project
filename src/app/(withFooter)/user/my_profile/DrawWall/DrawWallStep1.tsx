@@ -20,7 +20,7 @@ const DrawWallStep1 = () => {
             <Coin color="green" scale={0.3}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <span className="ms-1">，就能開啟我的塗鴉牆</span>
+            <span className="ms-1">，就能開啟我的塗鴉小牆</span>
           </li>
 
           <li className="mb-2 d-flex align-items-start">

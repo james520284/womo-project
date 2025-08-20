@@ -70,3 +70,4 @@ export { default as IconCheckBadge } from './CheckBadgeIcon';
 export { default as IconHot } from './HotIcon';
 export { default as IconLove } from './LoveIcon';
 export { default as IconDraw } from './DrawIcon';
+export { default as IconMoreImage } from './MoreImageIcon';

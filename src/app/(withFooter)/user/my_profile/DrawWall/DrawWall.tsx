@@ -2,7 +2,7 @@ import React from 'react';
 import style from './DrawWall.module.scss';
 import Image from 'next/image';
 import Link from 'next/link';
-import { IconDraw, IconLock } from '@/components/icons';
+import { IconDraw, IconLock, IconMoreImage } from '@/components/icons';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Avatar from '@/components/ui/avatar/Avatar';
 import DrawPage from '@/components/draw/Draw';
@@ -15,7 +15,7 @@ const DrawWall = () => {
     <section className="mb-20">
       <div className="row g-1">
         {/* 開放區 */}
-        {Array.from({ length: 9 }).map((Item, index) => (
+        {Array.from({ length: 3 }).map((_, index) => (
           <div key={index} className="col-4">
             <div className="position-relative">
               {index % 2 === 0 ? (
@@ -35,7 +35,7 @@ const DrawWall = () => {
               ) : (
                 <div className={style.imgWrapper}>
                   <Image
-                    src={homeBanner[index - 1].image}
+                    src="https://images.unsplash.com/photo-1695381517206-2be6c8adce33?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                     alt="圖1"
                     fill
                     style={{ objectFit: 'cover' }}
@@ -44,7 +44,13 @@ const DrawWall = () => {
                     <Avatar src={homeBanner[index].avatar} size={24} />
                     <span className="ms-1">正在塗鴉聊</span>
                   </div>
-                  <span className={style.imgText}>{clock[(index - 1) / 2]}消失</span>
+                  <div className={style.imgText}>
+                    <span>
+                      <IconMoreImage width={14} />
+                      <span className="ms-1">32</span>
+                    </span>
+                    <span>{clock[(index - 1) / 2]}消失</span>
+                  </div>
                 </div>
               )}
             </div>

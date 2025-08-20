@@ -85,7 +85,7 @@ const UserProfileClient = () => {
             isShowData={true}
             num={9}
           >
-            限時塗鴉
+            限時塗鴉聊
           </Tab>
         </section>
 
