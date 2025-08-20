@@ -12,7 +12,7 @@ const HotEmojiSupportStep1 = () => {
         <IconHot width={60} color="#cd506d" />
         <h2 className="fs-4 fw-bold text-primary">推爆+1</h2>
       </div>
-      <div className="w-50 mx-auto">
+      <div className=" mx-auto">
         <span className="fw-bold mb-2">支持喜愛的創作者</span>
         <ul className="fs-sm ">
           <li className="mb-2 d-flex align-items-center">
