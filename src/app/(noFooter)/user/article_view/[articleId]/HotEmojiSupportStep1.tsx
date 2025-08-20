@@ -4,7 +4,7 @@ import Coin from '@/components/ui/coin/Coin';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Avatar from '@/components/ui/avatar/Avatar';
 import Button from '@/components/ui/button/submit/Button';
-import LoveIcon from '@/components/icons/LoveIcon';
+
 const HotEmojiSupportStep1 = () => {
   return (
     <div className={`container-fluid mt-10 ${style.wrapper}`}>
@@ -18,7 +18,7 @@ const HotEmojiSupportStep1 = () => {
           <li className="mb-2 d-flex align-items-center">
             <span className="me-1">
               <span>
-                <LoveIcon width={16} color="#cd506d" />
+                <IconLove width={16} color="#cd506d" />
               </span>
               &nbsp;投出一顆
             </span>
@@ -30,7 +30,7 @@ const HotEmojiSupportStep1 = () => {
           <li className="mb-2 d-flex align-items-center">
             <span className="me-1">
               <span>
-                <LoveIcon width={16} color="#cd506d" />
+                <IconLove width={16} color="#cd506d" />
               </span>
               &nbsp;購買
             </span>
@@ -41,7 +41,7 @@ const HotEmojiSupportStep1 = () => {
           </li>
           <li className="mb-2">
             <span>
-              <LoveIcon width={16} color="#cd506d" />
+              <IconLove width={16} color="#cd506d" />
             </span>
             &nbsp;你的頭像將置頂榮耀展示！
           </li>
