@@ -5,8 +5,6 @@ import Link from 'next/link';
 import { IconDraw, IconLock } from '@/components/icons';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Avatar from '@/components/ui/avatar/Avatar';
-import Coin from '@/components/ui/coin/Coin';
-import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import DrawPage from '@/components/draw/Draw';
 
 const DrawWall = () => {
@@ -22,13 +20,7 @@ const DrawWall = () => {
                 {index % 2 === 0 ? (
                   <>
                     <IconDraw />
-                    <div className="d-flex align-items-center fs-xs mt-3">
-                      <span className="me-1">用</span>
-                      <Coin color="green" scale={0.25}>
-                        <Avatar src={AVATAR_LINK.my} />
-                      </Coin>
-                      <span className="ms-1">塗鴉</span>
-                    </div>
+                    <span className="mt-2 fs-sm">開放塗鴉</span>
                   </>
                 ) : (
                   <div className={style.imgWrapper}>
@@ -40,7 +32,7 @@ const DrawWall = () => {
                     />
                     <div className={style.imgAuthor}>
                       <Avatar src={homeBanner[index].avatar} size={24} />
-                      <span className="ms-1">在這塗鴉</span>
+                      <span className="ms-1">限時塗鴉</span>
                     </div>
                     <span className={style.imgText}>於{clock[(index - 1) / 2]}消失</span>
                   </div>
@@ -56,13 +48,7 @@ const DrawWall = () => {
             <div>
               <Link href="#" className={style.drawLock}>
                 <IconLock />
-                <div className="d-flex align-items-center fs-xs mt-3">
-                  <span className="me-1">用</span>
-                  <Coin color="red" scale={0.25}>
-                    <Avatar src={AVATAR_LINK.my} />
-                  </Coin>
-                  <span className="ms-1">認領</span>
-                </div>
+                <span className="mt-2">認養小牆</span>
               </Link>
             </div>
           </div>

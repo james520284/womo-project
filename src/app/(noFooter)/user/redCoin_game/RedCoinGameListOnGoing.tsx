@@ -66,7 +66,7 @@ const RedCoinGameListOnGoing = () => {
         </div>
       </SectionUI>
 
-      {/* 認領牆布 */}
+      {/* 認養小牆 */}
       <SectionUI>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
@@ -82,8 +82,8 @@ const RedCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">認領牆布</h3>
-              <p>用我的籌碼，認領我塗鴉牆上的空白牆布😊</p>
+              <h3 className="fw-bold fs-6 mb-2">認養小牆</h3>
+              <p>用我的籌碼，認養我塗鴉牆上的空白小牆😊</p>
               <span className="text-muted mt-1 fs-xs">#你的頭像將永久印在我的牆布上</span>
             </div>
           </div>

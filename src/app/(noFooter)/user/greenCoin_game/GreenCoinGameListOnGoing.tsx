@@ -37,7 +37,7 @@ const GreenCoinGameListOnGoing = () => {
         </div>
       </SectionUI>
 
-      {/* 搶奪塗鴉 */}
+      {/* 限時塗鴉 */}
       <SectionUI>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
@@ -53,7 +53,7 @@ const GreenCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">搶奪塗鴉</h3>
+              <h3 className="fw-bold fs-6 mb-2">限時塗鴉</h3>
               <p>用我的籌碼，在我有限的牆布上隨手塗鴉，想畫就畫、想聊就聊😁 </p>
               <span className="text-muted mt-1 fs-xs">#每則塗鴉僅限 24 小時</span>
             </div>
