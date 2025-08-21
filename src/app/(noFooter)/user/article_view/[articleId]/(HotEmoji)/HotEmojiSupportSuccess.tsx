@@ -29,14 +29,10 @@ const HotEmojiSupportSuccess = ({ setSupportState }: Props) => {
           目前剩餘顆數：<span className="text-coinRed fw-bold">6</span>
         </span>
       </div>
-
-      <div className="text-center mt-20">
-        <button
-          type="button"
-          className="text-primary fs-sm fw-bold"
-          onClick={() => setSupportState('success')}
-        >
-          繼續推爆
+      <hr className="mt-15" />
+      <div className="text-center">
+        <button type="button" className=" fs-sm fw-bold" onClick={() => setSupportState('success')}>
+          再推爆一次
         </button>
       </div>
     </>
