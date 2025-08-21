@@ -7,7 +7,7 @@ import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import React from 'react';
 
 type Props = {
-  setSupportState: React.Dispatch<React.SetStateAction<string>>;
+  setSupportState: React.Dispatch<React.SetStateAction<'none' | 'success' | 'fail'>>;
 };
 
 const HotEmojiSupportDesc = ({ setSupportState }: Props) => {
