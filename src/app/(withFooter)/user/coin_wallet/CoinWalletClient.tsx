@@ -6,7 +6,6 @@ import Image from 'next/image';
 import CoinWalletHeader from '@/components/header/CoinWalletHeader';
 import { useState } from 'react';
 import Button from '@/components/ui/button/submit/Button';
-import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import GreenCoinCollectList from './GreenCoinCollectList';
 import RedCoinCollectList from './RedCoinCollectList';
 import CoinTask from './CoinTask';
