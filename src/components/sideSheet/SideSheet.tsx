@@ -16,6 +16,9 @@ type SideSheetProps = {
   titleHidden?: boolean;
   children: ReactNode;
   vh?: number;
+  shareIcon?: boolean;
+  moreIcon?: boolean;
+  editIcon?: boolean;
 };
 
 type CSSVariables = React.CSSProperties & {
@@ -29,6 +32,9 @@ export function SideSheet({
   titleHidden = false,
   children,
   vh = 60,
+  shareIcon = false,
+  moreIcon = false,
+  editIcon = false,
 }: SideSheetProps) {
   const a11yTitle = title ?? 'Sheet';
   const contentAriaLabel = titleHidden ? a11yTitle : undefined;
@@ -56,15 +62,22 @@ export function SideSheet({
 
           {/* 把 close/share/more 放在同一個容器 */}
           <div className={styles.actions}>
-            <button className={styles.iconBtn} aria-label="Edit">
-              <IconEditOutline width={20} />
-            </button>
-            <button className={styles.iconBtn} aria-label="Share">
-              <IconShare width={20} />
-            </button>
-            <button className={styles.iconBtn} aria-label="More">
-              <IconMore />
-            </button>
+            {editIcon && (
+              <button className={styles.iconBtn} aria-label="Edit">
+                <IconEditOutline width={20} />
+              </button>
+            )}
+            {shareIcon && (
+              <button className={styles.iconBtn} aria-label="Share">
+                <IconShare width={20} />
+              </button>
+            )}
+            {moreIcon && (
+              <button className={styles.iconBtn} aria-label="More">
+                <IconMore />
+              </button>
+            )}
+
             <Dialog.Close asChild>
               <button className={styles.iconBtn} aria-label="Close">
                 <IconCancel width={28} />

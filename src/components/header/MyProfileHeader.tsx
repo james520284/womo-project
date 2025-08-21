@@ -36,6 +36,9 @@ const MyProfileHeader = () => {
             <SideSheet
               side="bottom"
               vh={75}
+              editIcon={true}
+              moreIcon={true}
+              shareIcon={true}
               title="我的小檔案"
               titleHidden
               trigger={

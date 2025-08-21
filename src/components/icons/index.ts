@@ -71,3 +71,5 @@ export { default as IconHot } from './HotIcon';
 export { default as IconLove } from './LoveIcon';
 export { default as IconDraw } from './DrawIcon';
 export { default as IconMoreImage } from './MoreImageIcon';
+export { default as IconCheckDouble } from './CheckDoubleIcon';
+export { default as IconWarningOutline } from './WarningOutlineIcon';

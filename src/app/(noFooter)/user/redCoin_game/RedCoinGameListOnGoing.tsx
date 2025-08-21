@@ -78,13 +78,13 @@ const RedCoinGameListOnGoing = () => {
                 className="fs-5 fw-bold fs-sm text-coinRed ms-2 d-inline-block text-center"
                 style={{ width: '24px' }}
               >
-                10
+                30
               </span>
             </div>
             <div className="ms-5">
               <h3 className="fw-bold fs-6 mb-2">認養小牆</h3>
               <p>用我的籌碼，認養我塗鴉牆上的空白小牆😊</p>
-              <span className="text-muted mt-1 fs-xs">#你的頭像將永久印在我的牆布上</span>
+              <span className="text-muted mt-1 fs-xs">#你的頭像將永久印在我的塗鴉牆上</span>
             </div>
           </div>
           <div className="text-start ms-5">
@@ -111,9 +111,9 @@ const RedCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">購買道具</h3>
-              <p>用我的籌碼，在我的網店購買你喜歡的WOMO道具😊</p>
-              <span className="text-muted mt-1 fs-xs">#道具一旦購買將無法取消唷</span>
+              <h3 className="fw-bold fs-6 mb-2">兌換道具</h3>
+              <p>用我的籌碼，在我的網店兌換你喜歡的WOMO道具😊</p>
+              <span className="text-muted mt-1 fs-xs">#道具一旦兌換將無法取消唷</span>
             </div>
           </div>
           <div className="text-start ms-5">

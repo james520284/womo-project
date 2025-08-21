@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { IconDraw, IconLock, IconMoreImage } from '@/components/icons';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Avatar from '@/components/ui/avatar/Avatar';
-import DrawPage from '@/components/draw/Draw';
 import DrawWallFreeStep1 from './DrawWallFreeStep1';
 import DrawWallPayStep1 from './DrawWallPayStep1';
 import { SideSheet } from '@/components/sideSheet/SideSheet';
@@ -12,10 +11,10 @@ import { SideSheet } from '@/components/sideSheet/SideSheet';
 const DrawWall = () => {
   const clock = ['16:21', '08:44', '03:08', '12:35'];
   return (
-    <section className="mb-20">
+    <section>
       <div className="row g-1">
         {/* 開放區 */}
-        {Array.from({ length: 3 }).map((_, index) => (
+        {Array.from({ length: 2 }).map((_, index) => (
           <div key={index} className="col-4">
             <div className="position-relative">
               {index % 2 === 0 ? (
@@ -76,7 +75,6 @@ const DrawWall = () => {
           </div>
         ))}
       </div>
-      <DrawPage />
     </section>
   );
 };

@@ -8,7 +8,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import Coin from '@/components/ui/coin/Coin';
 import { useRouter } from 'next/navigation';
-import HotEmojiSupport from './HotEmoji/HotEmojiSupportStep1';
+import HotEmojiSupport from './HotEmoji/HotEmojiSupport';
 import { SideSheet } from '@/components/sideSheet/SideSheet';
 
 // Header的返回鍵
