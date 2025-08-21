@@ -21,7 +21,7 @@ const HotEmojiSupportDesc = ({ setSupportState }: Props) => {
 
       {/* 內容區 */}
       <section className="mx-auto">
-        <span className="fw-bold mb-2">支持+推爆喜愛的創作者</span>
+        <span className="fw-bold mb-2">支持＋推爆喜愛的創作者</span>
         <ul className="fs-sm">
           <li className="mb-2 d-flex align-items-center">
             <IconLove width={16} color="#cd506d" />

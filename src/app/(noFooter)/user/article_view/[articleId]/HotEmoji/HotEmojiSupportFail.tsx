@@ -11,7 +11,7 @@ const HotEmojiSupportFail = () => {
 
   return (
     <>
-      <div className="d-flex flex-column align-items-center mb-5">
+      <div className="d-flex flex-column align-items-center pt-10 mb-5">
         <Coin color="red" scale={1}>
           <Avatar src={AVATAR_LINK.my} />
         </Coin>

@@ -6,7 +6,7 @@ import Avatar from '@/components/ui/avatar/Avatar';
 const HotEmojiSupportSuccess = () => {
   return (
     <>
-      <div className="text-center mb-5">
+      <div className="text-center pt-10 mb-5">
         <IconHot width={60} color="#cd506d" />
         <h2 className="fs-4 fw-bold text-primary mt-3">
           <IconCheckDouble width={32} />
