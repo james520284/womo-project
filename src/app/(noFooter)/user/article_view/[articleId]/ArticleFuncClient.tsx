@@ -1,7 +1,7 @@
 'use client';
 
 import style from './ArticleFuncClient.module.scss';
-import { IconShare, IconMore, IconHot, IconSend, IconBackArrow } from '@/components/icons';
+import { IconMore, IconHot, IconSend, IconBackArrow } from '@/components/icons';
 import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
