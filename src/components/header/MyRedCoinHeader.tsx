@@ -10,7 +10,6 @@ import { COINS } from '@/constants/coin';
 import Image from 'next/image';
 import { IconArrow, IconSell, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
-import MyRedCoinDetailSideSheet from '@/app/(withFooter)/user/my_redCoin/MyRedCoinDetailSideSheet';
 import MyRedCoinPlan from '@/app/(withFooter)/user/my_redCoin/MyRedCoinPlan';
 import { SideSheet } from '../sideSheet/SideSheet';
 
