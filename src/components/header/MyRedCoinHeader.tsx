@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { IconArrow, IconSell, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
 import MyRedCoinPlan from '@/app/(withFooter)/user/my_redCoin/MyRedCoinPlan';
-import { SideSheet } from '../sideSheet/SideSheet';
+import { SideSheet } from '../ui/sideSheet/SideSheet';
 
 const MyRedCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);

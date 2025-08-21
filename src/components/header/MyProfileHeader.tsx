@@ -7,7 +7,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { IconArrow, IconLoveBox, IconStore } from '../icons';
 import ProfileDetail from '@/app/(withFooter)/user/my_profile/ProfileDetail/ProfileDetail';
-import { SideSheet } from '../sideSheet/SideSheet';
+import { SideSheet } from '../ui/sideSheet/SideSheet';
 
 const MyProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);

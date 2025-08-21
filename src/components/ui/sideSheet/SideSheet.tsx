@@ -3,7 +3,7 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { ReactNode } from 'react';
 import styles from './SideSheet.module.scss';
-import { IconShare, IconMore, IconCancel, IconEditOutline } from '../icons';
+import { IconShare, IconMore, IconCancel, IconEditOutline } from '@/components/icons';
 
 type Side = 'left' | 'right' | 'top' | 'bottom';
 

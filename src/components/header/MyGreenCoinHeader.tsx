@@ -9,7 +9,7 @@ import Button from '../ui/button/submit/Button';
 import { IconArrow, IconSend, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
 import MyGreenCoinPlan from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinPlan';
-import { SideSheet } from '../sideSheet/SideSheet';
+import { SideSheet } from '../ui/sideSheet/SideSheet';
 
 const MyGreenCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);

@@ -6,7 +6,7 @@ import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Avatar from '@/components/ui/avatar/Avatar';
 import DrawWallFreeStep1 from './DrawWallFreeStep1';
 import DrawWallPayStep1 from './DrawWallPayStep1';
-import { SideSheet } from '@/components/sideSheet/SideSheet';
+import { SideSheet } from '@/components/ui/sideSheet/SideSheet';
 
 const DrawWall = () => {
   const clock = ['16:21', '08:44', '03:08', '12:35'];

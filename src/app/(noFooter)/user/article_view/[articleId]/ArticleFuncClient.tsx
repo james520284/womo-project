@@ -8,10 +8,10 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import HotEmojiSupport from './(HotEmoji)/HotEmojiSupport';
-import { SideSheet } from '@/components/sideSheet/SideSheet';
+import { SideSheet } from '@/components/ui/sideSheet/SideSheet';
 import { GiveCoinBtnInArticle } from './(CoinGameActionBtnInArticle)/CoinGameActionBtnInArticle';
 import GiveCoinInArticleSuccess from './(CoinGameInArticle)/(giveCoin)/GiveCoinInArticleSuccess';
-import DropDownMenu from '@/components/dropDownMenu/DropDownMenu';
+import DropDownMenu from '@/components/ui/dropDownMenu/DropDownMenu';
 
 // Header的返回鍵
 export const ArticleHeaderBackBtn = () => {

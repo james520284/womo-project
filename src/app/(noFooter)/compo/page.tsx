@@ -77,7 +77,7 @@ import SectionUI2 from '@/components/ui/section/SectionUI2';
 import { useState } from 'react';
 import { Tab, TabDataOnClick } from '@/components/ui/tab/Tab';
 import Search from '@/components/ui/search/Search';
-import GiveMyCoin from '@/components/modal/DialogModal';
+import GiveMyCoin from '@/components/ui/modal/DialogModal';
 
 const iconMap = [
   IconAdd,

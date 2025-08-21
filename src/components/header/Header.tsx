@@ -15,7 +15,7 @@ import {
   IconBell,
   IconAddFriend,
 } from '../icons';
-import { SideSheet } from '../sideSheet/SideSheet';
+import { SideSheet } from '../ui/sideSheet/SideSheet';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import SearchPage from '@/components/home/search/SearchPage';
