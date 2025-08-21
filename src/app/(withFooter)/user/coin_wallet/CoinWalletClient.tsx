@@ -9,7 +9,7 @@ import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import GreenCoinCollectList from './GreenCoinCollectList';
 import RedCoinCollectList from './RedCoinCollectList';
-import YellowCoinCollectList from './YellowCoinCollectList';
+import CoinTask from './CoinTask';
 
 const CoinWalletClient = () => {
   const [tab, setTab] = useState<'greenCoin' | 'redCoin' | 'yellowCoin'>('greenCoin');
@@ -75,15 +75,9 @@ const CoinWalletClient = () => {
           )}
 
           {tab === 'yellowCoin' && (
-            <div>
-              <Button color="orange" size="sm">
-                儲值
-              </Button>
-              &nbsp;
-              <ButtonOutline color="orange" size="sm">
-                網店
-              </ButtonOutline>
-            </div>
+            <Button color="orange" size="sm">
+              儲值
+            </Button>
           )}
         </section>
 
@@ -93,7 +87,7 @@ const CoinWalletClient = () => {
         ) : tab === 'redCoin' ? (
           <RedCoinCollectList />
         ) : (
-          <YellowCoinCollectList />
+          <CoinTask />
         )}
       </div>
     </>
