@@ -46,14 +46,14 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 40vh;
+    height: var(--vh, 60vh);
     max-height: 540px;
   }
   &.bottom {
     bottom: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: var(--vh, 60vh);
     max-height: 640px;
   }
 

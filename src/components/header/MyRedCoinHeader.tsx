@@ -12,6 +12,7 @@ import { IconArrow, IconSell, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
 import MyRedCoinDetailSideSheet from '@/app/(withFooter)/user/my_redCoin/MyRedCoinDetailSideSheet';
 import MyRedCoinPlan from '@/app/(withFooter)/user/my_redCoin/MyRedCoinPlan';
+import { SideSheet } from '../sideSheet/SideSheet';
 
 const MyRedCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -40,8 +41,9 @@ const MyRedCoinHeader = () => {
             <Coin color="red" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <MyRedCoinDetailSideSheet
+            <SideSheet
               side="bottom"
+              vh={75}
               title="我的紅籌碼方案"
               titleHidden
               trigger={
@@ -62,7 +64,7 @@ const MyRedCoinHeader = () => {
               }
             >
               <MyRedCoinPlan />
-            </MyRedCoinDetailSideSheet>
+            </SideSheet>
           </div>
 
           <Button

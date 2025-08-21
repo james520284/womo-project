@@ -6,8 +6,8 @@ import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { IconArrow, IconLoveBox, IconStore } from '../icons';
-import ProfileDetailSideSheet from '@/app/(withFooter)/user/my_profile/ProfileDetail/ProfileDetailSideSheet';
 import ProfileDetail from '@/app/(withFooter)/user/my_profile/ProfileDetail/ProfileDetail';
+import { SideSheet } from '../sideSheet/SideSheet';
 
 const UserProfileHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -34,8 +34,9 @@ const UserProfileHeader = () => {
           <div className="d-flex align-items-center">
             <Avatar src={AVATAR_LINK.others[0].image} size={48} />
 
-            <ProfileDetailSideSheet
+            <SideSheet
               side="bottom"
+              vh={75}
               title="我的小檔案"
               titleHidden
               trigger={
@@ -50,7 +51,7 @@ const UserProfileHeader = () => {
               }
             >
               <ProfileDetail />
-            </ProfileDetailSideSheet>
+            </SideSheet>
           </div>
 
           <div className="d-flex align-items-center fs-sm">

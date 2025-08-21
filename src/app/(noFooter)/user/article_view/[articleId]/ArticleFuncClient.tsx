@@ -8,8 +8,8 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import Coin from '@/components/ui/coin/Coin';
 import { useRouter } from 'next/navigation';
-import HotEmojiSideSheet from './HotEmoji/HotEmojiSideSheet';
 import HotEmojiSupport from './HotEmoji/HotEmojiSupportStep1';
+import { SideSheet } from '@/components/sideSheet/SideSheet';
 
 // Header的返回鍵
 export const ArticleHeaderBackBtn = () => {
@@ -59,7 +59,7 @@ export const ArticleReplyBar = () => {
           rows={1}
         />
         {!isInputFocused && (
-          <HotEmojiSideSheet
+          <SideSheet
             side="bottom"
             title="推爆貼文"
             titleHidden
@@ -70,7 +70,7 @@ export const ArticleReplyBar = () => {
             }
           >
             <HotEmojiSupport />
-          </HotEmojiSideSheet>
+          </SideSheet>
         )}
       </div>
       {!isInputFocused ? (

@@ -15,6 +15,11 @@ type SideSheetProps = {
   /** true 時標題不顯示在畫面上（仍提供給螢幕閱讀器） */
   titleHidden?: boolean;
   children: ReactNode;
+  vh?: number;
+};
+
+type CSSVariables = React.CSSProperties & {
+  '--vh'?: string;
 };
 
 export function SideSheet({
@@ -23,9 +28,13 @@ export function SideSheet({
   title,
   titleHidden = false,
   children,
+  vh = 60,
 }: SideSheetProps) {
   const a11yTitle = title ?? 'Sheet';
   const contentAriaLabel = titleHidden ? a11yTitle : undefined;
+  const sheetStyle: CSSVariables = {
+    ['--vh']: `${vh}vh`, // 不會報錯
+  };
 
   return (
     <Dialog.Root>
@@ -38,6 +47,7 @@ export function SideSheet({
           className={`${styles.sheet} ${styles[side]}`}
           forceMount
           aria-label={contentAriaLabel}
+          style={sheetStyle}
         >
           {/* 保留 Dialog.Title 以符合 a11y；可選擇隱藏 */}
           <Dialog.Title asChild>

@@ -1,13 +1,13 @@
 import React from 'react';
 import style from './DrawWall.module.scss';
 import Image from 'next/image';
-import Link from 'next/link';
 import { IconDraw, IconLock, IconMoreImage } from '@/components/icons';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Avatar from '@/components/ui/avatar/Avatar';
 import DrawPage from '@/components/draw/Draw';
-import DrawWallSideSheet from './DrawWallSideSheet';
-import DrawWallStep1 from './DrawWallStep1';
+import DrawWallFreeStep1 from './DrawWallFreeStep1';
+import DrawWallPayStep1 from './DrawWallPayStep1';
+import { SideSheet } from '@/components/sideSheet/SideSheet';
 
 const DrawWall = () => {
   const clock = ['16:21', '08:44', '03:08', '12:35'];
@@ -19,7 +19,7 @@ const DrawWall = () => {
           <div key={index} className="col-4">
             <div className="position-relative">
               {index % 2 === 0 ? (
-                <DrawWallSideSheet
+                <SideSheet
                   side="bottom"
                   title="推爆貼文"
                   titleHidden
@@ -30,8 +30,8 @@ const DrawWall = () => {
                     </button>
                   }
                 >
-                  <DrawWallStep1 />
-                </DrawWallSideSheet>
+                  <DrawWallFreeStep1 />
+                </SideSheet>
               ) : (
                 <div className={style.imgWrapper}>
                   <Image
@@ -60,12 +60,19 @@ const DrawWall = () => {
         {/* 未解鎖 */}
         {Array.from({ length: 1 }).map((Item, index) => (
           <div key={index} className="col-4">
-            <div>
-              <Link href="#" className={style.drawLock}>
-                <IconLock />
-                <span className="mt-2">認養小牆</span>
-              </Link>
-            </div>
+            <SideSheet
+              side="bottom"
+              title="推爆貼文"
+              titleHidden
+              trigger={
+                <button type="button" className={style.drawLock}>
+                  <IconLock />
+                  <span className="mt-2">認養小牆</span>
+                </button>
+              }
+            >
+              <DrawWallPayStep1 />
+            </SideSheet>
           </div>
         ))}
       </div>

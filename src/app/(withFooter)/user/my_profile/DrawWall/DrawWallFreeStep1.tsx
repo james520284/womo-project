@@ -4,7 +4,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Avatar from '@/components/ui/avatar/Avatar';
 import Button from '@/components/ui/button/submit/Button';
 
-const DrawWallStep1 = () => {
+const DrawWallFreeStep1 = () => {
   return (
     <div className="container-fluid mt-10" style={{ maxWidth: '700px' }}>
       <div className="text-center mb-8 text-secondary">
@@ -43,4 +43,4 @@ const DrawWallStep1 = () => {
   );
 };
 
-export default DrawWallStep1;
+export default DrawWallFreeStep1;

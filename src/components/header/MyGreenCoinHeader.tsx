@@ -8,8 +8,8 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
 import { IconArrow, IconSend, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
-import MyGreenCoinDetailSideSheet from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinDetailSideSheet';
 import MyGreenCoinPlan from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinPlan';
+import { SideSheet } from '../sideSheet/SideSheet';
 
 const MyGreenCoinHeader = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -38,8 +38,9 @@ const MyGreenCoinHeader = () => {
             <Coin color="green" scale={0.5}>
               <Avatar src={AVATAR_LINK.my} />
             </Coin>
-            <MyGreenCoinDetailSideSheet
+            <SideSheet
               side="bottom"
+              vh={75}
               title="我的綠籌碼方案"
               titleHidden
               trigger={
@@ -59,7 +60,7 @@ const MyGreenCoinHeader = () => {
               }
             >
               <MyGreenCoinPlan />
-            </MyGreenCoinDetailSideSheet>
+            </SideSheet>
           </div>
           <Button
             color="green"
