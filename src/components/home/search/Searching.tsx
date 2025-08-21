@@ -1,10 +1,9 @@
-import style from './page.module.scss';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Avatar from 'antd/es/avatar/Avatar';
 
 const Searching = () => {
   return (
-    <section className={`container-fluid mt-5 ${style.wrapper}`}>
+    <section className="container-fluid mt-5">
       {AVATAR_LINK.others.map((user) => (
         <div
           key={user.name}

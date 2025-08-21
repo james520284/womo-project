@@ -15,9 +15,10 @@ import {
   IconBell,
   IconAddFriend,
 } from '../icons';
-
+import { SideSheet } from '../sideSheet/SideSheet';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
+import SearchPage from '@/components/home/search/SearchPage';
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -126,9 +127,19 @@ const Header = () => {
               </Link>
             </li>
             <li className="px-1">
-              <Link href="/search">
-                <IconSearch width={20} />
-              </Link>
+              <SideSheet
+                side="left"
+                title="搜尋"
+                vh={90}
+                titleHidden
+                trigger={
+                  <button type="button">
+                    <IconSearch width={20} />
+                  </button>
+                }
+              >
+                <SearchPage />
+              </SideSheet>
             </li>
 
             <li className="px-1">

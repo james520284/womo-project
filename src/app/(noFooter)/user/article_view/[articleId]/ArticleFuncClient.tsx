@@ -6,10 +6,12 @@ import { useState } from 'react';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
-import Coin from '@/components/ui/coin/Coin';
 import { useRouter } from 'next/navigation';
-import HotEmojiSupport from './HotEmoji/HotEmojiSupport';
+import HotEmojiSupport from './(HotEmoji)/HotEmojiSupport';
 import { SideSheet } from '@/components/sideSheet/SideSheet';
+import { GiveCoinBtnInArticle } from './(CoinGameActionBtnInArticle)/CoinGameActionBtnInArticle';
+import GiveCoinInArticleSuccess from './(CoinGameInArticle)/(giveCoin)/GiveCoinInArticleSuccess';
+import DropDownMenu from '@/components/dropDownMenu/DropDownMenu';
 
 // Header的返回鍵
 export const ArticleHeaderBackBtn = () => {
@@ -25,14 +27,13 @@ export const ArticleHeaderBackBtn = () => {
 // Header的功能鍵
 export const ArticleHeaderFuncBtn = () => {
   return (
-    <div className="d-flex align-items-center">
-      <button>
-        <IconShare width={20} />
-      </button>
-      <button className="ms-5">
-        <IconMore width={24} />
-      </button>
-    </div>
+    <DropDownMenu
+      trigger={
+        <button className="ms-5">
+          <IconMore width={24} />
+        </button>
+      }
+    />
   );
 };
 
@@ -75,14 +76,15 @@ export const ArticleReplyBar = () => {
       </div>
       {!isInputFocused ? (
         <div className="col-4">
-          <button type="button" className={style.coinActionBtn}>
-            <div className={style.coinWrapper}>
-              <Coin color="green" scale={0.3}>
-                <Avatar src={AVATAR_LINK.my} />
-              </Coin>
-            </div>
-            <span className="ms-3 fw-bold fs-sm text-light">領取</span>
-          </button>
+          <SideSheet
+            side="bottom"
+            vh={36}
+            title="贈幣"
+            titleHidden
+            trigger={<GiveCoinBtnInArticle />}
+          >
+            <GiveCoinInArticleSuccess />
+          </SideSheet>
         </div>
       ) : (
         <div className="col-1">

@@ -57,22 +57,25 @@ const articleView = () => {
 
         {/* Emoji回覆區 */}
         <section className=" border-bottom pb-3 d-flex flex-column align-items-start">
-          <span className="fs-sm fw-bold mb-3 py-1 px-2 bg-primary text-light rounded-pill d-flex align-items-center">
+          <span className="fs-sm fw-bold mb-4 py-1 px-2 bg-primary text-light rounded-pill d-flex align-items-center">
             <IconHot width={20} />
-            <span>推爆</span>
+            <span>
+              推爆&nbsp; <span className="text-grey-100 fs-xs">531</span>{' '}
+            </span>
           </span>
           <div>
             {AVATAR_LINK.others.map((user) => (
               <Link
                 key={user.name}
                 href="#"
-                className="position-relative me-3"
+                className="position-relative me-3 text-center"
                 style={{ display: 'inline-block' }}
               >
                 <Avatar src={user.image} size={60} />
                 <span className={style.avatarEmoji}>
                   <IconHot width={36} />
                 </span>
+                <span className="fs-xs text-primary fw-bold">{user.num}次</span>
               </Link>
             ))}
           </div>

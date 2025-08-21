@@ -6,10 +6,11 @@ import { useState, useEffect } from 'react';
 type Props = {
   isActive?: boolean;
   className?: string;
+  cancelIcon?: boolean;
   setIsSearching?: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
-const Search = ({ isActive, className, setIsSearching }: Props) => {
+const Search = ({ isActive, className, cancelIcon = true, setIsSearching }: Props) => {
   const [isClick, setIsClick] = useState(isActive);
   const [value, setValue] = useState('');
 
@@ -29,19 +30,22 @@ const Search = ({ isActive, className, setIsSearching }: Props) => {
             value={value}
             onChange={(e) => setValue(e.target.value)}
           />
-          <button
-            type="button"
-            className="line-height-none position-absolute top-50 end-0 translate-middle"
-          >
-            <IconCancel
-              width={16}
-              color="#757575"
-              onClick={() => {
-                setIsClick(!isClick);
-                setValue('');
-              }}
-            />
-          </button>
+          {cancelIcon && (
+            <button
+              type="button"
+              className="line-height-none position-absolute top-50 end-0 translate-middle"
+            >
+              <IconCancel
+                width={16}
+                color="#757575"
+                onClick={() => {
+                  setIsClick(!isClick);
+                  setValue('');
+                }}
+              />
+            </button>
+          )}
+
           {!value && (
             <span className="line-height-none position-absolute top-50 start-0 translate-middle ms-3 text-muted">
               <IconSearch width={14} />

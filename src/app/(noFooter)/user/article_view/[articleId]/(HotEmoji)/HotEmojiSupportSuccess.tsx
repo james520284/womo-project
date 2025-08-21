@@ -3,14 +3,18 @@ import Coin from '@/components/ui/coin/Coin';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Avatar from '@/components/ui/avatar/Avatar';
 
-const HotEmojiSupportSuccess = () => {
+type Props = {
+  setSupportState: React.Dispatch<React.SetStateAction<'none' | 'success' | 'fail'>>;
+};
+
+const HotEmojiSupportSuccess = ({ setSupportState }: Props) => {
   return (
     <>
       <div className="text-center pt-10 mb-5">
         <IconHot width={60} color="#cd506d" />
         <h2 className="fs-4 fw-bold text-primary mt-3">
           <IconCheckDouble width={32} />
-          &nbsp;成功推爆！
+          <span className="ms-2">成功推爆！</span>
         </h2>
       </div>
 
@@ -24,6 +28,16 @@ const HotEmojiSupportSuccess = () => {
         <span>
           目前剩餘顆數：<span className="text-coinRed fw-bold">6</span>
         </span>
+      </div>
+
+      <div className="text-center mt-20">
+        <button
+          type="button"
+          className="text-primary fs-sm fw-bold"
+          onClick={() => setSupportState('success')}
+        >
+          繼續推爆
+        </button>
       </div>
     </>
   );

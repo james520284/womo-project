@@ -12,7 +12,7 @@ const HotEmojiSupport = () => {
       {supportState === 'none' ? (
         <HotEmojiSupportDesc setSupportState={setSupportState} />
       ) : supportState === 'success' ? (
-        <HotEmojiSupportSuccess />
+        <HotEmojiSupportSuccess setSupportState={setSupportState} />
       ) : (
         <HotEmojiSupportFail />
       )}

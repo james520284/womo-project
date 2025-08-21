@@ -1,0 +1,13 @@
+.coinActionBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  width: 100%;
+  padding: 4px 0;
+  background: linear-gradient(135deg, #cd506d, #e37929);
+  &:disabled {
+    background: #9aa0a6;
+    opacity: 0.8;
+  }
+}
