@@ -95,7 +95,7 @@ const RedCoinGameListOnGoing = () => {
         </div>
       </SectionUI>
 
-      {/* 購買道具 */}
+      {/* 兌換禮物 */}
       <SectionUI>
         <div className="d-flex align-items-center justify-content-between">
           <div className="d-flex align-items-start">
@@ -111,9 +111,9 @@ const RedCoinGameListOnGoing = () => {
               </span>
             </div>
             <div className="ms-5">
-              <h3 className="fw-bold fs-6 mb-2">兌換道具</h3>
-              <p>用我的籌碼，在我的網店兌換你喜歡的WOMO道具😊</p>
-              <span className="text-muted mt-1 fs-xs">#道具一旦兌換將無法取消唷</span>
+              <h3 className="fw-bold fs-6 mb-2">兌換禮物</h3>
+              <p>用我的籌碼，在我的網店兌換你喜歡的禮物😊</p>
+              <span className="text-muted mt-1 fs-xs">#禮物一旦兌換將無法取消唷</span>
             </div>
           </div>
           <div className="text-start ms-5">
