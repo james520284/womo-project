@@ -4,6 +4,7 @@ import * as Dialog from '@radix-ui/react-dialog';
 import { ReactNode } from 'react';
 import styles from './SideSheet.module.scss';
 import { IconShare, IconMore, IconCancel, IconEditOutline } from '@/components/icons';
+import Link from 'next/link';
 
 type Side = 'left' | 'right' | 'top' | 'bottom';
 
@@ -19,6 +20,7 @@ type SideSheetProps = {
   shareIcon?: boolean;
   moreIcon?: boolean;
   editIcon?: boolean;
+  editLink?: string;
 };
 
 type CSSVariables = React.CSSProperties & {
@@ -35,6 +37,7 @@ export function SideSheet({
   shareIcon = false,
   moreIcon = false,
   editIcon = false,
+  editLink,
 }: SideSheetProps) {
   const a11yTitle = title ?? 'Sheet';
   const contentAriaLabel = titleHidden ? a11yTitle : undefined;
@@ -63,9 +66,9 @@ export function SideSheet({
           {/* 把 close/share/more 放在同一個容器 */}
           <div className={styles.actions}>
             {editIcon && (
-              <button className={styles.iconBtn} aria-label="Edit">
+              <Link href={`${editLink}`} className={styles.iconBtn} aria-label="Edit">
                 <IconEditOutline width={20} />
-              </button>
+              </Link>
             )}
             {shareIcon && (
               <button className={styles.iconBtn} aria-label="Share">

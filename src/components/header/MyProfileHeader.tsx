@@ -39,6 +39,7 @@ const MyProfileHeader = () => {
               editIcon={true}
               moreIcon={true}
               shareIcon={true}
+              editLink="/user/myProfile_edit"
               title="我的小檔案"
               titleHidden
               trigger={
