@@ -118,7 +118,7 @@ const RedCoinGameListOnGoing = () => {
           </div>
           <div className="text-start ms-5">
             <Button color="red" size="sm">
-              碼上買
+              碼上換
             </Button>
           </div>
         </div>

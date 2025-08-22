@@ -74,7 +74,7 @@ const CoinWalletClient = () => {
           )}
 
           {tab === 'yellowCoin' && (
-            <Button color="orange" size="sm">
+            <Button as="a" href="/yellowCoin_deposit" color="orange" size="sm">
               儲值
             </Button>
           )}
