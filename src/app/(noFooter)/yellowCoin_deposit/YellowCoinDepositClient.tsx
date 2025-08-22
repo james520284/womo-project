@@ -45,7 +45,7 @@ const YellowCoinDepositClient = () => {
                     <div className="d-flex flex-column align-items-center text-center">
                       <span className="fw-bold text-coinYellow">
                         <Avatar src={COINS[2].image} />
-                        <span className="my-2">{plan.num}</span>
+                        <span className="my-2 fs-6">{plan.num}</span>
                       </span>
                       <span className="fs-xs fw-bold text-muted">{plan.tag}</span>
                     </div>
@@ -74,7 +74,7 @@ const YellowCoinDepositClient = () => {
                     <div className="d-flex flex-column align-items-center text-center">
                       <span className="fw-bold text-coinYellow">
                         <Avatar src={COINS[2].image} />
-                        <span className="my-2">{plan.num}</span>
+                        <span className="my-2 fs-6">{plan.num}</span>
                       </span>
                       <span className="fs-xs fw-bold text-muted">{plan.tag}</span>
                     </div>
@@ -94,11 +94,13 @@ const YellowCoinDepositClient = () => {
         <SectionUI2 title="儲值明細">
           <div className="d-flex align-items-center justify-content-between w-75 mx-auto mb-2">
             <h3 className="fs-sm">儲值顆數</h3>
-            <span className="text-coinYellow-700 fw-bold">{PlanContent[targetIndex].num} 顆</span>
+            <span className="text-coinYellow-700 fw-bold fs-6">
+              {PlanContent[targetIndex].num} 顆
+            </span>
           </div>
           <div className="d-flex align-items-center justify-content-between w-75 mx-auto">
             <h3 className="fs-sm">支付總額</h3>
-            <span className="text-primary fw-bold">{PlanContent[targetIndex].price}</span>
+            <span className="text-primary fw-bold  fs-6">{PlanContent[targetIndex].price}</span>
           </div>
         </SectionUI2>
 
@@ -114,7 +116,7 @@ const YellowCoinDepositClient = () => {
             <h3 className="fs-sm ">
               <span className="text-primary">*</span>電子信箱
             </h3>
-            <input type="email" />
+            <input type="email" className="fs-6" />
           </div>
         </SectionUI2>
 
