@@ -8,8 +8,8 @@ import { IconSortUp, IconSortDown, IconFilter } from '@/components/icons';
 import { useState } from 'react';
 
 const ModalYellowCoinPayDetail = () => {
-  const [isHistory, setIsHistory] = useState(false);
   const [isSort, setIsSort] = useState(false);
+  const dataArr = ['history'];
   return (
     <>
       {/* Header區 */}
@@ -33,7 +33,7 @@ const ModalYellowCoinPayDetail = () => {
         </div>
 
         {/* 列表區 */}
-        {isHistory ? (
+        {dataArr.length >= 1 ? (
           <ul>
             <li className="py-4">
               <div className="d-flex align-items-center justify-content-between mb-2">

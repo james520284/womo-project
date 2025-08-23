@@ -35,7 +35,7 @@ const DrawWallFreeStep1 = () => {
         </ul>
         <div className="text-center mt-5">
           <Button width="expand" color="green">
-            丟籌碼 塗鴉聊！
+            丟籌碼 開始塗鴉！
           </Button>
         </div>
       </div>
