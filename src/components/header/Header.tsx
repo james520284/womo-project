@@ -19,6 +19,7 @@ import { SideSheet } from '../ui/sideSheet/SideSheet';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import SearchPage from '@/components/home/search/SearchPage';
+import MoreFunctionPage from '../home/moreFunction/MoreFunctionPage';
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(true);
@@ -130,7 +131,6 @@ const Header = () => {
               <SideSheet
                 side="left"
                 title="搜尋"
-                vh={90}
                 titleHidden
                 trigger={
                   <button type="button">
@@ -143,9 +143,18 @@ const Header = () => {
             </li>
 
             <li className="px-1">
-              <Link href="#">
-                <IconMenu width={20} />
-              </Link>
+              <SideSheet
+                side="right"
+                title="更多功能"
+                titleHidden
+                trigger={
+                  <button type="button">
+                    <IconMenu width={20} />
+                  </button>
+                }
+              >
+                <MoreFunctionPage />
+              </SideSheet>
             </li>
           </ul>
         </div>

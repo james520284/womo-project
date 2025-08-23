@@ -73,3 +73,8 @@ export { default as IconDraw } from './DrawIcon';
 export { default as IconMoreImage } from './MoreImageIcon';
 export { default as IconCheckDouble } from './CheckDoubleIcon';
 export { default as IconWarningOutline } from './WarningOutlineIcon';
+export { default as IconGiftSolid } from './GiftSolidIcon';
+export { default as IconQRcode } from './QRcodeIcon';
+export { default as IconLogout } from './LogoutIcon';
+export { default as IconNote } from './NoteIcon';
+export { default as IconHelpOutline } from './HelpOutlineIcon';
