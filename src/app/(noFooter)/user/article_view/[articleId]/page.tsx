@@ -2,7 +2,13 @@ import style from './page.module.scss';
 import ArticleHeader from '@/components/header/ArticleHeader';
 import { homeBanner } from '@/libs/api/banner/homeBanner';
 import Image from 'next/image';
-import { IconViewSolid, IconChat, IconCoinEmoji, IconHot } from '@/components/icons';
+import {
+  IconViewSolid,
+  IconChat,
+  IconCoinEmoji,
+  IconHot,
+  IconShareSolid,
+} from '@/components/icons';
 import { ArticleReplyBar } from './ArticleFuncClient';
 import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
@@ -39,20 +45,27 @@ const articleView = () => {
 
       <div className="container-fluid">
         {/* 數據區 */}
-        <section className=" mt-3 mb-5 d-flex align-items-center text-grey-400">
-          <div>
-            <IconViewSolid width={20} />
-            <span className="fs-xs fw-bold">13.5K</span>
-          </div>
-
-          <div className="ms-2">
-            <IconChat width={20} />
-            <span className="fs-xs fw-bold">46</span>
-          </div>
-          <div className="ms-2">
-            <IconCoinEmoji width={20} />
-            <span className="fs-xs fw-bold">97</span>
-          </div>
+        <section className=" mt-3 mb-5">
+          <ul className="d-flex align-items-center text-grey-400 fs-xs">
+            <li>
+              <IconViewSolid width={20} />
+              <span>13.5K</span>
+            </li>
+            <li className="ms-2">
+              <IconChat width={20} />
+              <span>46</span>
+            </li>
+            <li className="ms-2">
+              <IconCoinEmoji width={20} />
+              <span>97</span>
+            </li>
+            <li className="ms-2">
+              <button type="button">
+                <IconShareSolid width={20} />
+                <span>14</span>
+              </button>
+            </li>
+          </ul>
         </section>
 
         {/* Emoji回覆區 */}

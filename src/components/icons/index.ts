@@ -78,3 +78,5 @@ export { default as IconQRcode } from './QRcodeIcon';
 export { default as IconLogout } from './LogoutIcon';
 export { default as IconNote } from './NoteIcon';
 export { default as IconHelpOutline } from './HelpOutlineIcon';
+export { default as IconGlobalOutline } from './GlobalOutlineIcon';
+export { default as IconShareSolid } from './ShareSolidIcon';
