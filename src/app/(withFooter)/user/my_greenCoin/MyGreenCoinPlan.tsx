@@ -57,7 +57,7 @@ const MyGreenCoinPlan = () => {
           <div className="d-flex align-items-center justify-content-between mb-5">
             <div className="d-flex align-items-center text-secondary">
               <IconCheckBadge width={36} />
-              <h2 className="fs-5 fw-bold ms-2">綠勾勾</h2>
+              <h2 className="fs-5 fw-bold ms-2">綠勾勾商業帳號</h2>
             </div>
             <ButtonOutline size="sm" color="green">
               開始試用
@@ -87,7 +87,7 @@ const MyGreenCoinPlan = () => {
               </li>
               <li className="mb-4">
                 <span className="fw-bold">業配媒合</span>
-                <p>品牌可公開提案找創作者，創作者也能接案賺收入</p>
+                <p>可以發佈合作需求，找到適合的創作者，一起拉高品牌聲量</p>
               </li>
               <li className="mb-4">
                 <span className="fw-bold">數據分析</span>

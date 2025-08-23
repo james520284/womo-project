@@ -19,7 +19,7 @@ import {
 const MoreFunctionPage = () => {
   return (
     <>
-      <ul className="mt-5">
+      <ul className="mt-5 mb-10">
         <li className="d-flex align-items-center mb-8">
           <Avatar src={AVATAR_LINK.my} size={48} />
           <div className="ms-2">

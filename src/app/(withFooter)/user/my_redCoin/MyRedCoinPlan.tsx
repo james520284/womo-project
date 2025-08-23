@@ -55,7 +55,7 @@ const MyRedCoinPlan = () => {
           <div className="d-flex align-items-center justify-content-between  mb-5">
             <div className="d-flex align-items-center text-primary">
               <IconCheckBadge width={36} />
-              <h2 className="fs-5 fw-bold ms-2">紅勾勾</h2>
+              <h2 className="fs-5 fw-bold ms-2">紅勾勾實名認證</h2>
             </div>
             <ButtonOutline size="sm">開始認證</ButtonOutline>
           </div>
