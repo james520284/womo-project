@@ -35,16 +35,25 @@ const MoreFunctionPage = () => {
           <h2 className="fw-bold fs-sm ms-1">我的籌碼朋友</h2>
         </li>
         <li className="d-flex align-items-center  mb-5">
-          <IconQRcode width={16} />
-          <h2 className="fw-bold fs-sm ms-1">我的打賞箱QR碼</h2>
-        </li>
-        <li className="d-flex align-items-center  mb-5">
           <IconChat width={16} />
           <h2 className="fw-bold fs-sm ms-1">我的私聊房</h2>
         </li>
         <li className="d-flex align-items-center  mb-5">
           <IconGiftSolid width={16} />
           <h2 className="fw-bold fs-sm ms-1">我的禮物券</h2>
+        </li>
+        <hr />
+        <li className="d-flex align-items-center  mb-5">
+          <IconQRcode width={16} />
+          <h2 className="fw-bold fs-sm ms-1">我的主頁QR碼</h2>
+        </li>
+        <li className="d-flex align-items-center  mb-5">
+          <IconQRcode width={16} />
+          <h2 className="fw-bold fs-sm ms-1">我的籌碼發行QR碼</h2>
+        </li>
+        <li className="d-flex align-items-center  mb-5">
+          <IconQRcode width={16} />
+          <h2 className="fw-bold fs-sm ms-1">我的打賞箱QR碼</h2>
         </li>
         <hr />
 
