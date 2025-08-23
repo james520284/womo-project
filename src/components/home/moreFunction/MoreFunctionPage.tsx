@@ -15,11 +15,12 @@ import {
   IconNote,
   IconHelpOutline,
 } from '@/components/icons';
+import Link from 'next/link';
 
 const MoreFunctionPage = () => {
   return (
     <>
-      <ul className="mt-5 mb-10">
+      <ul className="mt-5 mb-20">
         <li className="d-flex align-items-center mb-8">
           <Avatar src={AVATAR_LINK.my} size={48} />
           <div className="ms-2">
@@ -87,9 +88,11 @@ const MoreFunctionPage = () => {
           <IconHelpOutline width={16} />
           <h2 className="fw-bold fs-sm ms-1">幫助中心</h2>
         </li>
-        <li className="d-flex align-items-center  mb-5">
-          <IconSetting width={16} />
-          <h2 className="fw-bold fs-sm ms-1">設定</h2>
+        <li>
+          <Link href="/user/myAccount" className="d-flex align-items-center  mb-5">
+            <IconSetting width={16} />
+            <h2 className="fw-bold fs-sm ms-1">帳號設定</h2>
+          </Link>
         </li>
         <li className="d-flex align-items-center  mb-5">
           <IconExclamationMarkCircle width={16} />
