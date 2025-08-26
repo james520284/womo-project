@@ -9,7 +9,6 @@ import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '@/components/ui/button/submit/Button';
 import { IconAiFace, IconSticky, IconCloak } from '@/components/icons';
-import { COINS } from '@/constants/coin';
 
 const MyStoreClient = () => {
   const [tab, setTab] = useState<'WoMall' | 'sponsor' | 'myself'>('WoMall');
@@ -37,7 +36,7 @@ const MyStoreClient = () => {
             平台道具
           </Tab>
           <Tab isActive={tab === 'sponsor'} onClick={() => setTab('sponsor')}>
-            品牌贊助
+            廣告贊助
           </Tab>
           <Tab isActive={tab === 'myself'} onClick={() => setTab('myself')}>
             我提供的
