@@ -1,6 +1,5 @@
 import style from './page.module.scss';
 import Image from 'next/image';
-import { IconLine, IconArrow } from '@/components/icons';
 import LoginOption from './LoginOption';
 
 const Login = () => {

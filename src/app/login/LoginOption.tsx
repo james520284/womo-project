@@ -42,9 +42,9 @@ const LoginOption = () => {
           {/* 手機登入 */}
           <button
             type="button"
-            className="bg-primary pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3 text-white"
+            className="border border-dark  pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3"
           >
-            <IconPhone width={20} />
+            <IconPhone width={20} color="#da5271" />
             <span className="ms-3" style={{ width: '144px' }}>
               用手機號碼登入
             </span>
@@ -53,9 +53,9 @@ const LoginOption = () => {
           {/* Email登入 */}
           <button
             type="button"
-            className="bg-secondary pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3 text-white"
+            className="border border-dark  pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3"
           >
-            <IconMail width={20} />
+            <IconMail width={20} color="#00b0b4" />
             <span className="ms-3" style={{ width: '144px' }}>
               用 Email 帳號登入
             </span>
@@ -64,7 +64,7 @@ const LoginOption = () => {
           {/* apple登入 */}
           <button
             type="button"
-            className="bg-dark pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3 text-white"
+            className="border border-dark  pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3 "
           >
             <IconApple width={20} />
             <span className="ms-3" style={{ width: '144px' }}>
