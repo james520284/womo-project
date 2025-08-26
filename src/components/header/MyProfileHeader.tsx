@@ -62,7 +62,7 @@ const MyProfileHeader = () => {
               <IconLoveBox width={20} />
               <span>打賞我</span>
             </Link>
-            <Link href="#" className="d-flex align-items-center ms-4">
+            <Link href="/user/my_store" className="d-flex align-items-center ms-4">
               <IconStore width={20} />
               <span>我的網店</span>
             </Link>

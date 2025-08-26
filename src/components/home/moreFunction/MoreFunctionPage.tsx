@@ -56,7 +56,7 @@ const MoreFunctionPage = () => {
       </li>
       <li>
         <IconQRcode width={16} />
-        <span>我的打賞箱QR碼</span>
+        <span>我的籌碼支持QR碼</span>
       </li>
       <hr />
 
