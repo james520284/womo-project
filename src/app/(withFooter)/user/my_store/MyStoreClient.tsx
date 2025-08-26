@@ -25,8 +25,8 @@ const MyStoreClient = () => {
             </Coin>
           </div>
           <div className="fw-bold ms-5">
-            <p className="fs-5">Hello,這裡是我的小網店</p>
-            <p className="fs-6">歡迎大家用我的籌碼，換成你喜歡的東西😚</p>
+            <p className="fs-5">嗨～這裡是我的小網店</p>
+            <p className="fs-6">歡迎用我的籌碼，換你喜歡的東西❤️</p>
           </div>
         </div>
 
