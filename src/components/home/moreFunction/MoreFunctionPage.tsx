@@ -15,6 +15,7 @@ import {
   IconNote,
   IconHelpOutline,
   IconGlobalOutline,
+  IconLogin,
 } from '@/components/icons';
 import Link from 'next/link';
 
@@ -105,6 +106,12 @@ const MoreFunctionPage = () => {
         <span>關於WOMO</span>
       </li>
       <hr />
+      <li>
+        <Link href="/login">
+          <IconLogin width={16} />
+          <span>登入</span>
+        </Link>
+      </li>
       <li>
         <IconLogout width={16} />
         <span>登出</span>

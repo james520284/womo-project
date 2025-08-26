@@ -64,7 +64,7 @@ export { default as IconExclamationMarkCircle } from './ExclamationMarkCircleIco
 export { default as IconGenderMale } from './GenderMaleIcon';
 export { default as IconGenderFemale } from './GenderFemaleIcon';
 export { default as IconEditOutline } from './EditOutlineIcon';
-export { IconFB, IconIG, IconYT } from './SocialMediaIcon';
+export { IconFB, IconIG, IconYT, IconLine, IconApple } from './SocialMediaIcon';
 export { default as IconAddSolid } from './AddSolidIcon';
 export { default as IconCheckBadge } from './CheckBadgeIcon';
 export { default as IconHot } from './HotIcon';
@@ -80,3 +80,6 @@ export { default as IconNote } from './NoteIcon';
 export { default as IconHelpOutline } from './HelpOutlineIcon';
 export { default as IconGlobalOutline } from './GlobalOutlineIcon';
 export { default as IconShareSolid } from './ShareSolidIcon';
+export { default as IconLogin } from './LoginIcon';
+export { default as IconPhone } from './PhoneIcon';
+export { default as IconMail } from './MailIcon';
