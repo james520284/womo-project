@@ -5,10 +5,17 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '@/components/ui/button/submit/Button';
 import { GIFT } from '@/libs/api/gift';
 import Image from 'next/image';
+import { IconMore, IconAdd } from '@/components/icons';
 
 const MyProducts = () => {
   return (
     <>
+      {/* 功能區 */}
+      <button type="button" className="w-100 text-end">
+        <IconAdd />
+      </button>
+
+      {/* 列表區 */}
       {GIFT.map((gift) => (
         <SectionUI key={gift.productName}>
           <div className="d-flex align-items-center justify-content-between">
@@ -42,7 +49,10 @@ const MyProducts = () => {
                 </span>
               </div>
             </div>
-            <div className="text-start ms-5">
+            <div className="d-flex flex-column align-items-end justify-content-start mb-5">
+              <button type="button" className="mb-3 line-height-none text-grey-600">
+                <IconMore width={20} rotate={90} />
+              </button>
               <Button color="red" size="sm">
                 兌換
               </Button>

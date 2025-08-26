@@ -5,10 +5,17 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '@/components/ui/button/submit/Button';
 import { Stores } from '@/libs/api/stores';
 import Image from 'next/image';
+import { IconMore, IconSetting } from '@/components/icons';
 
 const SponsorProducts = () => {
   return (
     <>
+      {/* 功能區 */}
+      <button type="button" className="text-end w-100">
+        <IconSetting />
+      </button>
+
+      {/* 列表區 */}
       {Stores.map((brand) => (
         <SectionUI key={brand.name}>
           <div className="d-flex align-items-center justify-content-between">
@@ -46,7 +53,10 @@ const SponsorProducts = () => {
                 </div>
               </div>
             </div>
-            <div className="text-start ms-5">
+            <div className="d-flex flex-column align-items-end justify-content-start mb-5">
+              <button type="button" className="mb-3 line-height-none text-grey-600">
+                <IconMore width={20} rotate={90} />
+              </button>
               <Button color="red" size="sm">
                 兌換
               </Button>
