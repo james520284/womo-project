@@ -38,15 +38,13 @@ const LoginOfEmail = ({ setLoginOption }: Props) => {
         </Link>
       </div>
 
-      <Button width="expand" size="sm">
-        登入
-      </Button>
+      <Button width="expand">登入</Button>
 
       <div className="fs-xs text-muted mt-5 text-center">
-        還沒有帳號？
+        還沒有帳號？&emsp;
         <button
           type="button"
-          className="me-1 text-decoration-underline text-primary"
+          className="me-2 text-decoration-underline text-primary"
           onClick={() => setLoginOption('all')}
         >
           快速登入
@@ -54,7 +52,7 @@ const LoginOfEmail = ({ setLoginOption }: Props) => {
         或
         <Link
           href="/auth/register?way=email"
-          className="ms-1 text-decoration-underline text-primary"
+          className="ms-2 text-decoration-underline text-primary"
         >
           Email註冊
         </Link>

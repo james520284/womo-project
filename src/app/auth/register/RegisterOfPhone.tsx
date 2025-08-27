@@ -96,7 +96,7 @@ const RegisterOfPhone = () => {
           </Button>
 
           <p className="fs-xs text-muted mt-5 text-center">
-            更快方式？
+            更快方式？&emsp;
             <Link href="/auth/login" className="me-1 text-decoration-underline text-primary">
               快速登入
             </Link>

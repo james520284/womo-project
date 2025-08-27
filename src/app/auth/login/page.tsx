@@ -1,6 +1,7 @@
 import style from './page.module.scss';
 import Image from 'next/image';
 import LoginClient from './LoginClient';
+import Link from 'next/link';
 
 const Login = () => {
   return (
@@ -8,14 +9,16 @@ const Login = () => {
       <div className={style.wrapper}>
         <div>
           {/* LOGO */}
-          <div className={style.imgWrapper}>
-            <Image
-              src="http://womo_front.dymain.com/assets/images/logo.png"
-              alt="logo"
-              fill
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
+          <Link href="/">
+            <div className={style.imgWrapper}>
+              <Image
+                src="http://womo_front.dymain.com/assets/images/logo.png"
+                alt="logo"
+                fill
+                style={{ objectFit: 'contain' }}
+              />
+            </div>
+          </Link>
 
           {/* SLOGAN */}
           <h1 className="fs-4 fw-bold text-center mt-10 mb-2" style={{ letterSpacing: '4px' }}>

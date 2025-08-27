@@ -38,21 +38,19 @@ const LoginOfPhone = ({ setLoginOption }: Props) => {
         </Link>
       </div>
 
-      <Button width="expand" size="sm">
-        登入
-      </Button>
+      <Button width="expand">登入</Button>
 
       <div className="fs-xs text-muted mt-5 text-center">
-        還沒有帳號？
+        還沒有帳號？&emsp;
         <button
           type="button"
-          className="me-1 text-decoration-underline text-primary"
+          className="me-2 text-decoration-underline text-primary"
           onClick={() => setLoginOption('all')}
         >
           快速登入
         </button>
         或
-        <Link href="/auth/register" className="ms-1 text-decoration-underline text-primary">
+        <Link href="/auth/register" className="ms-2 text-decoration-underline text-primary">
           手機註冊
         </Link>
       </div>
