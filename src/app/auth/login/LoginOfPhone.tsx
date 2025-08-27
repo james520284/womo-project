@@ -33,7 +33,7 @@ const LoginOfPhone = ({ setLoginOption }: Props) => {
         </button>
       </div>
       <div className="text-end mb-10">
-        <Link href="#" className="fs-xs text-muted">
+        <Link href="/auth/forget_password" className="fs-xs text-muted">
           忘記密碼？
         </Link>
       </div>

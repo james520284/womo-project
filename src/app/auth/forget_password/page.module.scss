@@ -1,0 +1,17 @@
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  min-height: 85svh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.imgWrapper {
+  position: relative;
+  width: 180px;
+  height: auto;
+  aspect-ratio: 3/1;
+  margin: 0 auto;
+  margin-top: 80px;
+}

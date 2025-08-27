@@ -91,9 +91,7 @@ const RegisterOfPhone = () => {
             </button>
           </div>
 
-          <Button width="expand" size="sm">
-            註冊
-          </Button>
+          <Button width="expand">註冊</Button>
 
           <p className="fs-xs text-muted mt-5 text-center">
             更快方式？&emsp;

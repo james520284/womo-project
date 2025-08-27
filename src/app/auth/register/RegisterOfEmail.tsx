@@ -5,7 +5,7 @@ import Avatar from 'antd/es/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import {
   IconAvatarSolid,
-  IconPhone,
+  IconMail,
   IconLockOutline,
   IconViewOff,
   IconView,
@@ -40,7 +40,7 @@ const RegisterOfEmail = () => {
         {/* 信箱 */}
         <div className="w-75 mx-auto mb-20">
           <div className="d-flex align-items-center mb-5 position-relative">
-            <IconPhone width={20} />
+            <IconMail width={20} />
             <input type="email" placeholder="Email信箱" className="fs-6 ms-2" />
             <button
               type="button"
@@ -91,9 +91,7 @@ const RegisterOfEmail = () => {
             </button>
           </div>
 
-          <Button width="expand" size="sm">
-            註冊
-          </Button>
+          <Button width="expand">註冊</Button>
 
           <p className="fs-xs text-muted mt-5 text-center">
             更快方式？&emsp;

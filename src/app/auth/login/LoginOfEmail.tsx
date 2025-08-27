@@ -1,5 +1,5 @@
 'use client';
-import { IconPhone, IconLockOutline, IconView, IconViewOff } from '@/components/icons';
+import { IconMail, IconLockOutline, IconView, IconViewOff } from '@/components/icons';
 import Link from 'next/link';
 import Button from '@/components/ui/button/submit/Button';
 import { useState } from 'react';
@@ -14,7 +14,7 @@ const LoginOfEmail = ({ setLoginOption }: Props) => {
   return (
     <div className="w-75 mx-auto mb-20">
       <div className="d-flex align-items-center mb-5">
-        <IconPhone width={20} />
+        <IconMail width={20} />
         <input type="tel" placeholder="Email信箱" className="fs-6 ms-2" />
       </div>
       <div className="d-flex align-items-center  mb-5 position-relative">
@@ -33,7 +33,7 @@ const LoginOfEmail = ({ setLoginOption }: Props) => {
         </button>
       </div>
       <div className="text-end mb-10">
-        <Link href="#" className="fs-xs text-muted">
+        <Link href="/auth/forget_password" className="fs-xs text-muted">
           忘記密碼？
         </Link>
       </div>
