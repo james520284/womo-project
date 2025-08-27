@@ -8,7 +8,7 @@ const LoginOption = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="w-50 mx-auto mt-20 fw-bold fs-sm">
+    <div className="w-75 mx-auto  fw-bold fs-sm">
       {/* line登入 */}
       <button
         type="button"
@@ -39,6 +39,17 @@ const LoginOption = () => {
 
       {isOpen && (
         <>
+          {/* apple登入 */}
+          <button
+            type="button"
+            className="border border-dark  pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3 "
+          >
+            <IconApple width={20} />
+            <span className="ms-3" style={{ width: '144px' }}>
+              用 Apple 帳號登入
+            </span>
+          </button>
+
           {/* 手機登入 */}
           <button
             type="button"
@@ -60,17 +71,6 @@ const LoginOption = () => {
               用 Email 帳號登入
             </span>
           </button>
-
-          {/* apple登入 */}
-          <button
-            type="button"
-            className="border border-dark  pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3 "
-          >
-            <IconApple width={20} />
-            <span className="ms-3" style={{ width: '144px' }}>
-              用 Apple 帳號登入
-            </span>
-          </button>
         </>
       )}
 
@@ -80,7 +80,7 @@ const LoginOption = () => {
         className="fs-xs fw-bold d-flex align-items-center mx-auto line-height-none"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <span>更少選項</span> : <span>更多選項</span>}
+        {isOpen ? <span>更少</span> : <span>更多</span>}
 
         <IconArrow rotated={isOpen} width={20} />
       </button>
