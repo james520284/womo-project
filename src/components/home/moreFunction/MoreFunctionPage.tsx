@@ -107,7 +107,7 @@ const MoreFunctionPage = () => {
       </li>
       <hr />
       <li>
-        <Link href="/login">
+        <Link href="/auth/login">
           <IconLogin width={16} />
           <span>登入 (暫時入口)</span>
         </Link>

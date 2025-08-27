@@ -1,6 +1,6 @@
 import style from './page.module.scss';
 import Image from 'next/image';
-import LoginOption from './LoginOption';
+import LoginClient from './LoginClient';
 
 const Login = () => {
   return (
@@ -28,7 +28,7 @@ const Login = () => {
 
         {/* 登入選擇列表 */}
         <section>
-          <LoginOption />
+          <LoginClient />
         </section>
       </div>
     </>

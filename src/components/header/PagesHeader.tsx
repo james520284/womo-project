@@ -55,7 +55,11 @@ const PagesHeader = ({
   return (
     <header className={`${style.header} ${!showHeader ? style.hidden : ''}`}>
       <div className="container-fluid">
-        <div className="d-flex justify-content-between align-items-center py-3">
+        <div
+          className={`d-flex  align-items-center py-3 ${
+            titleType === 'txt' ? 'justify-content-between' : 'justify-content-center'
+          }`}
+        >
           <div className="d-flex align-items-center gap-2">
             {backArrowBtn && (
               <button type="button" className="line-height-none" onClick={() => router.back()}>

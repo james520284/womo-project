@@ -2,10 +2,14 @@
 
 import Image from 'next/image';
 import { IconLine, IconArrow, IconApple, IconPhone, IconMail } from '@/components/icons';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
-const LoginOption = () => {
-  const [isOpen, setIsOpen] = useState(false);
+type Props = {
+  setLoginOption: React.Dispatch<React.SetStateAction<'phone' | 'email' | 'all'>>;
+};
+
+const LoginOption = ({ setLoginOption }: Props) => {
+  const [isOpenLoginOption, setIsOpenLoginOption] = useState(false);
 
   return (
     <div className="w-75 mx-auto  fw-bold fs-sm">
@@ -37,7 +41,7 @@ const LoginOption = () => {
         </span>
       </button>
 
-      {isOpen && (
+      {isOpenLoginOption && (
         <>
           {/* apple登入 */}
           <button
@@ -54,6 +58,7 @@ const LoginOption = () => {
           <button
             type="button"
             className="border border-dark  pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3"
+            onClick={() => setLoginOption('phone')}
           >
             <IconPhone width={20} color="#da5271" />
             <span className="ms-3" style={{ width: '144px' }}>
@@ -65,6 +70,7 @@ const LoginOption = () => {
           <button
             type="button"
             className="border border-dark  pe-3 py-3 ps-10 rounded-pill w-100 d-flex align-items-center justify-content-center mb-3"
+            onClick={() => setLoginOption('email')}
           >
             <IconMail width={20} color="#00b0b4" />
             <span className="ms-3" style={{ width: '144px' }}>
@@ -78,11 +84,11 @@ const LoginOption = () => {
       <button
         type="button"
         className="fs-xs fw-bold d-flex align-items-center mx-auto line-height-none"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpenLoginOption(!isOpenLoginOption)}
       >
-        {isOpen ? <span>更少</span> : <span>更多</span>}
+        {isOpenLoginOption ? <span>更少</span> : <span>更多</span>}
 
-        <IconArrow rotated={isOpen} width={20} />
+        <IconArrow rotated={isOpenLoginOption} width={20} />
       </button>
     </div>
   );
