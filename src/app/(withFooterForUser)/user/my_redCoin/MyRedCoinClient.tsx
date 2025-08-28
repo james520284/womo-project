@@ -58,17 +58,9 @@ const MyRedCoinClient = () => {
         {/* 功能按鈕區 */}
         <div className="d-flex align-items-center justify-content-end">
           <Search />
-          {tab === 'support' ? (
-            <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
-              {isSort ? <IconSortDown /> : <IconSortUp />}
-            </button>
-          ) : (
-            tab === 'store' && (
-              <button type="button" className="ms-2">
-                <IconAdd />
-              </button>
-            )
-          )}
+          <button type="button" className="ms-2" onClick={() => setIsSort(!isSort)}>
+            {isSort ? <IconSortDown /> : <IconSortUp />}
+          </button>
         </div>
 
         {/* 列表區 */}
