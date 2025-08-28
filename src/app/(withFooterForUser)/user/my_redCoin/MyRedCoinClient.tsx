@@ -4,7 +4,7 @@ import style from './MyRedCoinClient.module.scss';
 import MyRedCoinHeader from '@/components/header/MyRedCoinHeader';
 import { useState } from 'react';
 import Search from '@/components/ui/search/Search';
-import { IconSortUp, IconSortDown, IconAdd } from '@/components/icons';
+import { IconSortUp, IconSortDown } from '@/components/icons';
 import { Tab } from '@/components/ui/tab/Tab';
 import RedCoinGameOfSupport from './RedCoinGameOfSupport';
 import RedCoinGameOfWork from './RedCoinGameOfWork';
