@@ -1,6 +1,6 @@
 import PagesHeader from '@/components/header/PagesHeader';
 import { Stores } from '@/libs/api/stores';
-import Avatar from 'antd/es/avatar/Avatar';
+import Avatar from '@/components/ui/avatar/Avatar';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 import { IconCheckBadge } from '@/components/icons';
