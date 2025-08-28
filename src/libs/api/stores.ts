@@ -9,6 +9,8 @@ export const Stores = [
     isReceiveMyCoin: false,
     productName: '極品牛排套餐85折',
     product: 'http://womo_front.dymain.com/assets/images/user/gallery05.jpg',
+    auth: '總管',
+    level: 'normal',
   },
   {
     name: '御私藏',
@@ -18,6 +20,8 @@ export const Stores = [
     isReceiveMyCoin: false,
     productName: '塔可買一送一',
     product: 'http://womo_front.dymain.com/assets/images/user/gallery07.jpg',
+    auth: '行銷',
+    level: 'advance',
   },
   {
     name: '星巴克',
@@ -27,5 +31,7 @@ export const Stores = [
     isReceiveMyCoin: true,
     productName: '任意咖啡第二杯半價',
     product: 'http://womo_front.dymain.com/assets/images/store/store_coupon1.jpg',
+    auth: '小編',
+    level: 'normal',
   },
 ];

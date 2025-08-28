@@ -8,7 +8,7 @@ import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Button from '../ui/button/submit/Button';
 import { IconArrow, IconSend, IconCheckBadge } from '../icons';
 import { useRouter } from 'next/navigation';
-import MyGreenCoinPlan from '@/app/(withFooter)/user/my_greenCoin/MyGreenCoinPlan';
+import MyGreenCoinPlan from '@/app/(withFooterForUser)/user/my_greenCoin/MyGreenCoinPlan';
 import { SideSheet } from '../ui/sideSheet/SideSheet';
 
 const MyGreenCoinHeader = () => {

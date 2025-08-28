@@ -10,7 +10,7 @@ import { useSearchParams } from 'next/navigation';
 const CoinFriendsClient = () => {
   const searchParams = useSearchParams().get('isChangeToAddFriend');
   const isPageChange = searchParams === 'true';
-  const [isChangeToAddFriend, setIsChangeToAddFriend] = useState(Boolean(isPageChange) ?? false);
+  const [isChangeToAddFriend, setIsChangeToAddFriend] = useState(isPageChange);
 
   return (
     <>
@@ -18,8 +18,8 @@ const CoinFriendsClient = () => {
         titleType="txt"
         titleTxt="籌碼朋友"
         friendBtn={true}
-        isChangeToAddFriend={isChangeToAddFriend}
-        setIsChangeToAddFriend={setIsChangeToAddFriend}
+        currentState={isChangeToAddFriend}
+        onFriendClick={() => setIsChangeToAddFriend((prev) => !prev)}
       />
 
       <div className={`container-fluid ${style.wrapper}`}>

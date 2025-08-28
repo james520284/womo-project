@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';
 import { IconArrow, IconLoveBox, IconStore } from '../icons';
-import ProfileDetail from '@/app/(withFooter)/user/my_profile/ProfileDetail/ProfileDetail';
+import ProfileDetail from '@/app/(withFooterForUser)/user/my_profile/ProfileDetail/ProfileDetail';
 import { SideSheet } from '../ui/sideSheet/SideSheet';
 
 const UserProfileHeader = () => {

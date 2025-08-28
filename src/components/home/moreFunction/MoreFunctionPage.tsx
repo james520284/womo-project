@@ -23,13 +23,15 @@ const MoreFunctionPage = () => {
   return (
     <ul className={style.listGroup}>
       <li className="d-flex align-items-center mb-8">
-        <Avatar src={AVATAR_LINK.my} size={48} />
+        <Link href="/user/my_profile">
+          <Avatar src={AVATAR_LINK.my} size={48} />
+        </Link>
         <div className="ms-2">
           <h2 className="fw-bold fs-6">蒼田楓</h2>
-          <div className="text-grey-400">
+          <Link href="/user/myProfile_edit" className="text-grey-400">
             <IconEditOutline width={16} />
             <span>我的小檔案</span>
-          </div>
+          </Link>
         </div>
       </li>
       <li>
@@ -71,8 +73,10 @@ const MoreFunctionPage = () => {
       </li>
       <hr />
       <li>
-        <IconCheckBadge width={16} color="#00b0b4" />
-        <span>綠勾勾商業帳號</span>
+        <Link href="/user/my_businessAccountList">
+          <IconCheckBadge width={16} color="#00b0b4" />
+          <span>綠勾勾商業帳號</span>
+        </Link>
       </li>
       <li>
         <IconCheckBadge width={16} color="#d3745d" />

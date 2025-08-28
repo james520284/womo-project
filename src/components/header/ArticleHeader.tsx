@@ -2,7 +2,7 @@ import style from './ArticleHeader.module.scss';
 import {
   ArticleHeaderFuncBtn,
   ArticleHeaderBackBtn,
-} from '@/app/(noFooter)/user/article_view/[articleId]/ArticleFuncClient';
+} from '@/app/(noFooterForUser)/user/article_view/[articleId]/ArticleFuncClient';
 import Avatar from '../ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import Link from 'next/link';

@@ -7,11 +7,10 @@ import Search from '@/components/ui/search/Search';
 import { IconSortUp, IconSortDown, IconAdd } from '@/components/icons';
 import { Tab } from '@/components/ui/tab/Tab';
 import RedCoinGameOfSupport from './RedCoinGameOfSupport';
-import RedCoinGameOfStore from './RedCoinGameOfStore';
 import RedCoinGameOfWork from './RedCoinGameOfWork';
 
 const MyRedCoinClient = () => {
-  const [tab, setTab] = useState<'support' | 'store' | 'work'>('support');
+  const [tab, setTab] = useState<'support' | 'work'>('support');
   const [isSort, setIsSort] = useState(false);
 
   return (
@@ -49,14 +48,7 @@ const MyRedCoinClient = () => {
             >
               誰支持我
             </Tab>
-            <Tab
-              isActive={tab === 'store'}
-              onClick={() => setTab('store')}
-              isShowData={true}
-              num={14}
-            >
-              我的網店
-            </Tab>
+
             <Tab isActive={tab === 'work'} onClick={() => setTab('work')} isShowData={true} num={1}>
               我的業配
             </Tab>
@@ -80,13 +72,7 @@ const MyRedCoinClient = () => {
         </div>
 
         {/* 列表區 */}
-        {tab === 'support' ? (
-          <RedCoinGameOfSupport />
-        ) : tab === 'store' ? (
-          <RedCoinGameOfStore />
-        ) : (
-          <RedCoinGameOfWork />
-        )}
+        {tab === 'support' ? <RedCoinGameOfSupport /> : <RedCoinGameOfWork />}
       </div>
     </>
   );

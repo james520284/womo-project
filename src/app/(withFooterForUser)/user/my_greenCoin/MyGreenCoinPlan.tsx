@@ -63,38 +63,37 @@ const MyGreenCoinPlan = () => {
               開始試用
             </ButtonOutline>
           </div>
-          <div>
-            <ul className="fs-sm">
-              <li className="mb-4">
-                <span className="fw-bold">多元發幣</span>
-                <p>支援智能 Code、手機號碼等多元發送籌碼方式</p>
-              </li>
-              <li className="mb-4">
-                <span className="fw-bold">專屬後台</span>
-                <p>更多進階模組，全面提升籌碼帳號推廣力</p>
-              </li>
-              <li className="mb-4">
-                <span className="fw-bold">分店聯盟</span>
-                <p>籌碼跨店通用，最適合連鎖品牌與多據點創作者</p>
-              </li>
-              <li className="mb-4">
-                <span className="fw-bold">團隊管理</span>
-                <p>可分配不同層級權限，讓多人協作更輕鬆</p>
-              </li>
-              <li className="mb-4">
-                <span className="fw-bold">廣告投放</span>
-                <p>可在WOMO投放廣告、將優惠曝光到指定帳號的網店</p>
-              </li>
-              <li className="mb-4">
-                <span className="fw-bold">業配媒合</span>
-                <p>可以發佈合作需求，找到適合的創作者，一起拉高品牌聲量</p>
-              </li>
-              <li className="mb-4">
-                <span className="fw-bold">數據分析</span>
-                <p>掌握籌碼流通數據，並提供 AI 智能建議，優化經營策略</p>
-              </li>
-            </ul>
-          </div>
+
+          <ul className="fs-sm">
+            <li className="mb-4">
+              <span className="fw-bold">多元發幣</span>
+              <p>支援智能 Code、手機號碼等多元發送籌碼方式</p>
+            </li>
+            <li className="mb-4">
+              <span className="fw-bold">專屬後台</span>
+              <p>更多進階模組，全面提升籌碼帳號推廣力</p>
+            </li>
+            <li className="mb-4">
+              <span className="fw-bold">分店聯盟</span>
+              <p>籌碼跨店通用，最適合連鎖品牌與多據點創作者</p>
+            </li>
+            <li className="mb-4">
+              <span className="fw-bold">團隊管理</span>
+              <p>可分配不同層級權限，讓多人協作更輕鬆</p>
+            </li>
+            <li className="mb-4">
+              <span className="fw-bold">廣告投放</span>
+              <p>可在WOMO投放廣告、將優惠曝光到指定帳號的網店</p>
+            </li>
+            <li className="mb-4">
+              <span className="fw-bold">業配媒合</span>
+              <p>可以發佈合作需求，找到適合的創作者，一起拉高品牌聲量</p>
+            </li>
+            <li className="mb-4">
+              <span className="fw-bold">數據分析</span>
+              <p>掌握籌碼流通數據，並提供 AI 智能建議，優化經營策略</p>
+            </li>
+          </ul>
         </section>
       </div>
     </>

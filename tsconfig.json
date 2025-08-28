@@ -27,7 +27,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "src/app/(withFooter)/user/my_store/WoMallProductstsx"
+    "src/app/(withFooterForUser)/user/my_store/WoMallProductstsx"
   ],
   "exclude": ["node_modules"]
 }

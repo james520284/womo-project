@@ -5,20 +5,35 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { IconBackArrow, IconShare, IconCancel, IconFriendsList, IconAddFriend } from '../icons';
+import {
+  IconBackArrow,
+  IconShare,
+  IconCancel,
+  IconFriendsList,
+  IconAddFriend,
+  IconAdd,
+} from '../icons';
 
 type Props = {
   titleType: 'txt' | 'img';
   titleTxt?: string;
   imageSrc?: string;
   imageLink?: string;
+
+  // 內部按鈕
   backArrowBtn?: boolean;
   shareBtn?: boolean;
   cancelBtn?: boolean;
   friendBtn?: boolean;
   searchBtn?: boolean;
-  isChangeToAddFriend?: boolean;
-  setIsChangeToAddFriend?: React.Dispatch<React.SetStateAction<boolean>>;
+  addBtn?: boolean;
+
+  // 外部傳入當前狀態
+  currentState?: boolean;
+
+  // 外部傳入的事件處理器
+  onAddClick?: () => void;
+  onFriendClick?: () => void;
 };
 
 const PagesHeader = ({
@@ -30,8 +45,10 @@ const PagesHeader = ({
   shareBtn,
   cancelBtn,
   friendBtn,
-  isChangeToAddFriend,
-  setIsChangeToAddFriend,
+  addBtn,
+  currentState,
+  onAddClick,
+  onFriendClick,
 }: Props) => {
   const [showHeader, setShowHeader] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -87,24 +104,16 @@ const PagesHeader = ({
                 <IconCancel width={24} />
               </button>
             )}
-            {friendBtn &&
-              (isChangeToAddFriend ? (
-                <button
-                  type="button"
-                  className="line-height-none"
-                  onClick={() => setIsChangeToAddFriend?.(!isChangeToAddFriend)}
-                >
-                  <IconFriendsList width={20} />
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  className="line-height-none"
-                  onClick={() => setIsChangeToAddFriend?.(!isChangeToAddFriend)}
-                >
-                  <IconAddFriend width={20} />
-                </button>
-              ))}
+            {addBtn && (
+              <button type="button" className="line-height-none" onClick={onAddClick}>
+                <IconAdd width={24} />
+              </button>
+            )}
+            {friendBtn && (
+              <button type="button" className="line-height-none" onClick={onFriendClick}>
+                {currentState ? <IconFriendsList width={20} /> : <IconAddFriend width={20} />}
+              </button>
+            )}
           </div>
         </div>
       </div>
