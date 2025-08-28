@@ -1,5 +1,5 @@
 import style from './InformClient.module.scss';
-import Avatar from 'antd/es/avatar/Avatar';
+import Avatar from '@/components/ui/avatar/Avatar';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
 
 const OfficialInform = () => {

@@ -1,5 +1,5 @@
 import style from './InformClient.module.scss';
-import Avatar from 'antd/es/avatar/Avatar';
+import Avatar from '@/components/ui/avatar/Avatar';
 import { AVATAR_LINK } from '@/libs/api/avatar/avatar';
 import { KOLs } from '@/libs/api/kols';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
