@@ -55,7 +55,7 @@ const Description = () => {
           <Accordion.Header className={style.header}>
             <Accordion.Trigger className={style.trigger}>
               <div className="d-flex align-items-center mb-3">
-                <span className="text-secondary mx-2">
+                <span className="text-secondary me-2">
                   <IconCheckBadge width={20} />
                 </span>
                 <h2 className="fs-6 fw-bold">綠勾勾是什麼？</h2>

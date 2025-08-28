@@ -85,3 +85,4 @@ export { default as IconPhone } from './PhoneIcon';
 export { default as IconMail } from './MailIcon';
 export { default as IconViewOff } from './ViewOffIcon';
 export { default as IconAvatarSolid } from './AvatarSolidIcon';
+export { default as IconUser } from './UserIcon';

@@ -3,21 +3,26 @@ import { Stores } from '@/libs/api/stores';
 import Avatar from '@/components/ui/avatar/Avatar';
 import Button from '@/components/ui/button/submit/Button';
 import ButtonOutline from '@/components/ui/button/submit/ButtonOutline';
-import { IconCheckBadge } from '@/components/icons';
+import { IconCheckBadge, IconAdd } from '@/components/icons';
 import Description from './Description';
 
 const BusinessAccount = () => {
   return (
     <>
       {/* Header區 */}
-      <PagesHeader titleType="txt" titleTxt="商業帳號" addBtn={true} />
+      <PagesHeader titleType="txt" titleTxt="商業帳號" />
 
       <section className="container-fluid mt-5 pb-20" style={{ maxWidth: '700px' }}>
         {/* 說明區 */}
         <Description />
 
         {/* 列表區 */}
-        <h2 className="fs-5 fw-bold mt-10 mb-3">我的商業帳號列表</h2>
+        <div className="mt-10 mb-3 d-flex align-items-center justify-content-between">
+          <h2 className="fs-5 fw-bold">我的商業帳號列表</h2>
+          <button type="button">
+            <IconAdd />
+          </button>
+        </div>
         {Stores.map((store) => (
           <div
             key={store.name}

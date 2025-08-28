@@ -9,6 +9,7 @@ import {
   IconLockOutline,
   IconViewOff,
   IconView,
+  IconUser,
 } from '@/components/icons';
 import Button from '@/components/ui/button/submit/Button';
 import { useState } from 'react';
@@ -37,8 +38,14 @@ const RegisterOfEmail = () => {
           </div>
         </div>
 
-        {/* 信箱 */}
-        <div className="w-75 mx-auto mb-20">
+        <div className="w-75 mx-auto mb-5">
+          {/* 暱稱*/}
+          <div className="d-flex align-items-center mb-5 position-relative">
+            <IconUser width={20} />
+            <input type="" placeholder="暱稱" className="fs-6 ms-2" />
+          </div>
+
+          {/* 信箱 */}
           <div className="d-flex align-items-center mb-5 position-relative">
             <IconMail width={20} />
             <input type="email" placeholder="Email信箱" className="fs-6 ms-2" />
